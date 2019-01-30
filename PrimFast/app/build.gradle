@@ -1,0 +1,78 @@
+apply plugin: 'com.android.application'
+
+apply plugin: 'kotlin-android'
+
+apply plugin: 'kotlin-android-extensions'
+
+def config = rootProject.ext.androidConfig
+
+def appIdConfig = rootProject.ext.appIdConfig
+
+android {
+    compileSdkVersion config.compileSdkVersion
+    defaultConfig {
+        applicationId appIdConfig.app
+        minSdkVersion config.minSdkVersion
+        targetSdkVersion config.targetSdkVersion
+        versionCode config.versionCode
+        versionName config.versionName
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        externalNativeBuild {
+            cmake {
+                cppFlags ""
+            }
+        }
+    }
+
+//    signingConfigs {
+//        debug {
+//            storeFile file('prim.keystore')
+//            storePassword "123456"
+//            keyAlias "prim"
+//            keyPassword "123456"
+//            v2SigningEnabled true
+//        }
+//        release {
+//            storeFile file('prim.keystore')
+//            storePassword "123456"
+//            keyAlias "prim"
+//            keyPassword "123456"
+//            v2SigningEnabled true
+//        }
+//    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+
+        debug {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    externalNativeBuild {
+        cmake {
+            path "CMakeLists.txt"
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    testImplementation rootProject.ext.dependencies["junit"]
+    implementation rootProject.ext.dependencies["appcompat-v7"]
+    implementation rootProject.ext.dependencies["constraint-layout"]
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+    implementation project(':primhttp')
+    implementation project(':openDefault-4.3.6')
+}
+
+repositories {
+    flatDir {
+        dirs 'libs'
+    }
+}

@@ -1,0 +1,69 @@
+ext {
+    //false 集成模式  true 组件模式可单独运行
+    isComponent = false
+
+    supportLibVersion = '28.0.0'
+    permissionVersion = '1.0.0'
+    leakcanaryVersion = '1.5.1'
+    retrofitVersion = '2.5.0'
+    okhttpVersion = '3.12.1'
+    rxJavaVersion = '2.2.4'
+    rxAndroidVersion = '2.1.0'
+
+    androidConfig = [
+            compileSdkVersion: 28,
+            buildToolsVersion: "28.0.0",
+            minSdkVersion    : 15,
+            targetSdkVersion : 28,
+            versionCode      : 1,
+            versionName      : "0.0.1"
+    ]
+
+    appIdConfig = [
+            app: "com.prim.fast",
+    ]
+
+    dependencies = [
+            //android-support
+            "support-v4"         : "com.android.support:support-v4:${supportLibVersion}",
+            "appcompat-v7"       : "com.android.support:appcompat-v7:${supportLibVersion}",
+            "design"             : "com.android.support:design:${supportLibVersion}",
+            "recyclerview-v7"    : "com.android.support:recyclerview-v7:${supportLibVersion}",
+            "cardview-v7"        : "com.android.support:cardview-v7:${supportLibVersion}",
+            "support-annotations": "com.android.support:support-annotations:${supportLibVersion}",
+            "constraint-layout"  : "com.android.support.constraint:constraint-layout:1.1.3",
+
+            //retrofit2
+            "retrofit"           : "com.squareup.retrofit2:retrofit:${retrofitVersion}",
+            "converter"          : "com.squareup.retrofit2:converter-scalars:${retrofitVersion}",
+
+            //okHttp
+            "okhttp"             : "com.squareup.okhttp3:okhttp:${okhttpVersion}",
+
+            //RxJava
+            "RxJava"             : "io.reactivex.rxjava2:rxjava:${rxJavaVersion}",
+            "RxAndroid"          : "io.reactivex.rxjava2:rxandroid:${rxAndroidVersion}",
+            "adapter-rxjava2"    : "com.squareup.retrofit2:adapter-rxjava2:2.3.0",
+
+            //eventbus
+            "eventbus"           : "org.greenrobot:eventbus:3.0.0",
+
+            //解析json
+            "gson"               : "com.google.code.gson:gson:2.7",
+
+            //动画相关
+            "nineoldandroids"    : "com.nineoldandroids:library:2.4.0",
+
+            //test
+            "junit"              : "junit:junit:4.12",
+
+            // 二维码
+            "zxing"              : "com.google.zxing:core:3.3.0",
+
+            // leakcanary 工具
+            "debugLeakcanary"    : "com.squareup.leakcanary:leakcanary-android:${leakcanaryVersion}",
+            "releaseLeakcanary"  : "com.squareup.leakcanary:leakcanary-android-no-op:${leakcanaryVersion}",
+            "testLeakcanary"     : "com.squareup.leakcanary:leakcanary-android-no-op:${leakcanaryVersion}",
+
+    ]
+}
