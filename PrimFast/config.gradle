@@ -9,7 +9,7 @@ ext {
     okhttpVersion = '3.12.1'
     rxJavaVersion = '2.2.4'
     rxAndroidVersion = '2.1.0'
-
+    gsonVersion = '2.8.5'
     androidConfig = [
             compileSdkVersion: 28,
             buildToolsVersion: "28.0.0",
@@ -49,7 +49,7 @@ ext {
             "eventbus"           : "org.greenrobot:eventbus:3.0.0",
 
             //解析json
-            "gson"               : "com.google.code.gson:gson:2.7",
+            "gson"               : "com.google.code.gson:gson:${gsonVersion}",
 
             //动画相关
             "nineoldandroids"    : "com.nineoldandroids:library:2.4.0",

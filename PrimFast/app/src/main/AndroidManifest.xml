@@ -24,7 +24,7 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-        <activity android:name=".HttpActivity"/>
+        <activity android:name=".test.TestHttpActivity"/>
         <meta-data
                 android:name="WEIBO_APPKEY"
                 android:value="2301361998" />

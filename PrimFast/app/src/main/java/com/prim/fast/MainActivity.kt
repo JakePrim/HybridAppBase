@@ -3,7 +3,7 @@ package com.prim.fast
 import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
-import cn.prim.http.lib_net.PrimHttp
+import com.prim.fast.test.TestHttpActivity
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
@@ -17,7 +17,7 @@ class MainActivity : AppCompatActivity() {
 
         sample_text.setOnClickListener {
             var intent = Intent()
-            intent.setClass(this,HttpActivity::class.java)
+            intent.setClass(this, TestHttpActivity::class.java)
             startActivity(intent)
         }
     }

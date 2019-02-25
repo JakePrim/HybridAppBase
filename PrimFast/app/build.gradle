@@ -67,8 +67,10 @@ dependencies {
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
-    implementation project(':primhttp')
-    implementation project(':openDefault-4.3.6')
+    implementation project(':prim_http')
+    //implementation project(':openDefault-4.3.6')
+    implementation project(':prim_base')
+//    implementation project(':prim_compiler')
 }
 
 repositories {

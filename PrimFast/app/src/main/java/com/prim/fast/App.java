@@ -15,6 +15,7 @@ public class App extends Application {
     @Override
     public void onCreate() {
         super.onCreate();
+        //网络框架初始化
         PrimHttp.init(this)
                 .withHost("https://api.weibo.com/")
                 .readTimeout(1000)
