@@ -27,5 +27,6 @@ dependencies {
     implementation rootProject.ext.dependencies["appcompat-v7"]
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+    //通用的核心库
     implementation project(':prim_core_common')
 }

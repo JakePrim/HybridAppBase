@@ -1,1 +1,1 @@
-include ':app', ':prim_http', ':prim_base', ':prim_annotation', ':prim_core_common', ':prim_compiler'
+include ':app', ':prim_http', ':prim_base', ':prim_annotation', ':prim_core_common', ':prim_compiler', ':prim_res'

@@ -16,6 +16,7 @@ android {
         targetSdkVersion config.targetSdkVersion
         versionCode config.versionCode
         versionName config.versionName
+        multiDexEnabled true
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
         externalNativeBuild {
             cmake {
@@ -67,10 +68,11 @@ dependencies {
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
-    implementation project(':prim_http')
+//    implementation project(':prim_http')
     //implementation project(':openDefault-4.3.6')
+    //项目的基础骨架库
     implementation project(':prim_base')
-//    implementation project(':prim_compiler')
+    //    implementation project(':prim_compiler')
 }
 
 repositories {
