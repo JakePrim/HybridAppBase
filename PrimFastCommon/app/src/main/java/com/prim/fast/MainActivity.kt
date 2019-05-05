@@ -13,7 +13,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         // Example of a call to a native method
-        sample_text.text = stringFromJNI()
+//        sample_text.text = stringFromJNI()
 
         sample_text.setOnClickListener {
             var intent = Intent()
@@ -28,11 +28,10 @@ class MainActivity : AppCompatActivity() {
      */
     external fun stringFromJNI(): String
 
-    companion object {
-
-        // Used to load the 'native-lib' library on application startup.
-        init {
-            System.loadLibrary("native-lib")
-        }
-    }
+//    companion object {
+//        // Used to load the 'native-lib' library on application startup.
+//        init {
+//            System.loadLibrary("native-lib")
+//        }
+//    }
 }

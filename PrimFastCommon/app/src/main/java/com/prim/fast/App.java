@@ -1,6 +1,9 @@
 package com.prim.fast;
 
 import android.app.Application;
+import com.joanzapata.iconify.fonts.FontAwesomeModule;
+import com.prim.config.PrimFast;
+import com.prim.icons.ExMoudle;
 //import com.joanzapata.iconify.fonts.FontAwesomeModule;
 //import com.prim.core.common.app.PrimFast;
 //import com.prim.icons.ExMoudle;
@@ -21,17 +24,11 @@ public class App extends Application {
 //                .readTimeout(1000)
 //                .connectionTimeout(5000)
 //                .build();
-
-//        WbSdk.install(this,
-//                new AuthInfo(this,
-//                        Constants.APP_KEY,
-//                        Constants.REDIRECT_URL,
-//                        Constants.SCOPE));
-//        PrimFast.init(this)
-//                .withIcons(new ExMoudle())//自定义字体图标库
-//                .withIcons(new FontAwesomeModule())
-//                .withApiHost("https:")
-//                .configure();
+        PrimFast.init(this)
+                .withIcons(new ExMoudle())//自定义字体图标库
+                .withIcons(new FontAwesomeModule())
+                .withApiHost("https://music.aityp.com")
+                .configure();
 
     }
 }

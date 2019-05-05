@@ -1,9 +1,8 @@
-package com.prim.core.common.app;
+package com.prim.config;
 
-import android.app.Application;
 import android.content.Context;
+
 import java.util.HashMap;
-import java.util.WeakHashMap;
 
 /**
  * @author prim
@@ -14,6 +13,7 @@ import java.util.WeakHashMap;
 public final class PrimFast {
     /**
      * 项目框架的初始化
+     *
      * @param context 上下文
      * @return Configurator
      */
@@ -29,6 +29,7 @@ public final class PrimFast {
 
     /**
      * 获取application
+     *
      * @return context
      */
     public static Context getApplication() {

@@ -1,4 +1,4 @@
-package com.prim.core.common.app;
+package com.prim.config;
 
 /**
  * @author prim

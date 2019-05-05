@@ -1,11 +1,10 @@
-package com.prim.core.common.app;
+package com.prim.config;
 
 import com.joanzapata.iconify.IconFontDescriptor;
 import com.joanzapata.iconify.Iconify;
 
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.WeakHashMap;
 
 /**
  * @author prim
@@ -14,6 +13,7 @@ import java.util.WeakHashMap;
  * @time 2019/2/26 - 6:48 AM
  */
 public class Configurator {
+    //配置集合
     private static final HashMap<String, Object> PRIM_CONFIGS = new HashMap<>();
 
     //字体图标库
@@ -32,22 +32,14 @@ public class Configurator {
         return Holder.INSTANCE;
     }
 
+    //获取配置集合
     public final HashMap<String, Object> getPrimConfigs() {
         return PRIM_CONFIGS;
     }
 
-    private void initIcons() {
-        if (ICONS.size() > 0) {
-            Iconify.IconifyInitializer initializer = Iconify.with(ICONS.get(0));
-            for (int i = 1; i < ICONS.size(); i++) {
-                initializer.with(ICONS.get(i));
-            }
-        }
-
-    }
-
     /**
      * 设置字体和图标库
+     *
      * @param descriptor
      * @return
      */
@@ -75,6 +67,15 @@ public class Configurator {
     public final void configure() {
         initIcons();
         PRIM_CONFIGS.put(ConfigType.CONFIG_READ.name(), true);
+    }
+
+    private void initIcons() {
+        if (ICONS.size() > 0) {
+            Iconify.IconifyInitializer initializer = Iconify.with(ICONS.get(0));
+            for (int i = 1; i < ICONS.size(); i++) {
+                initializer.with(ICONS.get(i));
+            }
+        }
     }
 
     /**
