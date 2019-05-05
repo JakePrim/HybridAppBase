@@ -1,5 +1,15 @@
 # PrimFastApp
-PrimFastApp 完整的项目开发框架,框架内设计的技术面很广,同时还是一套Android进阶和大前端的技术学习库,第三方框架原理和设计思想.1.包括Android进阶知识:APP快速开发框架搭建、组件化技术实现、插件化技术实现、Okhttp原理、Glide原理、RxJava原理、EventBus原理、音视频、NDK开发、进程通信、IOC、移动架构等,2.Flutter跨平台技术.3.RN跨平台技术以及移动Web应用和小程序的实战.4.Kotlin 开发技术,使用kotlin开发Android,专注于移动技术的最前线 https://jakeprim.cn/
+PrimFastApp 完整的项目开发框架,框架内设计的技术面很广,同时还是一套Android进阶和大前端的技术学习库,第三方框架原理和设计思想.
+
+1. 包括Android进阶知识:APP快速开发框架搭建、组件化技术实现、插件化技术实现、Okhttp原理、Glide原理、RxJava原理、EventBus原理、音视频、NDK开发、进程通信、IOC、移动架构等.
+
+2. Flutter跨平台技术.
+
+3. RN跨平台技术以及移动Web应用和小程序的实战.
+
+4. Kotlin 开发技术,使用kotlin开发Android.
+
+   专注于移动技术的最前线 https://jakeprim.cn/
 
 [TOC]
 
@@ -41,7 +51,7 @@ PrimFastKotlin
 ](https://www.jianshu.com/p/e2d93259dc34)
 - [x] [Android组件化专题 - 路由框架进阶模块间的业务通信](https://www.jianshu.com/p/f215eaf2f687)
 - [x] [Android组件化专题-路由动态注入跳转参数以及获取其他模块的fragment](https://www.jianshu.com/p/3dcbde5acc3b)
-- [ ] 组件化总结与用组件化完成一个完整的项目
+- [ ] 组件化总结与用组件化如何开发一个完整的项目
 
 #### Android 插件化实现方案
 - 实现demo地址:https://github.com/JakePrim/PrimPlug
@@ -75,11 +85,11 @@ PrimFastKotlin
 - [ ] Glide 的核心 API 的设计思路；
 - [ ] 总结 Glide 的架构。
 
-#### 序列化与反序列化Json框架
+#### 序列化与反序列化Json框架原理解析
 
-#### xutils IOC 注入式框架分析
+####  IOC 注入式框架分析
 
-#### EventBus原理分析与实现自己的可跨进程的通信框架
+#### EventBus原理分析与如何实现可跨进程的通信框架
 
 #### RxJava基础和RxJava实现原理
 
@@ -121,7 +131,12 @@ PrimFastKotlin
 
 ### Flutter 开发
 
-#### flutter 环境搭建和基础学习
+- [项目地址](https://github.com/JakePrim/prim_fultter_app)
+
+- [x] [Flutter 常用的布局与事件](https://jakeprim.cn/2019/03/26/flutter-1-1/)
+- [x] [Flutter 请求接口以及DAO层的实现](https://jakeprim.cn/2019/03/26/flutter-1-2/)
+- [x] [Flutter WebView使用详解](https://jakeprim.cn/2019/04/07/flutter-1-3/)
+- [x] [Flutter 中的组件通信与状态改变](https://jakeprim.cn/2019/03/15/flutter-event-bus/)
 
 ### ReactNative 开发
 
