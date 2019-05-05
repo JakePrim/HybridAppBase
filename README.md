@@ -1,21 +1,35 @@
 # PrimFastApp
-PrimFastApp 是一套Android和大前端的技术学习库,1.包括Android进阶知识:组件化技术实现、插件化技术实现、Okhttp原理、Glide原理、RxJava原理、EventBus原理、音视频、NDK开发、移动架构等,2.Flutter跨平台技术.3.RN跨平台技术.4.Kotlin 开发技术等,专注于移动端技术的最前线.
+PrimFastApp 完整的项目开发框架,框架内设计的技术面很广,同时还是一套Android进阶和大前端的技术学习库,第三方框架原理和设计思想.1.包括Android进阶知识:APP快速开发框架搭建、组件化技术实现、插件化技术实现、Okhttp原理、Glide原理、RxJava原理、EventBus原理、音视频、NDK开发、进程通信、IOC、移动架构等,2.Flutter跨平台技术.3.RN跨平台技术以及移动Web应用和小程序的实战.4.Kotlin 开发技术,使用kotlin开发Android,专注于移动技术的最前线 https://jakeprim.cn/
 
 [TOC]
 
-## PrimFast
+## PrimFast 介绍
 
-   PrimFast 是一套快速开发app的框架,采用 MVP/MVVM + RxJava + Retrofit + OkHttp + 组件化/插件化 搭建的项目框架.
+> PrimFastCommon 是一套快速开发app的框架,采用 MVP/MVVM + RxJava + Retrofit + OkHttp + kotlin/Java(混合) + 组件化/插件化 搭建的项目框架.
+
+> PrimFastFlutter 是学习Flutter的一个完整的项目
+
+> PrimFastKotlin 是学习kotlin的一个完整的项目
+
+> PrimFastApplets 是学习小程序开发的一个完整项目
+
+> PrimFastRn 是学习RN开发的一个完整项目
+
+> PrimFastWeb 是学习移动Web开发的一个完整项目(项目采用Vue来实现)
 
 ## 进度
 
 ### PrimFast 进度
 
+PrimFastCommon
+
 - 网络框架PrimHttp 完成度50%.
 - 基础框架PrimBase 完成度10%.
 .......
 
-### 计划任务表
+PrimFastFlutter
+
+PrimFastKotlin
 
 ### Android 高级进阶知识部分
 
@@ -99,13 +113,17 @@ PrimFastApp 是一套Android和大前端的技术学习库,1.包括Android进阶
 - [ ] 红黑树
 - [ ] 图论
 
+### Kotlin 开发
+
+
+
 ### 跨平台技术
 
-### Flutter
+### Flutter 开发
 
 #### flutter 环境搭建和基础学习
 
-### ReactNative
+### ReactNative 开发
 
 #### reactnative 环境搭建和基础学习
 
