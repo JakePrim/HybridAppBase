@@ -4,31 +4,27 @@ import cn.prim.http.lib_net.callback.Callback;
 import cn.prim.http.lib_net.request.func.ParseResponseFunc;
 import cn.prim.http.lib_net.request.subsciber.CallbackSubscriber;
 import cn.prim.http.lib_net.utils.TaskUtils;
-import io.reactivex.*;
+import io.reactivex.Observable;
 import okhttp3.ResponseBody;
 
 /**
  * @author prim
  * @version 1.0.0
- * @desc get方式请求网络
- * @time 2019/1/3 - 2:39 PM
+ * @desc delete方式请求网络
+ * @time 2019-05-06 - 17:45
  */
-public class GetRequest<T> extends BaseRequest<T, GetRequest<T>> {
-    private static final long serialVersionUID = 1284051499511650147L;
-
-    public GetRequest(String url) {
+public class DeleteRequest<T> extends BaseRequest<T, DeleteRequest<T>> {
+    public DeleteRequest(String url) {
         super(url);
     }
 
-    //同步请求
     @Override
     public ResponseBody execute() {
         return null;
     }
 
-    //异步请求
     @Override
-    public void enqueue(final Callback<T> callback) {
+    public void enqueue(Callback<T> callback) {
         //当创建Observable流的时候，compose()会立即执行
         generateRequest()
                 .map(new ParseResponseFunc<T>(callback == null ? null : callback.getType()))//转换json数据
@@ -38,6 +34,6 @@ public class GetRequest<T> extends BaseRequest<T, GetRequest<T>> {
 
     @Override
     protected Observable<ResponseBody> generateRequest() {
-        return generateService().get(url, mParams.getCommonParams());
+        return generateService().delete(url, mParams.getCommonParams());
     }
 }

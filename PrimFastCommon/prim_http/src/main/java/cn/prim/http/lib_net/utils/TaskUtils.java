@@ -17,7 +17,7 @@ import io.reactivex.schedulers.Schedulers;
  * @desc 任务调度切换 主要是 子线程和主线程切换
  * @time 2019/1/3 - 3:56 PM
  */
-public class Task {
+public class TaskUtils {
     //网络请求在子线程中执行
     @NonNull
     public static <T> ObservableTransformer<T, T> taskIo_main() {

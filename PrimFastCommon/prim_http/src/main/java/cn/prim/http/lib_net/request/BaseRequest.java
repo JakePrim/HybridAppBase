@@ -8,7 +8,6 @@ import cn.prim.http.lib_net.model.HttpHeaders;
 import cn.prim.http.lib_net.model.HttpParams;
 import cn.prim.http.lib_net.utils.Utils;
 import io.reactivex.Observable;
-import io.reactivex.disposables.Disposable;
 import okhttp3.HttpUrl;
 import okhttp3.Interceptor;
 import okhttp3.OkHttpClient;
@@ -43,6 +42,7 @@ public abstract class BaseRequest<T, R extends BaseRequest> implements Serializa
 
     //当前请求网络的tag
     protected Object tag;
+
     //当前请求网络的唯一ID
     protected int id;
 
@@ -155,7 +155,7 @@ public abstract class BaseRequest<T, R extends BaseRequest> implements Serializa
      */
     @SuppressWarnings("unchecked")
     public R params(HttpParams params) {
-        Utils.checkNotNull(params, "params == null");
+        Utils.checkForceNotNull(params, "params == null");
         this.mParams.put(params);
         return (R) this;
     }
@@ -221,12 +221,39 @@ public abstract class BaseRequest<T, R extends BaseRequest> implements Serializa
         return (R) this;
     }
 
+    /**
+     * 添加网络拦截器
+     *
+     * @param interceptor
+     * @return
+     */
     @SuppressWarnings("unchecked")
     public R addNetworkInterceptor(Interceptor interceptor) {
+        if (interceptor == null) return (R) this;
         networkInterceptor = interceptor;
         return (R) this;
     }
 
+    /**
+     * 添加其他可一个或者多个拦截器
+     *
+     * @param interceptor
+     * @return
+     */
+    @SuppressWarnings("unchecked")
+    public R addInterceptor(Interceptor interceptor) {
+        if (interceptor == null) return (R) this;
+        interceptors.add(interceptor);
+        return (R) this;
+    }
+
+    /**
+     * 监听网络请求回调
+     * 可自定义回调接口
+     *
+     * @param callback
+     * @return
+     */
     @SuppressWarnings("unchecked")
     public R setCallback(Callback<T> callback) {
         this.callback = callback;
@@ -234,29 +261,43 @@ public abstract class BaseRequest<T, R extends BaseRequest> implements Serializa
     }
 
     public String getUrl() {
-        return url;
+        return baseUrl + url;
     }
 
     public Object getTag() {
         return tag;
     }
 
+    public int getId() {
+        return id;
+    }
+
     /**
-     * 同步请求执行 阻塞方法 同步调用
+     * 同步请求执行 阻塞方法 同步调用 在主线程中执行 一般不用此方法
      *
-     * @return
+     * @return ResponseBody
      */
     public abstract ResponseBody execute();
 
     /**
-     * 异步调用 非阻塞方法 回调会在子线程中执行
+     * 异步调用 非阻塞方法 请求网络在子线程中执行，请求的回调在主线程中执行
      *
-     * @param callback
+     * @param callback {@link Callback} 可自定义callback 回调，如：加载中弹窗等
      */
     public abstract void enqueue(Callback<T> callback);
 
+    /**
+     * 生成网络请求
+     *
+     * @return Observable 通过RxJava来处理网络请求
+     */
     protected abstract Observable<ResponseBody> generateRequest();
 
+    /**
+     * 生成ApiService
+     *
+     * @return {@link ApiService}
+     */
     protected ApiService generateService() {
         OkHttpClient.Builder okBuilder = generateOkHttpClient();
         Retrofit.Builder retrofitBuilder = generateRetrofit();
@@ -267,7 +308,11 @@ public abstract class BaseRequest<T, R extends BaseRequest> implements Serializa
         return apiService;
     }
 
-
+    /**
+     * 生成okHttp，将配置的参数：拦截器、超时设置进行设置
+     *
+     * @return OkHttpClient.Builder
+     */
     private OkHttpClient.Builder generateOkHttpClient() {
         OkHttpClient.Builder okHttpBuilder = PrimHttp.getInstance().getOkHttpBuilder();
         if (null == okHttpBuilder) {
@@ -296,6 +341,11 @@ public abstract class BaseRequest<T, R extends BaseRequest> implements Serializa
         return okHttpBuilder;
     }
 
+    /**
+     * 生成Retrofit，设置baseURL
+     *
+     * @return Retrofit.Builder
+     */
     private Retrofit.Builder generateRetrofit() {
         Retrofit.Builder retrofitBuilder = PrimHttp.getInstance().getRetrofitBuilder();
         if (!TextUtils.isEmpty(baseUrl)) {

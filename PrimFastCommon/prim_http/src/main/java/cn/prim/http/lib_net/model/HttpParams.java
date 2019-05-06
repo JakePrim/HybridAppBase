@@ -24,12 +24,12 @@ public class HttpParams implements Serializable {
     public static final MediaType MEDIA_TYPE_JSON = MediaType.parse("application/json;charset=utf-8");
     public static final MediaType MEDIA_TYPE_STREAM = MediaType.parse("application/octet-stream");
 
-    public Map<String, Object> commonParams;
+    private Map<String, Object> commonParams;
 
     /**
      * 文件的键值对参数
      */
-    public Map<String, List<FileWrapper>> fileParamsMap;
+    private Map<String, List<FileWrapper>> fileParamsMap;
 
     public HttpParams() {
         init();
@@ -45,13 +45,18 @@ public class HttpParams implements Serializable {
         put(key, file);
     }
 
-    public Map<String, Object> getParams() {
-        return commonParams;
-    }
-
     private void init() {
         commonParams = new LinkedHashMap<>();
         fileParamsMap = new LinkedHashMap<>();
+    }
+
+    /**
+     * 获取普通参数
+     *
+     * @return Map
+     */
+    public Map<String, Object> getCommonParams() {
+        return commonParams;
     }
 
     public void put(String key, Object value) {
