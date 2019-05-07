@@ -1,18 +1,17 @@
 package cn.prim.http.lib_net.request.subsciber;
 
 import cn.prim.http.lib_net.callback.Callback;
-import io.reactivex.disposables.Disposable;
 
 /**
  * @author prim
  * @version 1.0.0
- * @desc 订阅网络回调
+ * @desc 观察者Observer 观察网络对回调
  * @time 2019/1/3 - 7:38 PM
  */
-public class CallbackSubscriber<T> extends BaseSubscriber<T> {
+public class CallbackObserver<T> extends BaseObserver<T> {
     public Callback<T> callback;
 
-    public CallbackSubscriber(Callback<T> callback) {
+    public CallbackObserver(Callback<T> callback) {
         this.callback = callback;
     }
 

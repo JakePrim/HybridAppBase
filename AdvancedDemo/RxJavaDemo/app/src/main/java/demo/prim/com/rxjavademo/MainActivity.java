@@ -7,7 +7,9 @@ import java.util.concurrent.TimeUnit;
 
 import io.reactivex.Observable;
 import io.reactivex.Observer;
+import io.reactivex.Scheduler;
 import io.reactivex.disposables.Disposable;
+import io.reactivex.schedulers.Schedulers;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -15,7 +17,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Observable.interval(1, TimeUnit.SECONDS)
+        Observable.interval(1, TimeUnit.SECONDS, Schedulers.newThread())
                 .take(5)//限制 拦截产生事件的数量
                 .subscribe(new Observer<Long>() {
                     @Override
@@ -25,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
 
                     @Override
                     public void onNext(Long aLong) {
-                        System.out.println("aLong = [" + aLong + "]");
+                        System.out.println("aLong = [" + aLong + "]" + Thread.currentThread().getName());
                     }
 
                     @Override
@@ -38,5 +40,8 @@ public class MainActivity extends AppCompatActivity {
                         System.out.println("onComplete");
                     }
                 });
+
+        //map
+
     }
 }

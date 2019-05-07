@@ -51,6 +51,7 @@ public class ExampleUnitTest {
         Observable observable = Observable.create(new ObservableOnSubscribe() {
             @Override
             public void subscribe(ObservableEmitter emitter) {
+                //产生一个事件
                 emitter.onNext("123");
             }
         });
@@ -59,25 +60,24 @@ public class ExampleUnitTest {
         Observer observer = new Observer<String>() {
             @Override
             public void onSubscribe(Disposable d) {
-//                Log.e(TAG, "onSubscribe: ");
                 System.out.println("onSubscribe = [" + d + "]");
-                d.dispose();
+                d.dispose();//中断
             }
 
             @Override
             public void onNext(String o) {
-//                Log.e(TAG, "onNext: " + o);
-                System.out.println(o);
+                System.out.println("onNext:" + o);
             }
 
             @Override
             public void onError(Throwable e) {
-//                Log.e(TAG, "onError: ");
+                System.out.println("onError");
             }
 
             @Override
             public void onComplete() {
-//                Log.e(TAG, "onComplete: ");
+                //？？什么时候调用完成呢
+                System.out.println("onComplete");
             }
         };
 
@@ -91,13 +91,14 @@ public class ExampleUnitTest {
      */
     @Test
     public void testChainCreate() {
+        //被观察者
         Observable.create(new ObservableOnSubscribe<String>() {
             @Override
             public void subscribe(ObservableEmitter<String> emitter) throws Exception {
                 emitter.onNext("123456");
 
             }
-        }).subscribe(new Observer<String>() {
+        }).subscribe(new Observer<String>() {//观察者
             @Override
             public void onSubscribe(Disposable d) {
 
@@ -115,7 +116,7 @@ public class ExampleUnitTest {
 
             @Override
             public void onComplete() {
-
+                System.out.println("onComplete");
             }
         });
     }
@@ -132,7 +133,7 @@ public class ExampleUnitTest {
      */
     @Test
     public void simpleCreate() {
-        // just 两个参数  fromArray 多个参数
+        // just 两个参数  fromArray 多个参数 遍历文件 just 是fromArray的一个封装
         Observable.just("123232", "2323").subscribe(new Observer<String>() {
             @Override
             public void onSubscribe(Disposable d) {
@@ -151,10 +152,11 @@ public class ExampleUnitTest {
 
             @Override
             public void onComplete() {
-
+                System.out.println("onComplete");
             }
         });
 
+        //遍历数组 T...
         Observable.fromArray(new Integer[]{1, 2, 3, 4}).subscribe(new Observer<Integer>() {
             @Override
             public void onSubscribe(Disposable d) {
@@ -173,7 +175,7 @@ public class ExampleUnitTest {
 
             @Override
             public void onComplete() {
-
+                System.out.println("onComplete");
             }
         });
 
@@ -205,7 +207,8 @@ public class ExampleUnitTest {
 
 
     /**
-     * 背压
+     * 背压 ?? 什么时候会用到背压呢 背压用于并发处理
+     * 生产速度 与 消费速度的比值
      */
     @Test
     public void testFlowable() {
@@ -217,9 +220,11 @@ public class ExampleUnitTest {
                     emitter.onNext(i);
                 }
             }
-        }, BackpressureStrategy.BUFFER).subscribe(new Subscriber<Object>() {
+        }, BackpressureStrategy.BUFFER)
+                .subscribe(new Subscriber<Object>() {
             @Override
             public void onSubscribe(Subscription s) {
+                System.out.println("onComplete");
                 s.request(Integer.MAX_VALUE);//最大的处理能力 最大处理数
             }
 
@@ -231,12 +236,12 @@ public class ExampleUnitTest {
 
             @Override
             public void onError(Throwable t) {
-
+                System.out.println("onComplete");
             }
 
             @Override
             public void onComplete() {
-
+                System.out.println("onComplete");
             }
         });
     }
@@ -246,13 +251,12 @@ public class ExampleUnitTest {
      */
     @Test
     public void testChange() {
-        Observable.just("head.png", "bit.png").map(new Function<String, String>() {
+        Observable.just("head", "bit").map(new Function<String, String>() {
             @Override
-            public String apply(String s) throws Exception {
+            public String apply(String s) throws Exception {//对每一项数据进行 数据变换
                 // 进行网络请求
                 System.out.println("s = [" + s + "]");
-
-                return s;
+                return s+".png";
             }
         }).subscribe(new Observer<String>() {
             @Override
@@ -336,14 +340,14 @@ public class ExampleUnitTest {
             @Override
             public void accept(final GroupedObservable<String, Integer> stringIntegerGroupedObservable) throws Exception {
                 //stringIntegerGroupedObservable 是被观察者
-                    stringIntegerGroupedObservable.subscribe(new Consumer<Integer>() {// 通过观察者拿到数据
-                        @Override
-                        public void accept(Integer integer) throws Exception {
-                            String key = stringIntegerGroupedObservable.getKey();
-                            System.out.println("key--"+key+" | "+integer);
+                stringIntegerGroupedObservable.subscribe(new Consumer<Integer>() {// 通过观察者拿到数据
+                    @Override
+                    public void accept(Integer integer) throws Exception {
+                        String key = stringIntegerGroupedObservable.getKey();
+                        System.out.println("key--" + key + " | " + integer);
 
-                        }
-                    });
+                    }
+                });
             }
         });
 
@@ -357,8 +361,8 @@ public class ExampleUnitTest {
      * 采取buffer等形式 将100000 条 分成 一小段执行
      */
     @Test
-    public void testBuffer(){
-        Observable.just(1,2,3,4,5,6).buffer(3).subscribe(new Observer<List<Integer>>() {
+    public void testBuffer() {
+        Observable.just(1, 2, 3, 4, 5, 6).buffer(3).subscribe(new Observer<List<Integer>>() {
             @Override
             public void onSubscribe(Disposable d) {
 
@@ -385,9 +389,10 @@ public class ExampleUnitTest {
      * 适合 上一个结果 作为 下一个参数
      */
     @Test
-    public void testScan(){
+    public void testScan() {
         // 10 个子文件 ---》 大文件
-        Observable.range(1,5).scan(new BiFunction<Integer, Integer, Integer>() {
+        Observable.range(1, 5)
+                .scan(new BiFunction<Integer, Integer, Integer>() {
             @Override
             public Integer apply(Integer integer, Integer integer2) throws Exception {
                 //
@@ -420,11 +425,11 @@ public class ExampleUnitTest {
 
 
     @Test
-    public void testFilter(){
-        Observable.just(1,2,3,4,5,6).filter(new Predicate<Integer>() {//过滤器
+    public void testFilter() {
+        Observable.just(1, 2, 3, 4, 5, 6).filter(new Predicate<Integer>() {//过滤器
             @Override
             public boolean test(Integer integer) throws Exception {// false 当前等事件不被处理  true 当前等事件处理
-                return integer>2;
+                return integer > 2;
             }
         }).subscribe(new Observer<Integer>() {
             @Override
@@ -453,36 +458,36 @@ public class ExampleUnitTest {
      * 定时器 心跳
      */
     @Test
-    public void testTake(){
+    public void testTake() {
         Observable.interval(1, TimeUnit.SECONDS)
                 .take(5)//限制 拦截产生事件的数量
                 .subscribe(new Observer<Long>() {
-            @Override
-            public void onSubscribe(Disposable d) {
-                System.out.println("d = [" + d + "]");
-            }
+                    @Override
+                    public void onSubscribe(Disposable d) {
+                        System.out.println("d = [" + d + "]");
+                    }
 
-            @Override
-            public void onNext(Long aLong) {
-                System.out.println("aLong = [" + aLong + "]");
-            }
+                    @Override
+                    public void onNext(Long aLong) {
+                        System.out.println("aLong = [" + aLong + "]");
+                    }
 
-            @Override
-            public void onError(Throwable e) {
+                    @Override
+                    public void onError(Throwable e) {
 
-            }
+                    }
 
-            @Override
-            public void onComplete() {
-                System.out.println("onComplete");
-            }
-        });
+                    @Override
+                    public void onComplete() {
+                        System.out.println("onComplete");
+                    }
+                });
     }
 
     //过滤重复的元素
     @Test
-    public void testDistinct(){
-        Observable.just(1,2,3,3,3,4,45,6,6).distinct().subscribe(new Observer<Integer>() {
+    public void testDistinct() {
+        Observable.just(1, 2, 3, 3, 3, 4, 45, 6, 6).distinct().subscribe(new Observer<Integer>() {
             @Override
             public void onSubscribe(Disposable d) {
 
@@ -509,8 +514,8 @@ public class ExampleUnitTest {
      * 获取指定的元素
      */
     @Test
-    public void testElementAt(){
-        Observable.just(1,2,3,4).elementAt(2).subscribe(new Consumer<Integer>() {
+    public void testElementAt() {
+        Observable.just(1, 2, 3, 4).elementAt(2).subscribe(new Consumer<Integer>() {
             @Override
             public void accept(Integer integer) throws Exception {
                 System.out.println("integer = [" + integer + "]");
@@ -524,8 +529,8 @@ public class ExampleUnitTest {
      * 判断事件中是否满足 得到一个结果
      */
     @Test
-    public void testAll(){
-        Observable.just(4,3,4,5).all(new Predicate<Integer>() {
+    public void testAll() {
+        Observable.just(4, 3, 4, 5).all(new Predicate<Integer>() {
             @Override
             public boolean test(Integer integer) throws Exception {
                 return integer > 2;//是否全部大于 2
@@ -542,8 +547,8 @@ public class ExampleUnitTest {
      * 判断事件是否包含
      */
     @Test
-    public void testContains(){
-        Observable.just("abc","a","er").contains("a").subscribe(new Consumer<Boolean>() {
+    public void testContains() {
+        Observable.just("abc", "a", "er").contains("a").subscribe(new Consumer<Boolean>() {
             @Override
             public void accept(Boolean aBoolean) throws Exception {
                 System.out.println("aBoolean = [" + aBoolean + "]");

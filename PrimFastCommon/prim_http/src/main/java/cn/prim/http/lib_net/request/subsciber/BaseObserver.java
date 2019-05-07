@@ -11,7 +11,7 @@ import io.reactivex.observers.DisposableSingleObserver;
  * @desc 订阅等基类
  * @time 2019/1/3 - 7:33 PM
  */
-public abstract class BaseSubscriber<T> extends DisposableObserver<T> {
+public abstract class BaseObserver<T> extends DisposableObserver<T> {
     @Override
     protected void onStart() {
     }

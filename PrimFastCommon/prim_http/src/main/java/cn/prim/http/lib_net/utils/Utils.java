@@ -10,7 +10,7 @@ import android.text.TextUtils;
  */
 public class Utils {
     /**
-     * 检查是否为空,强制不能为空
+     * 检查是否为空,强空判断
      */
     public static <T> T checkForceNotNull(T object, String message) {
         if (object == null) {
