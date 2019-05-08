@@ -339,7 +339,7 @@ public class ExampleUnitTest {
         }).subscribe(new Consumer<GroupedObservable<String, Integer>>() {
             @Override
             public void accept(final GroupedObservable<String, Integer> stringIntegerGroupedObservable) throws Exception {
-                //stringIntegerGroupedObservable 是被观察者
+                //stringIntegerGroupedObservable 是被观察者 需要通过观察者拿到数据
                 stringIntegerGroupedObservable.subscribe(new Consumer<Integer>() {// 通过观察者拿到数据
                     @Override
                     public void accept(Integer integer) throws Exception {

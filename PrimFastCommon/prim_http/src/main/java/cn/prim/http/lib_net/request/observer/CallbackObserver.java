@@ -1,4 +1,4 @@
-package cn.prim.http.lib_net.request.subsciber;
+package cn.prim.http.lib_net.request.observer;
 
 import cn.prim.http.lib_net.callback.Callback;
 

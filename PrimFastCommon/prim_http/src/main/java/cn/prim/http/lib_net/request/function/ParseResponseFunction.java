@@ -1,4 +1,4 @@
-package cn.prim.http.lib_net.request.func;
+package cn.prim.http.lib_net.request.function;
 
 import android.util.Log;
 import cn.prim.http.lib_net.model.Response;
@@ -12,7 +12,6 @@ import okhttp3.ResponseBody;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
-import java.io.IOException;
 import java.lang.reflect.ParameterizedType;
 import java.lang.reflect.Type;
 
@@ -24,10 +23,10 @@ import static android.content.ContentValues.TAG;
  * @desc 解析网络请求的返回结果
  * @time 2019/1/3 - 4:17 PM
  */
-public class ParseResponseFunc<T> implements Function<ResponseBody, T> {
+public class ParseResponseFunction<T> implements Function<ResponseBody, T> {
     private Type type;
 
-    public ParseResponseFunc(Type type) {
+    public ParseResponseFunction(Type type) {
         this.type = type;
     }
 

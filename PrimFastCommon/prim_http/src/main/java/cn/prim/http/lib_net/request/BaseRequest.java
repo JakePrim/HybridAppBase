@@ -40,24 +40,33 @@ public abstract class BaseRequest<T, R extends BaseRequest> implements Serializa
 
     protected PrimHttp primHttp;
 
-    //当前请求网络的tag
+    //当前请求网络的tag，可以作为某个请求的标签
     protected Object tag;
 
-    //当前请求网络的唯一ID
+    //当前请求网络的唯一ID，缓存数据时必须要传递
     protected int id;
 
+    //拦截器集合
     protected List<Interceptor> interceptors;
 
     protected Interceptor networkInterceptor;
 
+    //不需要序列化的字段
     protected transient ApiService apiService;
 
+    //不需要序列化的字段
     protected transient Callback<T> callback;
 
+    //是否需要缓存数据到数据库
+    protected boolean cache;
+
+    //链接超时
     private long connectTimeout;
 
+    //读取超时
     private long readTimeout;
 
+    //写入超时
     private long writeTimeout;
 
     public BaseRequest(String url) {
@@ -133,6 +142,12 @@ public abstract class BaseRequest<T, R extends BaseRequest> implements Serializa
     @SuppressWarnings("unchecked")
     public R id(int id) {
         this.id = id;
+        return (R) this;
+    }
+
+    @SuppressWarnings("unchecked")
+    public R cacheEnable(boolean enable) {
+        this.cache = enable;
         return (R) this;
     }
 
@@ -250,7 +265,7 @@ public abstract class BaseRequest<T, R extends BaseRequest> implements Serializa
     /**
      * 监听网络请求回调
      * 可自定义回调接口
-     *
+     * 设置回调
      * @param callback
      * @return
      */
@@ -285,6 +300,12 @@ public abstract class BaseRequest<T, R extends BaseRequest> implements Serializa
      * @param callback {@link Callback} 可自定义callback 回调，如：加载中弹窗等
      */
     public abstract void enqueue(Callback<T> callback);
+
+    /**
+     * 异步调用 非阻塞方法 请求网络在子线程中执行，请求的回调在主线程中执行
+     * 没有回调
+     */
+    public abstract void enqueue();
 
     /**
      * 生成网络请求
