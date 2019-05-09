@@ -93,6 +93,8 @@ PrimFastKotlin
 
 #### RxJava基础和RxJava实现原理
 
+- [x] [RxJava2.x 庖丁解牛 - 操作符使用详解与场景分析](https://jakeprim.cn/2019/05/09/rxjava-1/)
+
 ### Android View 部分
 
 #### View绘制的原理
