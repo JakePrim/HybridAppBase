@@ -15,7 +15,7 @@ PrimFastApp 完整的项目开发框架,框架内设计的技术面很广,同时
 
 ## PrimFast 介绍
 
-> PrimFastCommon 是一套快速开发app的框架,采用 MVP/MVVM + RxJava + Retrofit + OkHttp + kotlin/Java(混合) + 组件化/插件化 搭建的项目框架.
+> PrimFastCommon 是一套通用的快速开发app的框架,采用 Jetpack + RxJava + Retrofit + OkHttp + kotlin/Java(混合) + 组件化/插件化 搭建的Android项目开发框架.
 
 > PrimFastFlutter 是学习Flutter的一个完整的项目
 
@@ -25,7 +25,7 @@ PrimFastApp 完整的项目开发框架,框架内设计的技术面很广,同时
 
 > PrimFastRn 是学习RN开发的一个完整项目
 
-> PrimFastWeb 是学习移动Web开发的一个完整项目(项目采用Vue来实现)
+> PrimFastWeb 是学习移动Web开发的一个完整项目(项目准备采用Vue来实现)
 
 ## 进度
 
@@ -34,12 +34,21 @@ PrimFastApp 完整的项目开发框架,框架内设计的技术面很广,同时
 PrimFastCommon
 
 - 网络框架PrimHttp 完成度50%.
+  - 整体库配置搭建
 - 基础框架PrimBase 完成度10%.
 .......
 
 PrimFastFlutter
 
+[项目地址](https://github.com/JakePrim/prim_fultter_app)
+
 PrimFastKotlin
+
+PrimFastApplets
+
+PrimFastRn
+
+PrimFastWeb
 
 ### Android 高级进阶知识部分
 

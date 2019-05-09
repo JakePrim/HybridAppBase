@@ -1,35 +1,57 @@
 apply plugin: 'com.android.library'
 
+apply plugin: 'kotlin-android'
+
+apply plugin: 'kotlin-android-extensions'
+
 def config = rootProject.ext.androidConfig
 
 android {
     compileSdkVersion config.compileSdkVersion
+    //指定jdk版本
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+//    // 如果提示多个重复文件，加这属性
+//    packagingOptions {
+//        exclude 'META-INF/proguard/androidx-annotations.pro'
+//    }
 
     defaultConfig {
         minSdkVersion config.minSdkVersion
         targetSdkVersion config.targetSdkVersion
         versionCode config.versionCode
         versionName config.versionName
-        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
 
     buildTypes {
         release {
             minifyEnabled false
-            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
 }
 
 dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')
-    testImplementation rootProject.ext.dependencies["junit"]
-    implementation rootProject.ext.dependencies["appcompat-v7"]
-    androidTestImplementation 'com.android.support.test:runner:1.0.2'
-    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+    api rootProject.ext.dependencies["appcompat"]
+    api rootProject.ext.dependencies["constraint-layout"]
+    api rootProject.ext.dependencies["kotlin"]
+    api rootProject.ext.dependencies["core-ktx"]
+    api rootProject.ext.dependencies["recyclerview"]
+    api rootProject.ext.dependencies["design"]
+    api rootProject.ext.dependencies["support-v4"]
+    api rootProject.ext.dependencies["cardview"]
+    api rootProject.ext.dependencies["viewpager"]
     //通用的核心库
     api project(':prim_http')
     //字体图片库
     api 'com.joanzapata.iconify:android-iconify-ionicons:2.2.2'
     api 'com.joanzapata.iconify:android-iconify-fontawesome:2.2.2'
+    testImplementation rootProject.ext.dependencies["junit"]
+    androidTestImplementation rootProject.ext.dependencies["test_runner"]
+    androidTestImplementation rootProject.ext.dependencies["test_espresso"]
 }

@@ -17,7 +17,7 @@ android {
         versionCode config.versionCode
         versionName config.versionName
         multiDexEnabled true
-        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
 //        externalNativeBuild {
 //            cmake {
 //                cppFlags "armeabi-v7a", "armeabi"
@@ -45,12 +45,12 @@ android {
     buildTypes {
         release {
             minifyEnabled false
-            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
 
         debug {
             minifyEnabled false
-            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
 //    externalNativeBuild {
@@ -63,11 +63,8 @@ android {
 dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')
     testImplementation rootProject.ext.dependencies["junit"]
-    implementation rootProject.ext.dependencies["appcompat-v7"]
-    implementation rootProject.ext.dependencies["constraint-layout"]
-    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
-    androidTestImplementation 'com.android.support.test:runner:1.0.2'
-    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+    androidTestImplementation rootProject.ext.dependencies["test_runner"]
+    androidTestImplementation rootProject.ext.dependencies["test_espresso"]
     //implementation project(':openDefault-4.3.6')
     //项目的基础骨架库
     implementation project(':prim_base')

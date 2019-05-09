@@ -1,11 +1,11 @@
 package cn.prim.http.lib_net.utils;
 
-import android.support.annotation.NonNull;
 import cn.prim.http.lib_net.model.Response;
 import io.reactivex.Observable;
 import io.reactivex.ObservableSource;
 import io.reactivex.ObservableTransformer;
 import io.reactivex.android.schedulers.AndroidSchedulers;
+import io.reactivex.annotations.NonNull;
 import io.reactivex.disposables.Disposable;
 import io.reactivex.functions.Action;
 import io.reactivex.functions.Consumer;

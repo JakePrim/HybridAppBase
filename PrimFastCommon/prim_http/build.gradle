@@ -10,7 +10,7 @@ android {
         targetSdkVersion config.targetSdkVersion
         versionCode config.versionCode
         versionName config.versionName
-        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
 
     buildTypes {
@@ -24,8 +24,7 @@ android {
 
 dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')
-    testImplementation rootProject.ext.dependencies["junit"]
-    implementation rootProject.ext.dependencies["appcompat-v7"]
+//    implementation rootProject.ext.dependencies["appcompat"]
     implementation rootProject.ext.dependencies["retrofit"]
     implementation rootProject.ext.dependencies["converter"]
     implementation rootProject.ext.dependencies["okhttp"]
@@ -33,6 +32,7 @@ dependencies {
     implementation rootProject.ext.dependencies["RxAndroid"]
     implementation rootProject.ext.dependencies["adapter-rxjava2"]
     implementation rootProject.ext.dependencies["gson"]
+    testImplementation rootProject.ext.dependencies["junit"]
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
 }
