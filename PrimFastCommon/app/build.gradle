@@ -24,6 +24,10 @@ android {
 //            }
 //        }
     }
+    dexOptions {
+        preDexLibraries true
+        maxProcessCount 8
+    }
 
 //    signingConfigs {
 //        debug {
@@ -59,6 +63,14 @@ android {
 //        }
 //    }
 }
+
+//如果有用到kapt添加如下配置
+//kapt {
+//    useBuildCache = true
+//    javacOptions {
+//        option("-Xmaxerrs", 500)
+//    }
+//}
 
 dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')
