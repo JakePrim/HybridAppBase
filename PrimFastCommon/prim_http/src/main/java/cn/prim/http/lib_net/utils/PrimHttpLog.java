@@ -9,7 +9,7 @@ import android.util.Log;
  * @time 2019/1/3 - 4:13 PM
  */
 public class PrimHttpLog {
-    public static boolean IS_LOG = false;
+    public static boolean IS_LOG = true;
 
     private static final String TAG = "PrimHttpLog";
 

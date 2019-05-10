@@ -41,6 +41,7 @@ dependencies {
     api rootProject.ext.dependencies["constraint-layout"]
     api rootProject.ext.dependencies["kotlin"]
     api rootProject.ext.dependencies["core-ktx"]
+    api rootProject.ext.dependencies["kotlin_anko"]
     api rootProject.ext.dependencies["recyclerview"]
     api rootProject.ext.dependencies["design"]
     api rootProject.ext.dependencies["support-v4"]

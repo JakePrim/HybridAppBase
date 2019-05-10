@@ -2,9 +2,11 @@ package cn.prim.http.lib_net.request;
 
 import android.text.TextUtils;
 import cn.prim.http.lib_net.PrimHttp;
+import cn.prim.http.lib_net.cache.PrimCache;
 import cn.prim.http.lib_net.callback.Callback;
 import cn.prim.http.lib_net.client.retrofit.ApiService;
 import cn.prim.http.lib_net.model.HttpHeaders;
+import cn.prim.http.lib_net.model.HttpMethod;
 import cn.prim.http.lib_net.model.HttpParams;
 import cn.prim.http.lib_net.utils.Utils;
 import io.reactivex.Observable;
@@ -69,9 +71,20 @@ public abstract class BaseRequest<T, R extends BaseRequest> implements Serializa
     //写入超时
     private long writeTimeout;
 
+    //重试的次数
+    private int repeatCount;
+
+    //重试间隔的时长 ms
+    private long repeatDuration = 500;
+
+    protected PrimCache primCache;
+
     public BaseRequest(String url) {
         this.url = url;
+        //获取网络请求配置
         primHttp = PrimHttp.getInstance();
+
+        primCache = new PrimCache();
 
         baseUrl = primHttp.getBaseUrl();
 
@@ -151,18 +164,16 @@ public abstract class BaseRequest<T, R extends BaseRequest> implements Serializa
         return (R) this;
     }
 
-    /**
-     * 获取参数
-     */
-    public HttpParams getParams() {
-        return mParams;
+    @SuppressWarnings("unchecked")
+    public R repeatCount(int count) {
+        this.repeatCount = count;
+        return (R) this;
     }
 
-    /**
-     * 获取请求头
-     */
-    public HttpHeaders getHeaders() {
-        return mHeaders;
+    @SuppressWarnings("unchecked")
+    public R repeatDuration(int duration) {
+        this.repeatDuration = duration;
+        return (R) this;
     }
 
     /**
@@ -266,6 +277,7 @@ public abstract class BaseRequest<T, R extends BaseRequest> implements Serializa
      * 监听网络请求回调
      * 可自定义回调接口
      * 设置回调
+     *
      * @param callback
      * @return
      */
@@ -273,6 +285,28 @@ public abstract class BaseRequest<T, R extends BaseRequest> implements Serializa
     public R setCallback(Callback<T> callback) {
         this.callback = callback;
         return (R) this;
+    }
+
+    /**
+     * 获取参数
+     */
+    public HttpParams getParams() {
+        return mParams;
+    }
+
+    /**
+     * 获取请求头
+     */
+    public HttpHeaders getHeaders() {
+        return mHeaders;
+    }
+
+    public int getRepeatCount() {
+        return repeatCount;
+    }
+
+    public long getRepeatDuration() {
+        return repeatDuration;
     }
 
     public String getUrl() {
@@ -292,7 +326,7 @@ public abstract class BaseRequest<T, R extends BaseRequest> implements Serializa
      *
      * @return ResponseBody
      */
-    public abstract ResponseBody execute();
+    public abstract T execute();
 
     /**
      * 异步调用 非阻塞方法 请求网络在子线程中执行，请求的回调在主线程中执行
@@ -313,6 +347,13 @@ public abstract class BaseRequest<T, R extends BaseRequest> implements Serializa
      * @return Observable 通过RxJava来处理网络请求
      */
     protected abstract Observable<ResponseBody> generateRequest();
+
+    /**
+     * 当前的请求类型
+     *
+     * @return {@link HttpMethod}
+     */
+    public abstract HttpMethod getHttpMethod();
 
     /**
      * 生成ApiService

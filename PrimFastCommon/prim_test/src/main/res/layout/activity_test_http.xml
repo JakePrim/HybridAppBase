@@ -1,10 +1,61 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
+<LinearLayout
 		xmlns:android="http://schemas.android.com/apk/res/android"
 		xmlns:tools="http://schemas.android.com/tools"
-		xmlns:app="http://schemas.android.com/apk/res-auto"
 		android:layout_width="match_parent"
 		android:layout_height="match_parent"
-		tools:context=".TestHttpActivity">
+		android:orientation="vertical"
+		tools:context=".http.TestHttpActivity">
+	<TextView
+			android:layout_width="match_parent"
+			android:layout_height="50dp"
+			android:layout_gravity="center"
+			android:gravity="center"
+			android:background="@color/design_default_color_primary"
+			android:textColor="#fff"
+			android:textStyle="bold"
+			android:text="PrimHttp的使用方法"/>
+	
+	<TextView
+			android:id="@+id/tv_prim_http_base"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:padding="10dp"
+			android:background="#eeeeee"
+			android:textColor="#000"
+			android:text="PrimHttp基本功能\n1.GET POST PUT DELETE基本请求方法\n2.支持全局请求头、参数\n3.支持同步、异步请求\n4.支持多个接口并发请求\n5.支持自定义拦截器"/>
+	
+	<TextView android:id="@+id/tv_prim_http_json"
+	          android:layout_width="match_parent"
+	          android:layout_height="wrap_content"
+	          android:padding="10dp"
+	          android:background="#eeeeee"
+	          android:textColor="#000"
+	          android:text="Json解析\n1.支持自动解析json对象\n2.支持自定义解析类"/>
+	<TextView android:id="@+id/tv_prim_http_callback"
+	          android:layout_width="match_parent"
+	          android:layout_height="wrap_content"
+	          android:padding="10dp"
+	          android:background="#eeeeee"
+	          android:textColor="#000"
+	          android:text="Callback回调\n1.支持自定义回调\n2.支持自定义解析类"/>
+	<TextView android:layout_width="match_parent"
+	          android:layout_height="wrap_content"
+	          android:padding="10dp"
+	          android:background="#eeeeee"
+	          android:textColor="#000"
+	          android:text="缓存\n1.支持自动解析json对象\n2.支持自定义解析类"/>
+	<TextView android:layout_width="match_parent"
+	          android:layout_height="wrap_content"
+	          android:padding="10dp"
+	          android:background="#eeeeee"
+	          android:textColor="#000"
+	          android:text="文件上传\n1.支持自动解析json对象\n2.支持自定义解析类"/>
+	<TextView android:layout_width="match_parent"
+	          android:layout_height="wrap_content"
+	          android:padding="10dp"
+	          android:background="#eeeeee"
+	          android:textColor="#000"
+	          android:text="文件下载\n1.支持多文件下载\n2.支持下载进度和网速\n3.支持自定义目录和下载名称"/>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>

@@ -3,6 +3,7 @@ package cn.prim.http.lib_net.request.function;
 import android.util.Log;
 import cn.prim.http.lib_net.model.Response;
 import cn.prim.http.lib_net.model.SimpleResponse;
+import cn.prim.http.lib_net.utils.PrimHttpLog;
 import com.google.gson.Gson;
 import com.google.gson.JsonIOException;
 import com.google.gson.JsonSyntaxException;
@@ -30,8 +31,11 @@ public class ParseResponseFunction<T> implements Function<ResponseBody, T> {
         this.type = type;
     }
 
+    private static final String TAG = "ParseResponseFunction";
+
     @Override
     public T apply(ResponseBody input) throws Exception {
+        PrimHttpLog.e(TAG, input.string());
         if (type == null) {
             // 如果没有通过构造函数传进来，就自动解析父类泛型的真实类型（有局限性，继承后就无法解析到）
             Type genType = getClass().getGenericSuperclass();
