@@ -59,7 +59,6 @@ public class RepeatFunction implements Function<Observable<? extends Throwable>,
                 if (throwable instanceof ConnectException
                         || throwable instanceof SocketTimeoutException
                         || throwable instanceof TimeoutException
-                        || throwable instanceof NullPointerException
                         && (counts < count + 1)) {
                     return Observable.timer(duration, TimeUnit.MILLISECONDS);
                 }

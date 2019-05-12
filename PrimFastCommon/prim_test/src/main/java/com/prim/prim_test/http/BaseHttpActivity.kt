@@ -7,6 +7,7 @@ import cn.prim.http.lib_net.model.Response
 import com.prim.prim_test.R
 import com.prim.prim_test.http.modle.SearchModel
 import kotlinx.android.synthetic.main.activity_base_http.*
+import kotlinx.coroutines.CoroutineScope
 import org.jetbrains.anko.sdk27.coroutines.onClick
 import cn.prim.http.lib_net.callback.Callback as Callback1
 
@@ -16,12 +17,16 @@ class BaseHttpActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_base_http)
         tv_get_request.onClick {
-            PrimHttp.getInstance().get<SearchModel>("search")
-                .params("keywords", "海阔天空")
-                .headers("test", "head")
-                .tag(this)
-                .enqueue(Callback())
+            get()
         }
+    }
+
+    private fun CoroutineScope.get() {
+        PrimHttp.getInstance().get<SearchModel>("search")
+            .params("keywords", "海阔天空")
+            .headers("test", "head")
+            .tag(this)
+            .enqueue(Callback())
     }
 
     //注意声明内部类inner 标记才能访问外部类的成员
@@ -41,7 +46,5 @@ class BaseHttpActivity : AppCompatActivity() {
         override fun onFinish() {
             tv_state.text = "请求网络完成"
         }
-
-
     }
 }
