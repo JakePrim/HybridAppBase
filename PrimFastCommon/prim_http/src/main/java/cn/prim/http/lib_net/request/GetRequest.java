@@ -2,11 +2,8 @@ package cn.prim.http.lib_net.request;
 
 import cn.prim.http.lib_net.callback.Callback;
 import cn.prim.http.lib_net.model.HttpMethod;
-import cn.prim.http.lib_net.request.function.ParseResponseFunction;
-import cn.prim.http.lib_net.request.function.RepeatFunction;
-import cn.prim.http.lib_net.request.observer.CallbackObserver;
+import cn.prim.http.lib_net.request.base.NoBodyRequest;
 import cn.prim.http.lib_net.utils.PrimHttpLog;
-import cn.prim.http.lib_net.utils.SchedulersUtils;
 import io.reactivex.*;
 import okhttp3.ResponseBody;
 
@@ -34,7 +31,7 @@ public class GetRequest<T> extends NoBodyRequest<T, GetRequest<T>> {
     //异步请求 需要回调
     @Override
     public void enqueue(final Callback<T> callback) {
-        PrimHttpLog.e(TAG,"enqueue:"+getUrl());
+        PrimHttpLog.e(TAG, "enqueue:" + getUrl());
         generateEnqueue(callback);
     }
 

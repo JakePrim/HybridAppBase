@@ -1,4 +1,4 @@
-package cn.prim.http.lib_net.request;
+package cn.prim.http.lib_net.request.base;
 
 import android.text.TextUtils;
 import cn.prim.http.lib_net.PrimHttp;
@@ -8,6 +8,8 @@ import cn.prim.http.lib_net.client.retrofit.ApiService;
 import cn.prim.http.lib_net.model.HttpHeaders;
 import cn.prim.http.lib_net.model.HttpMethod;
 import cn.prim.http.lib_net.model.HttpParams;
+import cn.prim.http.lib_net.parse.GsonParse;
+import cn.prim.http.lib_net.parse.IParse;
 import cn.prim.http.lib_net.utils.Utils;
 import io.reactivex.Observable;
 import okhttp3.HttpUrl;
@@ -77,7 +79,10 @@ public abstract class BaseRequest<T, R extends BaseRequest> implements Serializa
     //重试间隔的时长 ms
     private long repeatDuration = 500;
 
+    //缓存控制类
     protected PrimCache primCache;
+
+    protected IParse<T> parse;
 
     public BaseRequest(String url) {
         this.url = url;
@@ -95,6 +100,10 @@ public abstract class BaseRequest<T, R extends BaseRequest> implements Serializa
         connectTimeout = primHttp.getConnectionTimeout();
         readTimeout = primHttp.getReadTimeout();
         writeTimeout = primHttp.getWriteTimeout();
+
+        if (parse == null) {
+            parse = new GsonParse<>();
+        }
 
         if (primHttp.getCommonHeaders() != null) {
             mHeaders = primHttp.getCommonHeaders();
@@ -214,18 +223,31 @@ public abstract class BaseRequest<T, R extends BaseRequest> implements Serializa
     }
 
     /**
-     * 添加全局的请求头
+     * 添加请求头
      */
+    @SuppressWarnings("unchecked")
     public R headers(HttpHeaders headers) {
         this.mHeaders.put(headers);
         return (R) this;
     }
 
     /**
-     * 添加全局公共参数
+     * 添加请求头
      */
+    @SuppressWarnings("unchecked")
     public R headers(String key, String value) {
         mHeaders.put(key, value);
+        return (R) this;
+    }
+
+    /**
+     * 添加Json解析器
+     *
+     * @param parse {@link IParse}
+     * @return
+     */
+    public R parse(IParse<T> parse) {
+        this.parse = parse;
         return (R) this;
     }
 

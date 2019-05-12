@@ -1,6 +1,7 @@
 package cn.prim.http.lib_net.request.observer;
 
 import cn.prim.http.lib_net.callback.Callback;
+import cn.prim.http.lib_net.model.Response;
 import cn.prim.http.lib_net.utils.PrimHttpLog;
 
 /**
@@ -23,13 +24,15 @@ public class CallbackObserver<T> extends BaseObserver<T> {
         if (callback != null) {
             callback.onStart();
         }
+        PrimHttpLog.e(TAG, "onStart");
     }
 
     @Override
-    public void onNext(T t) {
-        super.onNext(t);
+    public void onNext(T tResponse) {
+        super.onNext(tResponse);
+//        PrimHttpLog.e(TAG, "Response:" + tResponse.toString());
         if (callback != null) {
-            callback.onSuccess(t);
+//            callback.onSuccess(tResponse);
         }
     }
 
@@ -48,5 +51,6 @@ public class CallbackObserver<T> extends BaseObserver<T> {
         if (callback != null) {
             callback.onFinish();
         }
+        PrimHttpLog.e(TAG, "onComplete");
     }
 }

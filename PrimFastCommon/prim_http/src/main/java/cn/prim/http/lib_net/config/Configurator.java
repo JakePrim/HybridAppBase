@@ -2,6 +2,7 @@ package cn.prim.http.lib_net.config;
 
 import cn.prim.http.lib_net.model.HttpHeaders;
 import cn.prim.http.lib_net.model.HttpParams;
+import cn.prim.http.lib_net.parse.IParse;
 import cn.prim.http.lib_net.utils.PrimHttpLog;
 import cn.prim.http.lib_net.utils.Utils;
 import okhttp3.Interceptor;
@@ -174,6 +175,10 @@ public class Configurator {
         PARAMS.put(params);
         return this;
     }
+
+//    public Configurator parse(IParse parse){
+////
+////    }
 
     /**
      * 配置完成

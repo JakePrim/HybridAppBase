@@ -12,7 +12,6 @@ import java.util.List;
 public class SearchModel implements Serializable {
 
     public SearchResult result;
-    public String code;
 
     public class SearchResult {
         public List<Song> songs;
@@ -44,7 +43,6 @@ public class SearchModel implements Serializable {
     public String toString() {
         return "SearchModel{" +
                 "result=" + result +
-                ", code='" + code + '\'' +
                 '}';
     }
 }

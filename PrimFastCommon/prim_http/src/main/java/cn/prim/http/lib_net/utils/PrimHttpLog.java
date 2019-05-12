@@ -33,7 +33,7 @@ public class PrimHttpLog {
 
     public static void d(String tag, String msg) {
         if (IS_LOG) {
-            Log.e(TAG + ":" + tag, "e: " + msg);
+            Log.d(TAG + ":" + tag, "e: " + msg);
         }
     }
 }

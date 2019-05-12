@@ -8,6 +8,8 @@ import java.lang.reflect.Type;
  * @desc
  * @time 2019/1/3 - 4:43 PM
  */
-public interface Converter {
+public interface Converter<T> {
     Type getType();
+
+    Type getRawType();
 }

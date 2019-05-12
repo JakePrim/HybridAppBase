@@ -1,4 +1,4 @@
-package cn.prim.http.lib_net.request;
+package cn.prim.http.lib_net.request.base;
 
 /**
  * @author prim

@@ -14,5 +14,6 @@ public enum ConfigKeys {
     PARAMS,
     CONNECT_TIME_OUT,
     WRITE_TIME_OUT,
-    READ_TIME_OUT
+    READ_TIME_OUT,
+    PARSE,
 }

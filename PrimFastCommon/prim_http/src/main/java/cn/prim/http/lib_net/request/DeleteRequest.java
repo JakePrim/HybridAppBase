@@ -2,9 +2,7 @@ package cn.prim.http.lib_net.request;
 
 import cn.prim.http.lib_net.callback.Callback;
 import cn.prim.http.lib_net.model.HttpMethod;
-import cn.prim.http.lib_net.request.function.ParseResponseFunction;
-import cn.prim.http.lib_net.request.observer.CallbackObserver;
-import cn.prim.http.lib_net.utils.SchedulersUtils;
+import cn.prim.http.lib_net.request.base.BodyRequest;
 import io.reactivex.Observable;
 import okhttp3.ResponseBody;
 
