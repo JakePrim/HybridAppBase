@@ -11,6 +11,7 @@ import io.reactivex.functions.Function;
 import java.net.ConnectException;
 import java.net.SocketException;
 import java.net.SocketTimeoutException;
+import java.net.UnknownHostException;
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.TimeoutException;
 
@@ -44,7 +45,6 @@ public class RepeatFunction implements Function<Observable<? extends Throwable>,
         return observable.zipWith(Observable.range(1, count + 1), new BiFunction<Throwable, Integer, RepeatWarrp>() {
             @Override
             public RepeatWarrp apply(@NonNull Throwable throwable, @NonNull Integer integer) throws Exception {// 拿到请求次数和异常
-                PrimHttpLog.e(TAG, "apply:" + integer + " throwable:" + throwable.getMessage());
                 return new RepeatWarrp(integer, throwable);
             }
         }).flatMap(new Function<RepeatWarrp, ObservableSource<?>>() {//flatMap 拿到上一个发射的结果 进行处理
@@ -55,10 +55,11 @@ public class RepeatFunction implements Function<Observable<? extends Throwable>,
                 if (counts > 1) {
                     PrimHttpLog.d(TAG, "重试的次数:" + repeatWarrp.count);
                 }
-                PrimHttpLog.e(TAG, "throwable:" + throwable.getMessage());
+                PrimHttpLog.e(TAG, "throwable:" + throwable);
                 if (throwable instanceof ConnectException
                         || throwable instanceof SocketTimeoutException
                         || throwable instanceof TimeoutException
+                        || throwable instanceof UnknownHostException
                         && (counts < count + 1)) {
                     return Observable.timer(duration, TimeUnit.MILLISECONDS);
                 }

@@ -23,8 +23,10 @@ class BaseHttpActivity : AppCompatActivity() {
 
     private fun CoroutineScope.get() {
         PrimHttp.getInstance().get<SearchModel>("search")
-            .params("keywords", "海阔天空")
-            .headers("test", "head")
+            .params("keywords", "海阔天空")//请求参数
+            .headers("test", "head")//请求头
+            .repeatCount(3)//请求失败后重试的次数
+            .repeatDuration(500)//请求失败后
             .tag(this)
             .enqueue(Callback())
     }
