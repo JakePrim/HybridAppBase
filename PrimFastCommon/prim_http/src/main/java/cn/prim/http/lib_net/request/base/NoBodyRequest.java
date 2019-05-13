@@ -48,14 +48,14 @@ public abstract class NoBodyRequest<T, R extends NoBodyRequest> extends BaseRequ
                     .map(new ParseResponseFunction(callback == null ? null : callback.getType(), parse))//转换json数据
                     .compose(SchedulersUtils.taskIo_main())//子线程请求网络 主线程回调
                     .retryWhen(new RepeatFunction(getRepeatCount(), getRepeatDuration()))//网络请求失败 重试的判断
-                    .subscribeWith(new CallbackObserver<>(callback.getCallBack()));// 订阅观察者 CallbackObserver 观察者后续添加缓存 重试等
+                    .subscribeWith(new CallbackObserver<>(callback != null ? callback.getCallBack() : null));// 订阅观察者 CallbackObserver 观察者后续添加缓存 重试等
         } else {//如果没有开启缓存 则直接请求网络
             //当创建Observable流的时候，compose()会立即执行
             generateRequest()
                     .map(new ParseResponseFunction(callback == null ? null : callback.getType(), parse))//转换json数据
                     .compose(SchedulersUtils.taskIo_main())//子线程请求网络 主线程回调
                     .retryWhen(new RepeatFunction(getRepeatCount(), getRepeatDuration()))//网络请求失败 重试的判断
-                    .subscribeWith(new CallbackObserver<>(callback.getCallBack()));// 订阅观察者 CallbackObserver 观察者后续添加缓存 重试等
+                    .subscribeWith(new CallbackObserver<>(callback != null ? callback.getCallBack() : null));// 订阅观察者 CallbackObserver 观察者后续添加缓存 重试等
         }
     }
 
