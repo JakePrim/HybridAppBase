@@ -4,6 +4,9 @@ apply plugin: 'kotlin-android'
 
 apply plugin: 'kotlin-android-extensions'
 
+//kotlin 注解
+apply plugin: 'kotlin-kapt'
+
 def config = rootProject.ext.androidConfig
 
 android {

@@ -1,7 +1,6 @@
 package cn.prim.http.lib_net.request.observer;
 
 import cn.prim.http.lib_net.callback.Callback;
-import cn.prim.http.lib_net.model.Response;
 import cn.prim.http.lib_net.utils.PrimHttpLog;
 
 /**
@@ -49,7 +48,7 @@ public class CallbackObserver<T> extends BaseObserver<T> {
     public void onComplete() {
         super.onComplete();
         if (callback != null) {
-            callback.onFinish();
+            callback.onComplete();
         }
         PrimHttpLog.e(TAG, "onComplete");
     }

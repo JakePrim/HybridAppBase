@@ -45,7 +45,7 @@ class BaseHttpActivity : AppCompatActivity() {
             tv_state.text = "请求网络失败"
         }
 
-        override fun onFinish() {
+        override fun onComplete() {
             tv_state.text = "请求网络完成"
         }
     }

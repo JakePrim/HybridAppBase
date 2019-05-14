@@ -10,6 +10,4 @@ import java.lang.reflect.Type;
  */
 public interface Converter<T> {
     Type getType();
-
-    Type getRawType();
 }

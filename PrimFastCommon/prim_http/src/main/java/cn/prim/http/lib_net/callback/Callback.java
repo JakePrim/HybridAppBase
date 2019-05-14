@@ -22,14 +22,13 @@ public abstract class Callback<T> implements Converter<T> {
 
     public abstract void onError();
 
-    public abstract void onFinish();
+    public abstract void onComplete();
 
     @Override
     public Type getType() {
         return Utils.findNeedClass(getClass());
     }
 
-    @Override
     public Type getRawType() {
         return Utils.findRawType(getClass());
     }
