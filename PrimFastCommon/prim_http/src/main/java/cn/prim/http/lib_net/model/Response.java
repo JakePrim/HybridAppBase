@@ -47,19 +47,4 @@ public class Response<T> implements Serializable {
                 ", data=" + data +
                 '}';
     }
-
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        Response<?> response = (Response<?>) o;
-        return code == response.code &&
-                Objects.equals(msg, response.msg) &&
-                Objects.equals(data, response.data);
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(code, msg, data);
-    }
 }

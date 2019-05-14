@@ -22,20 +22,16 @@ public class GetRequest<T> extends NoBodyRequest<T, GetRequest<T>> {
 
     private static final String TAG = "GetRequest";
 
-    //同步请求
     @Override
     public T execute() {
         return generateExecute();
     }
 
-    //异步请求 需要回调
     @Override
     public void enqueue(final Callback<T> callback) {
-        PrimHttpLog.e(TAG, "enqueue:" + getUrl());
         generateEnqueue(callback);
     }
 
-    //不需要回调
     @Override
     public void enqueue() {
         generateEnqueue(callback);

@@ -62,22 +62,22 @@ public abstract class BaseRequest<T, R extends BaseRequest> implements Serializa
     protected transient Callback<T> callback;
 
     //是否需要缓存数据到数据库
-    protected boolean cache;
+    protected boolean cache = false;
 
     //链接超时
-    private long connectTimeout;
+    protected long connectTimeout;
 
     //读取超时
-    private long readTimeout;
+    protected long readTimeout;
 
     //写入超时
-    private long writeTimeout;
+    protected long writeTimeout;
 
     //重试的次数
-    private int repeatCount;
+    protected int repeatCount;
 
     //重试间隔的时长 ms
-    private long repeatDuration = 500;
+    protected long repeatDuration = 500;
 
     //缓存控制类
     protected PrimCache primCache;
@@ -167,18 +167,33 @@ public abstract class BaseRequest<T, R extends BaseRequest> implements Serializa
         return (R) this;
     }
 
+    /**
+     * 是否开启缓存 默认缓存处于关闭状态
+     **/
     @SuppressWarnings("unchecked")
     public R cacheEnable(boolean enable) {
         this.cache = enable;
         return (R) this;
     }
 
+    /**
+     * 网络请求错误后可进行重试
+     *
+     * @param count 设置重试的次数
+     * @return
+     */
     @SuppressWarnings("unchecked")
     public R repeatCount(int count) {
         this.repeatCount = count;
         return (R) this;
     }
 
+    /**
+     * 网络请求错误后 重试后的间隔
+     *
+     * @param duration
+     * @return
+     */
     @SuppressWarnings("unchecked")
     public R repeatDuration(int duration) {
         this.repeatDuration = duration;
