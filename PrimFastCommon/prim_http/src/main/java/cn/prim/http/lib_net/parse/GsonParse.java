@@ -1,19 +1,18 @@
 package cn.prim.http.lib_net.parse;
 
-import android.text.TextUtils;
 import cn.prim.http.lib_net.model.Response;
-import cn.prim.http.lib_net.utils.Utils;
+import cn.prim.http.lib_net.model.SimpleResponse;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
+import com.google.gson.stream.JsonReader;
 import okhttp3.ResponseBody;
+import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
-
 import java.io.IOException;
 import java.lang.reflect.Modifier;
 import java.lang.reflect.ParameterizedType;
 import java.lang.reflect.Type;
-import java.util.List;
 
 /**
  * @author prim
@@ -24,6 +23,8 @@ import java.util.List;
 public class GsonParse<T> implements IParse<T> {
     private Gson gson;
 
+    private static final String TAG = "GsonParse";
+
     public GsonParse() {
         gson = new GsonBuilder().excludeFieldsWithModifiers(Modifier.FINAL, Modifier.TRANSIENT, Modifier.STATIC)
                 .serializeNulls()
@@ -31,95 +32,83 @@ public class GsonParse<T> implements IParse<T> {
     }
 
     @Override
-    public Response<T> parseResponse(ResponseBody responseBody, Type type) {
-        Response<T> response = new Response<>();
-        response.setCode(-1);
-        if (type instanceof ParameterizedType) {
-            Class<T> cls = (Class<T>) ((ParameterizedType) type).getRawType();
-            if (Response.class.isAssignableFrom(cls)) {
-                final Type[] params = ((ParameterizedType) type).getActualTypeArguments();
-                final Class clazz = Utils.getClass(params[0], 0);
-                final Class rawType = Utils.getClass(type, 0);
-                try {
-                    String json = responseBody.string();
-                    //增加是List<String>判断错误的问题
-                    if (!List.class.isAssignableFrom(rawType) && clazz.equals(String.class)) {
-                        response.setData((T) json);
-                        response.setCode(0);
-                    } else {
-                        Response result = gson.fromJson(json, type);
-                        if (result != null) {
-                            response = result;
-                        } else {
-                            response.setMsg("json is null");
-                        }
-                    }
-                } catch (Exception e) {
-                    e.printStackTrace();
-                    response.setMsg(e.getMessage());
-                } finally {
-                    responseBody.close();
-                }
-            } else {
-                response.setMsg("ApiResult.class.isAssignableFrom(cls) err!!");
-            }
-        } else {
-            try {
-                final String json = responseBody.string();
-                final Class<T> clazz = Utils.getClass(type, 0);
-                if (clazz.equals(String.class)) {
-                    final Response result = parseApiResult(json, response);
-                    if (result != null) {
-                        response = result;
-                        response.setData((T) json);
-                    } else {
-                        response.setMsg("json is null");
-                    }
-                } else {
-                    final Response result = parseApiResult(json, response);
-                    if (result != null) {
-                        response = result;
-                        if (response.getData() != null) {
-                            T data = gson.fromJson(response.getData().toString(), clazz);
-                            response.setData(data);
-                        } else {
-                            response.setMsg("ApiResult's data is null");
-                        }
-                    } else {
-                        response.setMsg("json is null");
-                    }
-                }
-            } catch (JSONException e) {
-                e.printStackTrace();
-                response.setMsg(e.getMessage());
-            } catch (IOException e) {
-                e.printStackTrace();
-                response.setMsg(e.getMessage());
-            } finally {
-                responseBody.close();
-            }
+    public T parseResponse(ResponseBody responseBody, Type type) {
+        if (responseBody == null) return null;
+        if (type == null) {
+            // 如果没有通过构造函数传进来，就自动解析父类泛型的真实类型（有局限性，继承后就无法解析到）
+            Type genType = getClass().getGenericSuperclass();
+            type = ((ParameterizedType) genType).getActualTypeArguments()[0];
         }
-        return response;
+        if (type instanceof ParameterizedType) {//嵌套多个泛型
+            return parseParameterizedType(responseBody, (ParameterizedType) type);
+        } else if (type instanceof Class) {//一个泛型
+            return parseClass(responseBody, (Class<?>) type);
+        } else {//其他情况的处理
+            return parseType(responseBody, type);
+        }
     }
 
-    @Override
-    public T parse(ResponseBody responseBody, Type type) {
+    private T parseType(ResponseBody responseBody, Type type) {
+        if (type == null) {
+            return null;
+        }
+        try {
+            JsonReader jsonReader = new JsonReader(responseBody.charStream());
+            return (T) gson.fromJson(jsonReader, type);
+        } catch (Exception e) {
+            e.printStackTrace();
+        } finally {
+            responseBody.close();
+        }
         return null;
     }
 
-    private Response parseApiResult(String json, Response apiResult) throws JSONException {
-        if (TextUtils.isEmpty(json))
+    private T parseClass(ResponseBody responseBody, Class<?> type) {
+        if (type == null) {
             return null;
-        JSONObject jsonObject = new JSONObject(json);
-        if (jsonObject.has("code")) {
-            apiResult.setCode(jsonObject.getInt("code"));
         }
-        if (jsonObject.has("data")) {
-            apiResult.setData(jsonObject.getString("data"));
+        try {
+            JsonReader jsonReader = new JsonReader(responseBody.charStream());
+            if (type == String.class) {
+                return (T) responseBody.string();
+            } else if (type == JSONObject.class) {
+                return (T) new JSONObject(responseBody.string());
+            } else if (type == JSONArray.class) {
+                return (T) new JSONArray(responseBody.string());
+            } else {
+                return (T) gson.fromJson(jsonReader, type);
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        } catch (JSONException e) {
+            e.printStackTrace();
+        } finally {
+            responseBody.close();
         }
-        if (jsonObject.has("msg")) {
-            apiResult.setMsg(jsonObject.getString("msg"));
+        return null;
+    }
+
+    private T parseParameterizedType(ResponseBody responseBody, ParameterizedType type) {
+        if (type == null) return null;
+        JsonReader jsonReader = new JsonReader(responseBody.charStream());
+        //获取泛型的实际类型
+        Type rawType = type.getRawType();
+        //获取泛型的参数<Response<Bean>> Bean 就是参数
+        Type typeArgument = type.getActualTypeArguments()[0];
+        if (rawType != Response.class) {//返回是<Bean<bean>>,而不是本库标准的嵌套类型比如<Response<Bean>>
+            T result = gson.fromJson(jsonReader, type);
+            responseBody.close();
+            return result;
+        } else {//本库标准的嵌套类型比如<Response<Bean>>
+            if (typeArgument == Void.class) {//<Response<Void>>
+                SimpleResponse response = gson.fromJson(jsonReader, SimpleResponse.class);
+                responseBody.close();
+                return (T) response.toResponse();
+            } else {
+                Response response = gson.fromJson(jsonReader, type);
+                responseBody.close();
+                return (T) response;
+            }
         }
-        return apiResult;
     }
 }

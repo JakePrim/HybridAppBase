@@ -23,22 +23,19 @@ public class CallbackObserver<T> extends BaseObserver<T> {
         if (callback != null) {
             callback.onStart();
         }
-        PrimHttpLog.e(TAG, "onStart");
     }
 
     @Override
     public void onNext(T tResponse) {
         super.onNext(tResponse);
-//        PrimHttpLog.e(TAG, "Response:" + tResponse.toString());
         if (callback != null) {
-//            callback.onSuccess(tResponse);
+            callback.onSuccess(tResponse);
         }
     }
 
     @Override
     public void onError(Throwable e) {
         super.onError(e);
-        PrimHttpLog.e(TAG, "onError:" + e);
         if (callback != null) {
             callback.onError();
         }
@@ -50,6 +47,5 @@ public class CallbackObserver<T> extends BaseObserver<T> {
         if (callback != null) {
             callback.onComplete();
         }
-        PrimHttpLog.e(TAG, "onComplete");
     }
 }

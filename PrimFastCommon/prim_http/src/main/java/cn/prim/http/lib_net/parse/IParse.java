@@ -14,18 +14,10 @@ import java.lang.reflect.Type;
 public interface IParse<T> {
 
     /**
-     * 返回装饰好的{@link Response}
+     * 返回传递的类型
      * @param responseBody 网络请求返回的ResponseBody
      * @param type 解析的类型
      * @return Response
      */
-    Response<T> parseResponse(ResponseBody responseBody, Type type);
-
-    /**
-     * 返回传递的类型 不进行装饰
-     * @param responseBody 网络请求返回的ResponseBody
-     * @param type 解析的类型
-     * @return T
-     */
-    T parse(ResponseBody responseBody, Type type);
+    T parseResponse(ResponseBody responseBody, Type type);
 }

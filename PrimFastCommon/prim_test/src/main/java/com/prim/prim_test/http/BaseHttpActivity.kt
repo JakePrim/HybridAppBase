@@ -46,7 +46,7 @@ class BaseHttpActivity : AppCompatActivity() {
         }
 
         override fun onComplete() {
-            tv_state.text = "请求网络完成"
+//            tv_state.text = "请求网络完成"
         }
     }
 }

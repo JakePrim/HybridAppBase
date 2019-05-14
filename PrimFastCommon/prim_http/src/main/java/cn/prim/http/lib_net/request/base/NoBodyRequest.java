@@ -31,28 +31,22 @@ public abstract class NoBodyRequest<T, R extends NoBodyRequest> extends BaseRequ
      *
      * @param callback
      */
+    @SuppressLint("CheckResult")
     protected void generateEnqueue(Callback<T> callback) {
         //先查询看是否缓存了数据
-        generateEnqueue(new CallBackProxy<Response<T>, T>(callback) {
-
-        });
-    }
-
-    @SuppressLint("CheckResult")
-    private void generateEnqueue(CallBackProxy<? extends Response<T>, T> callback) {
         if (cache) {//如果开启了缓存 则先查找是否有缓存数据
             Observable.concat(primCache.getCache(), generateRequest())//先走缓存 如果缓存不存在，在请求网络，如果缓存存在则不请求网络
-                    .map(new ParseResponseFunction(callback.getCallBack().getRawType(), parse))//转换json数据
-                    .compose(SchedulersUtils.taskIo_main())//子线程请求网络 主线程回调
+                    .map(new ParseResponseFunction(callback.getType(), parse))//转换json数据
                     .retryWhen(new RepeatFunction(getRepeatCount(), getRepeatDuration()))//网络请求失败 重试的判断
-                    .subscribeWith(new CallbackObserver<>(callback.getCallBack()));// 订阅观察者 CallbackObserver 观察者后续添加缓存 重试等
+                    .compose(SchedulersUtils.taskIo_main())//子线程请求网络 主线程回调
+                    .subscribeWith(new CallbackObserver<>(callback));// 订阅观察者 CallbackObserver 观察者后续添加缓存 重试等
         } else {//如果没有开启缓存 则直接请求网络
             //当创建Observable流的时候，compose()会立即执行
             generateRequest()
-                    .map(new ParseResponseFunction(callback.getCallBack().getRawType(), parse))//转换json数据
-                    .compose(SchedulersUtils.taskIo_main())//子线程请求网络 主线程回调
+                    .map(new ParseResponseFunction(callback.getRawType(), parse))//转换json数据
                     .retryWhen(new RepeatFunction(getRepeatCount(), getRepeatDuration()))//网络请求失败 重试的判断
-                    .subscribeWith(new CallbackObserver<>(callback.getCallBack()));// 订阅观察者 CallbackObserver 观察者后续添加缓存 重试等
+                    .compose(SchedulersUtils.taskIo_main())//子线程请求网络 主线程回调
+                    .subscribe(new CallbackObserver<>(callback));// 订阅观察者 CallbackObserver 观察者后续添加缓存 重试等
         }
     }
 

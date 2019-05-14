@@ -1,5 +1,7 @@
 package com.prim.prim_test.http.modle;
 
+import cn.prim.http.lib_net.model.Response;
+
 import java.io.Serializable;
 import java.util.List;
 
@@ -13,36 +15,13 @@ public class SearchModel implements Serializable {
 
     public SearchResult result;
 
-    public class SearchResult {
-        public List<Song> songs;
-
-        @Override
-        public String toString() {
-            return "SearchResult{" +
-                    "songs=" + songs +
-                    '}';
-        }
-    }
-
-    public class Song {
-        public String id;
-        public String name;
-        public String status;
-
-        @Override
-        public String toString() {
-            return "Song{" +
-                    "id='" + id + '\'' +
-                    ", name='" + name + '\'' +
-                    ", status='" + status + '\'' +
-                    '}';
-        }
-    }
+    public int code;
 
     @Override
     public String toString() {
         return "SearchModel{" +
                 "result=" + result +
+                ", code=" + code +
                 '}';
     }
 }
