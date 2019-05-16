@@ -1,4 +1,4 @@
-package ClassAndNew
+package function
 
 class Childs: Parent() {
 }

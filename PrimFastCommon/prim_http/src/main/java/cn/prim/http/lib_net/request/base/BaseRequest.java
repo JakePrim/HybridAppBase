@@ -140,6 +140,11 @@ public abstract class BaseRequest<T, R extends BaseRequest> implements Serializa
         }
     }
 
+    /**
+     * 支持动态切换 base Url
+     * @param baseUrl url
+     * @return
+     */
     @SuppressWarnings("unchecked")
     public R baseUrl(String baseUrl) {
         this.baseUrl = baseUrl;
@@ -446,6 +451,7 @@ public abstract class BaseRequest<T, R extends BaseRequest> implements Serializa
      * @return Retrofit.Builder
      */
     private Retrofit.Builder generateRetrofit() {
+        //TODO 每次都要进行初始化 需要优化
         Retrofit.Builder retrofitBuilder = PrimHttp.getInstance().getRetrofitBuilder();
         if (!TextUtils.isEmpty(baseUrl)) {
             retrofitBuilder.baseUrl(baseUrl);

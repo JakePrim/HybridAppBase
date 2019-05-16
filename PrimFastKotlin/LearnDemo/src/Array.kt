@@ -20,7 +20,8 @@ fun main(args: Array<String>) {
 //    for (i in arrayOfChar) {
 //        print(" $i ")
 //    }
-    //forEach 遍历数组
+    //forEach 遍历数组 需要继续往下运行 通过标签中断迭代 ForEach@
+
     arrayOfChar.forEach ForEach@{
         if (it == 'c') return@ForEach
         println(it)

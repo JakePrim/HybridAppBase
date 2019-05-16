@@ -12,7 +12,7 @@ import java.util.Map;
 /**
  * @author prim
  * @version 1.0.0
- * @desc 通用的API接口
+ * @desc 通用的API接口，不用再去写其他的API接口
  * 1.基础API，减少API冗余
  * 2.支持所有类型的方式访问网络
  * @time 2019/1/2 - 5:29 PM
