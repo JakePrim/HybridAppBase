@@ -2,20 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="385233cd-8711-4802-8242-d865e8297117" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Calc.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Complex.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/function/T1.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/news/Diff.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/news/InputDevice.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/news/Manager.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/news/Person.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/news/PersonJava.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Delegates.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Extends.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/dataclass/Country.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/news/StaticClass.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/overiloads/overloads.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Array.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/Array.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Test.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/TestClass.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/function/Childs.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/function/Childs.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/function/Parent.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/function/Parent.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LearnDemo/META-INF/LearnDemo.kotlin_module" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LearnDemo/META-INF/LearnDemo.kotlin_module" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LearnDemo/news/D.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LearnDemo/news/D.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LearnDemo/news/DiffKt.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LearnDemo/news/DiffKt.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LearnDemo/news/Doctor.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LearnDemo/news/Doctor.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LearnDemo/news/MaNong.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LearnDemo/news/MaNong.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LearnDemo/news/PersonJava.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LearnDemo/news/PersonJava.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LearnDemo/news/PersonKt.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LearnDemo/news/PersonKt.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/news/Person.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/news/Person.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/news/PersonJava.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/news/PersonJava.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -28,12 +29,33 @@
     <option name="isMigrated" value="true" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/news/InputDevice.kt">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Extends.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="385">
-              <caret line="51" column="37" lean-forward="true" selection-start-line="51" selection-start-column="37" selection-end-line="51" selection-end-column="37" />
+            <state relative-caret-position="442">
+              <caret line="30" column="5" lean-forward="true" selection-start-line="30" selection-start-column="5" selection-end-line="30" selection-end-column="5" />
+              <folding>
+                <element signature="e#0#38#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Delegates.kt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="204">
+              <caret line="12" column="9" lean-forward="true" selection-start-line="12" selection-start-column="9" selection-end-line="12" selection-end-column="9" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/dataclass/Country.kt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="102">
+              <caret line="6" column="39" lean-forward="true" selection-start-line="6" selection-start-column="39" selection-end-line="6" selection-end-column="39" />
             </state>
           </provider>
         </entry>
@@ -41,35 +63,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/news/Person.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/news/Manager.kt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="207">
-              <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/news/PersonJava.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="3" selection-start-line="3" selection-end-line="3" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/news/Diff.kt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="14" column="16" lean-forward="true" selection-start-line="14" selection-start-column="16" selection-end-line="14" selection-end-column="16" />
+            <state relative-caret-position="1700">
+              <caret line="100" column="56" selection-start-line="100" selection-start-column="56" selection-end-line="100" selection-end-column="56" />
             </state>
           </provider>
         </entry>
@@ -82,11 +77,15 @@
         <option value="Kotlin Interface" />
         <option value="Class" />
         <option value="Kotlin Class" />
+        <option value="Kotlin File" />
       </list>
     </option>
   </component>
-  <component name="FindBugs-IDEA-Workspace">
-    <toolWindowEditorPreview>false</toolWindowEditorPreview>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>getValue</find>
+      <find>MusicPlayer</find>
+    </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
@@ -104,10 +103,16 @@
         <option value="$PROJECT_DIR$/src/function/T1.kt" />
         <option value="$PROJECT_DIR$/src/Calc.kt" />
         <option value="$PROJECT_DIR$/src/news/InputDevice.kt" />
-        <option value="$PROJECT_DIR$/src/news/PersonJava.java" />
-        <option value="$PROJECT_DIR$/src/news/Person.kt" />
         <option value="$PROJECT_DIR$/src/news/Diff.kt" />
         <option value="$PROJECT_DIR$/src/news/Manager.kt" />
+        <option value="$PROJECT_DIR$/src/news/Person.kt" />
+        <option value="$PROJECT_DIR$/src/news/PersonJava.java" />
+        <option value="$PROJECT_DIR$/src/news/StaticClass.kt" />
+        <option value="$PROJECT_DIR$/src/overiloads/overloads.kt" />
+        <option value="$PROJECT_DIR$/src/extends.kt" />
+        <option value="$PROJECT_DIR$/src/Extends.kt" />
+        <option value="$PROJECT_DIR$/src/Delegates.kt" />
+        <option value="$PROJECT_DIR$/src/dataclass/Country.kt" />
       </list>
     </option>
   </component>
@@ -125,10 +130,10 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds" fullScreen="true">
-    <option name="x" value="1719" />
-    <option name="y" value="149" />
-    <option name="width" value="1440" />
-    <option name="height" value="814" />
+    <option name="x" value="2261" />
+    <option name="y" value="43" />
+    <option name="width" value="1093" />
+    <option name="height" value="816" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -155,7 +160,7 @@
               <item name="LearnDemo" type="b2602c69:ProjectViewProjectNode" />
               <item name="LearnDemo" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="news" type="462c0819:PsiDirectoryNode" />
+              <item name="dataclass" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -170,6 +175,9 @@
     <property name="android.sdk.path" value="$USER_HOME$/Library/Android/sdk" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Project" />
@@ -195,15 +203,41 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Kotlin.news.DiffKt">
-    <configuration name="CalcKt" type="JetRunConfigurationType" factoryName="Kotlin" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Kotlin.dataclass.CountryKt">
+    <configuration name="DelegatesKt" type="JetRunConfigurationType" factoryName="Kotlin" temporary="true" nameIsGenerated="true">
       <module name="LearnDemo" />
       <option name="VM_PARAMETERS" />
       <option name="PROGRAM_PARAMETERS" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="MAIN_CLASS_NAME" value="CalcKt" />
+      <option name="MAIN_CLASS_NAME" value="DelegatesKt" />
+      <option name="WORKING_DIRECTORY" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ExtendsKt" type="JetRunConfigurationType" factoryName="Kotlin" temporary="true" nameIsGenerated="true">
+      <module name="LearnDemo" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="MAIN_CLASS_NAME" value="ExtendsKt" />
+      <option name="WORKING_DIRECTORY" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="dataclass.CountryKt" type="JetRunConfigurationType" factoryName="Kotlin" temporary="true" nameIsGenerated="true">
+      <module name="LearnDemo" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="MAIN_CLASS_NAME" value="dataclass.CountryKt" />
       <option name="WORKING_DIRECTORY" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -222,40 +256,14 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="news.InputDeviceKt" type="JetRunConfigurationType" factoryName="Kotlin" temporary="true" nameIsGenerated="true">
+    <configuration name="news.StaticClassKt" type="JetRunConfigurationType" factoryName="Kotlin" temporary="true" nameIsGenerated="true">
       <module name="LearnDemo" />
       <option name="VM_PARAMETERS" />
       <option name="PROGRAM_PARAMETERS" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="MAIN_CLASS_NAME" value="news.InputDeviceKt" />
-      <option name="WORKING_DIRECTORY" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="news.ManagerKt" type="JetRunConfigurationType" factoryName="Kotlin" temporary="true" nameIsGenerated="true">
-      <module name="LearnDemo" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="MAIN_CLASS_NAME" value="news.ManagerKt" />
-      <option name="WORKING_DIRECTORY" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="news.PersonKt" type="JetRunConfigurationType" factoryName="Kotlin" temporary="true" nameIsGenerated="true">
-      <module name="LearnDemo" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="MAIN_CLASS_NAME" value="news.PersonKt" />
+      <option name="MAIN_CLASS_NAME" value="news.StaticClassKt" />
       <option name="WORKING_DIRECTORY" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -263,11 +271,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Kotlin.dataclass.CountryKt" />
+        <item itemvalue="Kotlin.DelegatesKt" />
+        <item itemvalue="Kotlin.ExtendsKt" />
+        <item itemvalue="Kotlin.news.StaticClassKt" />
         <item itemvalue="Kotlin.news.DiffKt" />
-        <item itemvalue="Kotlin.news.ManagerKt" />
-        <item itemvalue="Kotlin.news.PersonKt" />
-        <item itemvalue="Kotlin.news.InputDeviceKt" />
-        <item itemvalue="Kotlin.CalcKt" />
       </list>
     </recent_temporary>
   </component>
@@ -286,12 +294,21 @@
       <workItem from="1557920789308" duration="88000" />
       <workItem from="1557920896042" duration="684000" />
       <workItem from="1557921614185" duration="5050000" />
-      <workItem from="1558043894371" duration="15163000" />
+      <workItem from="1558043894371" duration="15629000" />
+      <workItem from="1558273298884" duration="7380000" />
     </task>
+    <task id="LOCAL-00001" summary="kotlin 基础学习">
+      <created>1558090251479</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1558090251479</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="22054000" />
+    <option name="totallyTimeSpent" value="29900000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -306,7 +323,7 @@
     <frame x="1440" y="0" width="1920" height="1080" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20214477" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20589812" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -315,13 +332,13 @@
       <window_info id="UI Designer" order="6" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.26819128" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.21621622" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32992327" />
       <window_info anchor="bottom" id="FindBugs-IDEA" order="7" />
-      <window_info anchor="bottom" id="Terminal" order="8" />
+      <window_info anchor="bottom" id="Terminal" order="8" weight="0.40537083" />
       <window_info anchor="bottom" id="CheckStyle" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50072044" side_tool="true" weight="0.32992327" />
       <window_info anchor="bottom" id="Database Changes" order="11" />
@@ -329,7 +346,8 @@
       <window_info anchor="bottom" id="Flutter Performance" order="13" side_tool="true" />
       <window_info anchor="bottom" id="MyBatis Sql Log" order="14" />
       <window_info anchor="bottom" id="Docker" order="15" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Messages" order="16" sideWeight="0.49927953" weight="0.32952183" />
+      <window_info anchor="bottom" id="Messages" order="16" sideWeight="0.49927953" weight="0.3286445" />
+      <window_info anchor="right" id="Kotlin Bytecode" weight="0.3299639" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.24986595" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -342,11 +360,17 @@
       <window_info anchor="right" id="Palette&#9;" order="9" />
       <window_info anchor="right" id="Theme Preview" order="10" />
       <window_info anchor="right" id="Maven" order="11" weight="0.3297587" />
-      <window_info anchor="right" id="ASM" order="12" weight="0.44235924" />
+      <window_info anchor="right" id="ASM" order="12" weight="0.44187725" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
+    <option name="CHECK_NEW_TODO" value="false" />
+    <MESSAGE value="kotlin 基础学习" />
+    <option name="LAST_COMMIT_MESSAGE" value="kotlin 基础学习" />
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
@@ -489,38 +513,115 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/news/InputDevice.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="385">
-          <caret line="51" column="37" lean-forward="true" selection-start-line="51" selection-start-column="37" selection-end-line="51" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/news/Person.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/news/Diff.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="16" lean-forward="true" selection-start-line="14" selection-start-column="16" selection-end-line="14" selection-end-column="16" />
+        <state relative-caret-position="34">
+          <caret line="2" column="12" lean-forward="true" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_171.jdk/Contents/Home/src.zip!/java/lang/Math.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="250">
+          <caret line="1334" column="22" selection-start-line="1334" selection-start-column="22" selection-end-line="1334" selection-end-column="22" />
+          <folding>
+            <element signature="e#52232#52233#0" expanded="true" />
+            <element signature="e#52271#52272#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$KOTLIN_BUNDLED$/lib/kotlin-stdlib-sources.jar!/generated/_ComparisonsJvm.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="253">
+          <caret line="174" column="19" selection-start-line="174" selection-start-column="19" selection-end-line="174" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/overiloads/overloads.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="16" lean-forward="true" selection-start-line="4" selection-start-column="16" selection-end-line="4" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/news/StaticClass.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="212">
+          <caret line="14" column="17" selection-start-line="14" selection-start-column="17" selection-end-line="14" selection-end-column="17" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/news/PersonJava.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" selection-start-line="3" selection-end-line="3" />
+        <state relative-caret-position="136">
+          <caret line="8" selection-start-line="8" selection-end-line="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/news/InputDevice.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="404">
+          <caret line="51" column="37" selection-start-line="51" selection-start-column="37" selection-end-line="51" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$KOTLIN_BUNDLED$/lib/kotlin-stdlib-sources.jar!/kotlin/Comparable.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="21" column="17" selection-start-line="21" selection-start-column="17" selection-end-line="21" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$KOTLIN_BUNDLED$/lib/kotlin-stdlib-sources.jar!/kotlin/String.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="22" column="13" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$KOTLIN_BUNDLED$/lib/kotlin-stdlib-sources.jar!/kotlin/util/LazyJVM.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-775">
+          <caret line="61" column="11" selection-start-line="61" selection-start-column="11" selection-end-line="61" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/dataclass/Country.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="39" lean-forward="true" selection-start-line="6" selection-start-column="39" selection-end-line="6" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/news/Person.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1700">
+          <caret line="100" column="56" selection-start-line="100" selection-start-column="56" selection-end-line="100" selection-end-column="56" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/news/Manager.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="207">
-          <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
+        <state relative-caret-position="34">
+          <caret line="2" column="6" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Delegates.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="9" lean-forward="true" selection-start-line="12" selection-start-column="9" selection-end-line="12" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Extends.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="30" column="5" lean-forward="true" selection-start-line="30" selection-start-column="5" selection-end-line="30" selection-end-column="5" />
+          <folding>
+            <element signature="e#0#38#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
