@@ -84,6 +84,9 @@ PrimFastWeb
 - [ ] OkHttp 各个责任链详细分析
 - [ ] 理解Http与Tcp的相关知识(图解Http)
 
+#### Retrofit 实现原理
+- [x] [架构设计之美-揭秘Retrofit设计原理](https://jakeprim.cn/2019/05/21/retrofit-1/)
+
 #### Glide 实现原理及详细分析
 
 - [ ] Glide 的图片缓存实现原理；

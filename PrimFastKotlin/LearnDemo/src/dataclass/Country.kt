@@ -1,7 +1,7 @@
 package dataclass
 
 //相当于 JavaBean
-data class Country(val id: Int, val name: String)
+data class Country(var id: Int, var name: String)
 
 class ComponentX {
     operator fun component1(): String {
@@ -19,6 +19,10 @@ fun main() {
     val (id, name) = country
     println(id)
     println(name)
+
+    country.id = 1
+
+
 
     val (a, b) = ComponentX()
     println("$a ,$b")
