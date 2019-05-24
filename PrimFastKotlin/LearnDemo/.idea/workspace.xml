@@ -2,11 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="385233cd-8711-4802-8242-d865e8297117" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/TestEnum.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/innerclass/Outter.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/sealedclass/SealedClasses.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../PrimFastCommon/openDefault-4.3.6/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../PrimFastCommon/openDefault-4.3.6/openDefault-4.3.6.aar" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/dataclass/Country.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/dataclass/Country.kt" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -84,7 +82,7 @@
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" extendedState="6" fullScreen="true">
     <option name="x" value="1619" />
     <option name="y" value="155" />
     <option name="width" value="1440" />
@@ -98,7 +96,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -113,44 +110,13 @@
             </path>
             <path>
               <item name="LearnDemo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="LearnDemo" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="dataclass" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="LearnDemo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="LearnDemo" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="function" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="LearnDemo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="LearnDemo" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="innerclass" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="LearnDemo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="LearnDemo" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="news" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="LearnDemo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="LearnDemo" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="overiloads" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="LearnDemo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="LearnDemo" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="sealedclass" type="462c0819:PsiDirectoryNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
       <pane id="Scope" />
     </panes>
   </component>
@@ -284,6 +250,8 @@
       <workItem from="1558490018253" duration="71000" />
       <workItem from="1558491278718" duration="278000" />
       <workItem from="1558562390102" duration="1693000" />
+      <workItem from="1558661758582" duration="436000" />
+      <workItem from="1558662838214" duration="1029000" />
     </task>
     <task id="LOCAL-00001" summary="kotlin 基础学习">
       <created>1558090251479</created>
@@ -303,7 +271,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="35133000" />
+    <option name="totallyTimeSpent" value="36598000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -315,9 +283,9 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1440" height="900" extended-state="0" />
+    <frame x="1440" y="0" width="1920" height="1080" extended-state="0" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.21541786" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.22252011" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -632,6 +600,13 @@
           <folding>
             <element signature="e#0#38#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" column="38" lean-forward="true" selection-start-line="18" selection-start-column="38" selection-end-line="18" selection-end-column="38" />
         </state>
       </provider>
     </entry>

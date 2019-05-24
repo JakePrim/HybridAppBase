@@ -1,2 +1,0 @@
-configurations.maybeCreate("default")
-artifacts.add("default", file('openDefault-4.3.6.aar'))
