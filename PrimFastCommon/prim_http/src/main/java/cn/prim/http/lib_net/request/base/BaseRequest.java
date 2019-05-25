@@ -82,6 +82,7 @@ public abstract class BaseRequest<T, R extends BaseRequest> implements Serializa
     //缓存控制类
     protected PrimCache primCache;
 
+    //解析json类
     protected IParse<T> parse;
 
     public BaseRequest(String url) {
@@ -141,9 +142,10 @@ public abstract class BaseRequest<T, R extends BaseRequest> implements Serializa
     }
 
     /**
-     * 支持动态切换 base Url
+     * 支持暂时切换 base Url
+     * 并不是全局切换Base Url 如果要全局切换URL 需要调用{@link PrimHttp#getInstance()#setBaseUrl()}
      * @param baseUrl url
-     * @return
+     * @return BaseRequest
      */
     @SuppressWarnings("unchecked")
     public R baseUrl(String baseUrl) {

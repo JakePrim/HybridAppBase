@@ -174,6 +174,20 @@ public class PrimHttp {
         return Configurator.getInstance().getConfiguration(ConfigKeys.INTERCEPTOR);
     }
 
+    /**
+     * 动态设置URL
+     *
+     * @param baseUrl base url
+     */
+    public void setBaseUrl(String baseUrl) {
+        Configurator.getInstance().withHost(baseUrl);
+    }
+
+    /**
+     * 获取主线程的 Handler
+     *
+     * @return Handler
+     */
     public Handler getMainHandler() {
         return mHandler;
     }

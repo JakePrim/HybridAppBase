@@ -2,8 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="385233cd-8711-4802-8242-d865e8297117" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../../PrimFastCommon/openDefault-4.3.6/build.gradle" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../PrimFastCommon/openDefault-4.3.6/openDefault-4.3.6.aar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../PrimFastCommon/prim_base/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../../PrimFastCommon/prim_base/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../PrimFastCommon/prim_http/src/main/java/cn/prim/http/lib_net/PrimHttp.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../PrimFastCommon/prim_http/src/main/java/cn/prim/http/lib_net/PrimHttp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../PrimFastCommon/prim_http/src/main/java/cn/prim/http/lib_net/request/base/BaseRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../PrimFastCommon/prim_http/src/main/java/cn/prim/http/lib_net/request/base/BaseRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../KotlinAction/app/src/main/java/com/prim/gkapp/MainActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../KotlinAction/app/src/main/java/com/prim/gkapp/MainActivity.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -17,7 +19,7 @@
     <option name="isMigrated" value="true" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="375" />
+    <leaf />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -82,11 +84,11 @@
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6" fullScreen="true">
-    <option name="x" value="1619" />
-    <option name="y" value="155" />
-    <option name="width" value="1440" />
-    <option name="height" value="816" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="180" />
+    <option name="y" value="125" />
+    <option name="width" value="1080" />
+    <option name="height" value="612" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -134,7 +136,7 @@
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.Kotlin" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="show.migrate.to.gradle.popup" value="false" />
   </component>
   <component name="RecentsManager">
@@ -252,6 +254,8 @@
       <workItem from="1558562390102" duration="1693000" />
       <workItem from="1558661758582" duration="436000" />
       <workItem from="1558662838214" duration="1029000" />
+      <workItem from="1558791627044" duration="440000" />
+      <workItem from="1558792184140" duration="125000" />
     </task>
     <task id="LOCAL-00001" summary="kotlin 基础学习">
       <created>1558090251479</created>
@@ -271,7 +275,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="36598000" />
+    <option name="totallyTimeSpent" value="37163000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -283,9 +287,9 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="1440" y="0" width="1920" height="1080" extended-state="0" />
+    <frame x="0" y="23" width="1440" height="814" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.22252011" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.23104693" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -683,6 +687,17 @@
         </settings>
       </state>
       <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ScopeChooserConfigurable.UI">
         <settings>
           <splitter-proportions>
             <option name="proportions">

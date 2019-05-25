@@ -42,9 +42,9 @@ dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')
     api rootProject.ext.dependencies["appcompat"]
     api rootProject.ext.dependencies["constraint-layout"]
-    api rootProject.ext.dependencies["kotlin"]
-    api rootProject.ext.dependencies["core-ktx"]
-    api rootProject.ext.dependencies["kotlin_anko"]
+    api rootProject.ext.dependencies["kotlin"] //引入kotlin
+    api rootProject.ext.dependencies["core-ktx"] //引入ktx
+    api rootProject.ext.dependencies["kotlin_anko"]//引入kotlin auto
     api rootProject.ext.dependencies["recyclerview"]
     api rootProject.ext.dependencies["design"]
     api rootProject.ext.dependencies["support-v4"]
