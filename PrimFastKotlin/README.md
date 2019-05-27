@@ -31,18 +31,20 @@ PrimFastApp 完整的项目开发框架,框架内设计的技术面很广,同时
 
 ### PrimFast 进度
 
-PrimFastCommon [项目地址](https://github.com/JakePrim/PrimFastApp/tree/master/PrimFastCommon)
+PrimFastCommon
 
 - 网络框架PrimHttp 完成度50%.
   - 整体库配置搭建
 - 基础框架PrimBase 完成度10%.
 .......
 
-PrimFastFlutter [项目地址](https://github.com/JakePrim/prim_fultter_app)
+PrimFastFlutter
 
-PrimFastKotlin [项目地址](https://github.com/JakePrim/PrimFastApp/tree/master/PrimFastKotlin)
+[项目地址](https://github.com/JakePrim/prim_fultter_app)
 
-PrimFastApplets [项目地址](https://github.com/JakePrim/PrimFastApp/tree/master/PrimFastApplets)
+PrimFastKotlin
+
+PrimFastApplets
 
 PrimFastRn
 
@@ -104,7 +106,6 @@ PrimFastWeb
 #### RxJava基础和RxJava实现原理
 
 - [x] [RxJava2.x 庖丁解牛 - 操作符使用详解与场景分析](https://jakeprim.cn/2019/05/09/rxjava-1/)
-- [ ] RxJava2.x 源码分析
 
 ### Android View 部分
 
