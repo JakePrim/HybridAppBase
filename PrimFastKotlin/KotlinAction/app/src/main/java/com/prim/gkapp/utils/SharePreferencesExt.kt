@@ -5,7 +5,7 @@ import kotlin.properties.ReadWriteProperty
 import kotlin.reflect.KProperty
 
 /**
- * @desc sharePreferences 的扩展类
+ * @desc sharePreferences 的扩展类 可作为代理类来简化sharePreferences
  * @author prim
  * @time 2019-05-26 - 10:28
  * @version 1.0.0
@@ -16,12 +16,12 @@ class Preference<T>(val context: Context, val name: String, val default: T, val 
         context.getSharedPreferences(prefName, Context.MODE_PRIVATE)
     }
 
-    //. 相当于直接获取值
+    //相当于直接获取值
     override fun getValue(thisRef: Any?, property: KProperty<*>): T {
         return findPreference(name)
     }
 
-    //= 可以直接设置值
+    //相当于 = 可以直接设置值，设置进入Preference
     override fun setValue(thisRef: Any?, property: KProperty<*>, value: T) {
         putPreference(name, value)
     }
