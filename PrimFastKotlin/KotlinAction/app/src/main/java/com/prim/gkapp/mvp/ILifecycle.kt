@@ -2,6 +2,7 @@ package com.prim.gkapp.mvp
 
 import android.content.res.Configuration
 import android.os.Bundle
+import android.view.View
 import androidx.annotation.NonNull
 
 /**
@@ -13,9 +14,12 @@ import androidx.annotation.NonNull
 interface ILifecycle {
     fun onCreate(savedInstanceState: Bundle?)
     fun onSaveInstanceState(@NonNull outState: Bundle)
+    fun onViewCreated(view: View, savedInstanceState: Bundle?)
+    fun onViewStateRestored(savedInstanceState: Bundle?)
     fun onConfigurationChanged(newConfig: Configuration?)
     fun onStart()
     fun onResume()
+    fun onRestart()
     fun onPause()
     fun onStop()
     fun onDestroy()

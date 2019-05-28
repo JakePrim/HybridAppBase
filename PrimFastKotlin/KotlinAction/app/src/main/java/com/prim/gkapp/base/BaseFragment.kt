@@ -1,6 +1,7 @@
 package com.prim.gkapp.base
 
 import android.os.Bundle
+import android.view.View
 import androidx.fragment.app.Fragment
 import com.prim.gkapp.mvp.IMvpView
 import com.prim.gkapp.mvp.IPresenter
@@ -15,7 +16,7 @@ import java.lang.reflect.Type
  * @version 1.0.0
  */
 abstract class BaseFragment<out P : BasePresenter<BaseFragment<P>>> : IMvpView<P>, Fragment() {
-    override val presenter: P
+    final override val presenter: P
 
     //初始化 Presenter
     init {
@@ -50,29 +51,51 @@ abstract class BaseFragment<out P : BasePresenter<BaseFragment<P>>> : IMvpView<P
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        presenter.onCreate(savedInstanceState)
     }
 
     override fun onSaveInstanceState(outState: Bundle) {
         super.onSaveInstanceState(outState)
+        presenter.onSaveInstanceState(outState)
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        presenter.onViewCreated(view, savedInstanceState)
+    }
+
+    override fun onViewStateRestored(savedInstanceState: Bundle?) {
+        super.onViewStateRestored(savedInstanceState)
+        presenter.onViewStateRestored(savedInstanceState)
     }
 
     override fun onStart() {
         super.onStart()
+        presenter.onStart()
+    }
+
+    override fun onRestart() {
+        presenter.onRestart()
     }
 
     override fun onResume() {
         super.onResume()
+        presenter.onResume()
     }
 
     override fun onPause() {
         super.onPause()
+        presenter.onPause()
     }
 
     override fun onStop() {
         super.onStop()
+        presenter.onStop()
     }
 
     override fun onDestroy() {
         super.onDestroy()
+        presenter.onDestroy()
     }
+
 }

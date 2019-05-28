@@ -1,5 +1,6 @@
 package com.prim.gkapp.base
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.annotation.NonNull
 import androidx.appcompat.app.AppCompatActivity
@@ -17,9 +18,10 @@ import java.lang.reflect.Type
  */
 abstract class BaseActivity<out P : BasePresenter<BaseActivity<P>>> : IMvpView<P>, AppCompatActivity() {
 
-    override val presenter: P
+    final override val presenter: P
 
     init {
+        //自动实例化presenter
         presenter = createPresenterKt()
         presenter.view = this
     }
@@ -49,32 +51,47 @@ abstract class BaseActivity<out P : BasePresenter<BaseActivity<P>>> : IMvpView<P
 
     }
 
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        presenter.onCreate(savedInstanceState)
     }
 
     override fun onSaveInstanceState(@NonNull outState: Bundle) {
         super.onSaveInstanceState(outState)
+        presenter.onSaveInstanceState(outState)
     }
 
     override fun onStart() {
         super.onStart()
+        presenter.onStart()
     }
 
     override fun onResume() {
         super.onResume()
+        presenter.onResume()
+    }
+
+    override fun onRestart() {
+        super.onRestart()
+        presenter.onRestart()
     }
 
     override fun onPause() {
         super.onPause()
+        presenter.onPause()
     }
 
     override fun onStop() {
         super.onStop()
+        presenter.onStop()
     }
 
     override fun onDestroy() {
         super.onDestroy()
+        presenter.onDestroy()
+    }
+
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        super.onActivityResult(requestCode, resultCode, data)
     }
 }

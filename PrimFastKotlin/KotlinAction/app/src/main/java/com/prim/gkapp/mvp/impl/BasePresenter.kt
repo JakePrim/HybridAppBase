@@ -2,6 +2,7 @@ package com.prim.gkapp.mvp.impl
 
 import android.content.res.Configuration
 import android.os.Bundle
+import android.view.View
 import androidx.annotation.NonNull
 import com.prim.gkapp.mvp.IMvpView
 import com.prim.gkapp.mvp.IPresenter
@@ -14,12 +15,15 @@ import com.prim.gkapp.mvp.IPresenter
  */
 abstract class BasePresenter<out V : IMvpView<BasePresenter<V>>> : IPresenter<V> {
     override lateinit var view: @UnsafeVariance V
-    override fun onCreate(savedInstanceState: Bundle?){}
-    override fun onSaveInstanceState(@NonNull outState: Bundle){}
-    override fun onConfigurationChanged(newConfig: Configuration?){}
-    override fun onStart(){}
-    override fun onResume(){}
-    override fun onPause(){}
-    override fun onStop(){}
-    override fun onDestroy(){}
+    override fun onCreate(savedInstanceState: Bundle?) = Unit
+    override fun onSaveInstanceState(@NonNull outState: Bundle) = Unit
+    override fun onConfigurationChanged(newConfig: Configuration?) = Unit
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) = Unit
+    override fun onViewStateRestored(savedInstanceState: Bundle?) = Unit
+    override fun onRestart() = Unit
+    override fun onStart() = Unit
+    override fun onResume() = Unit
+    override fun onPause() = Unit
+    override fun onStop() = Unit
+    override fun onDestroy() = Unit
 }
