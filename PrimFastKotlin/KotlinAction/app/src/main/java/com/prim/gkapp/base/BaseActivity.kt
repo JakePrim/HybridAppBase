@@ -2,6 +2,7 @@ package com.prim.gkapp.base
 
 import android.content.Intent
 import android.os.Bundle
+import android.view.View
 import androidx.annotation.NonNull
 import androidx.appcompat.app.AppCompatActivity
 import com.prim.gkapp.mvp.IMvpView
@@ -93,5 +94,12 @@ abstract class BaseActivity<out P : BasePresenter<BaseActivity<P>>> : IMvpView<P
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+    }
+
+    override fun onViewStateRestored(savedInstanceState: Bundle?) {
+
     }
 }

@@ -23,7 +23,7 @@
                 android:name=".ui.login.LoginActivity"
                 android:label="@string/title_activity_login">
         </activity>
-        <activity android:name=".MainActivity">
+        <activity android:name=".ui.home.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 

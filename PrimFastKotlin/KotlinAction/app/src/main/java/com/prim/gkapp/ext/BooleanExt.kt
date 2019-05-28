@@ -1,4 +1,4 @@
-package com.prim.gkapp.utils
+package com.prim.gkapp.ext
 
 /**
  * @desc boolean 的扩展类
