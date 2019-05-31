@@ -2,29 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="385233cd-8711-4802-8242-d865e8297117" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../KotlinAction/app/src/main/java/com/prim/gkapp/App.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../KotlinAction/app/src/main/java/com/prim/gkapp/Setting.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../KotlinAction/app/src/main/java/com/prim/gkapp/data/LoginDataSource.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../KotlinAction/app/src/main/java/com/prim/gkapp/data/LoginRepository.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../KotlinAction/app/src/main/java/com/prim/gkapp/data/Result.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../KotlinAction/app/src/main/java/com/prim/gkapp/data/model/LoggedInUser.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../KotlinAction/app/src/main/java/com/prim/gkapp/ui/login/LoggedInUserView.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../KotlinAction/app/src/main/java/com/prim/gkapp/ui/login/LoginActivity.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../KotlinAction/app/src/main/java/com/prim/gkapp/ui/login/LoginFormState.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../KotlinAction/app/src/main/java/com/prim/gkapp/ui/login/LoginResult.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../KotlinAction/app/src/main/java/com/prim/gkapp/ui/login/LoginViewModel.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../KotlinAction/app/src/main/java/com/prim/gkapp/ui/login/LoginViewModelFactory.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../KotlinAction/app/src/main/java/com/prim/gkapp/utils/BooleanExt.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../KotlinAction/app/src/main/java/com/prim/gkapp/utils/SharePreferencesExt.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../KotlinAction/app/src/main/res/layout/activity_login.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../KotlinAction/app/src/main/res/values/dimens.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../KotlinAction/app/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../KotlinAction/app/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../KotlinAction/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../KotlinAction/app/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../KotlinAction/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../KotlinAction/app/src/main/AndroidManifest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../KotlinAction/app/src/main/java/com/prim/gkapp/MainActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../KotlinAction/app/src/main/java/com/prim/gkapp/MainActivity.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../KotlinAction/app/src/main/res/layout/activity_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../KotlinAction/app/src/main/res/layout/activity_main.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../KotlinAction/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../KotlinAction/app/src/main/res/values/strings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../KotlinAction/app/src/test/java/com/prim/gkapp/ExampleUnitTest.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../KotlinAction/app/src/test/java/com/prim/gkapp/ExampleUnitTest.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../KotlinAction/app/src/main/java/com/prim/gkapp/log/LogExt.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../KotlinAction/app/src/main/java/com/prim/gkapp/network/entities/AccountEntities.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../KotlinAction/app/src/main/java/com/prim/gkapp/network/service/AuthService.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../KotlinAction/app/src/main/java/com/prim/gkapp/utils/DeviceId.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../KotlinAction/app/src/main/java/com/prim/gkapp/anno/POKO.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../KotlinAction/app/src/main/java/com/prim/gkapp/anno/POKO.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../KotlinAction/app/src/main/java/com/prim/gkapp/base/Config.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../KotlinAction/app/src/main/java/com/prim/gkapp/base/Config.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../KotlinAction/app/src/main/java/com/prim/gkapp/network/WebServices.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../KotlinAction/app/src/main/java/com/prim/gkapp/network/WebServices.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../KotlinAction/app/src/main/java/com/prim/gkapp/ui/login/LoginActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../KotlinAction/app/src/main/java/com/prim/gkapp/ui/login/LoginActivity.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -38,39 +23,12 @@
     <option name="isMigrated" value="true" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/news/Manager.kt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" column="6" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/news/InputDevice.kt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="404">
-              <caret line="51" column="37" selection-start-line="51" selection-start-column="37" selection-end-line="51" selection-end-column="37" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/news/Diff.kt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" column="12" lean-forward="true" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="12" />
-            </state>
-          </provider>
-        </entry>
-      </file>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/overiloads/overloads.kt">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="68">
-              <caret line="4" column="16" lean-forward="true" selection-start-line="4" selection-start-column="16" selection-end-line="4" selection-end-column="16" />
+              <caret line="4" column="16" selection-start-line="4" selection-start-column="16" selection-end-line="4" selection-end-column="16" />
             </state>
           </provider>
         </entry>
@@ -106,7 +64,7 @@
         <entry file="file://$PROJECT_DIR$/src/Test3.kt">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="391">
-              <caret line="23" column="36" lean-forward="true" selection-start-line="23" selection-start-column="36" selection-end-line="23" selection-end-column="36" />
+              <caret line="23" column="36" selection-start-line="23" selection-start-column="36" selection-end-line="23" selection-end-column="36" />
             </state>
           </provider>
         </entry>
@@ -114,7 +72,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Extends.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
+            <state relative-caret-position="119">
               <caret line="8" column="1" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
               <folding>
                 <element signature="e#0#38#0" expanded="true" />
@@ -123,11 +81,29 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Delegates.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="194">
+            <state relative-caret-position="196">
               <caret line="12" column="9" selection-start-line="12" selection-start-column="9" selection-end-line="12" selection-end-column="9" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/BasecType.kt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="111">
+              <caret line="78" column="47" selection-start-line="78" selection-start-column="47" selection-end-line="78" selection-end-column="47" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Array.kt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="204">
+              <caret line="12" column="41" selection-start-line="12" selection-start-column="41" selection-end-line="12" selection-end-column="41" />
             </state>
           </provider>
         </entry>
@@ -197,11 +173,11 @@
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="180" />
-    <option name="y" value="125" />
-    <option name="width" value="1080" />
-    <option name="height" value="612" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="1692" />
+    <option name="y" value="140" />
+    <option name="width" value="1440" />
+    <option name="height" value="816" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -212,7 +188,6 @@
     </navigator>
     <panes>
       <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -269,6 +244,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -406,6 +382,7 @@
       <workItem from="1558791627044" duration="440000" />
       <workItem from="1558792184140" duration="125000" />
       <workItem from="1558794559959" duration="1342000" />
+      <workItem from="1559095714626" duration="598000" />
     </task>
     <task id="LOCAL-00001" summary="kotlin 基础学习">
       <created>1558090251479</created>
@@ -425,7 +402,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="38505000" />
+    <option name="totallyTimeSpent" value="39103000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -437,10 +414,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1440" height="814" extended-state="6" />
+    <frame x="1692" y="140" width="1440" height="816" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.23537906" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2397112" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -629,24 +606,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/BasecType.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1326">
-          <caret line="78" column="47" selection-start-line="78" selection-start-column="47" selection-end-line="78" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/TestEnum.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
           <caret line="1" column="16" selection-start-line="1" selection-start-column="16" selection-end-line="1" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Array.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="61" selection-start-line="13" selection-start-column="61" selection-end-line="13" selection-end-column="61" />
         </state>
       </provider>
     </entry>
@@ -701,7 +664,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/news/InputDevice.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="404">
+        <state relative-caret-position="867">
           <caret line="51" column="37" selection-start-line="51" selection-start-column="37" selection-end-line="51" selection-end-column="37" />
         </state>
       </provider>
@@ -709,14 +672,14 @@
     <entry file="file://$PROJECT_DIR$/src/news/Diff.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
-          <caret line="2" column="12" lean-forward="true" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="12" />
+          <caret line="2" column="12" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="12" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/overiloads/overloads.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
-          <caret line="4" column="16" lean-forward="true" selection-start-line="4" selection-start-column="16" selection-end-line="4" selection-end-column="16" />
+          <caret line="4" column="16" selection-start-line="4" selection-start-column="16" selection-end-line="4" selection-end-column="16" />
         </state>
       </provider>
     </entry>
@@ -744,13 +707,13 @@
     <entry file="file://$PROJECT_DIR$/src/Test3.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="391">
-          <caret line="23" column="36" lean-forward="true" selection-start-line="23" selection-start-column="36" selection-end-line="23" selection-end-column="36" />
+          <caret line="23" column="36" selection-start-line="23" selection-start-column="36" selection-end-line="23" selection-end-column="36" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Extends.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
+        <state relative-caret-position="119">
           <caret line="8" column="1" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
           <folding>
             <element signature="e#0#38#0" expanded="true" />
@@ -760,8 +723,29 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Delegates.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="194">
+        <state relative-caret-position="196">
           <caret line="12" column="9" selection-start-line="12" selection-start-column="9" selection-end-line="12" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/BasecType.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="111">
+          <caret line="78" column="47" selection-start-line="78" selection-start-column="47" selection-end-line="78" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$KOTLIN_BUNDLED$/lib/kotlin-stdlib-sources.jar!/kotlin/Library.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="214">
+          <caret line="40" column="45" selection-start-line="40" selection-start-column="45" selection-end-line="40" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Array.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="41" selection-start-line="12" selection-start-column="41" selection-end-line="12" selection-end-column="41" />
         </state>
       </provider>
     </entry>
