@@ -1,7 +1,8 @@
 package com.prim.gkapp.ui.home
 
-import androidx.fragment.app.FragmentActivity
+import android.content.Context
 import com.prim.gkapp.data.model.UserInfo
+import com.prim.gkapp.ext.toastKx
 import com.prim.gkapp.mvp.impl.BasePresenter
 
 /**
@@ -11,15 +12,18 @@ import com.prim.gkapp.mvp.impl.BasePresenter
  * @version 1.0.0
  */
 class MainPresenter : BasePresenter<MainActivity>() {
-    override fun initContext(context: FragmentActivity?) {
+    var context: Context? = null
 
+    override fun initContext(context: Context?) {
+        this.context = context
     }
 
     fun logout() {
         UserInfo.logout().subscribe({
+            context?.toastKx("已退出登录")
             view.toLogin()
         }, {
-
+            context?.toastKx("退出失败：${it.message}")
         })
     }
 

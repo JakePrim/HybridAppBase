@@ -1,10 +1,10 @@
 package com.prim.gkapp.mvp.impl
 
+import android.content.Context
 import android.content.res.Configuration
 import android.os.Bundle
 import android.view.View
 import androidx.annotation.NonNull
-import androidx.fragment.app.FragmentActivity
 import com.prim.gkapp.mvp.IMvpView
 import com.prim.gkapp.mvp.IPresenter
 
@@ -16,7 +16,7 @@ import com.prim.gkapp.mvp.IPresenter
  */
 abstract class BasePresenter<out V : IMvpView<BasePresenter<V>>> : IPresenter<V> {
     override lateinit var view: @UnsafeVariance V
-    open fun initContext(context: FragmentActivity?) = Unit
+    open fun initContext(context: Context?) = Unit
     override fun onCreate(savedInstanceState: Bundle?) = Unit
     override fun onSaveInstanceState(@NonNull outState: Bundle) = Unit
     override fun onConfigurationChanged(newConfig: Configuration) = Unit
