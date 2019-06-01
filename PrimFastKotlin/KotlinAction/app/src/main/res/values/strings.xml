@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">GKApp</string>
+    <string name="app_name">码乎.GitHub</string>
     <string name="title_activity_login">Sign in</string>
     <string name="prompt_email">Email</string>
     <string name="prompt_password">Password</string>
@@ -11,4 +11,5 @@
     <string name="login_failed">"Login failed"</string>
     <string name="title_activity_main2">Main2Activity</string>
     <string name="title_activity_login2">Sign in</string>
+    <string name="str_app_info_des">个人开源作品@JakePrim 版权所有 @2019</string>
 </resources>

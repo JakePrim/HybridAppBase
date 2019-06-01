@@ -1,6 +1,7 @@
 package com.prim.gkapp.base
 
 import android.content.Intent
+import android.content.res.Configuration
 import android.os.Bundle
 import android.view.View
 import androidx.annotation.NonNull
@@ -101,5 +102,10 @@ abstract class BaseActivity<out P : BasePresenter<BaseActivity<P>>> : IMvpView<P
 
     override fun onViewStateRestored(savedInstanceState: Bundle?) {
 
+    }
+
+    override fun onConfigurationChanged(newConfig: Configuration) {
+        super.onConfigurationChanged(newConfig)
+        presenter.onConfigurationChanged(newConfig)
     }
 }

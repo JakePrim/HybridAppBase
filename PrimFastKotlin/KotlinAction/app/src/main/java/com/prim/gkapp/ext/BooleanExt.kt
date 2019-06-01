@@ -17,7 +17,7 @@ object Otherwise : BooleanExt<Nothing>()
 //返回一个BooleanExt的实例对象
 class WithData<T>(val data: T) : BooleanExt<T>()
 
-//inline ?? 作用
+//inline  作用
 //block 匿名函数 传递一个函数
 /**
  * 判断 boolean是否为true 且为true的处理 扩展方法 不用再去写if else等代码
