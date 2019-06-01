@@ -1,5 +1,7 @@
 package com.prim.gkapp.ui.login
 
+import androidx.fragment.app.FragmentActivity
+import com.prim.gkapp.BuildConfig
 import com.prim.gkapp.data.model.UserInfo
 import com.prim.gkapp.mvp.impl.BasePresenter
 
@@ -10,6 +12,9 @@ import com.prim.gkapp.mvp.impl.BasePresenter
  * @version 1.0.0
  */
 class LoginPresenter : BasePresenter<LoginActivity>() {
+    override fun initContext(context: FragmentActivity?) {
+
+    }
 
     fun login(userName: String, password: String) {
         UserInfo.username = userName
@@ -35,6 +40,10 @@ class LoginPresenter : BasePresenter<LoginActivity>() {
 
     override fun onResume() {
         super.onResume()
-        view.onDataInit(UserInfo.username, UserInfo.password)
+        if (BuildConfig.DEBUG) {
+            view.onDataInit(BuildConfig.testUserName, BuildConfig.testPassword)
+        } else {
+            view.onDataInit(UserInfo.username, UserInfo.password)
+        }
     }
 }

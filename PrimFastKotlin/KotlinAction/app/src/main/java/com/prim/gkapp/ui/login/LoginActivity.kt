@@ -57,6 +57,7 @@ class LoginActivity : BaseActivity<LoginPresenter>(), LifecycleOwner {
 
     fun onIntent() {
         startActivity<MainActivity>()
+        finish()
     }
 
     fun onDataInit(name: String, pass: String) {

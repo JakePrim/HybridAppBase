@@ -19,7 +19,6 @@ import retrofit2.http.Path
  */
 
 interface AuthApi {
-
     //请求授权
     @PUT("/authorizations/clients/${Config.Auth.CLIENT_ID}/{fingerprint}")
     fun createAuth(
@@ -27,9 +26,10 @@ interface AuthApi {
         @Path("fingerprint") fingerprint: String = Config.Auth.fingerPrint
     ): Observable<AuthResponse>
 
+
     //删除授权
-    @DELETE("/applications/{id}/tokens/:access_token")
-    fun deleteAuth(@Path("id") id: Int): Observable<Response<Any>>
+    @DELETE("/authorizations/{authorization_id}")
+    fun deleteAuth(@Path("authorization_id") id: Int): Observable<Response<Any>>
 }
 
 //object 实现单例 代理retrofit

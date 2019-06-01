@@ -35,8 +35,8 @@ object UserInfo {
     var userInfoJson: String by Preference(AppContext, "userInfoJson", "")
     //记录鉴权ID
     var authId: Int by Preference(AppContext, "authId", 0)
-
-    var firstIn: Boolean by Preference(AppContext, "firstIn", false)
+    //记录用户是否第一次打开APP
+    var firstIn: Boolean by Preference(AppContext, "firstIn", true)
 
     //判断是否登录
     fun isLogin(): Boolean = token.isNotEmpty()
@@ -65,17 +65,16 @@ object UserInfo {
      * 用户请求登录
      */
     fun login() = AuthService.createAuth(AuthBody())
-        .observeOn(AndroidSchedulers.mainThread())
-        .subscribeOn(Schedulers.io())
         .doOnNext {
             Log.e("login", it.toString())
-            if (it.token.isEmpty()) AppException.AccountException(it)
+            if (it.token.isEmpty()) throw AppException.AccountException(it)
         }
-        .retryWhen { it ->
+        .retryWhen {
             //如果获取的token为空 则删除鉴权
             it.flatMap {
-                Log.e("login", it.message)
+                Log.e("login", it.toString())
                 if (it is AppException.AccountException) {
+                    Log.e("login", "删除鉴权重新请求:" + it.response.id)
                     AuthService.deleteAuth(it.response.id)//删除鉴权 然后再重新请求鉴权
                 } else {
                     Observable.error(it)
@@ -89,16 +88,17 @@ object UserInfo {
         }.map {
             currentUser = it//存储用户信息
             notifyLogin(it)//回调监听
-        }
+            Log.e("login", "userInfo:${it.toString()}")
+        }.observeOn(AndroidSchedulers.mainThread())
+        .subscribeOn(Schedulers.io())
 
 
     /**
      * 用户退出登录请求
      */
     fun logout() = AuthService.deleteAuth(authId)
-        .observeOn(AndroidSchedulers.mainThread())
-        .subscribeOn(Schedulers.io())
         .doOnNext {
+            Log.e("login", "退出登录 移除认证 code:${it.code()}")
             if (it.isSuccessful) {
                 authId = -1
                 token = ""
@@ -107,7 +107,10 @@ object UserInfo {
             } else {
                 throw HttpException(it)
             }
-        }
+        }.doOnError {
+            Log.e("login", "退出登录 移除认证 message:${it.message}")
+        }.observeOn(AndroidSchedulers.mainThread())
+        .subscribeOn(Schedulers.io())
 
 
     fun notifyLogin(user: User) {

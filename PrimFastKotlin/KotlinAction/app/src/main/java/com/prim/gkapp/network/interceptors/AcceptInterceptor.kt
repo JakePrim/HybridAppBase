@@ -13,7 +13,7 @@ class AcceptInterceptor : Interceptor {
     override fun intercept(chain: Interceptor.Chain): Response {
         val request = chain.request()
         return chain.proceed(request.newBuilder().apply {
-            header("accept", "application/vnd.github.v3.full+json,${request.header("accept") ?: ""}")
+            header("Accept", "application/vnd.github.v3.full+json,${request.header("accept") ?: ""}")
         }.build())
     }
 }

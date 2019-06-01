@@ -6,6 +6,8 @@ apply plugin: 'kotlin-android-extensions'
 
 apply plugin: 'kotlin-kapt'
 
+apply from: './local.gradle'
+
 android {
     compileSdkVersion 28
     defaultConfig {
@@ -22,7 +24,14 @@ android {
         targetCompatibility JavaVersion.VERSION_1_8
     }
     buildTypes {
+        debug {
+            buildConfigField "String", "testUserName", "\"" + project.username + "\""
+            buildConfigField "String", "testPassword", "\"" + project.password + "\""
+        }
+
         release {
+            buildConfigField "String", "testUserName", ""
+            buildConfigField "String", "testPassword", ""
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }

@@ -55,6 +55,7 @@ abstract class BaseActivity<out P : BasePresenter<BaseActivity<P>>> : IMvpView<P
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        presenter.initContext(this)
         presenter.onCreate(savedInstanceState)
     }
 
