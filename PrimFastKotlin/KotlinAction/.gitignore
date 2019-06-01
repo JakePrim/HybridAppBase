@@ -1,3 +1,4 @@
+/debug.properties
 *.iml
 .gradle
 /local.properties
@@ -12,4 +13,4 @@
 /captures
 .externalNativeBuild
 /.idea/
-/debug.properties
+app/libs/
