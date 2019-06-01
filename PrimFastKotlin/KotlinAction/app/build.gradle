@@ -33,6 +33,7 @@ android {
             buildConfigField "String", "note_url", "\"" + project.note_url + "\""
         }
 
+
         release {
             buildConfigField "String", "testUserName", ""
             buildConfigField "String", "testPassword", ""
