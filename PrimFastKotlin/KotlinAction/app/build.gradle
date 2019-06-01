@@ -27,11 +27,19 @@ android {
         debug {
             buildConfigField "String", "testUserName", "\"" + project.username + "\""
             buildConfigField "String", "testPassword", "\"" + project.password + "\""
+            buildConfigField "String", "client_id", "\"" + project.client_id + "\""
+            buildConfigField "String", "client_secret", "\"" + project.client_secret + "\""
+            buildConfigField "String", "note", "\"" + project.note + "\""
+            buildConfigField "String", "note_url", "\"" + project.note_url + "\""
         }
 
         release {
             buildConfigField "String", "testUserName", ""
             buildConfigField "String", "testPassword", ""
+            buildConfigField "String", "client_id", "\"" + project.client_id + "\""
+            buildConfigField "String", "client_secret", "\"" + project.client_secret + "\""
+            buildConfigField "String", "note", "\"" + project.note + "\""
+            buildConfigField "String", "note_url", "\"" + project.note_url + "\""
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
