@@ -1,0 +1,55 @@
+package com.prim.gkapp.ext
+
+import android.view.View
+import android.view.ViewTreeObserver
+import androidx.core.view.ViewCompat
+import com.google.android.material.navigation.NavigationView
+
+/**
+ * @desc
+ * @author prim
+ * @time 2019-06-02 - 11:39
+ * @version 1.0.0
+ */
+
+sealed class ViewExt
+
+inline fun NavigationView.doOnLayoutAvailable(crossinline block: () -> Unit) {
+    ViewCompat.isLaidOut(this).yes {
+        block()
+    }.otherwise {
+        addOnLayoutChangeListener(object : View.OnLayoutChangeListener {
+            override fun onLayoutChange(
+                v: View?,
+                left: Int,
+                top: Int,
+                right: Int,
+                bottom: Int,
+                oldLeft: Int,
+                oldTop: Int,
+                oldRight: Int,
+                oldBottom: Int
+            ) {
+                removeOnLayoutChangeListener(this)
+                block()
+            }
+
+        })
+    }
+}
+
+/**
+ * 判断view是否初始化完毕
+ */
+inline fun View.doViewAvailable(crossinline block: () -> Unit) {
+    ViewCompat.isLaidOut(this).yes {
+        block()
+    }.otherwise {
+        viewTreeObserver.addOnGlobalLayoutListener(object : ViewTreeObserver.OnGlobalLayoutListener {
+            override fun onGlobalLayout() {
+                viewTreeObserver.removeOnGlobalLayoutListener(this)
+                block()
+            }
+        })
+    }
+}

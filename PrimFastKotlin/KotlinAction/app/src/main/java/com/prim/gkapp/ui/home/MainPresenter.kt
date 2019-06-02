@@ -21,7 +21,7 @@ class MainPresenter : BasePresenter<MainActivity>() {
     fun logout() {
         UserInfo.logout().subscribe({
             context?.toastKx("已退出登录")
-            view.toLogin()
+//            view.toLogin()
         }, {
             context?.toastKx("退出失败：${it.message}")
         })

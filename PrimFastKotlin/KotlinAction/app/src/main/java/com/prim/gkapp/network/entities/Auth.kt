@@ -1,7 +1,9 @@
 package com.prim.gkapp.network.entities
 
+import android.os.Parcelable
 import com.prim.gkapp.anno.POKO
 import com.prim.gkapp.base.Config
+import kotlinx.android.parcel.Parcelize
 
 /**
  * @desc
@@ -25,6 +27,7 @@ data class AuthBody(
  * auth request return response data class
  */
 @POKO
+@Parcelize
 data class AuthResponse(
     var id: Int,
     var url: String,
@@ -38,7 +41,8 @@ data class AuthResponse(
     var fingerprint: String,
     var scopes: List<String>,
     var app: App
-)
+) : Parcelable
 
 @POKO
-data class App(var url: String, var name: String, var client_id: String)
+@Parcelize
+data class App(var url: String, var name: String, var client_id: String) : Parcelable

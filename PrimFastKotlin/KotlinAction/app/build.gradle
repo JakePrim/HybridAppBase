@@ -8,11 +8,21 @@ apply plugin: 'kotlin-kapt'
 
 apply from: './local.gradle'
 
+kotlin {
+//    experimental {
+//        coroutines "enable"
+//    }
+
+    androidExtensions {
+        experimental = true //帮助数据类序列化
+    }
+}
+
 android {
     compileSdkVersion 28
     defaultConfig {
         applicationId "com.prim.gkapp"
-        minSdkVersion 15
+        minSdkVersion 17
         targetSdkVersion 28
         versionCode 1
         versionName "1.0"
@@ -54,6 +64,7 @@ dependencies {
     implementation 'com.google.android.material:material:1.0.0'
     implementation 'androidx.annotation:annotation:1.0.2'
 //    implementation 'androidx.lifecycle:lifecycle-extensions:2.0.0'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
     testImplementation 'junit:junit:4.12'
 //    androidTestImplementation 'androidx.test:runner:1.2.0-beta01'
 //    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0-beta01'
@@ -70,5 +81,6 @@ dependencies {
     implementation "com.squareup.retrofit2:adapter-rxjava2:2.4.0"
     implementation 'io.reactivex.rxjava2:rxandroid:2.1.1'
     implementation "com.squareup.okhttp3:logging-interceptor:3.4.1"
+    implementation 'com.github.bumptech.glide:glide:4.9.0'
 
 }

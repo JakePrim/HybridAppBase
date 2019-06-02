@@ -1,6 +1,8 @@
 package com.prim.gkapp.network.entities
 
+import android.os.Parcelable
 import com.prim.gkapp.anno.POKO
+import kotlinx.android.parcel.Parcelize
 
 /**
  * @desc 用户数据类
@@ -9,6 +11,7 @@ import com.prim.gkapp.anno.POKO
  * @version 1.0.0
  */
 @POKO
+@Parcelize
 data class User(
     var login: String, var id: Int, var node_id: String,
     var avatar_url: String, var gravatar_id: String,
@@ -43,12 +46,13 @@ data class User(
     var collaborators: Int,
     var two_factor_authentication: Boolean,
     var plan: Plan
-)
+) : Parcelable
 
 @POKO
+@Parcelize
 data class Plan(
     var name: String,
     var space: Int,
     var private_repos: Int,
     var collaborators: Int
-)
+) : Parcelable

@@ -4,6 +4,7 @@ import com.prim.gkapp.AppContext
 import com.prim.gkapp.ext.ensureDir
 import com.prim.gkapp.network.interceptors.AcceptInterceptor
 import com.prim.gkapp.network.interceptors.AuthInterceptor
+import io.reactivex.schedulers.Schedulers
 import okhttp3.Cache
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
@@ -32,7 +33,7 @@ private val cacheFile by lazy {
 val retrofit by lazy {
     Retrofit.Builder()
         .addConverterFactory(GsonConverterFactory.create())
-        .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
+        .addCallAdapterFactory(RxJava2CallAdapterFactory.createWithScheduler(Schedulers.io()))
         .client(
             OkHttpClient.Builder()
                 .connectTimeout(60, TimeUnit.SECONDS)
