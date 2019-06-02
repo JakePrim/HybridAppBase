@@ -9,9 +9,9 @@ apply plugin: 'kotlin-kapt'
 apply from: './local.gradle'
 
 kotlin {
-//    experimental {
-//        coroutines "enable"
-//    }
+    experimental {
+        coroutines "enable"
+    }
 
     androidExtensions {
         experimental = true //帮助数据类序列化
