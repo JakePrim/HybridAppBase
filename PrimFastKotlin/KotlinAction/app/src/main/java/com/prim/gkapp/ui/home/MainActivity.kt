@@ -13,10 +13,12 @@ import com.prim.gkapp.R
 import com.prim.gkapp.base.BaseActivity
 import com.prim.gkapp.data.model.UserInfo
 import com.prim.gkapp.ext.doOnLayoutAvailable
+import com.prim.gkapp.ext.loadImage
 import com.prim.gkapp.ext.yes
 import kotlinx.android.synthetic.main.activity_main2.*
 import kotlinx.android.synthetic.main.app_bar_main2.*
 import kotlinx.android.synthetic.main.nav_header_main2.*
+import org.jetbrains.anko.imageResource
 
 /**
  * 项目主页面
@@ -49,9 +51,11 @@ class MainActivity : BaseActivity<MainPresenter>(), NavigationView.OnNavigationI
         nav_view.doOnLayoutAvailable {
             UserInfo.isLogin().yes {
                 UserInfo.currentUser?.let {
+                    iv_avatar.loadImage(it.avatar_url, it.name)
                     tv_username.text = it.name
                     tv_email.text = it.email
                 } ?: run {
+                    iv_avatar.imageResource = R.mipmap.ic_launcher_round
                     tv_username.text = "请登录"
                     tv_email.visibility = View.GONE
                 }
