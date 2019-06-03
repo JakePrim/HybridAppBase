@@ -14,7 +14,9 @@ import com.prim.gkapp.base.BaseActivity
 import com.prim.gkapp.data.model.UserInfo
 import com.prim.gkapp.ext.doOnLayoutAvailable
 import com.prim.gkapp.ext.loadImage
+import com.prim.gkapp.ext.showFragment
 import com.prim.gkapp.ext.yes
+import com.prim.gkapp.ui.about.AboutFragment
 import kotlinx.android.synthetic.main.activity_main2.*
 import kotlinx.android.synthetic.main.app_bar_main2.*
 import kotlinx.android.synthetic.main.nav_header_main2.*
@@ -33,21 +35,20 @@ class MainActivity : BaseActivity<MainPresenter>(), NavigationView.OnNavigationI
             Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
                 .setAction("Action", null).show()
         }
-        val drawerLayout: DrawerLayout = findViewById(R.id.drawer_layout)
-        val navView: NavigationView = findViewById(R.id.nav_view)
-        val toggle = ActionBarDrawerToggle(
-            this, drawerLayout, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close
-        )
-        drawerLayout.addDrawerListener(toggle)
-        toggle.syncState()
-
-        navView.setNavigationItemSelectedListener(this)
-
+        initDrawerLayout()
         initNavigation()
+    }
 
+    private fun initDrawerLayout() {
+        val toggle = ActionBarDrawerToggle(
+            this, drawer_layout, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close
+        )
+        drawer_layout.addDrawerListener(toggle)
+        toggle.syncState()
     }
 
     private fun initNavigation() {
+        nav_view.setNavigationItemSelectedListener(this)
         nav_view.doOnLayoutAvailable {
             UserInfo.isLogin().yes {
                 UserInfo.currentUser?.let {
@@ -88,10 +89,10 @@ class MainActivity : BaseActivity<MainPresenter>(), NavigationView.OnNavigationI
         // Handle navigation view item clicks here.
         when (item.itemId) {
             R.id.nav_home -> {
-                // Handle the camera action
-            }
-            R.id.nav_gallery -> {
 
+            }
+            R.id.nav_about -> {
+                showFragment(R.id.fl_content, AboutFragment::class.java, Bundle())
             }
             R.id.nav_slideshow -> {
 
