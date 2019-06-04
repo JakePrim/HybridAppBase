@@ -6,7 +6,7 @@ import androidx.core.view.ViewCompat
 import com.google.android.material.navigation.NavigationView
 
 /**
- * @desc
+ * @desc View的扩展类
  * @author prim
  * @time 2019-06-02 - 11:39
  * @version 1.0.0
@@ -14,6 +14,9 @@ import com.google.android.material.navigation.NavigationView
 
 sealed class ViewExt
 
+/**
+ * 判断NavigationView 是否初始化完毕
+ */
 inline fun NavigationView.doOnLayoutAvailable(crossinline block: () -> Unit) {
     ViewCompat.isLaidOut(this).yes {
         block()

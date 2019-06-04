@@ -6,7 +6,7 @@ import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.animation.doOnEnd
 import com.prim.gkapp.R
-import com.prim.gkapp.data.model.UserInfo
+import com.prim.gkapp.data.model.UserData
 import com.prim.gkapp.ext.otherwise
 import com.prim.gkapp.ext.yes
 import com.prim.gkapp.ui.home.MainActivity
@@ -34,9 +34,9 @@ class WelcomeActivity : AppCompatActivity() {
 
     private fun doWelcome() {
         Log.e("welcome", "doWelcome")
-        UserInfo.firstIn.yes {
+        UserData.firstIn.yes {
             //true 表示已经进入过了
-            UserInfo.isLogin().yes {
+            UserData.isLogin().yes {
                 //已经登录 进入MainActivity
                 startActivity<MainActivity>()
             }.otherwise {

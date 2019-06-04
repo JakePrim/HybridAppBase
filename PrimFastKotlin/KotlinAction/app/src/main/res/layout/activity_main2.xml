@@ -14,13 +14,22 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"/>
 
+
     <com.google.android.material.navigation.NavigationView
             android:id="@+id/nav_view"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_gravity="start"
             android:fitsSystemWindows="true"
+            android:layout_gravity="start"
             app:headerLayout="@layout/nav_header_main2"
-            app:menu="@menu/activity_main2_drawer"/>
+            app:menu="@menu/activity_main2_drawer">
+        <LinearLayout
+                android:gravity="bottom"
+                android:layout_gravity="bottom"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:orientation="horizontal">
+        </LinearLayout>
+    </com.google.android.material.navigation.NavigationView>
 
 </androidx.drawerlayout.widget.DrawerLayout>

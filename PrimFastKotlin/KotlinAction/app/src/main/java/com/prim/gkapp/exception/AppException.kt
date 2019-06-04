@@ -1,6 +1,6 @@
 package com.prim.gkapp.exception
 
-import com.prim.gkapp.network.entities.AuthResponse
+import com.prim.gkapp.data.model.AuthResponse
 
 /**
  * @desc
@@ -9,5 +9,5 @@ import com.prim.gkapp.network.entities.AuthResponse
  * @version 1.0.0
  */
 object AppException {
-    class AccountException(val response:AuthResponse):Exception("Already logged ")
+    class AccountException(val response: AuthResponse):Exception("Already logged ")
 }

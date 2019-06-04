@@ -1,8 +1,8 @@
 package com.prim.gkapp.network.service
 
 import com.prim.gkapp.base.Config
-import com.prim.gkapp.network.entities.AuthBody
-import com.prim.gkapp.network.entities.AuthResponse
+import com.prim.gkapp.data.model.AuthBody
+import com.prim.gkapp.data.model.AuthResponse
 import com.prim.gkapp.network.retrofit
 import io.reactivex.Observable
 import retrofit2.Response

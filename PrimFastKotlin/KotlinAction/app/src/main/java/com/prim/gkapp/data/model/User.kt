@@ -1,4 +1,4 @@
-package com.prim.gkapp.network.entities
+package com.prim.gkapp.data.model
 
 import android.os.Parcelable
 import com.prim.gkapp.anno.POKO

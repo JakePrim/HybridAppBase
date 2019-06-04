@@ -1,6 +1,6 @@
 package com.prim.gkapp.network.service
 
-import com.prim.gkapp.network.entities.User
+import com.prim.gkapp.data.model.User
 import com.prim.gkapp.network.retrofit
 import io.reactivex.Observable
 import retrofit2.http.GET

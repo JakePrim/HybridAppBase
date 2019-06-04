@@ -1,13 +1,14 @@
 package com.prim.gkapp.ui.about
 
 import android.os.Bundle
+import android.view.Gravity
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import org.jetbrains.anko.support.v4.UI
-import org.jetbrains.anko.textView
-import org.jetbrains.anko.verticalLayout
+import com.prim.gkapp.R
+import org.jetbrains.anko.*
+import org.jetbrains.anko.sdk27.coroutines.onClick
 
 /**
  * about fragment
@@ -24,11 +25,42 @@ class AboutFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return UI {
-            verticalLayout {
-                textView("码乎.GitHub by @JakePrim")
-                textView("open source listener")
-            }
-        }.view
+        return AboutFragmentUI().createView(AnkoContext.create(context!!, this))
     }
+}
+
+class AboutFragmentUI : AnkoComponent<AboutFragment> {
+    override fun createView(ui: AnkoContext<AboutFragment>): View = ui.apply {
+        relativeLayout {
+            verticalLayout {
+                imageView(R.mipmap.ic_launcher).lparams(width = wrapContent, height = wrapContent) {
+                    gravity = Gravity.CENTER
+                }
+                textView(
+                    "码乎.GitHub by @JakePrim"
+                ).lparams(width = wrapContent, height = wrapContent) {
+                    gravity = Gravity.CENTER_HORIZONTAL
+                    padding = dip(10)
+                }
+                textView(
+                    "open source listener"
+                ).lparams(width = wrapContent, height = wrapContent) {
+                    gravity = Gravity.CENTER_HORIZONTAL
+                    onClick {
+                        alert {
+                            customView {
+                                scrollView {
+                                    textView {
+                                        padding = dip(10)
+                                    }
+                                }
+                            }
+                        }.show()
+                    }
+                }
+            }.lparams(width = wrapContent, height = wrapContent) {
+                gravity = Gravity.CENTER
+            }
+        }
+    }.view
 }

@@ -11,11 +11,8 @@ import com.google.android.material.navigation.NavigationView
 import com.google.android.material.snackbar.Snackbar
 import com.prim.gkapp.R
 import com.prim.gkapp.base.BaseActivity
-import com.prim.gkapp.data.model.UserInfo
-import com.prim.gkapp.ext.doOnLayoutAvailable
-import com.prim.gkapp.ext.loadImage
-import com.prim.gkapp.ext.showFragment
-import com.prim.gkapp.ext.yes
+import com.prim.gkapp.data.model.UserData
+import com.prim.gkapp.ext.*
 import com.prim.gkapp.ui.about.AboutFragment
 import kotlinx.android.synthetic.main.activity_main2.*
 import kotlinx.android.synthetic.main.app_bar_main2.*
@@ -50,8 +47,8 @@ class MainActivity : BaseActivity<MainPresenter>(), NavigationView.OnNavigationI
     private fun initNavigation() {
         nav_view.setNavigationItemSelectedListener(this)
         nav_view.doOnLayoutAvailable {
-            UserInfo.isLogin().yes {
-                UserInfo.currentUser?.let {
+            UserData.isLogin().yes {
+                UserData.currentUser?.let {
                     iv_avatar.loadImage(it.avatar_url, it.name)
                     tv_username.text = it.name
                     tv_email.text = it.email
@@ -60,6 +57,10 @@ class MainActivity : BaseActivity<MainPresenter>(), NavigationView.OnNavigationI
                     tv_username.text = "请登录"
                     tv_email.visibility = View.GONE
                 }
+            }.otherwise {
+                iv_avatar.imageResource = R.mipmap.ic_launcher_round
+                tv_username.text = "请登录"
+                tv_email.visibility = View.GONE
             }
         }
     }
@@ -80,7 +81,7 @@ class MainActivity : BaseActivity<MainPresenter>(), NavigationView.OnNavigationI
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         return when (item.itemId) {
-            R.id.action_settings -> true
+            R.id.action_search -> true
             else -> super.onOptionsItemSelected(item)
         }
     }
@@ -89,9 +90,10 @@ class MainActivity : BaseActivity<MainPresenter>(), NavigationView.OnNavigationI
         // Handle navigation view item clicks here.
         when (item.itemId) {
             R.id.nav_home -> {
-
+                toolbar.title = "码乎.GitHub"
             }
             R.id.nav_about -> {
+                toolbar.title = "关于"
                 showFragment(R.id.fl_content, AboutFragment::class.java, Bundle())
             }
             R.id.nav_slideshow -> {

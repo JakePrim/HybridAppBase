@@ -2,7 +2,7 @@ package com.prim.gkapp.ui.login
 
 import android.content.Context
 import com.prim.gkapp.BuildConfig
-import com.prim.gkapp.data.model.UserInfo
+import com.prim.gkapp.data.model.UserData
 import com.prim.gkapp.mvp.impl.BasePresenter
 
 /**
@@ -17,9 +17,9 @@ class LoginPresenter : BasePresenter<LoginActivity>() {
     }
 
     fun login(userName: String, password: String) {
-        UserInfo.username = userName
-        UserInfo.password = password
-        UserInfo.login().subscribe({
+        UserData.username = userName
+        UserData.password = password
+        UserData.login().subscribe({
             view.onSuccessLogin()
         }, {
             view.onErrorLogin(it)
@@ -43,7 +43,7 @@ class LoginPresenter : BasePresenter<LoginActivity>() {
         if (BuildConfig.DEBUG) {
             view.onDataInit(BuildConfig.testUserName, BuildConfig.testPassword)
         } else {
-            view.onDataInit(UserInfo.username, UserInfo.password)
+            view.onDataInit(UserData.username, UserData.password)
         }
     }
 }

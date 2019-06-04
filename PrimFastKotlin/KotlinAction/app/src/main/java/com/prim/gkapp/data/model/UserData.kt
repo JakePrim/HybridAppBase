@@ -5,15 +5,12 @@ import com.google.gson.Gson
 import com.prim.gkapp.AppContext
 import com.prim.gkapp.exception.AppException
 import com.prim.gkapp.network.OnLoginStateChangeListener
-import com.prim.gkapp.network.entities.AuthBody
-import com.prim.gkapp.network.entities.User
 import com.prim.gkapp.network.service.AuthService
 import com.prim.gkapp.network.service.UserService
 import com.prim.gkapp.utils.Preference
 import com.prim.gkapp.utils.fromJson
 import io.reactivex.Observable
 import io.reactivex.android.schedulers.AndroidSchedulers
-import io.reactivex.schedulers.Schedulers
 import retrofit2.HttpException
 import java.util.concurrent.CopyOnWriteArrayList
 
@@ -23,7 +20,7 @@ import java.util.concurrent.CopyOnWriteArrayList
  * @time 2019-05-26 - 10:48
  * @version 1.0.0
  */
-object UserInfo {
+object UserData {
     //Preference 属性代理 默认会自动存入SharedPreference和自动取出数据
     //用户名
     var username: String by Preference(AppContext, "username", "")
@@ -62,7 +59,7 @@ object UserInfo {
 
 
     /**
-     * 用户请求登录
+     * 用户登录请求
      */
     fun login() = AuthService.createAuth(AuthBody())
         .doOnNext {
@@ -72,9 +69,7 @@ object UserInfo {
         .retryWhen {
             //如果获取的token为空 则删除鉴权
             it.flatMap {
-                Log.e("login", it.toString())
                 if (it is AppException.AccountException) {
-                    Log.e("login", "删除鉴权重新请求:" + it.response.id)
                     AuthService.deleteAuth(it.response.id)//删除鉴权 然后再重新请求鉴权
                 } else {
                     Observable.error(it)
@@ -88,9 +83,7 @@ object UserInfo {
         }.map {
             currentUser = it//存储用户信息
             notifyLogin(it)//回调监听
-            Log.e("login", "userInfo:${it.toString()}")
         }.observeOn(AndroidSchedulers.mainThread())
-        .subscribeOn(Schedulers.io())
 
 
     /**
@@ -110,7 +103,6 @@ object UserInfo {
         }.doOnError {
             Log.e("login", "退出登录 移除认证 message:${it.message}")
         }.observeOn(AndroidSchedulers.mainThread())
-        .subscribeOn(Schedulers.io())
 
 
     fun notifyLogin(user: User) {

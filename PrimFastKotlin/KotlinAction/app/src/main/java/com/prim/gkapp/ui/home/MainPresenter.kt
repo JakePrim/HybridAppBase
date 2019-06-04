@@ -1,7 +1,7 @@
 package com.prim.gkapp.ui.home
 
 import android.content.Context
-import com.prim.gkapp.data.model.UserInfo
+import com.prim.gkapp.data.model.UserData
 import com.prim.gkapp.ext.toastKx
 import com.prim.gkapp.mvp.impl.BasePresenter
 
@@ -19,7 +19,7 @@ class MainPresenter : BasePresenter<MainActivity>() {
     }
 
     fun logout() {
-        UserInfo.logout().subscribe({
+        UserData.logout().subscribe({
             context?.toastKx("已退出登录")
 //            view.toLogin()
         }, {
