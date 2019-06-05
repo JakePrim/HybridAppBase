@@ -28,6 +28,7 @@ class MainActivity : BaseActivity<MainPresenter>(), NavigationView.OnNavigationI
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main2)
         setSupportActionBar(toolbar)
+        toolbar.title = ""
         fab.setOnClickListener { view ->
             Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
                 .setAction("Action", null).show()
@@ -90,23 +91,11 @@ class MainActivity : BaseActivity<MainPresenter>(), NavigationView.OnNavigationI
         // Handle navigation view item clicks here.
         when (item.itemId) {
             R.id.nav_home -> {
-                toolbar.title = "码乎.GitHub"
+//                toolbar.title = "码乎.GitHub"
             }
             R.id.nav_about -> {
-                toolbar.title = "关于"
+//                toolbar.title = "关于"
                 showFragment(R.id.fl_content, AboutFragment::class.java, Bundle())
-            }
-            R.id.nav_slideshow -> {
-
-            }
-            R.id.nav_tools -> {
-
-            }
-            R.id.nav_share -> {
-
-            }
-            R.id.nav_send -> {
-
             }
         }
         val drawerLayout: DrawerLayout = findViewById(R.id.drawer_layout)

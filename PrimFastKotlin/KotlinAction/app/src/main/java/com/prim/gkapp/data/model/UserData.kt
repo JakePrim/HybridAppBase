@@ -8,9 +8,9 @@ import com.prim.gkapp.network.OnLoginStateChangeListener
 import com.prim.gkapp.network.service.AuthService
 import com.prim.gkapp.network.service.UserService
 import com.prim.gkapp.utils.Preference
+import com.prim.gkapp.utils.Task
 import com.prim.gkapp.utils.fromJson
 import io.reactivex.Observable
-import io.reactivex.android.schedulers.AndroidSchedulers
 import retrofit2.HttpException
 import java.util.concurrent.CopyOnWriteArrayList
 
@@ -83,7 +83,7 @@ object UserData {
         }.map {
             currentUser = it//存储用户信息
             notifyLogin(it)//回调监听
-        }.observeOn(AndroidSchedulers.mainThread())
+        }.compose(Task.taskIo_main())
 
 
     /**
@@ -102,7 +102,7 @@ object UserData {
             }
         }.doOnError {
             Log.e("login", "退出登录 移除认证 message:${it.message}")
-        }.observeOn(AndroidSchedulers.mainThread())
+        }.compose(Task.taskIo_main())
 
 
     fun notifyLogin(user: User) {

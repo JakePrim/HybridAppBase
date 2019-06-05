@@ -6,32 +6,39 @@
     <group android:checkableBehavior="single">
         <item
                 android:id="@+id/nav_home"
-                android:icon="@drawable/ic_menu_camera"
+                android:icon="@mipmap/ic_action_home"
                 android:title="@string/menu_home"/>
-        <item
-                android:id="@+id/nav_about"
-                android:icon="@drawable/ic_menu_camera"
-                android:title="@string/menu_about"/>
+
         <item
                 android:id="@+id/nav_slideshow"
-                android:icon="@drawable/ic_menu_slideshow"
-                android:title="@string/menu_slideshow"/>
+                android:icon="@mipmap/ic_action_dashboard"
+                android:title="Dashboard"/>
         <item
                 android:id="@+id/nav_tools"
-                android:icon="@drawable/ic_menu_manage"
-                android:title="@string/menu_tools"/>
+                android:icon="@mipmap/ic_action_pull"
+                android:title="Pull request"/>
+        <item
+                android:id="@+id/nav_issues"
+                android:icon="@mipmap/ic_action_issues"
+                android:title="Issues"/>
+
+        <item
+                android:id="@+id/nav_marketplace"
+                android:icon="@mipmap/ic_action_marketplace"
+                android:title="MarketPlace"/>
+        <item
+                android:id="@+id/nav_explore"
+                android:icon="@mipmap/ic_action_explore"
+                android:title="Explore"/>
+
     </group>
 
     <item android:title="Communicate">
         <menu>
             <item
-                    android:id="@+id/nav_share"
-                    android:icon="@drawable/ic_menu_share"
-                    android:title="@string/menu_share"/>
-            <item
-                    android:id="@+id/nav_send"
-                    android:icon="@drawable/ic_menu_send"
-                    android:title="@string/menu_send"/>
+                    android:id="@+id/nav_about"
+                    android:icon="@mipmap/ic_action_about"
+                    android:title="@string/menu_about"/>
         </menu>
     </item>
 
