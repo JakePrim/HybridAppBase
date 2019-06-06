@@ -10,10 +10,14 @@ import androidx.drawerlayout.widget.DrawerLayout
 import com.google.android.material.navigation.NavigationView
 import com.google.android.material.snackbar.Snackbar
 import com.prim.gkapp.R
-import com.prim.gkapp.base.BaseActivity
 import com.prim.gkapp.data.model.UserData
-import com.prim.gkapp.ext.*
+import com.prim.gkapp.ext.loadImage
 import com.prim.gkapp.ui.about.AboutFragment
+import com.prim.lib_base.base.BaseActivity
+import com.prim.lib_base.utils.doOnLayoutAvailable
+import com.prim.lib_base.utils.otherwise
+import com.prim.lib_base.utils.showFragment
+import com.prim.lib_base.utils.yes
 import kotlinx.android.synthetic.main.activity_main2.*
 import kotlinx.android.synthetic.main.app_bar_main2.*
 import kotlinx.android.synthetic.main.nav_header_main2.*
@@ -28,7 +32,8 @@ class MainActivity : BaseActivity<MainPresenter>(), NavigationView.OnNavigationI
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main2)
         setSupportActionBar(toolbar)
-        toolbar.title = ""
+        //隐藏toolbar 默认显示的title
+        supportActionBar?.setDisplayShowTitleEnabled(false)
         fab.setOnClickListener { view ->
             Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
                 .setAction("Action", null).show()
@@ -54,12 +59,12 @@ class MainActivity : BaseActivity<MainPresenter>(), NavigationView.OnNavigationI
                     tv_username.text = it.name
                     tv_email.text = it.email
                 } ?: run {
-                    iv_avatar.imageResource = R.mipmap.ic_launcher_round
+                    iv_avatar.imageResource = R.mipmap.ic_launcher
                     tv_username.text = "请登录"
                     tv_email.visibility = View.GONE
                 }
             }.otherwise {
-                iv_avatar.imageResource = R.mipmap.ic_launcher_round
+                iv_avatar.imageResource = R.mipmap.ic_launcher
                 tv_username.text = "请登录"
                 tv_email.visibility = View.GONE
             }

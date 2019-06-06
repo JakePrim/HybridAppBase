@@ -1,11 +1,11 @@
-package com.prim.gkapp.base
+package com.prim.lib_base.base
 
 import android.os.Bundle
 import android.view.View
 import androidx.fragment.app.Fragment
-import com.prim.gkapp.mvp.IMvpView
-import com.prim.gkapp.mvp.IPresenter
-import com.prim.gkapp.mvp.impl.BasePresenter
+import com.prim.lib_base.mvp.IMvpView
+import com.prim.lib_base.mvp.IPresenter
+import com.prim.lib_base.mvp.impl.BasePresenter
 import java.lang.reflect.ParameterizedType
 import java.lang.reflect.Type
 

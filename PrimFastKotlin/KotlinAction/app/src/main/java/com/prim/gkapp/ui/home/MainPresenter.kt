@@ -2,8 +2,8 @@ package com.prim.gkapp.ui.home
 
 import android.content.Context
 import com.prim.gkapp.data.model.UserData
-import com.prim.gkapp.ext.toastKx
-import com.prim.gkapp.mvp.impl.BasePresenter
+import com.prim.lib_base.utils.toastKx
+import com.prim.lib_base.mvp.impl.BasePresenter
 
 /**
  * @desc

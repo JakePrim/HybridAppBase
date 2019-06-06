@@ -2,14 +2,14 @@ package com.prim.gkapp.data.model
 
 import android.util.Log
 import com.google.gson.Gson
-import com.prim.gkapp.AppContext
 import com.prim.gkapp.exception.AppException
 import com.prim.gkapp.network.OnLoginStateChangeListener
 import com.prim.gkapp.network.service.AuthService
 import com.prim.gkapp.network.service.UserService
-import com.prim.gkapp.utils.Preference
 import com.prim.gkapp.utils.Task
 import com.prim.gkapp.utils.fromJson
+import com.prim.lib_base.AppContext
+import com.prim.lib_base.utils.Preference
 import io.reactivex.Observable
 import retrofit2.HttpException
 import java.util.concurrent.CopyOnWriteArrayList

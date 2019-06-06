@@ -1,4 +1,4 @@
-package com.prim.gkapp
+package com.prim.lib_base
 
 import android.app.Application
 import android.content.ContextWrapper
@@ -12,7 +12,7 @@ import android.content.ContextWrapper
 //lateinit 延迟初始化
 private lateinit var INSTANCE:Application
 
-class App : Application() {
+open class App : Application() {
     override fun onCreate() {
         super.onCreate()
         INSTANCE = this

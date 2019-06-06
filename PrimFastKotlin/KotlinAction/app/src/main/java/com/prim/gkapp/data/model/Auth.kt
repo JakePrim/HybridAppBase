@@ -2,7 +2,7 @@ package com.prim.gkapp.data.model
 
 import android.os.Parcelable
 import com.prim.gkapp.anno.POKO
-import com.prim.gkapp.base.Config
+import com.prim.gkapp.config.Config
 import kotlinx.android.parcel.Parcelize
 
 /**

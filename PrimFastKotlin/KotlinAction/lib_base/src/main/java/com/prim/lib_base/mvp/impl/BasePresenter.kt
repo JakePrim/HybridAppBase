@@ -1,12 +1,12 @@
-package com.prim.gkapp.mvp.impl
+package com.prim.lib_base.mvp.impl
 
 import android.content.Context
 import android.content.res.Configuration
 import android.os.Bundle
 import android.view.View
 import androidx.annotation.NonNull
-import com.prim.gkapp.mvp.IMvpView
-import com.prim.gkapp.mvp.IPresenter
+import com.prim.lib_base.mvp.IMvpView
+import com.prim.lib_base.mvp.IPresenter
 
 /**
  * @desc Presenter 的基类

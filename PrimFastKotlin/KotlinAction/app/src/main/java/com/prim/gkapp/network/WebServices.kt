@@ -1,7 +1,7 @@
 package com.prim.gkapp.network
 
-import com.prim.gkapp.AppContext
-import com.prim.gkapp.ext.ensureDir
+import com.prim.lib_base.AppContext
+import com.prim.lib_base.utils.ensureDir
 import com.prim.gkapp.network.interceptors.AcceptInterceptor
 import com.prim.gkapp.network.interceptors.AuthInterceptor
 import io.reactivex.schedulers.Schedulers

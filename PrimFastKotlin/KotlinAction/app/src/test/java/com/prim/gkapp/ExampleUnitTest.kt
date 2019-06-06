@@ -1,7 +1,7 @@
 package com.prim.gkapp
 
-import com.prim.gkapp.ext.otherwise
-import com.prim.gkapp.ext.yes
+import com.prim.lib_base.utils.otherwise
+import com.prim.lib_base.utils.yes
 import org.junit.Test
 
 /**

@@ -1,4 +1,4 @@
-package com.prim.gkapp.log
+package com.prim.lib_base.log
 
 import java.util.logging.Logger
 

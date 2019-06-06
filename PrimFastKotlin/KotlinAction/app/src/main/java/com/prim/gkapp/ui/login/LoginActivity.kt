@@ -6,9 +6,9 @@ import android.view.View.VISIBLE
 import androidx.core.widget.doOnTextChanged
 import androidx.lifecycle.LifecycleOwner
 import com.prim.gkapp.R
-import com.prim.gkapp.base.BaseActivity
-import com.prim.gkapp.ext.otherwise
-import com.prim.gkapp.ext.yes
+import com.prim.lib_base.base.BaseActivity
+import com.prim.lib_base.utils.otherwise
+import com.prim.lib_base.utils.yes
 import com.prim.gkapp.ui.home.MainActivity
 import kotlinx.android.synthetic.main.activity_login.*
 import org.jetbrains.anko.sdk27.coroutines.onClick

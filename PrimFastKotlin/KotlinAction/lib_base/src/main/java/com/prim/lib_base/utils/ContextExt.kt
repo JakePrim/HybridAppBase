@@ -1,4 +1,4 @@
-package com.prim.gkapp.ext
+package com.prim.lib_base.utils
 
 import android.content.Context
 import android.widget.Toast

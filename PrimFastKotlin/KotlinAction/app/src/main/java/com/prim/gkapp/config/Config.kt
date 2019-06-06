@@ -1,9 +1,9 @@
-package com.prim.gkapp.base
+package com.prim.gkapp.config
 
-import com.prim.gkapp.AppContext
 import com.prim.gkapp.BuildConfig
-import com.prim.gkapp.log.logger
-import com.prim.gkapp.utils.deviceID
+import com.prim.lib_base.AppContext
+import com.prim.lib_base.log.logger
+import com.prim.lib_base.utils.deviceID
 
 /**
  * @desc

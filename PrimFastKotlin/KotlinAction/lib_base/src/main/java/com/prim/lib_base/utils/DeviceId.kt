@@ -1,4 +1,4 @@
-package com.prim.gkapp.utils
+package com.prim.lib_base.utils
 
 import android.content.Context
 import android.provider.Settings.Secure.ANDROID_ID

@@ -1,4 +1,4 @@
-package com.prim.gkapp.ext
+package com.prim.lib_base.utils
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity

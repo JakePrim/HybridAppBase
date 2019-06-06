@@ -1,4 +1,4 @@
-package com.prim.gkapp.mvp
+package com.prim.lib_base.mvp
 
 import android.content.res.Configuration
 import android.os.Bundle
