@@ -11,6 +11,7 @@
     <color name="colorSecondaryDark">#1b1b1b</color>
 
     <color name="colorWhite">#FFFFFF</color>
+    <color name="colorTransparent">#00000000</color>
     <color name="colorEee">#EEEEEE</color>
     <color name="colorPrimaryBg">#f5f5f5</color>
     <color name="colorPrimaryBg2">#e0e0e0</color>

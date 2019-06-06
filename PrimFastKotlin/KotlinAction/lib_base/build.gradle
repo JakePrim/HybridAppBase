@@ -46,4 +46,12 @@ dependencies {
     api 'org.jetbrains.anko:anko:0.10.8'
     api "org.jetbrains.kotlin:kotlin-reflect:${kotlin_version}"
     api "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+
+    //状态栏管理
+    // 基础依赖包，必须要依赖
+    api 'com.gyf.immersionbar:immersionbar:3.0.0-beta05'
+    // fragment快速实现（可选）
+    api 'com.gyf.immersionbar:immersionbar-components:3.0.0-beta05'
+    // kotlin扩展（可选）
+    api 'com.gyf.immersionbar:immersionbar-ktx:3.0.0-beta05'
 }

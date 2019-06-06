@@ -14,10 +14,7 @@ import com.prim.gkapp.data.model.UserData
 import com.prim.gkapp.ext.loadImage
 import com.prim.gkapp.ui.about.AboutFragment
 import com.prim.lib_base.base.BaseActivity
-import com.prim.lib_base.utils.doOnLayoutAvailable
-import com.prim.lib_base.utils.otherwise
-import com.prim.lib_base.utils.showFragment
-import com.prim.lib_base.utils.yes
+import com.prim.lib_base.utils.*
 import kotlinx.android.synthetic.main.activity_main2.*
 import kotlinx.android.synthetic.main.app_bar_main2.*
 import kotlinx.android.synthetic.main.nav_header_main2.*
@@ -31,6 +28,9 @@ class MainActivity : BaseActivity<MainPresenter>(), NavigationView.OnNavigationI
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main2)
+        initDrawerLayout()
+        StatusBarUtil.setColorNoTranslucentForDrawerLayout(this, drawer_layout, this.getColorEx(R.color.colorPrimary))
+        initNavigation()
         setSupportActionBar(toolbar)
         //隐藏toolbar 默认显示的title
         supportActionBar?.setDisplayShowTitleEnabled(false)
@@ -38,8 +38,6 @@ class MainActivity : BaseActivity<MainPresenter>(), NavigationView.OnNavigationI
             Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
                 .setAction("Action", null).show()
         }
-        initDrawerLayout()
-        initNavigation()
     }
 
     private fun initDrawerLayout() {

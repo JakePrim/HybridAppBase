@@ -76,4 +76,6 @@ dependencies {
     implementation 'cn.carbs.android:AvatarImageView:1.0.4'
     implementation 'com.zzhoujay.richtext:richtext:3.0.8'
 
+
+
 }
