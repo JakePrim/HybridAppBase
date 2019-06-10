@@ -1,7 +1,9 @@
 package com.prim.lib_base.utils
 
+import android.os.Build
 import android.view.View
 import android.view.ViewTreeObserver
+import androidx.annotation.RequiresApi
 import androidx.core.view.ViewCompat
 import com.google.android.material.navigation.NavigationView
 
@@ -49,6 +51,7 @@ inline fun View.doViewAvailable(crossinline block: () -> Unit) {
         block()
     }.otherwise {
         viewTreeObserver.addOnGlobalLayoutListener(object : ViewTreeObserver.OnGlobalLayoutListener {
+            @RequiresApi(Build.VERSION_CODES.JELLY_BEAN)
             override fun onGlobalLayout() {
                 viewTreeObserver.removeOnGlobalLayoutListener(this)
                 block()

@@ -10,13 +10,16 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/side_nav_bar"
-            android:padding="16dp"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:paddingBottom="16dp"
+            android:paddingTop="25dp"
             android:theme="@style/ThemeOverlay.AppCompat.Dark"
             android:orientation="vertical"
             android:gravity="bottom">
 
         <LinearLayout
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
             <cn.carbs.android.avatarimageview.library.AvatarImageView
@@ -29,18 +32,35 @@
                     app:aiv_TextSizeRatio="0.4"
                     android:src="@mipmap/ic_launcher_round"
                     android:id="@+id/iv_avatar"/>
-            <TextView
-                    android:id="@+id/tv_username"
-                    android:layout_width="match_parent"
+            <LinearLayout
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:paddingTop="@dimen/nav_header_vertical_spacing"
-                    android:text="@string/nav_header_title"
-                    android:textSize="16sp"
                     android:layout_gravity="center_vertical"
-                    android:layout_marginLeft="10dp"
-                    android:textStyle="bold"
-                    android:textColor="@color/colorWhite"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Body1"/>
+                    android:orientation="vertical">
+                <TextView
+                        android:id="@+id/tv_username"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="@dimen/nav_header_vertical_spacing"
+                        android:text="@string/nav_header_title"
+                        android:textSize="16sp"
+                        android:layout_marginLeft="10dp"
+                        android:textStyle="bold"
+                        android:textColor="@color/colorWhite"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"/>
+                <TextView
+                        android:id="@+id/tv_location"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/colorPrimaryBg2"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginLeft="5dp"
+                        android:gravity="center_vertical"
+                        android:drawablePadding="5dp"
+                        android:textSize="14sp"
+                        android:drawableLeft="@mipmap/ic_action_location_on"
+                        android:text="北京"/>
+            </LinearLayout>
         </LinearLayout>
         <LinearLayout
                 android:id="@+id/ll_user_info"
@@ -56,19 +76,6 @@
                     android:layout_marginTop="10dp"
                     android:maxLines="2"
                     android:textSize="14sp"/>
-
-            <TextView
-                    android:id="@+id/tv_location"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textColor="@color/colorPrimaryBg2"
-                    android:layout_marginTop="5dp"
-                    android:layout_gravity="center_vertical"
-                    android:gravity="center_vertical"
-                    android:drawablePadding="5dp"
-                    android:textSize="14sp"
-                    android:drawableLeft="@mipmap/ic_action_location_on"
-                    android:text="北京"/>
 
             <TextView
                     android:id="@+id/tv_email"
@@ -107,109 +114,6 @@
             android:layout_marginLeft="16dp"
             android:layout_marginRight="16dp"
             android:layout_marginTop="-20dp">
-        <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_gravity="center_vertical"
-                android:layout_marginLeft="5dp"
-                android:gravity="center_vertical"
-                android:layout_marginRight="5dp"
-                android:orientation="horizontal">
-            <LinearLayout
-                    android:id="@+id/ll_followers"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:gravity="center"
-                    android:layout_weight="1"
-                    android:background="@drawable/normal_bg_selector"
-                    android:orientation="vertical">
-                <TextView android:layout_width="wrap_content"
-                          android:layout_height="wrap_content"
-                          android:textColor="@color/colorPrimary"
-                          android:textSize="14sp"
-                          android:text="followers"/>
-                <TextView
-                        android:id="@+id/tv_followers"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_horizontal"
-                        android:text="0"/>
-            </LinearLayout>
-            <View android:layout_width="1dp"
-                  android:layout_height="match_parent"
-                  android:layout_marginTop="8dp"
-                  android:layout_marginBottom="8dp"
-                  android:background="@color/colorEee"/>
-            <LinearLayout
-                    android:id="@+id/ll_following"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:background="@drawable/normal_bg_selector"
-                    android:gravity="center"
-                    android:orientation="vertical">
-                <TextView android:layout_width="wrap_content"
-                          android:layout_height="wrap_content"
-                          android:textColor="@color/colorPrimary"
-                          android:textSize="14sp"
-                          android:text="following"/>
-                <TextView
-                        android:id="@+id/tv_following"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_horizontal"
-                        android:text="0"/>
-            </LinearLayout>
-            <View android:layout_width="1dp"
-                  android:layout_height="match_parent"
-                  android:layout_marginTop="8dp"
-                  android:layout_marginBottom="8dp"
-                  android:background="@color/colorEee"/>
-            <LinearLayout
-                    android:id="@+id/ll_repos"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:orientation="vertical"
-                    android:background="@drawable/normal_bg_selector"
-                    android:layout_weight="1"
-                    android:gravity="center">
-                <TextView android:layout_width="wrap_content"
-                          android:layout_height="wrap_content"
-                          android:textColor="@color/colorPrimary"
-                          android:textSize="14sp"
-                          android:text="repos"/>
-                <TextView
-                        android:id="@+id/tv_repos"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_horizontal"
-                        android:text="0"/>
-            </LinearLayout>
-            <View android:layout_width="1dp"
-                  android:layout_height="match_parent"
-                  android:layout_marginTop="8dp"
-                  android:layout_marginBottom="8dp"
-                  android:background="@color/colorEee"/>
-            <LinearLayout
-                    android:id="@+id/ll_gists"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:orientation="vertical"
-                    android:gravity="center"
-                    android:background="@drawable/normal_bg_selector"
-                    android:layout_weight="1">
-                <TextView android:layout_width="wrap_content"
-                          android:layout_height="wrap_content"
-                          android:textColor="@color/colorPrimary"
-                          android:textSize="14sp"
-                          android:text="gists"/>
-                <TextView
-                        android:id="@+id/tv_gists"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_horizontal"
-                        android:text="0"/>
-            </LinearLayout>
-        </LinearLayout>
+        <include layout="@layout/include_nav_card_layout"/>
     </androidx.cardview.widget.CardView>
 </RelativeLayout>

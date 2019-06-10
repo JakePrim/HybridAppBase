@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
-      xmlns:tools="http://schemas.android.com/tools" xmlns:app="http://schemas.android.com/apk/res-auto"
+      xmlns:tools="http://schemas.android.com/tools"
+      xmlns:app="http://schemas.android.com/apk/res-auto"
       tools:showIn="navigation_view">
 
     <group android:checkableBehavior="single" android:id="@+id/nav_menu2">
@@ -12,16 +13,19 @@
         <item
                 android:id="@+id/nav_slideshow"
                 android:icon="@mipmap/ic_action_dashboard"
-
                 android:title="Dashboard"/>
         <item
                 android:id="@+id/nav_tools"
                 android:icon="@mipmap/ic_action_pull"
-                android:title="Pull request"/>
+                app:showAsAction="always"
+                android:title="Pull request"
+                app:actionLayout="@layout/menu_pull_request"/>
+
         <item
                 android:id="@+id/nav_issues"
                 android:icon="@mipmap/ic_action_issues"
                 app:showAsAction="always"
+                app:actionLayout="@layout/menu_issues"
                 android:title="Issues"/>
 
         <item

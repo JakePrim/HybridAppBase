@@ -18,6 +18,7 @@ import com.prim.lib_base.utils.*
 import kotlinx.android.synthetic.main.activity_main2.*
 import kotlinx.android.synthetic.main.app_bar_main2.*
 import kotlinx.android.synthetic.main.include_nav_bottom_layout.*
+import kotlinx.android.synthetic.main.include_nav_card_layout.*
 import kotlinx.android.synthetic.main.nav_header_main2.*
 import org.jetbrains.anko.imageResource
 import org.jetbrains.anko.sdk27.coroutines.onClick
@@ -147,6 +148,10 @@ class MainActivity : BaseActivity<MainPresenter>(), NavigationView.OnNavigationI
         val drawerLayout: DrawerLayout = findViewById(R.id.drawer_layout)
         drawerLayout.closeDrawer(GravityCompat.START)
         return true
+    }
+
+    override fun onResume() {
+        super.onResume()
     }
 
 }

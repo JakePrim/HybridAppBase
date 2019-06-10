@@ -22,5 +22,7 @@
     <color name="res_color_white_transparency_80">#CCFFFFFF</color>
     <color name="res_color_f5_transparency_80">#CCf5f5f5</color>
 
+    <color name="res_color_colorPrimary_transparency_50">#80212121</color>
+
     <color name="colorGrey">#f6f6f6</color>
 </resources>
