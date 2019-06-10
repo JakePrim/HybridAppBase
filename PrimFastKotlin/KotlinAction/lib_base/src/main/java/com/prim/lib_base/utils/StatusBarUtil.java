@@ -18,7 +18,7 @@ import com.prim.lib_base.R;
 /**
  * @author prim
  * @version 1.0.0
- * @desc
+ * @desc 状态栏管理工具类
  * @time 2019-06-06 - 18:35
  */
 public class StatusBarUtil {

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
-      xmlns:tools="http://schemas.android.com/tools"
+      xmlns:tools="http://schemas.android.com/tools" xmlns:app="http://schemas.android.com/apk/res-auto"
       tools:showIn="navigation_view">
 
-    <group android:checkableBehavior="single">
+    <group android:checkableBehavior="single" android:id="@+id/nav_menu2">
         <item
                 android:id="@+id/nav_home"
                 android:icon="@mipmap/ic_action_home"
@@ -12,6 +12,7 @@
         <item
                 android:id="@+id/nav_slideshow"
                 android:icon="@mipmap/ic_action_dashboard"
+
                 android:title="Dashboard"/>
         <item
                 android:id="@+id/nav_tools"
@@ -20,6 +21,7 @@
         <item
                 android:id="@+id/nav_issues"
                 android:icon="@mipmap/ic_action_issues"
+                app:showAsAction="always"
                 android:title="Issues"/>
 
         <item
@@ -33,13 +35,17 @@
 
     </group>
 
-    <item android:title="Communicate">
-        <menu>
-            <item
-                    android:id="@+id/nav_about"
-                    android:icon="@mipmap/ic_action_about"
-                    android:title="@string/menu_about"/>
-        </menu>
-    </item>
+    <group android:id="@+id/nav_menu1">
+        <item
+                android:id="@+id/nav_about"
+                android:icon="@mipmap/ic_action_error"
+                android:title="@string/menu_about"/>
+        <item
+                android:id="@+id/footer_spacer_2"
+                android:checkable="false"
+                android:enabled="false"
+                android:orderInCategory="200"
+                android:title=""/>
+    </group>
 
 </menu>

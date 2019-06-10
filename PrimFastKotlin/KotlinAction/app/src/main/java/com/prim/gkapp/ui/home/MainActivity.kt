@@ -17,8 +17,10 @@ import com.prim.lib_base.base.BaseActivity
 import com.prim.lib_base.utils.*
 import kotlinx.android.synthetic.main.activity_main2.*
 import kotlinx.android.synthetic.main.app_bar_main2.*
+import kotlinx.android.synthetic.main.include_nav_bottom_layout.*
 import kotlinx.android.synthetic.main.nav_header_main2.*
 import org.jetbrains.anko.imageResource
+import org.jetbrains.anko.sdk27.coroutines.onClick
 
 /**
  * 项目主页面
@@ -29,14 +31,29 @@ class MainActivity : BaseActivity<MainPresenter>(), NavigationView.OnNavigationI
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main2)
         initDrawerLayout()
+        //设置测滑栏状态栏
         StatusBarUtil.setColorNoTranslucentForDrawerLayout(this, drawer_layout, this.getColorEx(R.color.colorPrimary))
         initNavigation()
-        setSupportActionBar(toolbar)
-        //隐藏toolbar 默认显示的title
-        supportActionBar?.setDisplayShowTitleEnabled(false)
+        initToolBar()
+        initActionButton()
+        initListener()
+    }
+
+    private fun initActionButton() {
         fab.setOnClickListener { view ->
             Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
                 .setAction("Action", null).show()
+        }
+    }
+
+    private fun initToolBar() {
+        setSupportActionBar(toolbar)
+        //隐藏toolbar 默认显示的title
+        supportActionBar?.setDisplayShowTitleEnabled(false)
+        //隐藏toolbar 默认显示的左侧图片
+        supportActionBar?.setDisplayHomeAsUpEnabled(false)
+        nav_menu.onClick {
+            drawer_layout.openDrawer(GravityCompat.START)
         }
     }
 
@@ -56,23 +73,51 @@ class MainActivity : BaseActivity<MainPresenter>(), NavigationView.OnNavigationI
                     iv_avatar.loadImage(it.avatar_url, it.name)
                     tv_username.text = it.name
                     tv_email.text = it.email
+                    tv_location.text = it.location
+                    tv_blog.text = it.blog
+                    tv_dio.text = it.bio
+                    tv_followers.text = it.followers.toString()
+                    tv_following.text = it.following.toString()
+                    tv_repos.text = (it.public_repos + it.total_private_repos).toString()
+                    tv_gists.text = (it.public_gists + it.private_gists).toString()
                 } ?: run {
                     iv_avatar.imageResource = R.mipmap.ic_launcher
                     tv_username.text = "请登录"
-                    tv_email.visibility = View.GONE
+                    ll_user_info.visibility = View.GONE
                 }
             }.otherwise {
                 iv_avatar.imageResource = R.mipmap.ic_launcher
                 tv_username.text = "请登录"
-                tv_email.visibility = View.GONE
+                ll_user_info.visibility = View.GONE
+            }
+            ll_followers.onClick {
+
+            }
+
+            ll_following.onClick {
+
             }
         }
     }
 
+    private fun initListener() {
+        ll_setting.onClick {
+
+        }
+
+        ll_close.onClick {
+            finish()
+            System.exit(0)
+        }
+
+        ll_model.onClick {
+
+        }
+    }
+
     override fun onBackPressed() {
-        val drawerLayout: DrawerLayout = findViewById(R.id.drawer_layout)
-        if (drawerLayout.isDrawerOpen(GravityCompat.START)) {
-            drawerLayout.closeDrawer(GravityCompat.START)
+        if (drawer_layout.isDrawerOpen(GravityCompat.START)) {
+            drawer_layout.closeDrawer(GravityCompat.START)
         } else {
             super.onBackPressed()
         }
@@ -94,10 +139,8 @@ class MainActivity : BaseActivity<MainPresenter>(), NavigationView.OnNavigationI
         // Handle navigation view item clicks here.
         when (item.itemId) {
             R.id.nav_home -> {
-//                toolbar.title = "码乎.GitHub"
             }
             R.id.nav_about -> {
-//                toolbar.title = "关于"
                 showFragment(R.id.fl_content, AboutFragment::class.java, Bundle())
             }
         }

@@ -28,6 +28,21 @@
                        android:padding="10dp"
                        android:layout_gravity="center"
                        android:src="@mipmap/ic_launcher"/>
+            <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                <ImageView
+                        android:id="@+id/nav_menu"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@mipmap/ic_action_menu"/>
+                <View
+                        android:id="@+id/issues_dot"
+                        android:layout_width="8dp"
+                        android:layout_height="8dp"
+                        android:layout_alignRight="@+id/nav_menu"
+                        android:background="@drawable/shape_red_dot"/>
+            </RelativeLayout>
 
         </androidx.appcompat.widget.Toolbar>
 
@@ -42,6 +57,6 @@
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/fab_margin"
             android:layout_gravity="bottom|end"
-            app:srcCompat="@android:drawable/ic_dialog_email"/>
+            app:srcCompat="@mipmap/ic_action_notifications"/>
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

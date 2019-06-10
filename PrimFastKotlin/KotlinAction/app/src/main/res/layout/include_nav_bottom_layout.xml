@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:gravity="bottom"
+        android:layout_gravity="bottom"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:orientation="horizontal">
+
+    <LinearLayout
+            android:id="@+id/ll_model"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:background="@drawable/normal_bg_f5_selector"
+            android:layout_height="match_parent">
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorPrimaryLight"
+                android:gravity="center"
+                android:drawablePadding="5dp"
+                android:padding="10dp"
+                android:drawableLeft="@mipmap/ic_action_night_model_24"
+                android:text="@string/res_strings_night_model"/>
+    </LinearLayout>
+
+    <LinearLayout
+            android:id="@+id/ll_setting"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:background="@drawable/normal_bg_f5_selector"
+            android:layout_height="match_parent">
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textColor="@color/colorPrimaryLight"
+                android:padding="10dp"
+                android:drawableLeft="@mipmap/ic_settings"
+                android:text="@string/res_strings_setting"/>
+    </LinearLayout>
+
+    <LinearLayout
+            android:id="@+id/ll_close"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:layout_height="match_parent"
+            android:background="@drawable/normal_bg_f5_selector">
+        <TextView android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:padding="10dp"
+                  android:textColor="@color/colorPrimaryLight"
+                  android:gravity="center"
+                  android:drawablePadding="5dp"
+                  android:drawableLeft="@mipmap/ic_action_power_settings_new"
+                  android:text="@string/res_strings_close"/>
+    </LinearLayout>
+</LinearLayout>
