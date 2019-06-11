@@ -69,6 +69,7 @@ class MainActivity : BaseActivity<MainPresenter>(), NavigationView.OnNavigationI
     private fun initNavigation() {
         nav_view.setNavigationItemSelectedListener(this)
         nav_view.doOnLayoutAvailable {
+            //nav view 判断是否初始化完毕
             UserData.isLogin().yes {
                 UserData.currentUser?.let {
                     iv_avatar.loadImage(it.avatar_url, it.name)
@@ -92,18 +93,26 @@ class MainActivity : BaseActivity<MainPresenter>(), NavigationView.OnNavigationI
                 ll_user_info.visibility = View.GONE
             }
             ll_followers.onClick {
-
+                drawer_layout.closeDrawer(GravityCompat.START)
             }
 
             ll_following.onClick {
+                drawer_layout.closeDrawer(GravityCompat.START)
+            }
 
+            ll_gists.onClick {
+                drawer_layout.closeDrawer(GravityCompat.START)
+            }
+
+            ll_repos.onClick {
+                drawer_layout.closeDrawer(GravityCompat.START)
             }
         }
     }
 
     private fun initListener() {
         ll_setting.onClick {
-
+            drawer_layout.closeDrawer(GravityCompat.START)
         }
 
         ll_close.onClick {
@@ -112,7 +121,7 @@ class MainActivity : BaseActivity<MainPresenter>(), NavigationView.OnNavigationI
         }
 
         ll_model.onClick {
-
+            //请求模式
         }
     }
 

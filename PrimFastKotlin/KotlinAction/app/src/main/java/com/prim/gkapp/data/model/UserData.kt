@@ -8,8 +8,7 @@ import com.prim.gkapp.network.service.AuthService
 import com.prim.gkapp.network.service.UserService
 import com.prim.gkapp.utils.Task
 import com.prim.gkapp.utils.fromJson
-import com.prim.lib_base.AppContext
-import com.prim.lib_base.utils.Preference
+import com.prim.lib_base.utils.pref
 import io.reactivex.Observable
 import retrofit2.HttpException
 import java.util.concurrent.CopyOnWriteArrayList
@@ -23,17 +22,19 @@ import java.util.concurrent.CopyOnWriteArrayList
 object UserData {
     //Preference 属性代理 默认会自动存入SharedPreference和自动取出数据
     //用户名
-    var username: String by Preference(AppContext, "username", "")
+    var username: String by pref("")
     //密码
-    var password: String by Preference(AppContext, "password", "")
+    var password: String by pref("")
     //token
-    var token: String by Preference(AppContext, "token", "")
+    var token: String by pref("")
     //记录用户信息的json字符串
-    var userInfoJson: String by Preference(AppContext, "userInfoJson", "")
+    var userInfoJson: String by pref("")
     //记录鉴权ID
-    var authId: Int by Preference(AppContext, "authId", 0)
+    var authId: Int by pref(0)
     //记录用户是否第一次打开APP
-    var firstIn: Boolean by Preference(AppContext, "firstIn", true)
+    var firstIn: Boolean by pref(true)
+    //记录当前模式 true 为夜间模式 false为日间模式
+    var nightModel: Boolean by pref(false)
 
     //判断是否登录
     fun isLogin(): Boolean = token.isNotEmpty()
@@ -56,6 +57,8 @@ object UserData {
                 userInfoJson = Gson().toJson(value)
             }
         }
+
+//    var currentUser: User? by pref(currentUser)
 
 
     /**
