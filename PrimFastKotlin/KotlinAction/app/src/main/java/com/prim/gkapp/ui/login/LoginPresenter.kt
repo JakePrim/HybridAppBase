@@ -2,7 +2,7 @@ package com.prim.gkapp.ui.login
 
 import android.content.Context
 import com.prim.gkapp.BuildConfig
-import com.prim.gkapp.data.model.UserData
+import com.prim.gkapp.data.UserData
 import com.prim.lib_base.mvp.impl.BasePresenter
 
 /**

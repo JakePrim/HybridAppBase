@@ -6,7 +6,7 @@ import com.prim.gkapp.config.Config
 import kotlinx.android.parcel.Parcelize
 
 /**
- * @desc
+ * @desc auth request model
  * @author prim
  * @time 2019-05-29 - 10:02
  * @version 1.0.0

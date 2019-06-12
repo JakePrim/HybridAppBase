@@ -1,7 +1,7 @@
 package com.prim.gkapp.network.interceptors
 
 import android.util.Base64
-import com.prim.gkapp.data.model.UserData
+import com.prim.gkapp.data.UserData
 import okhttp3.Interceptor
 import okhttp3.Response
 

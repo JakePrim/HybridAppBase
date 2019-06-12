@@ -5,7 +5,7 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.animation.doOnEnd
 import com.prim.gkapp.R
-import com.prim.gkapp.data.model.UserData
+import com.prim.gkapp.data.UserData
 import com.prim.gkapp.ui.home.MainActivity
 import com.prim.gkapp.ui.login.LoginActivity
 import com.prim.lib_base.utils.doViewAvailable

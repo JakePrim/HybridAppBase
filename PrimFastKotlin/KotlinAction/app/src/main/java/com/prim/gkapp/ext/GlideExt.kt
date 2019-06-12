@@ -11,6 +11,7 @@ import com.bumptech.glide.request.RequestOptions
  * @version 1.0.0
  */
 fun AvatarImageView.loadImage(url: String, text: CharSequence, opetions: RequestOptions = RequestOptions()) {
+    //没有头像时的处理
     text.toString().let {
         setTextAndColorSeed(it.toUpperCase(), it.hashCode().toString())
     }

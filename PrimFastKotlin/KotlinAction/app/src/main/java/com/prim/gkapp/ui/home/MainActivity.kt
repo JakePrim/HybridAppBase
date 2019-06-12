@@ -10,7 +10,7 @@ import androidx.drawerlayout.widget.DrawerLayout
 import com.google.android.material.navigation.NavigationView
 import com.google.android.material.snackbar.Snackbar
 import com.prim.gkapp.R
-import com.prim.gkapp.data.model.UserData
+import com.prim.gkapp.data.UserData
 import com.prim.gkapp.ext.loadImage
 import com.prim.gkapp.ui.about.AboutFragment
 import com.prim.lib_base.base.BaseActivity

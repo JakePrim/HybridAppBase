@@ -1,7 +1,7 @@
-package com.prim.gkapp.data.model
+package com.prim.gkapp.data
 
 /**
- * @desc list进行分页
+ * @desc this is github list paging handle
  * @author prim
  * @time 2019-06-05 - 06:17
  * @version 1.0.0

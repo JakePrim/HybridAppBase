@@ -1,12 +1,13 @@
-package com.prim.gkapp.data.model
+package com.prim.gkapp.data
 
 import android.util.Log
 import com.google.gson.Gson
+import com.prim.gkapp.data.model.AuthBody
+import com.prim.gkapp.data.model.User
 import com.prim.gkapp.exception.AppException
 import com.prim.gkapp.network.OnLoginStateChangeListener
 import com.prim.gkapp.network.service.AuthService
 import com.prim.gkapp.network.service.UserService
-import com.prim.gkapp.utils.Task
 import com.prim.gkapp.utils.fromJson
 import com.prim.lib_base.utils.pref
 import io.reactivex.Observable
@@ -86,7 +87,8 @@ object UserData {
         }.map {
             currentUser = it//存储用户信息
             notifyLogin(it)//回调监听
-        }.compose(Task.taskIo_main())
+        }
+//        .compose(Task.taskIo_main())
 
 
     /**
@@ -105,7 +107,8 @@ object UserData {
             }
         }.doOnError {
             Log.e("login", "退出登录 移除认证 message:${it.message}")
-        }.compose(Task.taskIo_main())
+        }
+//        .compose(Task.taskIo_main())
 
 
     fun notifyLogin(user: User) {
