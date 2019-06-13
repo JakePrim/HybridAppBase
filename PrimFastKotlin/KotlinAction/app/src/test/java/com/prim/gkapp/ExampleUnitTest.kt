@@ -1,5 +1,6 @@
 package com.prim.gkapp
 
+import com.prim.gkapp.network.service.RepositoryService
 import com.prim.lib_base.utils.otherwise
 import com.prim.lib_base.utils.yes
 import org.junit.Test
@@ -22,4 +23,13 @@ class ExampleUnitTest {
     }
 
     fun getBoolean() = true
+
+    @Test
+    fun testRepos() {
+        RepositoryService.listRepositoryOfUser("JakePrim", 2).doOnNext {
+            print("hasNext:{${it.hasNext}} hasPer:${it.hasPre}")
+        }.doOnError {
+            it.printStackTrace()
+        }
+    }
 }

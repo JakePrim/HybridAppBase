@@ -1,6 +1,7 @@
 package com.prim.gkapp.ui.home
 
 import android.os.Bundle
+import android.util.Log
 import android.view.Menu
 import android.view.MenuItem
 import android.view.View
@@ -12,6 +13,7 @@ import com.google.android.material.snackbar.Snackbar
 import com.prim.gkapp.R
 import com.prim.gkapp.data.UserData
 import com.prim.gkapp.ext.loadImage
+import com.prim.gkapp.network.service.RepositoryService
 import com.prim.gkapp.ui.about.AboutFragment
 import com.prim.lib_base.base.BaseActivity
 import com.prim.lib_base.utils.*
@@ -38,6 +40,13 @@ class MainActivity : BaseActivity<MainPresenter>(), NavigationView.OnNavigationI
         initToolBar()
         initActionButton()
         initListener()
+        UserData.currentUser?.let {
+            RepositoryService.listRepositoryOfUser(it.name,2).subscribe({
+                Log.e("listRepositoryOfUser","hasNext:"+it.hasNext+" hasPer:"+it.hasPre)
+            },{
+                it.printStackTrace()
+            })
+        }
     }
 
     private fun initActionButton() {
@@ -69,6 +78,8 @@ class MainActivity : BaseActivity<MainPresenter>(), NavigationView.OnNavigationI
     private fun initNavigation() {
         nav_view.setNavigationItemSelectedListener(this)
         nav_view.doOnLayoutAvailable {
+            //默认为菜单的第一个
+            nav_view.setCheckedItem(R.id.nav_home)
             //nav view 判断是否初始化完毕
             UserData.isLogin().yes {
                 UserData.currentUser?.let {
@@ -149,9 +160,25 @@ class MainActivity : BaseActivity<MainPresenter>(), NavigationView.OnNavigationI
         // Handle navigation view item clicks here.
         when (item.itemId) {
             R.id.nav_home -> {
+                showFragment(R.id.fl_content, HomeFragment::class.java, Bundle())
             }
             R.id.nav_about -> {
                 showFragment(R.id.fl_content, AboutFragment::class.java, Bundle())
+            }
+            R.id.nav_dashboard -> {
+
+            }
+            R.id.nav_pull -> {
+
+            }
+            R.id.nav_issues -> {
+
+            }
+            R.id.nav_marketplace -> {
+
+            }
+            R.id.nav_explore -> {
+
             }
         }
         val drawerLayout: DrawerLayout = findViewById(R.id.drawer_layout)
@@ -161,6 +188,8 @@ class MainActivity : BaseActivity<MainPresenter>(), NavigationView.OnNavigationI
 
     override fun onResume() {
         super.onResume()
+        //更新通知
+
     }
 
 }

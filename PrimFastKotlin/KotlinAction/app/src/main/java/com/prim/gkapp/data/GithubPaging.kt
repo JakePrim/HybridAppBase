@@ -1,5 +1,7 @@
 package com.prim.gkapp.data
 
+import com.prim.lib_base.log.logger
+
 /**
  * @desc this is github list paging handle
  * @author prim
@@ -8,7 +10,7 @@ package com.prim.gkapp.data
  */
 class GithubPaging<T> : ArrayList<T>() {
     companion object {
-        const val URL = """(http?|ftp|file)://[-a-zA-Z0-9+&@#/%?=~_|!:,.;]*[-az-A-Z0-9+&@#/%=~_|]"""
+        const val URL = """(https?|ftp|file)://[-a-zA-Z0-9+&@#/%?=~_|!:,.;]*[-a-zA-Z0-9+&@#/%=~_|]"""
     }
 
     private val relMap = HashMap<String, String?>().withDefault { null }
@@ -35,9 +37,10 @@ class GithubPaging<T> : ArrayList<T>() {
     }
 
     fun setupLink(link: String) {
-        Regex("""<($URL)>;rel="(\w+)"""").findAll(link).asIterable().map {
+        Regex("""<($URL)>; rel="(\w+)"""").findAll(link).asIterable().map {
             val url = it.groupValues[1]
             relMap[it.groupValues[3]] = url //next=....
+            logger.warn("${it.groupValues[3]} => ${it.groupValues[1]}")
         }
     }
 

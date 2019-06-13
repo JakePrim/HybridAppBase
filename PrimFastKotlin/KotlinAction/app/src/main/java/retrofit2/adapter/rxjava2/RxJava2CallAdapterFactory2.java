@@ -146,7 +146,7 @@ public final class RxJava2CallAdapterFactory2 extends CallAdapter.Factory {
                 throw new IllegalStateException("Result must be parameterized"
                         + " as Result<GithubPaging> or Result<? extends GithubPaging>");
             }
-            responseType = getParameterUpperBound(0, (ParameterizedType) observableType);
+            responseType = observableType;
             isPaging = true;
         } else {
             responseType = observableType;

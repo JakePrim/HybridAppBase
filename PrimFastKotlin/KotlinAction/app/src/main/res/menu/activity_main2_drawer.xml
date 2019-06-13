@@ -11,11 +11,11 @@
                 android:title="@string/menu_home"/>
 
         <item
-                android:id="@+id/nav_slideshow"
+                android:id="@+id/nav_dashboard"
                 android:icon="@mipmap/ic_action_dashboard"
                 android:title="Dashboard"/>
         <item
-                android:id="@+id/nav_tools"
+                android:id="@+id/nav_pull"
                 android:icon="@mipmap/ic_action_pull"
                 app:showAsAction="always"
                 android:title="Pull request"

@@ -33,14 +33,14 @@ final class GithubPagingObservable<T> extends Observable<T> {
 
     @Override
     protected void subscribeActual(Observer<? super T> observer) {
-        upstream.subscribe(new BodyObserver<T>(observer));
+        upstream.subscribe(new GitHubPagingObserver<T>(observer));
     }
 
-    private static class BodyObserver<R> implements Observer<Response<R>> {
+    private static class GitHubPagingObserver<R> implements Observer<Response<R>> {
         private final Observer<? super R> observer;
         private boolean terminated;
 
-        BodyObserver(Observer<? super R> observer) {
+        GitHubPagingObserver(Observer<? super R> observer) {
             this.observer = observer;
         }
 

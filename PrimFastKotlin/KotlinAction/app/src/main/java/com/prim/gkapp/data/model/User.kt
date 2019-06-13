@@ -48,6 +48,8 @@ data class User(
     var plan: Plan
 ) : Parcelable
 
+
+
 @POKO
 @Parcelize
 data class Plan(

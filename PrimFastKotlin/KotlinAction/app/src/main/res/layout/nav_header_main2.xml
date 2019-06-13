@@ -109,7 +109,7 @@
             android:layout_height="60dp"
             android:layout_below="@+id/ll_header"
             app:cardElevation="5dp"
-            app:cardBackgroundColor="@color/colorWhite"
+            app:cardBackgroundColor="@color/colorPrimaryLight"
             android:layout_marginBottom="10dp"
             android:layout_marginLeft="16dp"
             android:layout_marginRight="16dp"
