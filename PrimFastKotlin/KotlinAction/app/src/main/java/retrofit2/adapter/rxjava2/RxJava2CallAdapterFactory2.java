@@ -16,7 +16,7 @@
 package retrofit2.adapter.rxjava2;
 
 import androidx.annotation.Nullable;
-import com.prim.gkapp.data.GithubPaging;
+import com.prim.gkapp.data.page.GithubPaging;
 import io.reactivex.*;
 import retrofit2.CallAdapter;
 import retrofit2.HttpException;
@@ -146,6 +146,10 @@ public final class RxJava2CallAdapterFactory2 extends CallAdapter.Factory {
                 throw new IllegalStateException("Result must be parameterized"
                         + " as Result<GithubPaging> or Result<? extends GithubPaging>");
             }
+            responseType = observableType;
+            isPaging = true;
+        } else if (PagingWrapper.class.isAssignableFrom(rawObservableType)) {
+            /* impl PagingWrapper class **/
             responseType = observableType;
             isPaging = true;
         } else {

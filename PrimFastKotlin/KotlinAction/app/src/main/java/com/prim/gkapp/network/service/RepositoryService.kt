@@ -1,8 +1,8 @@
 package com.prim.gkapp.network.service
 
-import com.prim.gkapp.data.GithubPaging
 import com.prim.gkapp.data.model.Repository
 import com.prim.gkapp.data.model.SearchRepos
+import com.prim.gkapp.data.page.GithubPaging
 import com.prim.gkapp.network.retrofit
 import io.reactivex.Observable
 import retrofit2.http.GET

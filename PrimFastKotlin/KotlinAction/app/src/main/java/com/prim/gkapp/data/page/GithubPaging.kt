@@ -1,4 +1,4 @@
-package com.prim.gkapp.data
+package com.prim.gkapp.data.page
 
 import com.prim.lib_base.log.logger
 

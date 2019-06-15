@@ -16,6 +16,7 @@ import com.prim.gkapp.ext.loadImage
 import com.prim.gkapp.network.service.RepositoryService
 import com.prim.gkapp.ui.about.AboutFragment
 import com.prim.lib_base.base.BaseActivity
+import com.prim.lib_base.log.logger
 import com.prim.lib_base.utils.*
 import kotlinx.android.synthetic.main.activity_main2.*
 import kotlinx.android.synthetic.main.app_bar_main2.*
@@ -41,12 +42,19 @@ class MainActivity : BaseActivity<MainPresenter>(), NavigationView.OnNavigationI
         initActionButton()
         initListener()
         UserData.currentUser?.let {
-            RepositoryService.listRepositoryOfUser(it.name,2).subscribe({
-                Log.e("listRepositoryOfUser","hasNext:"+it.hasNext+" hasPer:"+it.hasPre)
-            },{
+            RepositoryService.listRepositoryOfUser(it.name, 2).subscribe({
+                Log.e("listRepositoryOfUser", "hasNext:" + it.hasNext + " hasPer:" + it.hasPre + "")
+            }, {
                 it.printStackTrace()
             })
         }
+        RepositoryService.searchRepository(2, "pushed:<" + java.util.Date().format("yyyy-MM-dd"))
+            .subscribe({
+                logger.debug("Pagging:hasNext:${it.paging.hasNext},hasPer:${it.paging.hasPre}")
+                Log.e("searchRepository", "hasNext:" + it.paging.hasNext + " hasPer:" + it.paging.hasPre + "")
+            }, {
+                it.printStackTrace()
+            })
     }
 
     private fun initActionButton() {

@@ -15,7 +15,7 @@
  */
 package retrofit2.adapter.rxjava2;
 
-import com.prim.gkapp.data.GithubPaging;
+import com.prim.gkapp.data.page.GithubPaging;
 import io.reactivex.Observable;
 import io.reactivex.Observer;
 import io.reactivex.disposables.Disposable;
@@ -52,17 +52,19 @@ final class GithubPagingObservable<T> extends Observable<T> {
         @Override
         public void onNext(Response<R> response) {
             if (response.isSuccessful()) {
+                GithubPaging githubPaging;
                 if (response.body() instanceof GithubPaging) {
-                    GithubPaging githubPaging = (GithubPaging) response.body();
-                    String link = response.headers().get("link");
-                    if (link != null) {
-                        githubPaging.setupLink(link);
-                    }
-                    observer.onNext(response.body());
-                } else {
+                    githubPaging = (GithubPaging) response.body();
+                } else if (response.body() instanceof PagingWrapper){
+                    githubPaging = ((PagingWrapper)response.body()).getPaging();
+                }else {
                     throw new IllegalArgumentException("");
                 }
-
+                String link = response.headers().get("link");
+                if (link != null) {
+                    githubPaging.setupLink(link);
+                }
+                observer.onNext(response.body());
             } else {
                 terminated = true;
                 Throwable t = new HttpException(response);
