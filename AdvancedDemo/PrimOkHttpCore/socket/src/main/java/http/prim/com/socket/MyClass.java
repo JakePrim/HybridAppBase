@@ -14,10 +14,10 @@ import javax.net.ssl.SSLSocketFactory;
 public class MyClass {
 
     public static void main(String[] args) {
-
+        doHttps();//SSL 的过程？？？ 如何使用证书？？？
     }
 
-    public static void doHttp(){
+    public static void doHttp() {
 
     }
 

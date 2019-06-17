@@ -4,7 +4,7 @@ import com.prim.lib_base.log.logger
 import io.reactivex.Observable
 
 /**
- * @desc
+ * @desc list page，auto impl load more data and load page count
  * @author prim
  * @time 2019-06-15 - 06:57
  * @version 1.0.0
@@ -12,12 +12,15 @@ import io.reactivex.Observable
 abstract class ListPage<T> : DateProvider<T> {
 
     companion object {
+        //The number of pages displayed,number default 20
         const val PAGE_SIZE = 20
     }
 
+    //Record current number of pages,set method private not allow
     var currentPage = 1
         private set
 
+    //Record current data of pages
     val data = GithubPaging<T>()
 
     /**
