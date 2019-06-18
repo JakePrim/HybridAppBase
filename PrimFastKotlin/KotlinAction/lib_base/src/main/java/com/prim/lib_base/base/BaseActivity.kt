@@ -4,8 +4,10 @@ import android.content.Intent
 import android.content.res.Configuration
 import android.os.Bundle
 import android.view.View
+import androidx.annotation.ColorRes
 import androidx.annotation.NonNull
 import androidx.appcompat.app.AppCompatActivity
+import com.gyf.immersionbar.ImmersionBar
 import com.prim.lib_base.mvp.IMvpView
 import com.prim.lib_base.mvp.IPresenter
 import com.prim.lib_base.mvp.impl.BasePresenter
@@ -108,5 +110,19 @@ abstract class BaseActivity<out P : BasePresenter<BaseActivity<P>>> : IMvpView<P
     override fun onConfigurationChanged(newConfig: Configuration) {
         super.onConfigurationChanged(newConfig)
         presenter.onConfigurationChanged(newConfig)
+    }
+
+    fun setStatusBar(
+        @ColorRes color: Int, alpha: Float = 1.0f,
+        isDark: Boolean = true,
+        fitsSystemFlag: Boolean = true
+    ) {
+        ImmersionBar
+            .with(this)
+            .keyboardEnable(true)
+            .fitsSystemWindows(fitsSystemFlag)
+            .statusBarColor(color)
+            .statusBarDarkFont(isDark, alpha)
+            .init()
     }
 }

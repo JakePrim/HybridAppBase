@@ -4,6 +4,7 @@ import android.animation.ObjectAnimator
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.animation.doOnEnd
+import com.gyf.immersionbar.ImmersionBar
 import com.prim.gkapp.R
 import com.prim.gkapp.data.UserData
 import com.prim.gkapp.ui.home.MainActivity
@@ -19,11 +20,13 @@ class WelcomeActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        //设置状态栏字体 为黑色
+        ImmersionBar.with(this).statusBarDarkFont(true).init()
         setContentView(R.layout.activity_welcome)
         tv_app_name.doViewAvailable {
             val anim = ObjectAnimator.ofFloat(
-                tv_app_name,
-                "alpha", 0.1f, 1f, 0.1f
+                    tv_app_name,
+                    "alpha", 0.1f, 1f, 0.1f
             )
             anim.duration = 3000
             anim.doOnEnd {

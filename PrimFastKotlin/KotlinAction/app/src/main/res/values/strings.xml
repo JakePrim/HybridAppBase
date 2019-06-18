@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">码乎</string>
+    <string name="app_name">CodeHub</string>
     <string name="title_activity_login">Sign in</string>
     <string name="prompt_email">Email</string>
     <string name="prompt_password">Password</string>
@@ -33,4 +33,6 @@
     <string name="res_strings_night_model">夜间模式</string>
     <string name="res_strings_setting">设置</string>
     <string name="res_strings_close">退出</string>
+    <string name="str_search">搜索</string>
+    <string name="str_github_login_dec">请使用您的GitHub账号登录 了解详情</string>
 </resources>

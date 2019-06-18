@@ -6,4 +6,14 @@
     <dimen name="nav_header_vertical_spacing">8dp</dimen>
     <dimen name="nav_header_height">250dp</dimen>
     <dimen name="nav_header_avatar">93dp</dimen>
+
+    <dimen name="menu_avatar">40dp</dimen>
+
+    <dimen name="textSizePrimary">16sp</dimen>
+
+    <dimen name="textSizeSecondary">14sp</dimen>
+
+    <dimen name="textSizeAssist">12sp</dimen>
+
+    <dimen name="textSizePrompt">10sp</dimen>
 </resources>

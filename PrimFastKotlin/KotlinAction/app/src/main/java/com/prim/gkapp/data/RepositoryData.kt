@@ -21,7 +21,7 @@ class RepositoryData(val owner: User? = null) : ListPage<Repository>() {
             RepositoryService.listRepositoryOfUser(owner.login, page)
         } else {
             //没有用户就查询所有的仓库
-            RepositoryService.searchRepository(page, "push:<" + Date().format("yyyy-MM-dd")).map { it.paging }
+            RepositoryService.searchRepository(page, "pushed:<" + Date().format("yyyy-MM-dd")).map { it.paging }
         }
     }
 }
