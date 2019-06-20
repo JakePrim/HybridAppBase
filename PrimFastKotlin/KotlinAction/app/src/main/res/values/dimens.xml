@@ -9,7 +9,7 @@
 
     <dimen name="menu_avatar">40dp</dimen>
 
-    <dimen name="textSizePrimary">16sp</dimen>
+    <dimen name="textSizePrimary">18sp</dimen>
 
     <dimen name="textSizeSecondary">14sp</dimen>
 

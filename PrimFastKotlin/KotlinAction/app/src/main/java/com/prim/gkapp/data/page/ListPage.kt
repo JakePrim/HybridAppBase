@@ -1,5 +1,6 @@
 package com.prim.gkapp.data.page
 
+import android.util.Log
 import com.prim.lib_base.log.logger
 import io.reactivex.Observable
 
@@ -27,33 +28,33 @@ abstract class ListPage<T> : DateProvider<T> {
      * request more data
      */
     fun loadMore() =
-        getData(currentPage + 1).doOnNext {
-            currentPage++
-        }.doOnError {
-            logger.error("loadMore error", it.message)
-        }.map {
-            data.mergeData(it)
-            data
-        }
+            getData(currentPage + 1).doOnNext {
+                currentPage++
+            }.doOnError {
+                logger.error("loadMore error", it.message)
+            }.map {
+                data.mergeData(it)
+                data
+            }
 
     /**
      * load page count,form page = 1 start
      */
-    fun fromInfrist(pageCount: Int) = Observable.range(1, pageCount)
-        .concatMap {
-            getData(it)
-        }
-        .doOnError {
-            logger.error("loadMore error", it.message)
-        }
-        .reduce { acc, pageData ->
-            acc.mergeData(pageData)
-        }
-        .doOnSuccess {
-            data.clear()
-            data.mergeData(it)
-            currentPage = pageCount
-        }
+    fun fromInfrist(pageCount: Int = currentPage) = Observable.range(1, pageCount)
+            .concatMap {
+                getData(it)
+            }
+            .doOnError {
+                Log.e("loadMore error", it.message)
+            }
+            .reduce { acc, pageData ->
+                acc.mergeData(pageData)
+            }
+            .doOnSuccess {
+                data.clear()
+                data.mergeData(it)
+                currentPage = pageCount
+            }
 
 
 }

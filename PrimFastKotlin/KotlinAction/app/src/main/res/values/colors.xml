@@ -29,4 +29,27 @@
     <color name="res_color_colorPrimary_transparency_50">#80212121</color>
 
     <color name="colorGrey">#f6f6f6</color>
+
+    <color name="google_red">#ea4235</color>
+    <color name="google_yellow">#fabc05</color>
+    <color name="google_green">#34a853</color>
+    <color name="google_blue">#4286f5</color>
+
+    <color name="textColorPrimaryInverse">#24292E</color>
+    <color name="textColorSecondaryInverse">#333333</color>
+    <color name="textColorTertiaryInverse">#555555</color>
+
+    <color name="textColorPrimary">#FFFFFF</color>
+    <color name="textColorSecondary">#F0F0F0</color>
+    <color name="textColorTertiary">#AAAAAA</color>
+
+    <color name="textColorAccent">#FF0000</color>
+
+
+    <color name="colorBackground">#F3F3F3</color>
+    <color name="windowBackground">#EEEEEE</color>
+
+    <color name="colorBackgroundInverse">#333333</color>
+    <color name="windowBackgroundInverse">#333333</color>
+
 </resources>

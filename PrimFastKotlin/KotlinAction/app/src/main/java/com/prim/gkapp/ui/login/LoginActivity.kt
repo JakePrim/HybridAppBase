@@ -16,6 +16,11 @@ import org.jetbrains.anko.sdk27.coroutines.onClick
 import org.jetbrains.anko.startActivity
 import org.jetbrains.anko.toast
 
+/**
+ * login activity
+ * @author JakePrim
+ *
+ */
 class LoginActivity : BaseActivity<LoginPresenter>(), LifecycleOwner {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

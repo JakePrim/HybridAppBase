@@ -1,6 +1,7 @@
 package com.prim.gkapp.ui.common
 
 import android.animation.ObjectAnimator
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.MotionEvent
 import android.view.View
@@ -44,6 +45,7 @@ abstract class CommonListAdapter<T>(@LayoutRes val layoutRes: Int) : RecyclerVie
      * }
      */
     init {
+        Log.e("CommonListAdapter", "init:" + data.javaClass)
         this.setHasStableIds(true)
     }
 
@@ -52,7 +54,12 @@ abstract class CommonListAdapter<T>(@LayoutRes val layoutRes: Int) : RecyclerVie
     }
 
     override fun getItemCount(): Int {
+//        Log.e("CommonListAdapter", "getItemCount:" + data.size)
         return data.size
+    }
+
+    override fun getItemViewType(position: Int): Int {
+        return super.getItemViewType(position)
     }
 
 

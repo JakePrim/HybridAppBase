@@ -1,6 +1,7 @@
 package com.prim.gkapp.ui.home
 
 import android.os.Bundle
+import android.util.Log
 import android.view.MenuItem
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.core.view.GravityCompat
@@ -10,13 +11,13 @@ import com.google.android.material.snackbar.Snackbar
 import com.gyf.immersionbar.ImmersionBar
 import com.prim.gkapp.R
 import com.prim.gkapp.ui.about.AboutFragment
+import com.prim.gkapp.ui.repos.ReposFragment
 import com.prim.lib_base.base.BaseActivity
 import com.prim.lib_base.utils.doOnLayoutAvailable
 import com.prim.lib_base.utils.showFragment
 import kotlinx.android.synthetic.main.activity_main2.*
 import kotlinx.android.synthetic.main.app_bar_main2.*
 import kotlinx.android.synthetic.main.include_nav_bottom_layout.*
-import kotlinx.android.synthetic.main.include_nav_card_layout.*
 import org.jetbrains.anko.sdk27.coroutines.onClick
 
 /**
@@ -69,7 +70,11 @@ class MainActivity : BaseActivity<MainPresenter>(), NavigationView.OnNavigationI
         nav_view.setNavigationItemSelectedListener(this)
         nav_view.doOnLayoutAvailable {
             //默认为菜单的第一个
-            nav_view.setCheckedItem(R.id.nav_home)
+            nav_view.post {
+                nav_view.setCheckedItem(R.id.nav_home)
+            }
+
+
             //nav view 判断是否初始化完毕
 //            UserData.isLogin().yes {
 //                UserData.currentUser?.let {
@@ -93,21 +98,21 @@ class MainActivity : BaseActivity<MainPresenter>(), NavigationView.OnNavigationI
 //                tv_username.text = "请登录"
 //                ll_user_info.visibility = View.GONE
 //            }
-            ll_followers.onClick {
-                drawer_layout.closeDrawer(GravityCompat.START)
-            }
-
-            ll_following.onClick {
-                drawer_layout.closeDrawer(GravityCompat.START)
-            }
-
-            ll_gists.onClick {
-                drawer_layout.closeDrawer(GravityCompat.START)
-            }
-
-            ll_repos.onClick {
-                drawer_layout.closeDrawer(GravityCompat.START)
-            }
+//            ll_followers.onClick {
+//                drawer_layout.closeDrawer(GravityCompat.START)
+//            }
+//
+//            ll_following.onClick {
+//                drawer_layout.closeDrawer(GravityCompat.START)
+//            }
+//
+//            ll_gists.onClick {
+//                drawer_layout.closeDrawer(GravityCompat.START)
+//            }
+//
+//            ll_repos.onClick {
+//                drawer_layout.closeDrawer(GravityCompat.START)
+//            }
         }
     }
 
@@ -134,23 +139,12 @@ class MainActivity : BaseActivity<MainPresenter>(), NavigationView.OnNavigationI
         }
     }
 
-//    override fun onCreateOptionsMenu(menu: Menu): Boolean {
-//        menuInflater.inflate(R.menu.main2, menu)
-//        return true
-//    }
-//
-//    override fun onOptionsItemSelected(item: MenuItem): Boolean {
-//        return when (item.itemId) {
-//            R.id.action_search -> true
-//            else -> super.onOptionsItemSelected(item)
-//        }
-//    }
-
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
         // Handle navigation view item clicks here.
         when (item.itemId) {
             R.id.nav_home -> {
-                showFragment(R.id.fl_content, HomeFragment::class.java, Bundle())
+                Log.e("MainActivity", "nav_home")
+                showFragment(R.id.fl_content, ReposFragment::class.java, Bundle())
             }
             R.id.nav_about -> {
                 showFragment(R.id.fl_content, AboutFragment::class.java, Bundle())

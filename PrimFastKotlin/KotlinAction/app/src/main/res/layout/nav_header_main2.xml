@@ -1,120 +1,111 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorWhite">
+
+    <LinearLayout
+        android:id="@+id/ll_header"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/colorWhite">
-    <LinearLayout
-            android:id="@+id/ll_header"
+        android:background="@drawable/side_nav_bar"
+        android:gravity="bottom"
+        android:orientation="vertical"
+        android:paddingLeft="16dp"
+        android:paddingTop="25dp"
+        android:paddingRight="16dp"
+        android:paddingBottom="16dp"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark">
+
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@drawable/side_nav_bar"
-            android:paddingLeft="16dp"
-            android:paddingRight="16dp"
-            android:paddingBottom="16dp"
-            android:paddingTop="25dp"
-            android:theme="@style/ThemeOverlay.AppCompat.Dark"
-            android:orientation="vertical"
-            android:gravity="bottom">
+            android:orientation="horizontal">
 
-        <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
             <cn.carbs.android.avatarimageview.library.AvatarImageView
-                    android:layout_width="@dimen/nav_header_avatar"
-                    android:layout_height="@dimen/nav_header_avatar"
-                    android:paddingTop="@dimen/nav_header_vertical_spacing"
-                    android:contentDescription="@string/nav_header_desc"
-                    app:aiv_BoarderWidth="2dp"
-                    app:aiv_ShowBoarder="true"
-                    app:aiv_TextSizeRatio="0.4"
-                    android:src="@mipmap/ic_launcher_round"
-                    android:id="@+id/iv_avatar"/>
+                android:id="@+id/iv_avatar"
+                android:layout_width="@dimen/nav_header_avatar"
+                android:layout_height="@dimen/nav_header_avatar"
+                android:contentDescription="@string/nav_header_desc"
+                android:paddingTop="@dimen/nav_header_vertical_spacing"
+                android:src="@mipmap/ic_launcher_round"
+                app:aiv_BoarderWidth="2dp"
+                app:aiv_ShowBoarder="true"
+                app:aiv_TextSizeRatio="0.4" />
+
             <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_vertical"
-                    android:orientation="vertical">
-                <TextView
-                        android:id="@+id/tv_username"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:paddingTop="@dimen/nav_header_vertical_spacing"
-                        android:text="@string/nav_header_title"
-                        android:textSize="16sp"
-                        android:layout_marginLeft="10dp"
-                        android:textStyle="bold"
-                        android:textColor="@color/colorWhite"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"/>
-                <TextView
-                        android:id="@+id/tv_location"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textColor="@color/colorPrimaryBg2"
-                        android:layout_marginTop="5dp"
-                        android:layout_marginLeft="5dp"
-                        android:gravity="center_vertical"
-                        android:drawablePadding="5dp"
-                        android:textSize="14sp"
-                        android:drawableLeft="@mipmap/ic_action_location_on"
-                        android:text="北京"/>
-            </LinearLayout>
-        </LinearLayout>
-        <LinearLayout
-                android:id="@+id/ll_user_info"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="10dp"
+                android:layout_gravity="center_vertical"
                 android:orientation="vertical">
-            <TextView
-                    android:id="@+id/tv_dio"
+
+                <TextView
+                    android:id="@+id/tv_username"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:paddingTop="@dimen/nav_header_vertical_spacing"
+                    android:text="@string/nav_header_title"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tv_location"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="5dp"
+                    android:drawableLeft="@mipmap/ic_action_location_on"
+                    android:drawablePadding="5dp"
+                    android:gravity="center_vertical"
+                    android:text="北京"
                     android:textColor="@color/colorPrimaryBg2"
-                    android:layout_marginTop="10dp"
-                    android:maxLines="2"
-                    android:textSize="14sp"/>
+                    android:textSize="14sp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_user_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:orientation="vertical">
 
             <TextView
-                    android:id="@+id/tv_email"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textColor="@android:color/holo_blue_bright"
-                    android:text="@string/nav_header_subtitle"
-                    android:drawableLeft="@mipmap/ic_action_email"
-                    android:drawablePadding="5dp"
-                    android:layout_gravity="center_vertical"
-                    android:layout_marginTop="5dp"
-                    android:textSize="14sp"/>
+                android:id="@+id/tv_dio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:maxLines="2"
+                android:textColor="@color/colorPrimaryBg2"
+                android:textSize="14sp" />
 
             <TextView
-                    android:id="@+id/tv_blog"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textColor="@android:color/holo_blue_bright"
-                    android:text="@string/nav_header_subtitle"
-                    android:layout_marginTop="5dp"
-                    android:drawableLeft="@mipmap/ic_action_insert_link"
-                    android:drawablePadding="5dp"
-                    android:textSize="14sp"/>
+                android:id="@+id/tv_email"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginTop="5dp"
+                android:drawableLeft="@mipmap/ic_action_email"
+                android:drawablePadding="5dp"
+                android:text="@string/nav_header_subtitle"
+                android:textColor="@android:color/holo_blue_bright"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/tv_blog"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:drawableLeft="@mipmap/ic_action_insert_link"
+                android:drawablePadding="5dp"
+                android:text="@string/nav_header_subtitle"
+                android:textColor="@android:color/holo_blue_bright"
+                android:textSize="14sp" />
 
         </LinearLayout>
     </LinearLayout>
-
-
-    <androidx.cardview.widget.CardView
-            android:layout_width="match_parent"
-            android:layout_height="60dp"
-            android:layout_below="@+id/ll_header"
-            app:cardElevation="5dp"
-            app:cardBackgroundColor="@color/colorPrimaryLight"
-            android:layout_marginBottom="10dp"
-            android:layout_marginLeft="16dp"
-            android:layout_marginRight="16dp"
-            android:layout_marginTop="-20dp"
-            android:visibility="gone">
-        <include layout="@layout/include_nav_card_layout"/>
-    </androidx.cardview.widget.CardView>
 </RelativeLayout>
