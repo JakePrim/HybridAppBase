@@ -1,7 +1,6 @@
 package com.prim.gkapp.ui.home
 
 import android.os.Bundle
-import android.util.Log
 import android.view.MenuItem
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.core.view.GravityCompat
@@ -28,11 +27,11 @@ class MainActivity : BaseActivity<MainPresenter>(), NavigationView.OnNavigationI
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         ImmersionBar.with(this)
-                .autoStatusBarDarkModeEnable(true)
-                .statusBarColor(R.color.colorPrimary, 0.1f)
-                .transparentStatusBar()
-                .init()
+            .statusBarDarkFont(true)
+            .statusBarColor(R.color.colorPrimary)
+            .init()
         setContentView(R.layout.activity_main2)
+        showFragment(R.id.fl_content, ReposFragment::class.java, Bundle())
         initDrawerLayout()
         initNavigation()
         initToolBar()
@@ -43,7 +42,7 @@ class MainActivity : BaseActivity<MainPresenter>(), NavigationView.OnNavigationI
     private fun initActionButton() {
         fab.setOnClickListener { view ->
             Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                    .setAction("Action", null).show()
+                .setAction("Action", null).show()
         }
     }
 
@@ -60,7 +59,7 @@ class MainActivity : BaseActivity<MainPresenter>(), NavigationView.OnNavigationI
 
     private fun initDrawerLayout() {
         val toggle = ActionBarDrawerToggle(
-                this, drawer_layout, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close
+            this, drawer_layout, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close
         )
         drawer_layout.addDrawerListener(toggle)
         toggle.syncState()
@@ -73,8 +72,6 @@ class MainActivity : BaseActivity<MainPresenter>(), NavigationView.OnNavigationI
             nav_view.post {
                 nav_view.setCheckedItem(R.id.nav_home)
             }
-
-
             //nav view 判断是否初始化完毕
 //            UserData.isLogin().yes {
 //                UserData.currentUser?.let {
@@ -143,7 +140,6 @@ class MainActivity : BaseActivity<MainPresenter>(), NavigationView.OnNavigationI
         // Handle navigation view item clicks here.
         when (item.itemId) {
             R.id.nav_home -> {
-                Log.e("MainActivity", "nav_home")
                 showFragment(R.id.fl_content, ReposFragment::class.java, Bundle())
             }
             R.id.nav_about -> {
