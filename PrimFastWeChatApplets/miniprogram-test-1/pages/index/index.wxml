@@ -1,0 +1,3 @@
+<!--index.wxml-->
+<view class='temp'>21°</view>
+<view class='weather'>晴天</view>

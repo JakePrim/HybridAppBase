@@ -1,0 +1,14 @@
+.temp{
+  margin-top: 300rpx;
+  text-align: center;
+  font-size: 200rpx;
+  line-height: 280rpx;
+  opacity: 0.8;
+}
+
+.weather{
+  text-align: center;
+  font-size: 40rpx;
+  opacity: 0.5;
+  line-height: 56rpx;/*行高设置为字号的1.4倍*/
+}
