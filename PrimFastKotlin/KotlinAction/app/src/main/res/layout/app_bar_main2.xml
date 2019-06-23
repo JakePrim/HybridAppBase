@@ -1,71 +1,76 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:fitsSystemWindows="true"
-    tools:context=".ui.home.MainActivity">
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true"
+        android:background="@color/colorPrimary"
+        tools:context=".ui.home.MainActivity">
+
+    <include layout="@layout/content_main2"/>
 
     <com.google.android.material.appbar.AppBarLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
-        app:elevation="0dp">
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+            app:elevation="0dp">
 
         <androidx.appcompat.widget.Toolbar
-            android:id="@+id/toolbar"
-            android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize"
-            android:background="@color/colorTransparent"
-            app:contentInsetEnd="0dp"
-            app:contentInsetLeft="0dp"
-            app:contentInsetRight="0dp"
-            app:contentInsetStart="0dp"
-            app:layout_scrollFlags="scroll|enterAlways|snap"
-            app:popupTheme="@style/AppTheme.PopupOverlay">
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="?attr/colorPrimary"
+                app:contentInsetEnd="0dp"
+                app:contentInsetLeft="0dp"
+                app:contentInsetRight="0dp"
+                app:contentInsetStart="0dp"
+                app:layout_scrollFlags="scroll|enterAlways|snap"
+                app:popupTheme="@style/AppTheme.PopupOverlay">
 
             <com.google.android.material.card.MaterialCardView
-                android:id="@+id/toolbar_card"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginLeft="16dp"
-                android:layout_marginTop="5dp"
-                android:layout_marginRight="16dp"
-                android:layout_marginBottom="5dp"
-                android:background="@drawable/normal_bg_selector"
-                app:cardCornerRadius="5dp"
-                app:cardElevation="2dp">
-
-                <LinearLayout
+                    android:id="@+id/toolbar_card"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:orientation="horizontal">
+                    android:layout_marginLeft="@dimen/common_list_padding_left"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="@dimen/common_list_padding_right"
+                    android:layout_marginBottom="1dp"
+                    android:background="@drawable/normal_bg_selector"
+                    app:cardCornerRadius="5dp"
+                    app:cardElevation="2dp">
+
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
 
                     <ImageView
-                        android:id="@+id/nav_menu"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_vertical"
-                        android:padding="10dp"
-                        android:src="@drawable/ic_menu_black_24dp" />
+                            android:id="@+id/nav_menu"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:padding="10dp"
+                            android:src="@drawable/ic_menu_black_24dp"/>
 
                     <TextView
-                        style="@style/TextStylePrimary_1"
-                        android:layout_weight="1"
-                        android:gravity="center_vertical"
-                        android:text="@string/str_search" />
+                            style="@style/TextStylePrimary_1"
+                            android:layout_weight="1"
+                            android:gravity="center_vertical"
+                            android:textColor="@color/colorSecondaryText"
+                            android:text="@string/str_search"/>
 
                     <cn.carbs.android.avatarimageview.library.AvatarImageView
-                        android:id="@+id/iv_avatar"
-                        android:layout_width="@dimen/menu_avatar"
-                        android:layout_height="@dimen/menu_avatar"
-                        android:layout_gravity="center_vertical"
-                        android:layout_marginRight="10dp"
-                        android:contentDescription="@string/nav_header_desc"
-                        android:src="@mipmap/ic_launcher"
-                        app:aiv_BoarderWidth="2dp"
-                        app:aiv_TextSizeRatio="0.4" />
+                            android:id="@+id/iv_avatar"
+                            android:layout_width="@dimen/menu_avatar"
+                            android:layout_height="@dimen/menu_avatar"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginRight="10dp"
+                            android:contentDescription="@string/nav_header_desc"
+                            android:src="@mipmap/ic_launcher"
+                            app:aiv_BoarderWidth="2dp"
+                            app:aiv_TextSizeRatio="0.4"/>
                 </LinearLayout>
 
             </com.google.android.material.card.MaterialCardView>
@@ -74,14 +79,13 @@
 
     </com.google.android.material.appbar.AppBarLayout>
 
-    <include layout="@layout/content_main2" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/fab"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="bottom|end"
-        android:layout_margin="@dimen/fab_margin"
-        app:srcCompat="@mipmap/ic_action_notifications" />
+            android:id="@+id/fab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end"
+            android:layout_margin="@dimen/fab_margin"
+            app:srcCompat="@mipmap/ic_action_notifications"/>
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -1,31 +1,34 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:orientation="horizontal">
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:paddingLeft="@dimen/common_list_padding_left"
+              android:paddingRight="@dimen/common_list_padding_right"
+              android:orientation="horizontal">
 
     <cn.carbs.android.avatarimageview.library.AvatarImageView
-        android:id="@+id/item_avatar"
-        android:layout_width="@dimen/nav_header_avatar"
-        android:layout_height="@dimen/nav_header_avatar" />
+            android:id="@+id/item_avatar"
+            android:layout_width="@dimen/nav_header_avatar"
+            android:layout_height="@dimen/nav_header_avatar"/>
 
     <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_vertical"
-        android:orientation="vertical">
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:orientation="vertical">
 
         <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/item_title"
-            style="@style/TextStylePrimary_2"
-            android:text="标题"
-            android:textStyle="bold" />
+                android:id="@+id/item_title"
+                style="@style/TextStylePrimary_2"
+                android:text="标题"
+                android:textColor="@color/colorPrimaryText"/>
 
         <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/item_dec"
-            style="@style/TextStylePrimary_2"
-            android:maxLines="1"
-            android:text="标题" />
+                android:id="@+id/item_dec"
+                style="@style/TextStylePrimary_2"
+                android:maxLines="1"
+                android:textColor="@color/colorSecondaryText"
+                android:text="标题"/>
 
     </LinearLayout>
 

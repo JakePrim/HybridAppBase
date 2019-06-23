@@ -1,5 +1,4 @@
 .temp{
-  margin-top: 300rpx;
   text-align: center;
   font-size: 200rpx;
   line-height: 280rpx;
@@ -11,4 +10,67 @@
   font-size: 40rpx;
   opacity: 0.5;
   line-height: 56rpx;/*行高设置为字号的1.4倍*/
+}
+
+.weather_wrapper{
+  position: relative;
+  padding-top: 174rpx;
+  padding-bottom: 250rpx;
+}
+
+.weather_bg{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.time{
+  display: flex;/** 设置为水平布局 */
+  align-items: center;/** 设置垂直居中*/
+  justify-content: center;/** 设置水平居中*/
+  margin-top:40rpx;
+  margin-bottom: 45rpx;
+}
+.time_icon{
+  width: 36rpx;
+  height: 28rpx;
+  margin-right: 10rpx;
+}
+
+.time_text{
+  font-size: 30rpx;
+  line-height: 42rpx;
+  opacity: 0.5;
+}
+
+.forecast-list{
+  display: flex;
+}
+
+.forecast-item{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 120rpx;
+  flex-shrink: 0;
+}
+
+.forecast-time{
+  font-size: 30rpx;
+  line-height: 42rpx;
+}
+
+.forecast-weather{
+  margin-top: 50rpx;
+  width: 60rpx;
+  height: 60rpx;
+  margin-bottom: 50rpx;
+}
+
+.forecast-temp{
+  font-size: 40rpx;
+  line-height: 56rpx;
 }

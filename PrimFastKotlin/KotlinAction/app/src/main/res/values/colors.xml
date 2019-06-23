@@ -4,15 +4,17 @@
     <color name="colorPrimaryDark">#CCCCCC</color>
     <color name="colorPrimaryLight">#FFFFFF</color>
 
-    <color name="colorAccent">#D81B60</color>
+    <color name="colorAccent">#4286f5</color>
 
     <color name="colorSecondary">#F1F1F1</color>
     <color name="colorSecondaryLight">#FFFFFF</color>
     <color name="colorSecondaryDark">#bebebe</color>
 
-    <color name="colorPrimaryText">#000000</color>
+    <color name="colorPrimaryText">#24292E</color>
 
-    <color name="colorSecondaryText">#212121</color>
+    <color name="colorSecondaryText">#586069</color>
+
+    <color name="colorDecText">#6A737D</color>
 
     <color name="colorWhite">#FFFFFF</color>
     <color name="colorTransparent">#00000000</color>

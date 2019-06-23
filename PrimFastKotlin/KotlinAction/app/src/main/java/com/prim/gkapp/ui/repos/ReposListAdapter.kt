@@ -1,6 +1,5 @@
 package com.prim.gkapp.ui.repos
 
-import android.util.Log
 import android.view.View
 import androidx.recyclerview.widget.RecyclerView
 import com.prim.gkapp.R
@@ -23,5 +22,9 @@ class ReposListAdapter : CommonListAdapter<Repository>(R.layout.item_repos_layou
     }
 
     override fun onItemClick(view: View, item: Repository) {
+    }
+
+    override fun onItemLongClick(view: View, item: Repository) {
+
     }
 }

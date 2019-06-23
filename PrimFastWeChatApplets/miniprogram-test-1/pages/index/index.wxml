@@ -1,3 +1,19 @@
 <!--index.wxml-->
-<view class='temp'>21°</view>
-<view class='weather'>晴天</view>
+<view class='weather_wrapper'>
+  <view class='temp'>{{now_temp}}</view>
+  <view class='weather'>{{now_weather}}</view>
+  <image src="{{now_weather_bg}}" class='weather_bg' mode='scaleToFill'></image>
+</view>
+<view class='time'>
+<image src='/images/time-icon.png' class='time_icon'></image>
+<view class='time_text'>未来24小时天气预测</view>
+</view>
+<scroll-view scroll-x>
+ <view class='forecast-list'>
+   <view class='forecast-item' wx:for="{{forecast}}">
+   <view class='forecast-time'>{{item.time}}</view>
+   <image class='forecast-weather' src='{{item.iconPath}}'></image>
+   <view class='forecast-temp'>{{item.temp}}</view>
+   </view>
+ </view>
+</scroll-view>

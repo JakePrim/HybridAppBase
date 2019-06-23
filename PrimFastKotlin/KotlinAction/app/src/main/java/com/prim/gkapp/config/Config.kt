@@ -4,6 +4,7 @@ import com.prim.gkapp.BuildConfig
 import com.prim.lib_base.AppContext
 import com.prim.lib_base.log.logger
 import com.prim.lib_base.utils.deviceID
+import com.prim.lib_base.utils.pref
 
 /**
  * @desc
@@ -29,5 +30,8 @@ object Config {
             }
         }
     }
+
+    //是否开启item点击动画
+    var itemClickAnimator: Boolean by pref(false)
 
 }

@@ -9,11 +9,16 @@
 
     <dimen name="menu_avatar">40dp</dimen>
 
-    <dimen name="textSizePrimary">18sp</dimen>
+    <dimen name="textSizeBig">20sp</dimen>
+
+    <dimen name="textSizePrimary">16sp</dimen>
 
     <dimen name="textSizeSecondary">14sp</dimen>
 
     <dimen name="textSizeAssist">12sp</dimen>
 
     <dimen name="textSizePrompt">10sp</dimen>
+    <dimen name="item_radius">10dp</dimen>
+    <dimen name="common_list_padding_left">16dp</dimen>
+    <dimen name="common_list_padding_right">16dp</dimen>
 </resources>
