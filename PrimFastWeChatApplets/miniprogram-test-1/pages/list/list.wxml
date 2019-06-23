@@ -1,0 +1,9 @@
+<!--pages/list/list.wxml-->
+<view class='item' wx:for='{{future}}'>
+   <view class='item-date'>
+     <view class='day'>{{item.wrok}}</view>
+     <view class='date'>{{item.date}}</view>
+   </view>
+   <view class='item-temp'>{{item.temp}}</view>
+   <image class='item-temp-icon' src='{{item.weathericon}}'></image>
+</view>

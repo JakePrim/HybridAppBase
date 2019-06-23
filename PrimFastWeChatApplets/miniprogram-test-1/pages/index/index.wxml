@@ -1,8 +1,19 @@
 <!--index.wxml-->
 <view class='weather_wrapper'>
+  <view class='location-wrapper'>
+    <view class='location'>
+      <image class='location-icon' src='/images/location-icon.png'/>
+      <view class='location-city'>北京</view>
+    </view>
+    <view class='location-tips'>获取当前位置</view>
+  </view>
   <view class='temp'>{{now_temp}}</view>
   <view class='weather'>{{now_weather}}</view>
   <image src="{{now_weather_bg}}" class='weather_bg' mode='scaleToFill'></image>
+  <view class='weather-day' bindtap='onTabDayWeather'>
+    <view class='weather-text'>{{toDayTempDate}}</view>
+    <image class='arrow-icon' src='/images/arrow.png'></image>
+  </view>
 </view>
 <view class='time'>
 <image src='/images/time-icon.png' class='time_icon'></image>

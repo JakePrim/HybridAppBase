@@ -14,8 +14,32 @@
 
 .weather_wrapper{
   position: relative;
-  padding-top: 174rpx;
+  padding-top: 20rpx;
   padding-bottom: 250rpx;
+}
+
+.loaction-wrapper{
+  margin-bottom: 60rpx;
+  font-size: 30rpx;
+  line-height: 42rpx;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.location{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.location-icon{
+  margin-right: 10rpx;
+  width: 21rpx;
+  height: 30rpx;
+}
+
+.location-tips{
+  margin-top: 10rpx;
+  text-align: center;
 }
 
 .weather_bg{
@@ -57,20 +81,39 @@
   width: 120rpx;
   flex-shrink: 0;
 }
-
 .forecast-time{
   font-size: 30rpx;
   line-height: 42rpx;
 }
-
 .forecast-weather{
   margin-top: 50rpx;
   width: 60rpx;
   height: 60rpx;
   margin-bottom: 50rpx;
 }
-
 .forecast-temp{
   font-size: 40rpx;
   line-height: 56rpx;
+}
+.weather-day{
+  display: flex;
+  height: 90rpx;
+  position: absolute;
+  bottom: 0;
+  align-items: center;
+  font-size: 30rpx;
+  line-height: 42rpx;
+  left: 40rpx;
+  right: 40rpx;
+  color: rgba(0, 0, 0, 0.5);
+  border-top: 1rpx solid rgba(0, 0, 0, 0.1);
+}
+.arrow-icon{
+  width: 13rpx;
+  height: 24rpx;
+}
+.weather-text{
+  text-align: left;
+  padding-right: 30rpx;
+  flex-grow: 1;/**占用全部的剩余空间*/
 }

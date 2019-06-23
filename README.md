@@ -9,6 +9,8 @@ PrimFastApp 完整的项目开发框架,框架内设计的技术面很广,同时
 
 4. Kotlin 开发技术,使用kotlin开发Android.
 
+5. JavaScript 技术详解, 大前端时代必备的知识
+
    专注于移动技术的最前线 https://jakeprim.cn/
 
 [TOC]
@@ -17,15 +19,19 @@ PrimFastApp 完整的项目开发框架,框架内设计的技术面很广,同时
 
 > PrimFastCommon 是一套通用的快速开发app的框架,采用 Jetpack + RxJava + Retrofit + OkHttp + kotlin/Java(混合) + 组件化/插件化 搭建的Android项目开发框架.
 
-> PrimFastFlutter 是学习Flutter的一个完整的项目
+> PrimFastFlutter 是学习Flutter的一个完整的项目,包括项目完整实现的讲解
 
-> PrimFastKotlin 是学习kotlin的一个完整的项目
+> PrimFastKotlin 是学习kotlin的一个完整的项目,包括项目完整实现的讲解
 
-> PrimFastApplets 是学习小程序开发的一个完整项目
+> PrimFastWeChatApplets 是学习小程序开发的一个完整项目
 
 > PrimFastRn 是学习RN开发的一个完整项目
+>
+> PrimJs 
 
 > PrimFastWeb 是学习移动Web开发的一个完整项目(项目准备采用Vue来实现)
+>
+> AdvancedDemo 是Android进阶的知识点的Demo练习
 
 ## 进度
 
@@ -42,9 +48,9 @@ PrimFastFlutter [项目地址](https://github.com/JakePrim/prim_fultter_app)
 
 PrimFastKotlin [项目地址](https://github.com/JakePrim/PrimFastApp/tree/master/PrimFastKotlin)
 
-PrimFastApplets [项目地址](https://github.com/JakePrim/PrimFastApp/tree/master/PrimFastApplets)
+PrimFastApplets [项目地址](https://github.com/JakePrim/PrimFastApp/tree/master/PrimFastWeChatApplets)
 
-PrimFastRn
+PrimFastRn [项目地址](https://github.com/JakePrim/PrimFastApp/tree/master/PrimFastRn)
 
 PrimFastWeb
 

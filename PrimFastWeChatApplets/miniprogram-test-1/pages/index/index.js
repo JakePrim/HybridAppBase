@@ -29,7 +29,26 @@ Page({
     now_temp:"",
     now_weather:"",
     now_weather_bg:"",
-    forecast:[]
+    forecast:[],
+    toDayTempDate:""
+  },
+  getNowData(callback) {
+    wx.request({
+      url: 'https://test-miniprogram.com/api/weather/now',
+      data: {
+        'city': "北京"
+      },
+      success: res => {
+        let result = res.data.result;
+        console.log(result);
+        this.setNow(result);
+        this.setForecast(result);
+        this.setToDayTemp(result);
+      },
+      complete: () => {
+        callback && callback()
+      }
+    })
   },
   onPullDownRefresh(){
     this.getNowData(()=>{wx.stopPullDownRefresh()})
@@ -49,24 +68,6 @@ Page({
       now_weather_bg: "/images/" + weather + '-bg.png'
     })
   },
-  getNowData(callback) {
-    wx.request({
-      url: 'https://test-miniprogram.com/api/weather/now',
-      data: {
-        'city': "北京"
-      },
-      success: res => {
-        let result = res.data.result;
-        console.log(result);
-        this.setNow(result);
-        this.setForecast(result);
-      },
-      complete:()=>{
-        callback && callback()
-      }
-    })
-  },
-  
   setForecast(result){
     let r_forecast = [];
     let n_f = result.forecast;
@@ -82,6 +83,17 @@ Page({
     r_forecast[0].time = "现在";
     this.setData({
       forecast: r_forecast
+    })
+  },
+  setToDayTemp(result){
+     let date = new Date();
+     this.setData({
+       toDayTempDate: `${date.getFullYear()}-${date.getMonth() - 1}-${date.getDate()} 今天` + ` ${result.today.minTemp}°-${result.today.maxTemp}°`
+     });
+  },
+  onTabDayWeather(){
+    wx.navigateTo({
+      url: '/pages/list/list',
     })
   }
 })
