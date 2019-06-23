@@ -26,11 +26,11 @@ PrimFastApp 完整的项目开发框架,框架内设计的技术面很广,同时
 > PrimFastWeChatApplets 是学习小程序开发的一个完整项目
 
 > PrimFastRn 是学习RN开发的一个完整项目
->
-> PrimJs 
+
+> PrimJs  是专门给Android开发者,Js入门到进阶的知识
 
 > PrimFastWeb 是学习移动Web开发的一个完整项目(项目准备采用Vue来实现)
->
+
 > AdvancedDemo 是Android进阶的知识点的Demo练习
 
 ## 进度
@@ -47,6 +47,8 @@ PrimFastCommon [项目地址](https://github.com/JakePrim/PrimFastApp/tree/maste
 PrimFastFlutter [项目地址](https://github.com/JakePrim/prim_fultter_app)
 
 PrimFastKotlin [项目地址](https://github.com/JakePrim/PrimFastApp/tree/master/PrimFastKotlin)
+
+- 
 
 PrimFastApplets [项目地址](https://github.com/JakePrim/PrimFastApp/tree/master/PrimFastWeChatApplets)
 
