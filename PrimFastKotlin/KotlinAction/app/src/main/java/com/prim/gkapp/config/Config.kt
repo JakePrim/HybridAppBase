@@ -1,6 +1,7 @@
 package com.prim.gkapp.config
 
 import com.prim.gkapp.BuildConfig
+import com.prim.gkapp.R
 import com.prim.lib_base.AppContext
 import com.prim.lib_base.log.logger
 import com.prim.lib_base.utils.deviceID
@@ -33,5 +34,15 @@ object Config {
 
     //是否开启item点击动画
     var itemClickAnimator: Boolean by pref(false)
+    //是否开启list滑动动画
+    var listScrollAnimator: Boolean by pref(false)
+
+    val languageColor = mapOf<String, Int>("Java" to R.color.colorJava,
+            "Dart" to R.color.colorDart,
+            "Html" to R.color.colorHtml,
+            "JavaScript" to R.color.colorJavaScript,
+            "Kotlin" to R.color.colorKotlin,
+            "Lua" to R.color.colorLua,
+            "" to R.color.colorPrimary)
 
 }

@@ -16,6 +16,9 @@
                 android:layout_marginTop="10dp"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:scrollbarSize="5dp"
+                android:scrollbarThumbVertical="@color/colorAccent"
+                android:scrollbars="vertical"
                 tools:listitem="@layout/item_repos_layout">
 
         </androidx.recyclerview.widget.RecyclerView>

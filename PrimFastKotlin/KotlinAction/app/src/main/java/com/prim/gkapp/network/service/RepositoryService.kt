@@ -16,7 +16,7 @@ import retrofit2.http.Query
  * @version 1.0.0
  */
 interface RepositoryApi {
-    @GET("/users/{owner}/repos?type=all")
+    @GET("/users/{owner}/repos?type=all&sort=updated")
     fun listRepositoryOfUser(
         @Path("owner") owner: String,
         @Query("page") page: Int = 1,

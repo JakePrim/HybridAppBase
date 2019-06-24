@@ -10,11 +10,6 @@
     <color name="colorSecondaryLight">#FFFFFF</color>
     <color name="colorSecondaryDark">#bebebe</color>
 
-    <color name="colorPrimaryText">#24292E</color>
-
-    <color name="colorSecondaryText">#586069</color>
-
-    <color name="colorDecText">#6A737D</color>
 
     <color name="colorWhite">#FFFFFF</color>
     <color name="colorTransparent">#00000000</color>
@@ -32,26 +27,35 @@
 
     <color name="colorGrey">#f6f6f6</color>
 
-    <color name="google_red">#ea4235</color>
-    <color name="google_yellow">#fabc05</color>
-    <color name="google_green">#34a853</color>
-    <color name="google_blue">#4286f5</color>
 
     <color name="textColorPrimaryInverse">#24292E</color>
     <color name="textColorSecondaryInverse">#333333</color>
     <color name="textColorTertiaryInverse">#555555</color>
 
-    <color name="textColorPrimary">#FFFFFF</color>
-    <color name="textColorSecondary">#F0F0F0</color>
-    <color name="textColorTertiary">#AAAAAA</color>
-
-    <color name="textColorAccent">#FF0000</color>
-
 
     <color name="colorBackground">#F3F3F3</color>
     <color name="windowBackground">#EEEEEE</color>
-
     <color name="colorBackgroundInverse">#333333</color>
     <color name="windowBackgroundInverse">#333333</color>
+
+    <!-- language color -->
+    <color name="colorJava">#B07219</color>
+    <color name="colorHtml">#E43C26</color>
+    <color name="colorDart">#00B4AB</color>
+    <color name="colorLua">#000080</color>
+    <color name="colorKotlin">#F18E33</color>
+    <color name="colorJavaScript">#F1E05A</color>
+
+    <!-- text color -->
+    <color name="colorPrimaryText">#24292E</color>
+    <color name="colorPrimaryTextBlue">#0366d6</color>
+    <color name="colorSecondaryText">#586069</color>
+    <color name="colorDecText">#6A737D</color>
+
+    <!-- refush color-->
+    <color name="google_red">#ea4235</color>
+    <color name="google_yellow">#fabc05</color>
+    <color name="google_green">#34a853</color>
+    <color name="google_blue">#4286f5</color>
 
 </resources>

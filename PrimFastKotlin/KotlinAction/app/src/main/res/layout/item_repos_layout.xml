@@ -1,34 +1,92 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              android:layout_width="match_parent"
-              android:layout_height="wrap_content"
-              android:paddingLeft="@dimen/common_list_padding_left"
-              android:paddingRight="@dimen/common_list_padding_right"
-              android:orientation="horizontal">
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="16dp">
 
     <cn.carbs.android.avatarimageview.library.AvatarImageView
-            android:id="@+id/item_avatar"
-            android:layout_width="@dimen/nav_header_avatar"
-            android:layout_height="@dimen/nav_header_avatar"/>
+        android:id="@+id/item_avatar"
+        android:layout_width="@dimen/nav_header_avatar"
+        android:layout_height="@dimen/nav_header_avatar" />
 
     <LinearLayout
-            android:layout_width="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="5dp"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/item_title"
+            style="@style/TextStylePrimary_2"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:textColor="@color/colorPrimaryTextBlue"
+            android:textSize="@dimen/textSizeBig"
+            android:textStyle="bold" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/item_fork"
+            style="@style/TextStyleDec"
+            android:layout_marginTop="5dp"
+            android:visibility="gone" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/item_dec"
+            style="@style/TextStyleSecondary_2"
+            android:layout_marginTop="5dp"
+            android:ellipsize="end"
+            android:maxLines="2" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
-            android:orientation="vertical">
+            android:layout_marginTop="5dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
 
-        <androidx.appcompat.widget.AppCompatTextView
-                android:id="@+id/item_title"
-                style="@style/TextStylePrimary_2"
-                android:text="标题"
-                android:textColor="@color/colorPrimaryText"/>
+            <View
+                android:id="@+id/item_tips_language"
+                android:layout_width="12dp"
+                android:layout_height="12dp"
+                android:background="@drawable/shape_red_dot" />
 
-        <androidx.appcompat.widget.AppCompatTextView
-                android:id="@+id/item_dec"
-                style="@style/TextStylePrimary_2"
-                android:maxLines="1"
-                android:textColor="@color/colorSecondaryText"
-                android:text="标题"/>
+            <TextView
+                android:id="@+id/item_language"
+                style="@style/TextStyleSecondary_2"
+                android:layout_marginStart="5dp"
+                android:textSize="@dimen/textSizeAssist" />
+
+            <TextView
+                android:id="@+id/item_stargazers"
+                style="@style/TextStyleSecondary_2"
+                android:layout_marginStart="@dimen/common_list_padding_left"
+                android:drawableLeft="@drawable/ic_star_black_14dp"
+                android:drawablePadding="5dp"
+                android:textSize="@dimen/textSizeAssist" />
+
+            <TextView
+                android:id="@+id/item_forked_count"
+                style="@style/TextStyleSecondary_2"
+                android:layout_marginLeft="10dp"
+                android:textSize="@dimen/textSizeAssist" />
+
+            <TextView
+                android:id="@+id/item_license"
+                style="@style/TextStyleSecondary_2"
+                android:layout_marginStart="@dimen/common_list_padding_left"
+                android:textSize="@dimen/textSizeAssist" />
+
+            <TextView
+                android:id="@+id/item_update_time"
+                style="@style/TextStyleSecondary_2"
+                android:layout_marginStart="@dimen/common_list_padding_left"
+                android:textSize="@dimen/textSizeAssist" />
+
+        </LinearLayout>
 
     </LinearLayout>
 

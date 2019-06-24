@@ -1,12 +1,17 @@
 package com.prim.gkapp.ui.common
 
+import android.animation.ObjectAnimator
 import android.view.LayoutInflater
+import android.view.MotionEvent
 import android.view.View
 import android.view.ViewGroup
 import androidx.annotation.LayoutRes
+import androidx.core.view.ViewCompat
 import androidx.recyclerview.widget.RecyclerView
 import com.prim.gkapp.R
+import com.prim.gkapp.config.Config
 import kotlinx.android.synthetic.main.item_common_list.view.*
+import org.jetbrains.anko.dip
 import org.jetbrains.anko.sdk27.coroutines.onClick
 import org.jetbrains.anko.sdk27.coroutines.onLongClick
 
@@ -65,19 +70,21 @@ abstract class CommonListAdapter<T>(@LayoutRes val layoutRes: Int) : RecyclerVie
 
     override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
         onBindItem(holder, data[position])
-//        holder.itemView.setOnTouchListener { v, event ->
-//            when (event.action) {
-//                MotionEvent.ACTION_DOWN -> {
-//                    ViewCompat.animate(holder.itemView).scaleX(1.03f)
-//                        .scaleY(1.03f).translationZ(v.dip(10).toFloat()).duration = ANIMATION_CARD_DURATION
-//                }
-//                MotionEvent.ACTION_UP, MotionEvent.ACTION_CANCEL -> {
-//                    ViewCompat.animate(holder.itemView).scaleX(1f)
-//                        .scaleY(1f).translationZ(v.dip(0).toFloat()).duration = ANIMATION_CARD_DURATION
-//                }
-//            }
-//            false
-//        }
+        holder.itemView.setOnTouchListener { v, event ->
+            if (Config.itemClickAnimator) {
+                when (event.action) {
+                    MotionEvent.ACTION_DOWN -> {
+                        ViewCompat.animate(holder.itemView).scaleX(1.03f)
+                            .scaleY(1.03f).translationZ(v.dip(10).toFloat()).duration = ANIMATION_CARD_DURATION
+                    }
+                    MotionEvent.ACTION_UP, MotionEvent.ACTION_CANCEL -> {
+                        ViewCompat.animate(holder.itemView).scaleX(1f)
+                            .scaleY(1f).translationZ(v.dip(0).toFloat()).duration = ANIMATION_CARD_DURATION
+                    }
+                }
+            }
+            false
+        }
         holder.itemView.onClick {
             onItemClick(holder.itemView, data[position])
         }
@@ -87,10 +94,10 @@ abstract class CommonListAdapter<T>(@LayoutRes val layoutRes: Int) : RecyclerVie
     }
 
     override fun onViewAttachedToWindow(holder: RecyclerView.ViewHolder) {
-//        if (holder is CommonViewHolder && holder.layoutPosition > oldPosition) {
-//            ObjectAnimator.ofFloat(holder.itemView, "translationY", 500f, 0f).setDuration(ANIMATION_DURATION).start()
-//            oldPosition = holder.layoutPosition
-//        }
+        if (holder is CommonViewHolder && holder.layoutPosition > oldPosition && Config.listScrollAnimator) {
+            ObjectAnimator.ofFloat(holder.itemView, "translationY", 500f, 0f).setDuration(ANIMATION_DURATION).start()
+            oldPosition = holder.layoutPosition
+        }
     }
 
     abstract fun onBindItem(holder: RecyclerView.ViewHolder, item: T)

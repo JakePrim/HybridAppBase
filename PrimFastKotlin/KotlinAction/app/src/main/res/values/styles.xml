@@ -13,9 +13,9 @@
         <item name="windowNoTitle">true</item>
     </style>
 
-    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar"/>
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
 
-    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light"/>
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 
     <style name="MainStyle" parent="AppTheme.NoActionBar"></style>
 
@@ -82,5 +82,14 @@
         <item name="android:textSize">@dimen/textSizePrimary</item>
     </style>
 
+    <style name="TextStyleSecondary_2" parent="Width_Warp_Height_Warp">
+        <item name="android:textColor">@color/colorSecondaryText</item>
+        <item name="android:textSize">@dimen/textSizeSecondary</item>
+    </style>
+
+    <style name="TextStyleDec" parent="Width_Warp_Height_Warp">
+        <item name="android:textColor">@color/colorSecondaryText</item>
+        <item name="android:textSize">@dimen/textSizeAssist</item>
+    </style>
 
 </resources>
