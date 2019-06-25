@@ -37,12 +37,14 @@ object Config {
     //是否开启list滑动动画
     var listScrollAnimator: Boolean by pref(false)
 
-    val languageColor = mapOf<String, Int>("Java" to R.color.colorJava,
-            "Dart" to R.color.colorDart,
-            "Html" to R.color.colorHtml,
-            "JavaScript" to R.color.colorJavaScript,
-            "Kotlin" to R.color.colorKotlin,
-            "Lua" to R.color.colorLua,
-            "" to R.color.colorPrimary)
+    val languageColor = mapOf<String, Int>(
+        "Java" to R.drawable.shape_java_dot,
+        "Dart" to R.drawable.shape_dart_dot,
+        "Html" to R.drawable.shape_html_dot,
+        "JavaScript" to R.drawable.shape_javascript_dot,
+        "Kotlin" to R.drawable.shape_kotlin_dot,
+        "Lua" to R.drawable.shape_lua_dot,
+        "" to R.color.colorPrimary
+    )
 
 }

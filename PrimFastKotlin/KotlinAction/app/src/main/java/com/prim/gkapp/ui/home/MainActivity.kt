@@ -154,12 +154,6 @@ class MainActivity : BaseActivity<MainPresenter>(), NavigationView.OnNavigationI
             R.id.nav_issues -> {
 
             }
-            R.id.nav_marketplace -> {
-
-            }
-            R.id.nav_explore -> {
-
-            }
         }
         val drawerLayout: DrawerLayout = findViewById(R.id.drawer_layout)
         drawerLayout.closeDrawer(GravityCompat.START)

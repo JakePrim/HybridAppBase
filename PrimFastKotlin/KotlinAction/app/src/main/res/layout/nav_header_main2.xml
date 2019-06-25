@@ -1,111 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:background="@color/colorWhite">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="@dimen/nav_header_height">
 
-    <LinearLayout
-        android:id="@+id/ll_header"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@drawable/side_nav_bar"
-        android:gravity="bottom"
-        android:orientation="vertical"
-        android:paddingLeft="16dp"
-        android:paddingTop="25dp"
-        android:paddingRight="16dp"
-        android:paddingBottom="16dp"
-        android:theme="@style/ThemeOverlay.AppCompat.Dark">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-            <cn.carbs.android.avatarimageview.library.AvatarImageView
-                android:id="@+id/iv_avatar"
-                android:layout_width="@dimen/nav_header_avatar"
-                android:layout_height="@dimen/nav_header_avatar"
-                android:contentDescription="@string/nav_header_desc"
-                android:paddingTop="@dimen/nav_header_vertical_spacing"
-                android:src="@mipmap/ic_launcher_round"
-                app:aiv_BoarderWidth="2dp"
-                app:aiv_ShowBoarder="true"
-                app:aiv_TextSizeRatio="0.4" />
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical"
-                android:orientation="vertical">
-
-                <TextView
-                    android:id="@+id/tv_username"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="10dp"
-                    android:paddingTop="@dimen/nav_header_vertical_spacing"
-                    android:text="@string/nav_header_title"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-                    android:textColor="@color/colorWhite"
-                    android:textSize="16sp"
-                    android:textStyle="bold" />
-
-                <TextView
-                    android:id="@+id/tv_location"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="5dp"
-                    android:layout_marginTop="5dp"
-                    android:drawableLeft="@mipmap/ic_action_location_on"
-                    android:drawablePadding="5dp"
-                    android:gravity="center_vertical"
-                    android:text="北京"
-                    android:textColor="@color/colorPrimaryBg2"
-                    android:textSize="14sp" />
-            </LinearLayout>
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/ll_user_info"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="10dp"
-            android:orientation="vertical">
-
-            <TextView
-                android:id="@+id/tv_dio"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:maxLines="2"
-                android:textColor="@color/colorPrimaryBg2"
-                android:textSize="14sp" />
-
-            <TextView
-                android:id="@+id/tv_email"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical"
-                android:layout_marginTop="5dp"
-                android:drawableLeft="@mipmap/ic_action_email"
-                android:drawablePadding="5dp"
-                android:text="@string/nav_header_subtitle"
-                android:textColor="@android:color/holo_blue_bright"
-                android:textSize="14sp" />
-
-            <TextView
-                android:id="@+id/tv_blog"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
-                android:drawableLeft="@mipmap/ic_action_insert_link"
-                android:drawablePadding="5dp"
-                android:text="@string/nav_header_subtitle"
-                android:textColor="@android:color/holo_blue_bright"
-                android:textSize="14sp" />
-
-        </LinearLayout>
-    </LinearLayout>
-</RelativeLayout>
+    <TextView android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:text="@string/app_name"
+              android:textSize="@dimen/textSizeBig"
+              android:gravity="center_vertical"
+              android:layout_gravity="center_vertical"
+              android:layout_marginTop="10dp"
+              android:layout_marginLeft="15dp"
+              android:textColor="@color/colorAccent"/>
+</LinearLayout>

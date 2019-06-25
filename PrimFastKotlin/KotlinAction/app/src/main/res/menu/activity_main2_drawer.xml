@@ -1,59 +1,74 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    tools:showIn="navigation_view">
+      xmlns:app="http://schemas.android.com/apk/res-auto"
+      xmlns:tools="http://schemas.android.com/tools"
+      tools:showIn="navigation_view">
 
     <group
-        android:id="@+id/nav_menu2"
-        android:checkableBehavior="single">
+            android:id="@+id/nav_menu2"
+            android:checkableBehavior="single">
         <item
-            android:id="@+id/nav_home"
-            android:icon="@mipmap/ic_action_home"
-            android:title="@string/menu_home" />
+                android:id="@+id/nav_home"
+                android:icon="@mipmap/ic_action_home"
+                android:title="@string/str_feeds"/>
 
         <item
-            android:id="@+id/nav_dashboard"
-            android:icon="@mipmap/ic_action_dashboard"
-            android:title="Dashboard" />
-        <item
-            android:id="@+id/nav_pull"
-            android:icon="@mipmap/ic_action_pull"
-            android:title="Pull request"
-            app:actionLayout="@layout/menu_pull_request"
-            app:showAsAction="always" />
+                android:id="@+id/nav_dashboard"
+                android:icon="@mipmap/ic_action_dashboard"
+                android:title="@string/str_repositories"/>
 
         <item
-            android:id="@+id/nav_issues"
-            android:icon="@mipmap/ic_action_issues"
-            android:title="Issues"
-            app:actionLayout="@layout/menu_issues"
-            app:showAsAction="always" />
+                android:id="@+id/nav_issues"
+                android:icon="@mipmap/ic_action_issues"
+                android:title="@string/str_issues"
+                app:actionLayout="@layout/menu_issues"
+                app:showAsAction="always"/>
 
         <item
-            android:id="@+id/nav_marketplace"
-            android:icon="@mipmap/ic_action_marketplace"
-            android:title="MarketPlace" />
-        <item
-            android:id="@+id/nav_explore"
-            android:icon="@mipmap/ic_action_explore"
-            android:title="Explore" />
+                android:id="@+id/nav_pull"
+                android:icon="@mipmap/ic_action_pull"
+                android:title="@string/str_pull_request"
+                app:actionLayout="@layout/menu_pull_request"
+                app:showAsAction="always"/>
+    </group>
 
+    <group android:checkableBehavior="single"
+           android:id="@+id/nav_menu3">
+        <item
+                android:id="@+id/nav_notification"
+                android:icon="@mipmap/ic_action_marketplace"
+                android:title="@string/str_notification"/>
+        <item
+                android:id="@+id/nav_pinned"
+                android:icon="@mipmap/ic_action_explore"
+                android:title="@string/str_pinned"/>
+        <item
+                android:id="@+id/nav_trending"
+                android:icon="@mipmap/ic_action_explore"
+                android:title="@string/str_trending"/>
+        <item
+                android:id="@+id/nav_gists"
+                android:icon="@mipmap/ic_action_explore"
+                android:title="@string/str_gists"/>
     </group>
 
     <group
-        android:id="@+id/nav_menu1"
-        android:checkableBehavior="single">
+            android:id="@+id/nav_menu1"
+            android:checkableBehavior="single">
         <item
-            android:id="@+id/nav_about"
-            android:icon="@mipmap/ic_action_error"
-            android:title="@string/menu_about" />
+                android:id="@+id/nav_setting"
+                android:icon="@mipmap/ic_action_error"
+                android:title="@string/str_setting"/>
         <item
-            android:id="@+id/footer_spacer_2"
-            android:checkable="false"
-            android:enabled="false"
-            android:orderInCategory="200"
-            android:title="" />
+                android:id="@+id/nav_about"
+                android:icon="@mipmap/ic_action_error"
+                android:title="@string/menu_about"/>
+        <item
+                android:id="@+id/footer_spacer_2"
+                android:checkable="false"
+                android:enabled="false"
+                android:orderInCategory="200"
+                android:title=""/>
     </group>
 
 </menu>

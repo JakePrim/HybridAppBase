@@ -1,5 +1,6 @@
 package com.prim.gkapp.ui.repos
 
+import android.util.Log
 import android.view.View
 import android.view.View.GONE
 import android.view.View.VISIBLE
@@ -26,8 +27,11 @@ class ReposListAdapter : CommonListAdapter<Repository>(R.layout.item_repos_layou
             item_avatar.loadImage(item.owner.avatar_url, item.owner.login)
             item_title.text = item.name
             item_dec.text = item.description
-            Config.languageColor[item.language]
             item_language.text = item.language
+
+            val res = Config.languageColor[item.language]
+            Log.e("ReposListAdapter","res:"+res)
+            res?.let { item_tips_language.setBackgroundResource(it) }
 
             item.fork.yes {
                 item_fork.visibility = VISIBLE
