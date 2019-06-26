@@ -6,6 +6,56 @@
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
+
+        <item name="android:textColorPrimary">@color/textColorPrimary</item>
+        <item name="android:textColorSecondary">@color/textColorSecondary</item>
+        <item name="android:textColorTertiary">@color/textColorTertiary</item>
+
+        <item name="android:textColorPrimaryInverse">@color/textColorPrimaryInverse</item>
+        <item name="android:textColorSecondaryInverse">@color/textColorSecondaryInverse</item>
+        <item name="android:textColorTertiaryInverse">@color/textColorTertiaryInverse</item>
+
+        <item name="android:colorBackground">@color/colorBackground</item>
+        <item name="android:windowBackground">@color/windowBackground</item>
+
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+
+        <!--<item name="sideBarBackground">@drawable/side_nav_bar</item>-->
+        <item name="android:alertDialogTheme">@style/AlertDialogTheme</item>
+    </style>
+
+    <style name="AppTheme.Dark" parent="Theme.AppCompat">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccentDark</item>
+
+        <item name="android:textColorPrimary">@color/textColorPrimary</item>
+        <item name="android:textColorSecondary">@color/textColorSecondary</item>
+        <item name="android:textColorTertiary">@color/textColorTertiary</item>
+
+        <item name="android:textColorPrimaryInverse">@color/textColorPrimary</item>
+        <item name="android:textColorSecondaryInverse">@color/textColorSecondary</item>
+        <item name="android:textColorTertiaryInverse">@color/textColorTertiary</item>
+
+        <item name="android:colorBackground">@color/colorBackgroundInverse</item>
+        <item name="android:windowBackground">@color/windowBackgroundInverse</item>
+
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+
+        <!--<item name="sideBarBackground">@drawable/side_nav_bar_night</item>-->
+        <item name="android:alertDialogTheme">@style/AlertDialogTheme.Dark</item>
+    </style>
+
+    <style name="AlertDialogTheme" parent="Theme.AppCompat.Light.Dialog.Alert"/>
+
+    <style name="AlertDialogTheme.Dark">
+        <item name="android:textColorPrimary">@color/textColorPrimary</item>
+        <item name="android:textColorSecondary">@color/textColorSecondary</item>
+        <item name="android:textColorTertiary">@color/textColorTertiary</item>
+        <item name="android:windowBackground">@color/colorBackgroundInverse</item>
     </style>
 
     <style name="AppTheme.NoActionBar">
@@ -13,83 +63,79 @@
         <item name="windowNoTitle">true</item>
     </style>
 
-    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+    <style name="list_repos_item_title">
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:textColor">?android:attr/textColorPrimaryInverse</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_margin">3dp</item>
+        <item name="android:layout_gravity">center_vertical</item>
+    </style>
 
-    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+    <style name="list_item_title">
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">?android:attr/textColorPrimaryInverse</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">wrap_content</item>
+        <!--<item name="android:layout_margin">3dp</item>-->
+        <item name="android:layout_gravity">center_vertical</item>
+    </style>
+
+    <style name="list_item_subtitle">
+        <item name="android:textStyle">normal</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">?android:attr/textColorSecondaryInverse</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">wrap_content</item>
+        <!--<item name="android:layout_margin">3dp</item>-->
+        <item name="android:layout_gravity">center_vertical</item>
+    </style>
+
+    <style name="list_item_tertiary_title">
+        <item name="android:textStyle">normal</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">?android:attr/textColorTertiaryInverse</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">wrap_content</item>
+        <!--<item name="android:layout_margin">3dp</item>-->
+        <item name="android:layout_gravity">center_vertical</item>
+    </style>
+
+    <style name="list_item_avatar">
+        <item name="android:layout_height">50dp</item>
+        <item name="android:layout_width">50dp</item>
+        <!--<item name="android:layout_marginTop">15dp</item>-->
+        <!--<item name="android:layout_marginLeft">10dp</item>-->
+        <item name="android:gravity">center</item>
+        <item name="android:layout_gravity">center_vertical</item>
+        <item name="android:scaleType">fitXY</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar"/>
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light"/>
 
     <style name="MainStyle" parent="AppTheme.NoActionBar"></style>
 
     <style name="MyHintText" parent="TextAppearance.AppCompat.Small">
-        <item name="android:textColor">@color/colorPrimary</item>
-        <item name="android:textColorHint">@color/colorSecondary</item>
-        <item name="colorControlNormal">@color/colorPrimary</item>
-        <item name="colorControlActivated">@color/colorAccent</item>
+        <item name="android:textColor">?android:attr/textColorPrimaryInverse</item>
+        <item name="android:textColorHint">?android:attr/textColorSecondaryInverse</item>
+        <item name="colorControlNormal">?android:attr/colorPrimaryDark</item>
+        <item name="colorControlActivated">?android:attr/colorAccent</item>
     </style>
 
     <style name="MyEditText" parent="Theme.AppCompat.Light">
-        <item name="colorControlNormal">@color/colorPrimary</item>
-        <item name="colorControlActivated">@color/colorAccent</item>
+        <item name="colorControlNormal">?android:attr/colorPrimaryDark</item>
+        <item name="colorControlActivated">?android:attr/colorAccent</item>
+        <item name="android:textColor">?android:attr/textColorPrimaryInverse</item>
+        <item name="android:textColorHint">?android:attr/textColorSecondaryInverse</item>
     </style>
 
     <style name="MyButton" parent="Theme.AppCompat.Light">
         <item name="colorControlHighlight">@color/google_red</item>
         <item name="colorButtonNormal">@color/colorAccent</item>
-    </style>
-
-
-    <style name="Width_Warp_Height_Warp">
-        <item name="android:layout_width">wrap_content</item>
-        <item name="android:layout_height">wrap_content</item>
-    </style>
-
-    <style name="Width_Warp_Height_Match">
-        <item name="android:layout_width">wrap_content</item>
-        <item name="android:layout_height">match_parent</item>
-    </style>
-
-    <style name="Width_0_Height_Warp">
-        <item name="android:layout_width">0dp</item>
-        <item name="android:layout_height">wrap_content</item>
-    </style>
-
-    <style name="Width_0_Height_Match">
-        <item name="android:layout_width">0dp</item>
-        <item name="android:layout_height">match_parent</item>
-    </style>
-
-    <style name="Width_Match_Height_Match">
-        <item name="android:layout_width">match_parent</item>
-        <item name="android:layout_height">match_parent</item>
-    </style>
-
-    <style name="Width_Match_Height_Warp">
-        <item name="android:layout_width">match_parent</item>
-        <item name="android:layout_height">wrap_content</item>
-    </style>
-
-    <style name="TextStylePrimary_1" parent="Width_0_Height_Match">
-        <item name="android:textColor">@color/colorPrimaryText</item>
-        <item name="android:textSize">@dimen/textSizePrimary</item>
-    </style>
-
-    <style name="TextStylePrimary_2" parent="Width_Warp_Height_Warp">
-        <item name="android:textColor">@color/colorPrimaryText</item>
-        <item name="android:textSize">@dimen/textSizePrimary</item>
-    </style>
-
-    <style name="TextStylePrimary_3" parent="Width_Match_Height_Match">
-        <item name="android:textColor">@color/colorPrimaryText</item>
-        <item name="android:textSize">@dimen/textSizePrimary</item>
-    </style>
-
-    <style name="TextStyleSecondary_2" parent="Width_Warp_Height_Warp">
-        <item name="android:textColor">@color/colorSecondaryText</item>
-        <item name="android:textSize">@dimen/textSizeSecondary</item>
-    </style>
-
-    <style name="TextStyleDec" parent="Width_Warp_Height_Warp">
-        <item name="android:textColor">@color/colorSecondaryText</item>
-        <item name="android:textSize">@dimen/textSizeAssist</item>
     </style>
 
 </resources>

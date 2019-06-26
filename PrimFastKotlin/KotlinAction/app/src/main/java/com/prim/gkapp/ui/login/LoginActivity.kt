@@ -5,10 +5,10 @@ import android.view.View.GONE
 import android.view.View.VISIBLE
 import androidx.core.widget.doOnTextChanged
 import androidx.lifecycle.LifecycleOwner
+import com.gyf.immersionbar.ImmersionBar
 import com.prim.gkapp.R
 import com.prim.gkapp.ui.home.MainActivity
 import com.prim.lib_base.base.BaseActivity
-import com.prim.lib_base.utils.StatusBarUtil
 import com.prim.lib_base.utils.otherwise
 import com.prim.lib_base.utils.yes
 import kotlinx.android.synthetic.main.activity_login.*
@@ -24,7 +24,7 @@ import org.jetbrains.anko.toast
 class LoginActivity : BaseActivity<LoginPresenter>(), LifecycleOwner {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        StatusBarUtil.setTranslucentForCoordinatorLayout(this, 0)
+        ImmersionBar.with(this).statusBarDarkFont(true).init()
         setContentView(R.layout.activity_login)
         username.doOnTextChanged { _, _, _, _ ->
             login.isEnabled = username.text.isNotEmpty() && password.text.isNotEmpty()

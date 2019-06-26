@@ -10,7 +10,7 @@
             android:layout_height="wrap_content"
             android:textSize="12sp"
             android:text="有新的请求"
-            android:textColor="@color/colorSecondaryLight"/>
+            android:textColor="?android:textColorSecondaryInverse"/>
     <View
             android:id="@+id/pull_dot"
             android:layout_width="5dp"

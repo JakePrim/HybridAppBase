@@ -17,6 +17,6 @@
             android:layout_height="wrap_content"
             android:textSize="12sp"
             android:text="有新的问题哦"
-            android:textColor="@color/colorSecondaryLight"/>
+            android:textColor="?android:textColorSecondaryInverse"/>
 
 </RelativeLayout>

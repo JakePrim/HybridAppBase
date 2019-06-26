@@ -24,7 +24,7 @@
             app:elevation="10dp"
             app:headerLayout="@layout/nav_header_main2"
             app:itemIconPadding="15dp"
-            app:itemTextColor="@color/colorSecondaryText"
+            app:itemTextColor="?android:textColorPrimaryInverse"
             app:menu="@menu/activity_main2_drawer">
 
         <include layout="@layout/include_nav_bottom_layout"/>
