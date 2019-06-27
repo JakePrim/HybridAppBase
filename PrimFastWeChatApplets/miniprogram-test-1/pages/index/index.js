@@ -20,11 +20,17 @@ const weatherColorMap = {
   'snow': '#aae1fc'
 }
 
+//引入位置核心SDK
+const QQMapWx = require('../../libs/qqmap-wx-jssdk.js');
+var qqmapsdk;
 Page({
   onLoad(){
-    console.log('Hello Word')
+    qqmapsdk = new QQMapWx({
+      key:'SZGBZ-64HEI-RVTG7-5GPKJ-GGV46-LEBTG'
+    });
     this.getNowData()
   },
+  
   data:{
     now_temp:"",
     now_weather:"",
@@ -95,5 +101,26 @@ Page({
     wx.navigateTo({
       url: '/pages/list/list',
     })
+  },
+  //获取当前的经纬度
+  toTabLocation(){
+      wx.getLocation({
+        success: function(res) {
+          console.log(res.latitude,res.longitude);
+          qqmapsdk.reverseGeocoder({
+              location:{
+                latitude:res.latitude,
+                longitude: res.longitude
+              },
+              success:res =>{
+                let city = res.result.address.city;
+                console.log("city:"+city);
+              }
+          });
+        },
+      });
+      //SZGBZ-64HEI-RVTG7-5GPKJ-GGV46-LEBTG
+      //https://apis.map.qq.com
+
   }
 })

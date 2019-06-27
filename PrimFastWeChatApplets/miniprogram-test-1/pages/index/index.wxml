@@ -5,7 +5,7 @@
       <image class='location-icon' src='/images/location-icon.png'/>
       <view class='location-city'>北京</view>
     </view>
-    <view class='location-tips'>获取当前位置</view>
+    <view class='location-tips' bindtap='toTabLocation'>获取当前位置</view>
   </view>
   <view class='temp'>{{now_temp}}</view>
   <view class='weather'>{{now_weather}}</view>
