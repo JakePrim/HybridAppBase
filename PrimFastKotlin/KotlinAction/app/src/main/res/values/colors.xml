@@ -6,8 +6,8 @@
     <color name="colorPrimaryLight">#FFFFFF</color>
     <color name="colorAccent">#4286f5</color>
     <color name="colorAccentDark">#2332B5</color>
-    <color name="colorBackground">#F3F3F3</color>
-    <color name="windowBackground">#EEEEEE</color>
+    <color name="colorBackground">#FFFFFF</color>
+    <color name="windowBackground">#FFFFFF</color>
     <color name="colorBackgroundInverse">#333333</color>
     <color name="windowBackgroundInverse">#333333</color>
 

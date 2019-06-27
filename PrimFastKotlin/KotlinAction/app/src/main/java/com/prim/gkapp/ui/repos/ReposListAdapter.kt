@@ -30,36 +30,31 @@ class ReposListAdapter : CommonListAdapter<Repository>(R.layout.item_repos_layou
             item_language.text = item.language
 
             val res = Config.languageColor[item.language]
-            Log.e("ReposListAdapter","res:"+res)
+            Log.e("ReposListAdapter", "res:" + res)
             res?.let { item_tips_language.setBackgroundResource(it) }
 
             item.fork.yes {
                 item_fork.visibility = VISIBLE
-                item_fork.text = "Forked form"
+                item_fork.text = "Forked form ${item.name}"
             }.otherwise {
                 item_fork.visibility = GONE
             }
 
             (item.stargazers_count == 0).yes {
-                item_stargazers.visibility = GONE
+                ll_item_stargazers.visibility = GONE
             }.otherwise {
                 item_stargazers.visibility = VISIBLE
                 item_stargazers.text = item.stargazers_count.toKilo()
             }
 
             (item.forks_count == 0).yes {
-                item_forked_count.visibility = GONE
+                ll_item_forked.visibility = GONE
             }.otherwise {
                 item_forked_count.visibility = VISIBLE
                 item_forked_count.text = item.forks_count.toKilo()
             }
 
-            (item.license == null).yes {
-                item_license.visibility = GONE
-            }.otherwise {
-                item_license.visibility = VISIBLE
-                item_license.text = item.license.name
-            }
+            item_update_time.text = item.updated_at
         }
     }
 

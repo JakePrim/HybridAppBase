@@ -9,7 +9,7 @@ import com.google.android.material.navigation.NavigationView
 import com.google.android.material.snackbar.Snackbar
 import com.gyf.immersionbar.ImmersionBar
 import com.prim.gkapp.R
-import com.prim.gkapp.ui.about.AboutFragment
+import com.prim.gkapp.config.Themer
 import com.prim.gkapp.ui.repos.ReposFragment
 import com.prim.lib_base.base.BaseActivity
 import com.prim.lib_base.utils.doOnLayoutAvailable
@@ -26,10 +26,14 @@ import org.jetbrains.anko.sdk27.coroutines.onClick
 class MainActivity : BaseActivity<MainPresenter>(), NavigationView.OnNavigationItemSelectedListener {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        Themer.applyProperTheme(this)
+        Themer.currentTheme()
+
         ImmersionBar.with(this)
-            .statusBarDarkFont(true)
+            .statusBarDarkFont(Themer.currentTheme() == Themer.ThemeMode.DAY)
             .statusBarColor(R.color.colorPrimary)
             .init()
+
         setContentView(R.layout.activity_main2)
         showFragment(R.id.fl_content, ReposFragment::class.java, Bundle())
         initDrawerLayout()
@@ -143,7 +147,8 @@ class MainActivity : BaseActivity<MainPresenter>(), NavigationView.OnNavigationI
                 showFragment(R.id.fl_content, ReposFragment::class.java, Bundle())
             }
             R.id.nav_about -> {
-                showFragment(R.id.fl_content, AboutFragment::class.java, Bundle())
+//                showFragment(R.id.fl_content, AboutFragment::class.java, Bundle())
+                Themer.toggle(this)
             }
             R.id.nav_dashboard -> {
 

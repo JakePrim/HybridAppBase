@@ -34,8 +34,9 @@ object UserData {
     var authId: Int by pref(0)
     //记录用户是否第一次打开APP
     var firstIn: Boolean by pref(true)
-    //记录当前模式 true 为夜间模式 false为日间模式
-    var nightModel: Boolean by pref(false)
+
+    //记录当前主题模式
+    var themeMode by pref("DAY")
 
     //判断是否登录
     fun isLogin(): Boolean = token.isNotEmpty()
