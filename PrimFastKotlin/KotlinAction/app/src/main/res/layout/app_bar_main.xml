@@ -49,22 +49,19 @@
                             android:layout_height="wrap_content"
                             android:layout_gravity="center_vertical"
                             android:padding="10dp"
-                            android:src="@drawable/ic_menu_black_24dp"/>
+                            android:tint="?android:textColorSecondaryInverse"
+                            app:srcCompat="@drawable/ic_menu_black_24dp"/>
 
                     <TextView
                             style="@style/list_item_subtitle"
                             android:layout_weight="1"
                             android:gravity="center_vertical"
-                            android:textColor="?android:textColorSecondaryInverse"
                             android:text="@string/str_search"/>
 
                     <cn.carbs.android.avatarimageview.library.AvatarImageView
                             android:id="@+id/iv_avatar"
-                            android:layout_width="@dimen/menu_avatar"
-                            android:layout_height="@dimen/menu_avatar"
-                            android:layout_gravity="center_vertical"
+                            style="@style/list_item_avatar"
                             android:layout_marginRight="10dp"
-                            android:contentDescription="@string/nav_header_desc"
                             android:src="@mipmap/ic_launcher"
                             app:aiv_BoarderWidth="2dp"
                             app:aiv_TextSizeRatio="0.4"/>

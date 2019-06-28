@@ -1,21 +1,19 @@
 package com.prim.gkapp.ui.home
 
 import android.os.Bundle
-import android.view.MenuItem
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.core.view.GravityCompat
-import androidx.drawerlayout.widget.DrawerLayout
-import com.google.android.material.navigation.NavigationView
 import com.google.android.material.snackbar.Snackbar
-import com.gyf.immersionbar.ImmersionBar
 import com.prim.gkapp.R
 import com.prim.gkapp.config.Themer
+import com.prim.gkapp.data.UserData
+import com.prim.gkapp.ext.loadImage
+import com.prim.gkapp.ui.ThemeActivity
 import com.prim.gkapp.ui.repos.ReposFragment
-import com.prim.lib_base.base.BaseActivity
-import com.prim.lib_base.utils.doOnLayoutAvailable
 import com.prim.lib_base.utils.showFragment
-import kotlinx.android.synthetic.main.activity_main2.*
-import kotlinx.android.synthetic.main.app_bar_main2.*
+import com.prim.lib_base.utils.yes
+import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.android.synthetic.main.app_bar_main.*
 import kotlinx.android.synthetic.main.include_nav_bottom_layout.*
 import org.jetbrains.anko.sdk27.coroutines.onClick
 
@@ -23,24 +21,33 @@ import org.jetbrains.anko.sdk27.coroutines.onClick
  * 项目主页面
  * {@see MainPresenter}
  */
-class MainActivity : BaseActivity<MainPresenter>(), NavigationView.OnNavigationItemSelectedListener {
+class MainActivity : ThemeActivity<MainPresenter>() {
+
+    /**
+     * 在使用时才初始化NavigationController
+     */
+    private val navigationController by lazy {
+        NavigationController(this, nav_view, drawer_layout)
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         Themer.applyProperTheme(this)
-        Themer.currentTheme()
-
-        ImmersionBar.with(this)
-            .statusBarDarkFont(Themer.currentTheme() == Themer.ThemeMode.DAY)
-            .statusBarColor(R.color.colorPrimary)
-            .init()
-
-        setContentView(R.layout.activity_main2)
+        setContentView(R.layout.activity_main)
         showFragment(R.id.fl_content, ReposFragment::class.java, Bundle())
         initDrawerLayout()
-        initNavigation()
         initToolBar()
         initActionButton()
         initListener()
+        initData()
+    }
+
+    private fun initData() {
+        UserData.isLogin().yes {
+            UserData.currentUser?.let {
+                iv_avatar.loadImage(it.avatar_url, it.login)
+            }
+        }
     }
 
     private fun initActionButton() {
@@ -67,54 +74,7 @@ class MainActivity : BaseActivity<MainPresenter>(), NavigationView.OnNavigationI
         )
         drawer_layout.addDrawerListener(toggle)
         toggle.syncState()
-    }
-
-    private fun initNavigation() {
-        nav_view.setNavigationItemSelectedListener(this)
-        nav_view.doOnLayoutAvailable {
-            //默认为菜单的第一个
-            nav_view.post {
-                nav_view.setCheckedItem(R.id.nav_home)
-            }
-            //nav view 判断是否初始化完毕
-//            UserData.isLogin().yes {
-//                UserData.currentUser?.let {
-//                    iv_avatar.loadImage(it.avatar_url, it.name)
-//                    tv_username.text = it.name
-//                    tv_email.text = it.email
-//                    tv_location.text = it.location
-//                    tv_blog.text = it.blog
-//                    tv_dio.text = it.bio
-//                    tv_followers.text = it.followers.toString()
-//                    tv_following.text = it.following.toString()
-//                    tv_repos.text = (it.public_repos + it.total_private_repos).toString()
-//                    tv_gists.text = (it.public_gists + it.private_gists).toString()
-//                } ?: run {
-//                    iv_avatar.imageResource = R.mipmap.ic_launcher
-//                    tv_username.text = "请登录"
-//                    ll_user_info.visibility = View.GONE
-//                }
-//            }.otherwise {
-//                iv_avatar.imageResource = R.mipmap.ic_launcher
-//                tv_username.text = "请登录"
-//                ll_user_info.visibility = View.GONE
-//            }
-//            ll_followers.onClick {
-//                drawer_layout.closeDrawer(GravityCompat.START)
-//            }
-//
-//            ll_following.onClick {
-//                drawer_layout.closeDrawer(GravityCompat.START)
-//            }
-//
-//            ll_gists.onClick {
-//                drawer_layout.closeDrawer(GravityCompat.START)
-//            }
-//
-//            ll_repos.onClick {
-//                drawer_layout.closeDrawer(GravityCompat.START)
-//            }
-        }
+        navigationController.initNavigation()
     }
 
     private fun initListener() {
@@ -127,8 +87,8 @@ class MainActivity : BaseActivity<MainPresenter>(), NavigationView.OnNavigationI
             System.exit(0)
         }
 
-        ll_model.onClick {
-            //请求模式
+        ll_model.setOnClickListener {
+            Themer.toggle(this)
         }
     }
 
@@ -138,31 +98,6 @@ class MainActivity : BaseActivity<MainPresenter>(), NavigationView.OnNavigationI
         } else {
             super.onBackPressed()
         }
-    }
-
-    override fun onNavigationItemSelected(item: MenuItem): Boolean {
-        // Handle navigation view item clicks here.
-        when (item.itemId) {
-            R.id.nav_home -> {
-                showFragment(R.id.fl_content, ReposFragment::class.java, Bundle())
-            }
-            R.id.nav_about -> {
-//                showFragment(R.id.fl_content, AboutFragment::class.java, Bundle())
-                Themer.toggle(this)
-            }
-            R.id.nav_dashboard -> {
-
-            }
-            R.id.nav_pull -> {
-
-            }
-            R.id.nav_issues -> {
-
-            }
-        }
-        val drawerLayout: DrawerLayout = findViewById(R.id.drawer_layout)
-        drawerLayout.closeDrawer(GravityCompat.START)
-        return true
     }
 
     override fun onResume() {

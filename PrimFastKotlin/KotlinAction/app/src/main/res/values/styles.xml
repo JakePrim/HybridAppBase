@@ -7,9 +7,9 @@
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
 
-        <item name="android:textColorPrimary">@color/textColorPrimary</item>
-        <item name="android:textColorSecondary">@color/textColorSecondary</item>
-        <item name="android:textColorTertiary">@color/textColorTertiary</item>
+        <item name="android:textColorPrimary">@color/textColorPrimaryInverse</item>
+        <item name="android:textColorSecondary">@color/textColorSecondaryInverse</item>
+        <item name="android:textColorTertiary">@color/textColorTertiaryInverse</item>
 
         <item name="android:textColorPrimaryInverse">@color/textColorPrimaryInverse</item>
         <item name="android:textColorSecondaryInverse">@color/textColorSecondaryInverse</item>
@@ -20,6 +20,8 @@
 
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
+
+        <item name="preferenceTheme">@style/PreferenceThemeOverlay.v14.Material</item>
 
         <!--<item name="sideBarBackground">@drawable/side_nav_bar</item>-->
         <item name="android:alertDialogTheme">@style/AlertDialogTheme</item>
@@ -45,6 +47,8 @@
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
 
+        <item name="preferenceTheme">@style/PreferenceThemeOverlay.v14.Material</item>
+
         <!--<item name="sideBarBackground">@drawable/side_nav_bar_night</item>-->
         <item name="android:alertDialogTheme">@style/AlertDialogTheme.Dark</item>
     </style>
@@ -61,6 +65,12 @@
     <style name="AppTheme.NoActionBar">
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="preferences_style" parent="PreferenceThemeOverlay.v14.Material">
+        <item name="android:textColor">?android:attr/textColorPrimaryInverse</item>
+        <item name="android:textColorHint">?android:attr/textColorTertiaryInverse</item>
+        <item name="android:cacheColorHint">?android:attr/textColorTertiaryInverse</item>
     </style>
 
     <style name="list_repos_item_title">
@@ -99,15 +109,13 @@
         <item name="android:textColor">?android:attr/textColorTertiaryInverse</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_width">wrap_content</item>
-        <!--<item name="android:layout_margin">3dp</item>-->
         <item name="android:layout_gravity">center_vertical</item>
     </style>
 
     <style name="list_item_avatar">
         <item name="android:layout_height">50dp</item>
         <item name="android:layout_width">50dp</item>
-        <!--<item name="android:layout_marginTop">15dp</item>-->
-        <!--<item name="android:layout_marginLeft">10dp</item>-->
+        <item name="android:layout_marginRight">5dp</item>
         <item name="android:gravity">center</item>
         <item name="android:layout_gravity">center_vertical</item>
         <item name="android:scaleType">fitXY</item>
@@ -116,8 +124,6 @@
     <style name="repo_tag_icon">
         <item name="android:layout_height">12dp</item>
         <item name="android:layout_width">12dp</item>
-        <!--<item name="android:layout_margin">3dp</item>-->
-        <!--<item name="android:gravity">center</item>-->
         <item name="android:layout_gravity">center_vertical</item>
         <item name="android:scaleType">fitXY</item>
         <item name="android:tint">?android:textColorSecondaryInverse</item>

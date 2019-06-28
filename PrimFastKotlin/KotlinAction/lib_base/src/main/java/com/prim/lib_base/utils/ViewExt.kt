@@ -4,7 +4,9 @@ import android.os.Build
 import android.view.View
 import android.view.ViewTreeObserver
 import androidx.annotation.RequiresApi
+import androidx.core.view.GravityCompat
 import androidx.core.view.ViewCompat
+import androidx.drawerlayout.widget.DrawerLayout
 import com.google.android.material.navigation.NavigationView
 
 /**
@@ -56,6 +58,25 @@ inline fun View.doViewAvailable(crossinline block: () -> Unit) {
                 viewTreeObserver.removeOnGlobalLayoutListener(this)
                 block()
             }
+        })
+    }
+}
+
+inline fun DrawerLayout.afterClose(crossinline block: () -> Unit) {
+    if (isDrawerOpen(GravityCompat.START)) {
+        closeDrawer(GravityCompat.START)
+        addDrawerListener(object : DrawerLayout.DrawerListener {
+            override fun onDrawerStateChanged(newState: Int) = Unit
+
+            override fun onDrawerSlide(drawerView: View, slideOffset: Float) = Unit
+
+            override fun onDrawerOpened(drawerView: View) = Unit
+
+            override fun onDrawerClosed(drawerView: View) {
+                removeDrawerListener(this)
+                block()
+            }
+
         })
     }
 }

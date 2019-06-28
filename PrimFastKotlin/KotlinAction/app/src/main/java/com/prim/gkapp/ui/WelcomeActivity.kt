@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.animation.doOnEnd
 import com.gyf.immersionbar.ImmersionBar
 import com.prim.gkapp.R
+import com.prim.gkapp.config.Themer
 import com.prim.gkapp.data.UserData
 import com.prim.gkapp.ui.home.MainActivity
 import com.prim.gkapp.ui.login.LoginActivity
@@ -17,16 +18,16 @@ import org.jetbrains.anko.startActivity
 
 
 class WelcomeActivity : AppCompatActivity() {
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        Themer.applyProperTheme(this)
         //设置状态栏字体 为黑色
-        ImmersionBar.with(this).statusBarDarkFont(true).init()
+        ImmersionBar.with(this).statusBarDarkFont(Themer.currentTheme() == Themer.ThemeMode.DAY).init()
         setContentView(R.layout.activity_welcome)
         tv_app_name.doViewAvailable {
             val anim = ObjectAnimator.ofFloat(
-                    tv_app_name,
-                    "alpha", 0.1f, 1f, 0.1f
+                tv_app_name,
+                "alpha", 0.1f, 1f, 0.1f
             )
             anim.duration = 3000
             anim.doOnEnd {

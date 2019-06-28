@@ -55,12 +55,3 @@ inline fun <T> BooleanExt<T>.otherwise(block: () -> T): T =
         is WithData -> this.data
     }
 
-fun main() {//测试
-    val result = true.yes {
-        1
-    }.otherwise {
-        2
-    }
-
-}
-

@@ -8,25 +8,25 @@
             android:id="@+id/nav_menu2"
             android:checkableBehavior="single">
         <item
-                android:id="@+id/nav_home"
-                android:icon="@mipmap/ic_action_home"
+                android:id="@+id/nav_feeds"
+                android:icon="@drawable/ic_camera_black_24dp"
                 android:title="@string/str_feeds"/>
 
         <item
-                android:id="@+id/nav_dashboard"
-                android:icon="@mipmap/ic_action_dashboard"
+                android:id="@+id/nav_repositories"
+                android:icon="@drawable/ic_repository_24dp"
                 android:title="@string/str_repositories"/>
 
         <item
                 android:id="@+id/nav_issues"
-                android:icon="@mipmap/ic_action_issues"
+                android:icon="@drawable/ic_issus_24dp"
                 android:title="@string/str_issues"
                 app:actionLayout="@layout/menu_issues"
                 app:showAsAction="always"/>
 
         <item
                 android:id="@+id/nav_pull"
-                android:icon="@mipmap/ic_action_pull"
+                android:icon="@drawable/ic_pull_24dp"
                 android:title="@string/str_pull_request"
                 app:actionLayout="@layout/menu_pull_request"
                 app:showAsAction="always"/>
@@ -36,32 +36,30 @@
            android:id="@+id/nav_menu3">
         <item
                 android:id="@+id/nav_notification"
-                android:icon="@mipmap/ic_action_marketplace"
+                android:icon="@drawable/ic_notifications_none_black_24dp"
                 android:title="@string/str_notification"/>
         <item
                 android:id="@+id/nav_pinned"
-                android:icon="@mipmap/ic_action_explore"
+                android:icon="@drawable/ic_pinned_24dp"
                 android:title="@string/str_pinned"/>
         <item
                 android:id="@+id/nav_trending"
-                android:icon="@mipmap/ic_action_explore"
+                android:icon="@drawable/ic_trending_up_black_24dp"
                 android:title="@string/str_trending"/>
         <item
                 android:id="@+id/nav_gists"
-                android:icon="@mipmap/ic_action_explore"
+                android:icon="@drawable/ic_view_list_black_24dp"
                 android:title="@string/str_gists"/>
     </group>
 
-    <group
-            android:id="@+id/nav_menu1"
-            android:checkableBehavior="single">
+    <group android:checkableBehavior="single">
         <item
                 android:id="@+id/nav_setting"
-                android:icon="@mipmap/ic_action_error"
+                android:icon="@drawable/ic_settings_black_24dp"
                 android:title="@string/str_setting"/>
         <item
                 android:id="@+id/nav_about"
-                android:icon="@mipmap/ic_action_error"
+                android:icon="@drawable/ic_about_24dp"
                 android:title="@string/menu_about"/>
         <item
                 android:id="@+id/footer_spacer_2"
