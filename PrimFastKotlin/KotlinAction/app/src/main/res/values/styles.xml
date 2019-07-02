@@ -57,6 +57,7 @@
         <!--<item name="sideBarBackground">@drawable/side_nav_bar_night</item>-->
 
         <item name="android:alertDialogTheme">@style/AlertDialogTheme.Dark</item>
+
     </style>
 
     <style name="AlertDialogTheme" parent="Theme.AppCompat.Light.Dialog.Alert"/>
@@ -71,6 +72,26 @@
     <style name="AppTheme.NoActionBar">
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="Widget.CodeIdea.Toolbar" parent="Widget.AppCompat.Toolbar">
+        <item name="android:background">?attr/colorPrimary</item>
+        <item name="android:textSize">16sp</item>
+        <item name="popupTheme">@style/Toolbar.Theme</item>
+        <item name="android:theme">@style/Toolbar.Theme</item>
+    </style>
+
+    <style name="base_toolbar" parent="Widget.CodeIdea.Toolbar"/>
+
+    <style name="Toolbar.Theme" parent="ThemeOverlay.AppCompat.ActionBar">
+        <!-- 设置Menu菜单的背景色 -->
+        <item name="android:itemBackground">?attr/colorPrimary</item>
+        <!-- 设置Menu菜单的字体颜色 -->
+        <item name="android:textColorPrimary">?android:attr/textColorPrimaryInverse</item>
+        <item name="colorControlNormal">?android:attr/textColorPrimaryInverse</item><!-- 主要是这个起作用,修改默认返回键的颜色-->
+        <item name="colorControlHighlight">?android:attr/textColorPrimaryInverse</item><!-- 主要是这个起作用,修改默认返回键的颜色-->
+        <!-- 设置Menu窗口不覆盖Toolbar视图 -->
+        <item name="overlapAnchor">false</item>
     </style>
 
     <style name="preferences_style" parent="PreferenceThemeOverlay.v14.Material">

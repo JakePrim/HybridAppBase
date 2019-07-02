@@ -35,7 +35,7 @@ class LoginPresenter : BasePresenter<LoginActivity>() {
     }
 
     fun checkPassword(password: String): Boolean {
-        return true
+        return password != null && password.length >= 8
     }
 
     override fun onResume() {

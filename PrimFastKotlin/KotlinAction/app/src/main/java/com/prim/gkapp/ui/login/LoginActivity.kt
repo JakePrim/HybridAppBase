@@ -37,7 +37,7 @@ class LoginActivity : ThemeActivity<LoginPresenter>(), LifecycleOwner {
                 presenter.checkPassword(password.text.toString()).yes {
                     presenter.login(username.text.toString(), password.text.toString())
                 }.otherwise {
-                    toast("密码输入不合法")
+                    inputLayout.error = getString(R.string.error_password)
                 }
             }.otherwise {
                 toast("账号输入不合法")

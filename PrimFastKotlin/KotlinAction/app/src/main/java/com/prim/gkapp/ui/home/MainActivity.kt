@@ -58,12 +58,13 @@ class MainActivity : ThemeActivity<MainPresenter>() {
     private fun initToolBar() {
         setSupportActionBar(toolbar)
         //隐藏toolbar 默认显示的title
-        supportActionBar?.setDisplayShowTitleEnabled(false)
+        supportActionBar?.setDisplayShowTitleEnabled(true)
         //隐藏toolbar 默认显示的左侧图片
-        supportActionBar?.setDisplayHomeAsUpEnabled(false)
-//        nav_menu.onClick {
-//            drawer_layout.openDrawer(GravityCompat.START)
-//        }
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+        //设置NavigationIcon的点击事件
+        toolbar.setNavigationOnClickListener {
+            drawer_layout.openDrawer(GravityCompat.START)
+        }
     }
 
     private fun initDrawerLayout() {

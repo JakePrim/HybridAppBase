@@ -69,4 +69,9 @@
 
         <item name="android:alertDialogTheme">@style/AlertDialogTheme.Dark</item>
     </style>
+
+    <style name="base_toolbar" parent="@style/Widget.CodeIdea.Toolbar">
+        <item name="android:elevation">3dp</item>
+        <item name="android:navigationIcon">?attr/homeAsUpIndicator</item>
+    </style>
 </resources>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <!-- background color -->
-    <color name="colorPrimary">#24292E</color>
+    <color name="colorPrimary">#333333</color>
 
     <color name="colorPrimaryInverse">#FFFFFF</color>
 
