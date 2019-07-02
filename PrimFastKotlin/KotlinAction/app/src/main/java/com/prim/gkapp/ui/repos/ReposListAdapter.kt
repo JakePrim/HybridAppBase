@@ -64,4 +64,8 @@ class ReposListAdapter : CommonListAdapter<Repository>(R.layout.item_repos_layou
     override fun onItemLongClick(view: View, item: Repository) {
 
     }
+
+    override fun onLoadErrorClick(view: View) {
+
+    }
 }

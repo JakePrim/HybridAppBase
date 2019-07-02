@@ -1,13 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <!-- background color -->
-    <color name="colorPrimary">#FFFFFF</color>
+    <color name="colorPrimary">#24292E</color>
+
+    <color name="colorPrimaryInverse">#FFFFFF</color>
+
     <color name="colorPrimaryDark">#333333</color>
+
     <color name="colorPrimaryLight">#FFFFFF</color>
+
     <color name="colorAccent">#4286f5</color>
+
     <color name="colorAccentDark">#2332B5</color>
+
     <color name="colorBackground">#FFFFFF</color>
     <color name="windowBackground">#FFFFFF</color>
+
     <color name="colorBackgroundInverse">#333333</color>
     <color name="windowBackgroundInverse">#333333</color>
 

@@ -22,7 +22,7 @@
             android:layout_gravity="start"
             android:fitsSystemWindows="true"
             app:elevation="10dp"
-            app:headerLayout="@layout/nav_header_main2"
+            app:headerLayout="@layout/nav_header_main"
             app:itemIconPadding="15dp"
             app:itemTextColor="?android:textColorPrimaryInverse"
             app:itemIconTint="?android:textColorPrimaryInverse"

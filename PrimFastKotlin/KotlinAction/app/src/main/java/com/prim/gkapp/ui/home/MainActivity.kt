@@ -7,12 +7,12 @@ import com.google.android.material.snackbar.Snackbar
 import com.prim.gkapp.R
 import com.prim.gkapp.config.Themer
 import com.prim.gkapp.data.UserData
-import com.prim.gkapp.ext.loadImage
 import com.prim.gkapp.ui.ThemeActivity
 import com.prim.gkapp.ui.repos.ReposFragment
 import com.prim.lib_base.utils.showFragment
 import com.prim.lib_base.utils.yes
 import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.android.synthetic.main.app_bar_layout.*
 import kotlinx.android.synthetic.main.app_bar_main.*
 import kotlinx.android.synthetic.main.include_nav_bottom_layout.*
 import org.jetbrains.anko.sdk27.coroutines.onClick
@@ -33,7 +33,6 @@ class MainActivity : ThemeActivity<MainPresenter>() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        showFragment(R.id.fl_content, ReposFragment::class.java, Bundle())
         initDrawerLayout()
         initToolBar()
         initActionButton()
@@ -44,7 +43,7 @@ class MainActivity : ThemeActivity<MainPresenter>() {
     private fun initData() {
         UserData.isLogin().yes {
             UserData.currentUser?.let {
-                iv_avatar.loadImage(it.avatar_url, it.login)
+                //                nav_iv_avatar.loadImage(it.avatar_url, it.login)
             }
         }
     }
@@ -62,9 +61,9 @@ class MainActivity : ThemeActivity<MainPresenter>() {
         supportActionBar?.setDisplayShowTitleEnabled(false)
         //隐藏toolbar 默认显示的左侧图片
         supportActionBar?.setDisplayHomeAsUpEnabled(false)
-        nav_menu.onClick {
-            drawer_layout.openDrawer(GravityCompat.START)
-        }
+//        nav_menu.onClick {
+//            drawer_layout.openDrawer(GravityCompat.START)
+//        }
     }
 
     private fun initDrawerLayout() {
@@ -74,6 +73,7 @@ class MainActivity : ThemeActivity<MainPresenter>() {
         drawer_layout.addDrawerListener(toggle)
         toggle.syncState()
         navigationController.initNavigation()
+        showFragment(R.id.fl_content, ReposFragment::class.java, Bundle())
     }
 
     private fun initListener() {
@@ -89,6 +89,18 @@ class MainActivity : ThemeActivity<MainPresenter>() {
         ll_model.setOnClickListener {
             Themer.toggle(this)
         }
+
+//        nav_bar.onClick {
+//
+//        }
+//
+//        nav_iv_avatar.onClick {
+//
+//        }
+//
+//        nav_bar.onClick {
+//
+//        }
     }
 
     override fun onBackPressed() {

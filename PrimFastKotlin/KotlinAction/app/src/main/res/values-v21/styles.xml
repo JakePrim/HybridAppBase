@@ -2,8 +2,7 @@
     <style name="AppTheme.NoActionBar">
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
-        <item name="android:statusBarColor">@color/colorPrimary</item>
-        <item name="android:colorEdgeEffect">@color/colorAccent</item>
+        <item name="android:colorEdgeEffect">?android:attr/colorAccent</item>
     </style>
 
     <style name="MainStyle" parent="AppTheme.NoActionBar">
@@ -13,7 +12,8 @@
     <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
         <!-- Customize your theme here. -->
-        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimary">@color/colorPrimaryInverse</item>
+
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
 
@@ -32,16 +32,20 @@
         <item name="windowNoTitle">true</item>
 
         <item name="android:statusBarColor">@color/colorPrimary</item>
+
         <item name="android:colorEdgeEffect">@color/colorAccent</item>
 
-        <!--<item name="sideBarBackground">@drawable/side_nav_bar</item>-->
+        <item name="preferenceTheme">@style/PreferenceThemeOverlay.v14.Material</item>
+
         <item name="android:alertDialogTheme">@style/AlertDialogTheme</item>
     </style>
 
     <style name="AppTheme.Dark" parent="Theme.AppCompat">
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorPrimary</item>
+
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+
         <item name="colorAccent">@color/colorAccentDark</item>
 
         <item name="android:textColorPrimary">@color/textColorPrimary</item>
@@ -61,7 +65,8 @@
         <item name="android:statusBarColor">@color/colorPrimaryDark</item>
         <item name="android:colorEdgeEffect">@color/colorAccentDark</item>
 
-        <!--<item name="sideBarBackground">@drawable/side_nav_bar_night</item>-->
+        <item name="preferenceTheme">@style/PreferenceThemeOverlay.v14.Material</item>
+
         <item name="android:alertDialogTheme">@style/AlertDialogTheme.Dark</item>
     </style>
 </resources>

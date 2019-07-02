@@ -41,7 +41,9 @@ class NavigationController(
     }
 
     fun initNavigation() {
-
+        navigationView.doOnLayoutAvailable {
+            navigationView.setCheckedItem(R.id.nav_feeds)
+        }
     }
 
     private fun loginLayout() {

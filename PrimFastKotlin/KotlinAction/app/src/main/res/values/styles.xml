@@ -3,8 +3,10 @@
     <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
         <!-- Customize your theme here. -->
-        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimary">@color/colorPrimaryInverse</item>
+
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+
         <item name="colorAccent">@color/colorAccent</item>
 
         <item name="android:textColorPrimary">@color/textColorPrimaryInverse</item>
@@ -24,13 +26,16 @@
         <item name="preferenceTheme">@style/PreferenceThemeOverlay.v14.Material</item>
 
         <!--<item name="sideBarBackground">@drawable/side_nav_bar</item>-->
+
         <item name="android:alertDialogTheme">@style/AlertDialogTheme</item>
     </style>
 
     <style name="AppTheme.Dark" parent="Theme.AppCompat">
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorPrimary</item>
+
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+
         <item name="colorAccent">@color/colorAccentDark</item>
 
         <item name="android:textColorPrimary">@color/textColorPrimary</item>
@@ -50,6 +55,7 @@
         <item name="preferenceTheme">@style/PreferenceThemeOverlay.v14.Material</item>
 
         <!--<item name="sideBarBackground">@drawable/side_nav_bar_night</item>-->
+
         <item name="android:alertDialogTheme">@style/AlertDialogTheme.Dark</item>
     </style>
 
@@ -146,8 +152,6 @@
     <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar"/>
 
     <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light"/>
-
-    <style name="MainStyle" parent="AppTheme.NoActionBar"></style>
 
     <style name="MyHintText" parent="TextAppearance.AppCompat.Small">
         <item name="android:textColor">?android:attr/textColorPrimaryInverse</item>
