@@ -25,11 +25,11 @@ class LoginActivity : ThemeActivity<LoginPresenter>(), LifecycleOwner {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
         username.doOnTextChanged { _, _, _, _ ->
-            login.isEnabled = username.text.isNotEmpty() && password.text.isNotEmpty()
+            login.isEnabled = username.text!!.isNotEmpty() && password.text!!.isNotEmpty()
         }
 
         password.doOnTextChanged { _, _, _, _ ->
-            login.isEnabled = username.text.isNotEmpty() && password.text.isNotEmpty()
+            login.isEnabled = username.text!!.isNotEmpty() && password.text!!.isNotEmpty()
         }
 
         login.onClick {

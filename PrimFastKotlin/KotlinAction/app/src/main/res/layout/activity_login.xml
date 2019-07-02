@@ -44,22 +44,6 @@
                 android:layout_marginBottom="8dp"
                 app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintStart_toStartOf="@+id/login"/>
 
-        <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
-                android:layout_marginTop="8dp"
-                android:layout_marginEnd="8dp"
-                android:layout_marginBottom="8dp"
-                android:text="Sing in CodeHub for GitHub"
-                android:textAllCaps="false"
-                android:textColor="?android:textColorPrimaryInverse"
-                android:textSize="@dimen/textSizeBig"
-                app:layout_constraintBottom_toTopOf="@+id/emailInput"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/imageView"/>
-
         <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/emailInput"
                 android:layout_width="0dp"
@@ -67,19 +51,20 @@
                 android:layout_marginStart="24dp"
                 android:layout_marginTop="208dp"
                 android:layout_marginEnd="24dp"
+                android:hint="@string/prompt_email"
+                style="@style/Widget.Shrine.TextInputLayout"
                 app:hintTextAppearance="@style/MyHintText"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent">
 
-            <EditText
+            <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/username"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="@string/prompt_email"
-                    android:inputType="textEmailAddress"
-                    android:selectAllOnFocus="true"
-                    android:theme="@style/MyEditText"/>
+                    android:textColor="?android:attr/textColorPrimaryInverse"
+                    android:maxLines="1"
+                    android:inputType="textEmailAddress"/>
 
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -90,23 +75,22 @@
                 android:layout_marginStart="24dp"
                 android:layout_marginTop="8dp"
                 android:layout_marginEnd="24dp"
+                style="@style/Widget.Shrine.TextInputLayout"
                 app:hintTextAppearance="@style/MyHintText"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/emailInput"
                 app:passwordToggleEnabled="true"
+                android:hint="@string/prompt_password"
                 app:passwordToggleTint="?android:textColorPrimaryInverse">
 
-            <EditText
+            <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/password"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="@string/prompt_password"
-                    android:imeActionLabel="@string/action_sign_in_short"
-                    android:imeOptions="actionDone"
                     android:inputType="textPassword"
-                    android:selectAllOnFocus="true"
-                    android:theme="@style/MyEditText"/>
+                    android:textColor="?android:attr/textColorPrimaryInverse"
+                    android:maxLines="1"/>
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.button.MaterialButton

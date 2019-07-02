@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">CodeIdea</string>
     <string name="title_activity_login">Sign in</string>
-    <string name="prompt_email">Username or email address</string>
+    <string name="prompt_email">Username or Email</string>
     <string name="prompt_password">Password</string>
     <string name="action_sign_in">Sign in or register</string>
     <string name="action_sign_in_short">Sign in</string>
