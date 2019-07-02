@@ -1,7 +1,6 @@
 package com.prim.gkapp.ui.common
 
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -10,6 +9,8 @@ import androidx.recyclerview.widget.RecyclerView
 import com.prim.gkapp.R
 import com.prim.gkapp.data.page.GithubPaging
 import com.prim.lib_base.base.BaseFragment
+import com.prim.lib_base.utils.no
+import com.prim.lib_base.utils.otherwise
 import com.prim.lib_base.view.PromptInfoView
 import kotlinx.android.synthetic.main.common_list_layout.*
 import org.jetbrains.anko.sdk27.coroutines.onClick
@@ -25,7 +26,7 @@ import org.jetbrains.anko.support.v4.toast
  * @version 1.0.0
  */
 abstract class CommonListFragment<T, out Presenter : CommonListPresenter<T, CommonListFragment<T, Presenter>>>
-    : BaseFragment<Presenter>() {
+    : BaseFragment<Presenter>(), OnLoadMoreListener {
 
     //adapter extend CommonListAdapter<T> abstract
     protected abstract val adapter: CommonListAdapter<T>
@@ -54,10 +55,9 @@ abstract class CommonListFragment<T, out Presenter : CommonListPresenter<T, Comm
             R.color.google_red,
             R.color.google_blue, R.color.google_green, R.color.google_yellow
         )
-
+        adapter.setOnLoadMoreListeners(this)
         //默认自动刷新
         refreshLayout.isRefreshing = true
-        Log.e(TAG, "adapter set:" + adapter)
         //添加layoutManager
         recyclerView.layoutManager = layoutManager
         //添加item动画
@@ -73,6 +73,9 @@ abstract class CommonListFragment<T, out Presenter : CommonListPresenter<T, Comm
         presenter.initData()
     }
 
+    override fun onLoadMore() {
+        presenter.loadMoreData()
+    }
 
     /**
      * once request data init
@@ -81,7 +84,7 @@ abstract class CommonListFragment<T, out Presenter : CommonListPresenter<T, Comm
         if (!data.isEmpty()) {
             adapter.data.clear()
             adapter.data.addAll(data)
-            //todo 判断是否还有更多
+            onNextData(data)
             refreshLayout.isRefreshing = false
             dismissError()
         }
@@ -119,6 +122,7 @@ abstract class CommonListFragment<T, out Presenter : CommonListPresenter<T, Comm
             showError(error, block)
         } else {
             toast(error)
+            adapter.onErrorMore()
         }
     }
 
@@ -127,10 +131,17 @@ abstract class CommonListFragment<T, out Presenter : CommonListPresenter<T, Comm
      */
     fun onDataWithMoreLoad(data: GithubPaging<T>) {
         adapter.data.update(data)
-        refreshLayout.isRefreshing = false
-        //todo 判断是否还有更多数据
-
+        onNextData(data)
         dismissError()
+    }
+
+    private fun onNextData(data: GithubPaging<T>) {
+        data.hasNext.no {
+            //没有下一个
+            adapter.onNotMore()
+        }.otherwise {
+            adapter.onNextMore()
+        }
     }
 
     /**
@@ -138,7 +149,7 @@ abstract class CommonListFragment<T, out Presenter : CommonListPresenter<T, Comm
      */
     fun onDataWithMoreLoadError(error: String) {
         toast(error)
-        refreshLayout.isRefreshing = false
+        adapter.onErrorMore()
     }
 
     protected open fun showError(error: String, block: () -> Unit) {

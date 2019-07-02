@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 
-///首页页面
+//旅拍类型接口
+const TRAVEL_URL = "http://www.devio.org/io/flutter_app/json/travel_page.json";
+
+///旅拍界面
 class TravelPage extends StatefulWidget {
   @override
   State<StatefulWidget> createState() {

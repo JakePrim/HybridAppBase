@@ -75,4 +75,15 @@ class AdapterList<T>(val adapter: RecyclerView.Adapter<*>) : ArrayList<T>() {
         super.addAll(elements)
         adapter.notifyDataSetChanged()
     }
+
+    fun addMore(elements: Collection<T>) {
+        val length = size
+        super.addAll(elements)
+        if (length > 0) {
+            adapter.notifyItemRangeInserted(length, size - length)
+        } else {
+            adapter.notifyDataSetChanged()
+        }
+    }
+
 }

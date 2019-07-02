@@ -108,7 +108,7 @@ function doNumber(){
     console.log(pf1,pf2,pf3,pf4,pf5);
 }
 
-doString();
+// doString();
 
 function doString(){
      //js 中字符串可以使用“或者单引号‘表示;而Java中的字符串只能以双引号表示
@@ -137,4 +137,168 @@ function doString(){
      //关于 object 的属性和构造函数 会在后面中详细的讲解
 }
 
-//关于递增和递减操作符 和Java中的逻辑一样的 这里就不进行讲解了 非常基础的东西
+//关于递增和递减操作符和其他基本的操作符和Java中的逻辑一样的 这里就不进行讲解了 非常基础的东西
+
+// doStatement();
+
+/**
+ * 理解ECMAScript 的基本语句
+ */
+function doStatement(){
+
+    //if 语句,javascript的if语句和Java中的if语句一样 if语句后可以跟一行代码或代码块不过业界推崇的是始终使用代码块
+    //注意Javascript 的if语句中的条件可以是任意表达式,而且表达式的求值不一定是布尔值,ECMAScript会自动调用Boolean()转换函数
+    //将这个表达式的结果转换为一个布尔值,这一点跟Java的有所不同,Java的if语句条件必须是布尔值.
+    var i = 10;
+    if(i > 25)
+        alert('Greater than 25.');//单行语句
+    else{
+        alert('Less than or equal to 25.'); //代码块中的语句
+    }
+    
+    //do-while while for 语句和Java的语句并没有区别,举个例子
+    //do-while语句
+    var li = 0;
+    do{
+        i+=2;
+    }while(i<10);
+    //for语句
+    for (let i = 0; i < array.length; i++) {
+        const element = array[i];
+    }
+    //包括for无限循环也和Java的一模一样
+    for(;;){
+        //TODO 
+    }
+    //只给出控制表达式实际上就是把for循环转换成了while循环
+    for(;li<20;){
+       li++;
+    }
+
+    //while 语句
+    while (li<20) {
+        li+=2;
+    }
+
+    alert(i);
+
+    //for-in 语句,而在Java中没有for-in语句但是在kotlin中有for-in语句,kotlin中的一些语法也借鉴了ECMAScript中的语法
+    //语法的简洁确实在编程中提高了效率,这也是我为什么喜欢上了JavaScript和Kotlin这两种语言
+    //下面我们看这个例子
+    for (const propName in window) {
+       document.write(propName);
+    }
+    //需要注意的是ECMAScript对象的属性没有顺序,所以遍历返回的先后次序可能会因浏览器而异
+    //还需要注意的是如果表达式的对象的变量值为null或undefined,for-in语句会抛出错误.
+    //ECMAScript5 更正了这一行为,不再抛出错误,而是不执行循环体,建议在使用for-in循环之前,先检测该对象的值不是null或undefined
+    for (const key in object) {
+        if (object.hasOwnProperty(key)) {
+            const element = object[key];
+        }
+    }
+}
+
+// doLabel();
+
+function doLabel(){
+ //label 语句,在Java中同样没有这样的语句但是在kotlin 中有这样的语句,kotlin大量借鉴了JavaScript语法
+    //label :statement label语句可以在代码中添加标签,以便将来使用,看下面的一个例子:
+    //label 语句一般都要与for语句等循环语句配合使用
+
+    //break 和continue语句都可以与label语句联合使用,从而返回代码中特定的位置
+    //这种联合使用的情况多发生在循环嵌套的情况中
+    var num = 0;
+    start:for(var i=0;i<11;i++){
+       for(var j = 0;j<10;j++){
+           if(i==5 && j==5){
+               break start;//强制退出内部和外部循环
+           }
+           num++
+       }
+    }
+    alert(num);//55
+}
+// doWith();
+
+function doWith(){
+    //with 语句的作用是将代码的作用域设置到一个特定的对象中,定义with语句的目的主要是为了简化多次编写同一个对象的工作
+    //这种形式的语句同样在Java中是没有的,但是在kotlin中是存在的如:apply let run 等特殊函数
+    //通常使用的写法如下:
+    // var s = location.search.substring(1);
+    // var hostName = location.hostName;
+    // var url = location.url;
+
+    //使用with语句
+    with(location){
+       var s = hostname;
+       alert(s);
+    }
+    //注意:在严格模式下 不允许使用with语句,否则视为语法错误,由于大量使用with语句会导致性能下降,同时也会给调试代码造成困难
+    //在开发大型应用程序时,不建议使用with语句
+}
+
+//switch 语句的用法和Java中的一样,ECMAScript中switch语句可以使用任何类型,其次case的值不一定是常量还可以是变量
+//甚至表达式.而在Java中case的值不能是变量和表达式的
+function doSwitch(){
+    var i = 10;
+    switch (i) {
+        case 10:
+            alert("10");
+            break;
+    
+        default:
+            break;
+    }
+    //switch语句是全等操作符,不会发生类型转换(例如字符串“10”不等于数值10)
+}
+
+// sayHi("JakePrim","Hello Word");
+
+//ECMAScript 中函数是通过function关键字声明的,对函数的命名没有什么要求,但是在严格模式下不能把函数/参数命名为eval或arguments
+//ECMAScript中的函数在定义时不必指定是否返回值,任何函数在任何时候都可以通过return语句后跟要返回的值
+//在Java和kotlin中必须要指定返回值的类型的
+// function sayHi(name,message){
+//     alert(name,message);
+//     eval(name);
+//     return 100+name;
+// }
+
+//报错误:Uncaught SyntaxError: Unexpected eval or arguments in strict mode 
+// function eval(arguments){
+//     "use strict"//启用严格模式 对于某些不安全的操作会抛出错误,严格模式下JavaScript的执行结果会有很大的不同
+//     alert(arguments);
+// }
+
+//函数中的参数:
+//ECMAScript 函数不介意传递进来多少个参数,也不在乎传进来参数是什么数据类型.
+//也就是说,即便定义的函数只接收两个参数,在调用这个函数时也未必一定要传递两个参数,可以传递一个、三个甚至不传递参数
+//(PS:感觉ECMAScript的这种弱定义不是很理解,这种方法容易出现错误,不像Java中的强制定义一样)
+//ECMAScript 为什么会这么做呢?
+//ECMAScript中的参数在内部是用一个数组来表示的.函数接收到的始终都是这个数组,而不关心数组中包含哪些参数.
+//实际上函数体内可以通过arguments对象(这也是为什么在严格模式下arguments不能用作参数和函数名的原因)来访问这个参数数组
+//,从而获取传递给函数的每一个参数.arguments对象与数组类似. 使用arguments获取参数
+//看下面的一个例子
+function sayHi(){
+    alert("1: "+arguments[0]+" 2:"+arguments[1]);
+}
+sayHi("JakePrim","HelloWorld");
+//ECMAScript 函数的一个重要特点:命名的参数只提供便利,但不是必需的.ECMAScript 函数不存在函数重载这一重要特性(因为传递的参数没有个数和类型限制)
+//
+//另一个与参数相关的重要方面,arguments对象可以与命名参数一起使用
+//arguments的值永远与对应命名参数的值保持同步
+//没有传递值的命名参数将自动被赋予undefined 值
+function doAdd(num1,num2){
+    arguments[1] = 10;//相当于重写了第二个参数,如果只传递了一个参数那么num2 还是undefined,如果传递了两个参数 num2 就是10
+    if(arguments.length == 1){
+        alert(num1+10);
+    }else if(arguments.length == 2){
+        alert(arguments[0]+num2);
+    }
+}
+
+doAdd();
+
+
+
+
+

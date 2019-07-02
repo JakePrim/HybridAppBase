@@ -3,6 +3,7 @@ package com.prim.gkapp.network.service
 import com.prim.gkapp.data.model.Repository
 import com.prim.gkapp.data.model.SearchRepos
 import com.prim.gkapp.data.page.GithubPaging
+import com.prim.gkapp.data.page.ListPage
 import com.prim.gkapp.network.retrofit
 import io.reactivex.Observable
 import retrofit2.http.GET
@@ -24,7 +25,7 @@ interface RepositoryApi {
     ): Observable<GithubPaging<Repository>>
 
     @GET("/search/repositories?order=desc&sort=updated")
-    fun searchRepository(@Query("page") page: Int = 1, @Query("q") q: String, @Query("per_page") per_page: Int = 20): Observable<SearchRepos>
+    fun searchRepository(@Query("page") page: Int = 1, @Query("q") q: String, @Query("per_page") per_page: Int = ListPage.PAGE_SIZE): Observable<SearchRepos>
 }
 
 //单例

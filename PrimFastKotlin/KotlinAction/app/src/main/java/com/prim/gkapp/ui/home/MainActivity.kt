@@ -32,7 +32,6 @@ class MainActivity : ThemeActivity<MainPresenter>() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        Themer.applyProperTheme(this)
         setContentView(R.layout.activity_main)
         showFragment(R.id.fl_content, ReposFragment::class.java, Bundle())
         initDrawerLayout()

@@ -21,7 +21,7 @@ import kotlinx.android.synthetic.main.item_repos_layout.view.*
  * @time 2019-06-19 - 07:06
  * @version 1.0.0
  */
-class ReposListAdapter : CommonListAdapter<Repository>(R.layout.item_repos_layout) {
+class ReposListAdapter : CommonListAdapter<Repository>(R.layout.item_repos_layout, true) {
     override fun onBindItem(holder: RecyclerView.ViewHolder, item: Repository) {
         holder.itemView.apply {
             item_avatar.loadImage(item.owner.avatar_url, item.owner.login)

@@ -18,13 +18,13 @@ abstract class ThemeActivity<P : BasePresenter<BaseActivity<P>>> : BaseActivity<
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         Themer.applyProperTheme(this)
-        var barColor = R.color.colorPrimary
+        var barColor = R.color.textColorSecondary
         (Themer.currentTheme() == Themer.ThemeMode.NIGHT).yes {
-            barColor = R.color.colorPrimaryDark
+            barColor = R.color.textColorSecondaryInverse
         }
         ImmersionBar.with(this)
-            .statusBarDarkFont(Themer.currentTheme() == Themer.ThemeMode.DAY)
-            .statusBarColor(barColor)
-            .init()
+                .statusBarDarkFont(Themer.currentTheme() == Themer.ThemeMode.DAY)
+                .statusBarColor(barColor)
+                .init()
     }
 }

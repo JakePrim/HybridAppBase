@@ -7,4 +7,5 @@ package com.prim.gkapp.ui.common
  * @version 1.0.0
  */
 interface OnLoadMoreListener {
+     fun onLoadMore()
 }
