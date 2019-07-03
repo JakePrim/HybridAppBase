@@ -1,4 +1,4 @@
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
 
     <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
@@ -60,7 +60,7 @@
 
     </style>
 
-    <style name="AlertDialogTheme" parent="Theme.AppCompat.Light.Dialog.Alert"/>
+    <style name="AlertDialogTheme" parent="Theme.AppCompat.Light.Dialog.Alert" />
 
     <style name="AlertDialogTheme.Dark">
         <item name="android:textColorPrimary">@color/textColorPrimary</item>
@@ -81,15 +81,17 @@
         <item name="android:theme">@style/Toolbar.Theme</item>
     </style>
 
-    <style name="base_toolbar" parent="Widget.CodeIdea.Toolbar"/>
+    <style name="base_toolbar" parent="Widget.CodeIdea.Toolbar" />
 
     <style name="Toolbar.Theme" parent="ThemeOverlay.AppCompat.ActionBar">
         <!-- 设置Menu菜单的背景色 -->
         <item name="android:itemBackground">?attr/colorPrimary</item>
         <!-- 设置Menu菜单的字体颜色 -->
         <item name="android:textColorPrimary">?android:attr/textColorPrimaryInverse</item>
-        <item name="colorControlNormal">?android:attr/textColorPrimaryInverse</item><!-- 主要是这个起作用,修改默认返回键的颜色-->
-        <item name="colorControlHighlight">?android:attr/textColorPrimaryInverse</item><!-- 主要是这个起作用,修改默认返回键的颜色-->
+        <item name="colorControlNormal">?android:attr/textColorPrimaryInverse
+        </item><!-- 主要是这个起作用,修改默认返回键的颜色-->
+        <item name="colorControlHighlight">?android:attr/textColorPrimaryInverse
+        </item><!-- 主要是这个起作用,修改默认返回键的颜色-->
         <!-- 设置Menu窗口不覆盖Toolbar视图 -->
         <item name="overlapAnchor">false</item>
     </style>
@@ -106,7 +108,6 @@
         <item name="android:textColor">?android:attr/textColorPrimaryInverse</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_width">wrap_content</item>
-        <item name="android:layout_margin">3dp</item>
         <item name="android:layout_gravity">center_vertical</item>
     </style>
 
@@ -116,7 +117,6 @@
         <item name="android:textColor">?android:attr/textColorPrimaryInverse</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_width">wrap_content</item>
-        <!--<item name="android:layout_margin">3dp</item>-->
         <item name="android:layout_gravity">center_vertical</item>
     </style>
 
@@ -143,8 +143,8 @@
         <item name="android:layout_height">50dp</item>
         <item name="android:layout_width">50dp</item>
         <item name="android:layout_marginRight">5dp</item>
-        <item name="android:gravity">center</item>
-        <item name="android:layout_gravity">center_vertical</item>
+        <!--<item name="android:gravity">center</item>-->
+        <!--<item name="android:layout_gravity">center_vertical</item>-->
         <item name="android:scaleType">fitXY</item>
     </style>
 
@@ -170,9 +170,9 @@
         <item name="android:windowIsTranslucent">true</item>
     </style>
 
-    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar"/>
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
 
-    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light"/>
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 
     <style name="Widget.Shrine.TextInputLayout" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
         <item name="hintTextAppearance">@style/TextAppearance.Shrine.TextInputLayout.HintText</item>
@@ -202,6 +202,19 @@
     <style name="MyButton" parent="Theme.AppCompat.Light">
         <item name="colorControlHighlight">@color/google_red</item>
         <item name="colorButtonNormal">@color/colorAccent</item>
+    </style>
+
+    <style name="Widget.Shrine.Button" parent="Widget.MaterialComponents.Button">
+        <item name="android:textColor">?android:attr/colorPrimary</item>
+        <item name="android:textSize">16sp</item>
+        <item name="backgroundTint">?attr/colorAccent</item>
+        <item name="android:stateListAnimator" tools:ignore="NewApi">
+            @animator/shr_next_button_state_list_anim
+        </item>
+    </style>
+
+    <style name="Widget.Shrine.Button.TextButton" parent="Widget.MaterialComponents.Button.TextButton">
+        <item name="android:textColor">?android:attr/textColorPrimary</item>
     </style>
 
 </resources>

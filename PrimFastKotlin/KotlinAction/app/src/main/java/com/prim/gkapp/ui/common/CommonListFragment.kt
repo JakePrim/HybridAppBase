@@ -52,8 +52,8 @@ abstract class CommonListFragment<T, out Presenter : CommonListPresenter<T, Comm
         super.onViewCreated(view, savedInstanceState)
         //设置刷新view
         refreshLayout.setColorSchemeResources(
-            R.color.google_red,
-            R.color.google_blue, R.color.google_green, R.color.google_yellow
+                R.color.google_red,
+                R.color.google_blue, R.color.google_green, R.color.google_yellow
         )
         adapter.setOnLoadMoreListeners(this)
         //默认自动刷新
@@ -62,6 +62,8 @@ abstract class CommonListFragment<T, out Presenter : CommonListPresenter<T, Comm
         recyclerView.layoutManager = layoutManager
         //添加item动画
         recyclerView.itemAnimator = itemAnimator
+        //添加下划线
+//        recyclerView.addItemDecoration()
         //添加适配器
         recyclerView.adapter = adapter
 

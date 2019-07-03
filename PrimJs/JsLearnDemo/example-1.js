@@ -288,15 +288,40 @@ sayHi("JakePrim","HelloWorld");
 //arguments的值永远与对应命名参数的值保持同步
 //没有传递值的命名参数将自动被赋予undefined 值
 function doAdd(num1,num2){
-    arguments[1] = 10;//相当于重写了第二个参数,如果只传递了一个参数那么num2 还是undefined,如果传递了两个参数 num2 就是10
+    arguments[1] = 10;//相当于重写了第二个参数,如果只传递了一个参数那么num2 还是undefined,如果传递了两个参数 num
     if(arguments.length == 1){
         alert(num1+10);
     }else if(arguments.length == 2){
         alert(arguments[0]+num2);
     }
 }
-
 doAdd();
+
+//ECMAScript 函数没有签名,因为其参数是有包含零或多个值的数组来表示的. 而没有函数签名 真正的重载是不可能做到的
+
+function addSomeNumber(params) {
+    return params + 100;
+}
+
+function addSomeNumber(params) {
+    return params + 200;
+}
+// 函数addSomeNumber 被定义了两次,后定义的函数覆盖了先定义的函数,因此这个函数的返回结果就是300
+var result = addSomeNumber(100);//300
+
+console.log(result);
+
+//总结ECMAScript的基本要素:
+//ECMAScript 中的基本数据类型包括Undefined、Null、Boolean、Number、String
+//与其他语言不同,ECMAScript没有为整数和浮点值分别定义不同的数据类型,Number类型可用于表示所有数值
+//严格模式为这门语言容易出错的地方施加了限制
+//ECMAScript提供了很多与C及其他类C语言中相同的基本操作符,包括算术操作符、布尔操作符、关系操作符、相等操作符及赋值操作符
+//无须指定函数的返回值,因为任何ECMAScript函数都可以在任何时候返回任何值
+//实际上,未指定返回值的函数返回的是一个特殊的undefined值
+//ECMAScript中也没有函数签名的概念,因为其函数参数是以一个包含零或多个值的数组的形式传递的
+//可以向ECMAScript函数传递任意数量的参数,并且通过arguments对象来访问这些参数
+//由于不存在函数签名的特性,ECMAScript函数不能重载
+
 
 
 

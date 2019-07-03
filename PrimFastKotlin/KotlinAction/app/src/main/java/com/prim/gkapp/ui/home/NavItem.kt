@@ -5,7 +5,7 @@ import android.os.Bundle
 import androidx.annotation.IdRes
 import androidx.fragment.app.Fragment
 import com.prim.gkapp.R.id
-import com.prim.gkapp.ui.feeds.FeedsFragment
+import com.prim.gkapp.ui.feeds.EventsFragment
 import com.prim.gkapp.ui.feeds.IssuesFragment
 import com.prim.gkapp.ui.repos.ReposFragment
 import com.prim.gkapp.ui.settings.SettingsActivity
@@ -33,7 +33,7 @@ class NavItem private constructor(
             id.nav_feeds to NavItem(
                 groupId = id.nav_menu2,
                 type = 0, title = "Feeds",
-                fragmentClass = FeedsFragment::class.java
+                fragmentClass = EventsFragment::class.java
             ),
             id.nav_repositories to NavItem(
                 groupId = id.nav_menu2,

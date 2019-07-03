@@ -1,6 +1,5 @@
 package com.prim.gkapp.ui.repos
 
-import android.util.Log
 import android.view.View
 import android.view.View.GONE
 import android.view.View.VISIBLE
@@ -10,9 +9,7 @@ import com.prim.gkapp.config.Config
 import com.prim.gkapp.data.model.Repository
 import com.prim.gkapp.ext.loadImage
 import com.prim.gkapp.ui.common.CommonListAdapter
-import com.prim.lib_base.utils.otherwise
-import com.prim.lib_base.utils.toKilo
-import com.prim.lib_base.utils.yes
+import com.prim.lib_base.utils.*
 import kotlinx.android.synthetic.main.item_repos_layout.view.*
 
 /**
@@ -27,10 +24,14 @@ class ReposListAdapter : CommonListAdapter<Repository>(R.layout.item_repos_layou
             item_avatar.loadImage(item.owner.avatar_url, item.owner.login)
             item_title.text = item.name
             item_dec.text = item.description
-            item_language.text = item.language
+            item.language.isNullOrEmpty().yes {
+                item_language.text = "Unknown"
+            }.otherwise {
+                item_language.text = item.language
+            }
 
             val res = Config.languageColor[item.language]
-            Log.e("ReposListAdapter", "res:" + res)
+
             res?.let { item_tips_language.setBackgroundResource(it) }
 
             item.fork.yes {
@@ -43,18 +44,26 @@ class ReposListAdapter : CommonListAdapter<Repository>(R.layout.item_repos_layou
             (item.stargazers_count == 0).yes {
                 ll_item_stargazers.visibility = GONE
             }.otherwise {
-                item_stargazers.visibility = VISIBLE
+                ll_item_stargazers.visibility = VISIBLE
                 item_stargazers.text = item.stargazers_count.toKilo()
             }
 
             (item.forks_count == 0).yes {
                 ll_item_forked.visibility = GONE
             }.otherwise {
-                item_forked_count.visibility = VISIBLE
+                ll_item_forked.visibility = VISIBLE
                 item_forked_count.text = item.forks_count.toKilo()
             }
 
-            item_update_time.text = item.updated_at
+            (item.open_issues_count == 0).yes {
+                ll_item_issues.visibility = GONE
+            }.otherwise {
+                ll_item_issues.visibility = VISIBLE
+                item_issues_count.text = item.open_issues_count.toKilo()
+            }
+
+            //使用时间规则
+            item_update_time.text = timeToData(item.updated_at).rule1()
         }
     }
 

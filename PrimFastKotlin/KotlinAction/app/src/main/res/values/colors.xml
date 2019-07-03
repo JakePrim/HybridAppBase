@@ -47,6 +47,8 @@
     <color name="google_green">#34a853</color>
     <color name="google_blue">#4286f5</color>
 
+    <color name="item_line">#e1e4e8</color>
+
     <!-- transparency color -->
     <color name="res_color_white_transparency_50">#80FFFFFF</color>
     <color name="res_color_white_transparency_60">#99FFFFFF</color>

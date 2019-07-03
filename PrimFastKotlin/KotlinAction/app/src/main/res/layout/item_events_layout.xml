@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="?android:attr/selectableItemBackground"
+    android:orientation="horizontal"
+    android:paddingLeft="16dp"
+    android:paddingTop="10dp"
+    android:paddingRight="16dp"
+    android:paddingBottom="10dp"
+    android:transitionName="userHead">
+
+    <cn.carbs.android.avatarimageview.library.AvatarImageView
+        android:id="@+id/item_avatar"
+        style="@style/list_item_avatar"
+        app:aiv_CornerRadius="5dp"
+        tools:src="@mipmap/ic_launcher" />
+
+    <LinearLayout
+        android:id="@+id/ll_item_head"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_toRightOf="@+id/item_avatar"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/item_name"
+            style="@style/list_item_title"
+            android:textSize="@dimen/textSizeSecondary"
+            tools:text="JakePrim" />
+
+        <TextView
+            android:id="@+id/item_action"
+            style="@style/list_item_tertiary_title"
+            android:layout_marginStart="5dp"
+            tools:text="started" />
+
+    </LinearLayout>
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ll_item_head"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="5dp"
+        android:layout_toEndOf="@+id/item_avatar"
+        app:cardCornerRadius="3dp"
+        app:cardElevation="3dp"
+        app:contentPadding="5dp"
+        app:strokeColor="@color/colorAccent"
+        app:strokeWidth="1dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/item_events_repo_name"
+                    style="@style/list_item_title"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:layout_toStartOf="@+id/item_action_button"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    tools:text="JakePrim/PrimFast" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/item_action_button"
+                    style="@style/Widget.AppCompat.Button.Borderless"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:text="start" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/item_events_repo_dec"
+                style="@style/list_item_subtitle"
+                android:ellipsize="end"
+                android:maxLines="3"
+                android:visibility="gone"
+                tools:text="fastutil extends the Java™ Collections Framework by providing type-specific maps, sets, lists and queues." />
+
+            <include layout="@layout/include_item_bottom" />
+
+            <TextView
+                android:id="@+id/item_time"
+                style="@style/list_item_tertiary_title"
+                tools:text="一天前" />
+
+        </LinearLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+
+</RelativeLayout>

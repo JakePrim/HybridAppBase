@@ -8,7 +8,7 @@ import com.prim.gkapp.R
 import com.prim.gkapp.config.Themer
 import com.prim.gkapp.data.UserData
 import com.prim.gkapp.ui.ThemeActivity
-import com.prim.gkapp.ui.repos.ReposFragment
+import com.prim.gkapp.ui.feeds.EventsFragment
 import com.prim.lib_base.utils.showFragment
 import com.prim.lib_base.utils.yes
 import kotlinx.android.synthetic.main.activity_main.*
@@ -74,7 +74,7 @@ class MainActivity : ThemeActivity<MainPresenter>() {
         drawer_layout.addDrawerListener(toggle)
         toggle.syncState()
         navigationController.initNavigation()
-        showFragment(R.id.fl_content, ReposFragment::class.java, Bundle())
+        showFragment(R.id.fl_content, EventsFragment::class.java, Bundle())
     }
 
     private fun initListener() {
