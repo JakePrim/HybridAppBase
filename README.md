@@ -44,17 +44,17 @@ PrimFastCommon [项目地址](https://github.com/JakePrim/PrimFastApp/tree/maste
 - 基础框架PrimBase 完成度10%.
 .......
 
-PrimFastFlutter [项目地址](https://github.com/JakePrim/prim_fultter_app)
+PrimFastFlutter [项目地址](https://github.com/JakePrim/PrimFastApp/tree/master/PrimFastFlutter)
 
 PrimFastKotlin [项目地址](https://github.com/JakePrim/PrimFastApp/tree/master/PrimFastKotlin)
-
-- 
 
 PrimFastApplets [项目地址](https://github.com/JakePrim/PrimFastApp/tree/master/PrimFastWeChatApplets)
 
 PrimFastRn [项目地址](https://github.com/JakePrim/PrimFastApp/tree/master/PrimFastRn)
 
-PrimFastWeb
+PrimJs [项目地址](https://github.com/JakePrim/PrimFastApp/tree/master/PrimJs)
+
+AdvancedDemo [项目地址](https://github.com/JakePrim/PrimFastApp/tree/master/AdvancedDemo)
 
 ### Android 高级进阶知识部分
 
@@ -152,7 +152,7 @@ PrimFastWeb
 
 ### Flutter 开发
 
-- [项目地址](https://github.com/JakePrim/prim_fultter_app)
+- [项目地址](https://github.com/JakePrim/PrimFastApp/tree/master/PrimFastFlutter)
 
 - [x] [Flutter 常用的布局与事件](https://jakeprim.cn/2019/03/26/flutter-1-1/)
 - [x] [Flutter 请求接口以及DAO层的实现](https://jakeprim.cn/2019/03/26/flutter-1-2/)
