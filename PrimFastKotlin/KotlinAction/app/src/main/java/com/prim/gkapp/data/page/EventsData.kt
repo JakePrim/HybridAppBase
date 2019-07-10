@@ -16,7 +16,7 @@ import java.util.*
 class EventsData(private val owner: User? = null) : ListPage<Events>() {
     override fun getData(page: Int): Observable<GithubPaging<Events>> {
         return if (owner != null) {
-            EventsService.getUserEvents(owner = owner.login, page = page)
+            EventsService.getUserReceivedEvents(owner = owner.login, page = page)
         } else {
             EventsService.getPublicEvents(page, "pushed:<" + Date().format("yyyy-MM-dd"))
         }

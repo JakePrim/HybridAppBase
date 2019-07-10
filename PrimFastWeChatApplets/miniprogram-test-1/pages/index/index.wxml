@@ -1,12 +1,12 @@
 <!--index.wxml-->
 <view class='weather_wrapper'>
-  <view class='location-wrapper'>
+  <button class='location-wrapper' open-type="{{ locationAuthType==1 ? 'openSetting' : ''}}" bindopensetting="toTabLocation" bindtap="toTabLocation" plain="true">
     <view class='location'>
       <image class='location-icon' src='/images/location-icon.png'/>
-      <view class='location-city'>北京</view>
+      <view class='location-city'>{{city}}</view>
     </view>
-    <view class='location-tips' bindtap='toTabLocation'>获取当前位置</view>
-  </view>
+    <view class='location-tips'>{{locationTipsText}}</view>
+  </button>
   <view class='temp'>{{now_temp}}</view>
   <view class='weather'>{{now_weather}}</view>
   <image src="{{now_weather_bg}}" class='weather_bg' mode='scaleToFill'></image>

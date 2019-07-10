@@ -67,18 +67,9 @@
                     style="@style/list_item_title"
                     android:layout_alignParentStart="true"
                     android:layout_centerVertical="true"
-                    android:layout_toStartOf="@+id/item_action_button"
                     android:ellipsize="end"
                     android:maxLines="1"
                     tools:text="JakePrim/PrimFast" />
-
-                <com.google.android.material.button.MaterialButton
-                    android:id="@+id/item_action_button"
-                    style="@style/Widget.AppCompat.Button.Borderless"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentRight="true"
-                    android:text="start" />
             </RelativeLayout>
 
             <TextView
@@ -90,11 +81,6 @@
                 tools:text="fastutil extends the Java™ Collections Framework by providing type-specific maps, sets, lists and queues." />
 
             <include layout="@layout/include_item_bottom" />
-
-            <TextView
-                android:id="@+id/item_time"
-                style="@style/list_item_tertiary_title"
-                tools:text="一天前" />
 
         </LinearLayout>
 

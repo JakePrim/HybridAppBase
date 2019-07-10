@@ -11,6 +11,6 @@ data class Events(val actor: Actor,
                   val payload: Payload,
                   val org: Org,
                   val repo: Repo,
-                  val createdAt: String = "",
+                  val created_at: String = "",
                   val id: String = "",
                   val type: String = ""): Parcelable

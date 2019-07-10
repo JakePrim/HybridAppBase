@@ -6,9 +6,9 @@ import kotlinx.android.parcel.Parcelize
 
 @POKO
 @Parcelize
-data class Actor(val displayLogin: String = "",
-                 val avatarUrl: String = "",
+data class Actor(val display_login: String = "",
+                 val avatar_url: String = "",
                  val id: Int = 0,
                  val login: String = "",
-                 val gravatarId: String = "",
+                 val gravatar_id: String = "",
                  val url: String = ""): Parcelable

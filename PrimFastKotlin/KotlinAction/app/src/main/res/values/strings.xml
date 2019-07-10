@@ -36,7 +36,7 @@
     <string name="res_strings_close">退出</string>
     <string name="str_search">搜索</string>
     <string name="str_github_login_dec">请使用您的GitHub账号登录 了解详情</string>
-    <string name="str_feeds">Feeds</string>
+    <string name="str_feeds">Activity</string>
     <string name="str_repositories">Repositories</string>
     <string name="str_issues">Issues</string>
     <string name="str_pull_request">Pull Request</string>

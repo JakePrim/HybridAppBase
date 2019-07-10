@@ -12,11 +12,12 @@
         标签之间再包含额外的JavaScript代码,只会下载和执行外部脚本文件,而嵌入的代码会被忽略
         -->
         <script src="example-1.js"></script>
+        <script src="example-2.js"></script>
 
         <!-- src 也可以使用外部域的URL -->
         <!-- <script async src="https://www.somewhere.com/afile.js"></script> -->
 
-        <!-- 异步脚本 async ,同样只适用于外部文件 -->
+        <!-- 异步脚本 async ,同样只适用于外部文件 不一定按照顺序执行-->
         <!-- <script async src="example-1.js"></script> -->
 
         <!-- 延迟脚本 脚本执行时不会影响页面的构造,也就是整个页面加载完毕后在执行.在html5规定中只适用于外部脚本 

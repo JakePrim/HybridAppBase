@@ -7,6 +7,7 @@ Page({
    * 页面的初始数据
    */
   data: {
+    city:"石家庄市",
     future:[]
   },
 
@@ -14,6 +15,9 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    this.setData({
+      city:options.city
+    });
     this.getFuture()
   },
 
@@ -21,7 +25,7 @@ Page({
     wx.request({
       url: 'https://test-miniprogram.com/api/weather/future',
       data:{
-         city:'北京市',
+         city:this.data.city,
          time:new Date().getTime()
       },
       success: (res) => {

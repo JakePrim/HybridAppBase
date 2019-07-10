@@ -81,4 +81,9 @@
             style="@style/list_item_tertiary_title"
             android:layout_marginStart="5dp" />
     </LinearLayout>
+
+    <TextView
+        android:id="@+id/item_time"
+        style="@style/list_item_tertiary_title"
+        tools:text="一天前" />
 </LinearLayout>

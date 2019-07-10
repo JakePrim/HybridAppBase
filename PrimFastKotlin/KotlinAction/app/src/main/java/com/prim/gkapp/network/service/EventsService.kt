@@ -19,12 +19,12 @@ interface EventsApi {
     @GET("/users/{owner}/received_events?type=all&sort=updated")
     fun getUserReceivedEvents(@Path("owner") owner: String,
                               @Query("page") page: Int = 1,
-                              @Query("per_page") per_page: Int = 20): Observable<GithubPaging<Events>>
+                              @Query("per_page") per_page: Int = ListPage.PAGE_SIZE): Observable<GithubPaging<Events>>
 
     @GET("/users/{owner}/events?type=all&sort=updated")
     fun getUserEvents(@Path("owner") owner: String,
                       @Query("page") page: Int = 1,
-                      @Query("per_page") per_page: Int = 20): Observable<GithubPaging<Events>>
+                      @Query("per_page") per_page: Int = ListPage.PAGE_SIZE): Observable<GithubPaging<Events>>
 
     @GET("/events")
     fun getPublicEvents(@Query("page") page: Int = 1,
