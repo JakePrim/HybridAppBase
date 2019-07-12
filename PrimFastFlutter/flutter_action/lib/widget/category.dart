@@ -9,7 +9,6 @@ import 'package:flutter_action/converter_route.dart';
 final _rowHeight = 100.0;
 final _borderRadius = BorderRadius.circular(_rowHeight / 2);
 
-// ignore: must_be_immutable
 class CategoryWidget extends StatefulWidget {
   final IconData iconData;
   final String text;
@@ -48,13 +47,18 @@ class CategoryWidget extends StatefulWidget {
 }
 
 class CategoryPage extends State<CategoryWidget> {
+
+  @override
+  void initState() {
+    super.initState();
+  }
   @override
   Widget build(BuildContext context) {
     return Material(
       color: Colors.transparent,
       child: Container(
         height: _rowHeight,
-        child: InkWell(
+        child: InkWell(//InkWell of this click change color
           highlightColor: widget.color,
           splashColor: widget.color,
           child: Padding(

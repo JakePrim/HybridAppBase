@@ -21,5 +21,4 @@ class EventsData(private val owner: User? = null) : ListPage<Events>() {
             EventsService.getPublicEvents(page, "pushed:<" + Date().format("yyyy-MM-dd"))
         }
     }
-
 }

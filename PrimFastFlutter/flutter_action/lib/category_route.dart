@@ -23,6 +23,7 @@ class CategoryPage extends State<CategoryRoute> {
     'Length',
     'Area',
     'Volume',
+    'Mass',
     'Time',
     'Digital Storage',
     'Energy',
