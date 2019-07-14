@@ -103,7 +103,7 @@ class CategoryPage extends State<CategoryRoute> {
     final appbar = AppBar(
       elevation: 0,
       title: Text(
-        'Converter',
+        'Unit Converter',
         style: TextStyle(color: Colors.black, fontSize: 30.0),
       ),
       centerTitle: true,

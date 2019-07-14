@@ -176,6 +176,7 @@ class ConverterPage extends State<ConverterRoute> {
       leading: Builder(builder: (BuildContext context) {
         return IconButton(
             icon: const Icon(Icons.close),
+            // ignore: unused_local_variable
             onPressed: () {
               Navigator.pop(context);
             });
@@ -192,25 +193,6 @@ class ConverterPage extends State<ConverterRoute> {
 
   @override
   Widget build(BuildContext context) {
-    final unitWidgets = widget.units.map((Unit unit) {
-      return Container(
-        margin: EdgeInsets.all(8.0),
-        padding: EdgeInsets.all(16.0),
-        child: Column(
-          children: <Widget>[
-            Text(
-              unit.name,
-              style: Theme.of(context).textTheme.headline,
-            ),
-            Text(
-              'Conversion: ${unit.conversion}',
-              style: Theme.of(context).textTheme.subhead,
-            )
-          ],
-        ),
-      );
-    }).toList();
-
     final input = Padding(
       padding: _padding,
       child: Column(
