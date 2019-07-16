@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:flutter_action/widget/backdrop.dart';
+import 'package:flutter_action/widget/category_title.dart';
 import 'widget/category.dart';
-import 'converter_route.dart';
+import 'unit_converter.dart';
 import 'widget/unit.dart';
 
 ///a list of [Category]
@@ -18,6 +20,10 @@ class CategoryRoute extends StatefulWidget {
 
 class CategoryPage extends State<CategoryRoute> {
   final categorys = <CategoryWidget>[];
+
+  // Keep track of a default [Category], and the currently-selected
+  CategoryWidget _currentCategory;
+  CategoryWidget _defaultCategory;
 
   static const _categoryNames = <String>[
     'Length',
@@ -76,7 +82,10 @@ class CategoryPage extends State<CategoryRoute> {
   Widget _buildCategoryWidget(List<CategoryWidget> categorys) {
     return ListView.builder(
       itemBuilder: (context, position) {
-        return categorys[position];
+        return CategoryTitle(
+          categoryWidget: categorys[position],
+          onTap: _onCategorytap,
+        );
       },
       itemCount: categorys.length,
     );
@@ -86,37 +95,50 @@ class CategoryPage extends State<CategoryRoute> {
   void initState() {
     super.initState();
     for (int i = 0; i < _categoryNames.length; i++) {
-      categorys.add(CategoryWidget(
+      var category = CategoryWidget(
           iconData: Icons.cake,
           text: _categoryNames[i],
           color: _baseColors[i],
-          units: _retrieveUnitList(_categoryNames[i])));
+          units: _retrieveUnitList(_categoryNames[i]));
+      if (i == 0) {
+        _defaultCategory = category;
+      }
+      categorys.add(category);
     }
+  }
+
+  //todo Fill out this function
+  void _onCategorytap(CategoryWidget categoryWidget) {
+    setState(() {
+      _currentCategory = categoryWidget;
+    });
   }
 
   @override
   Widget build(BuildContext context) {
     final listView = Container(
+      color: _backgroundColor,
+      padding: EdgeInsets.only(
+        left: 8.0,
+        right: 8.0,
+        bottom: 48.0,
+      ),
       child: _buildCategoryWidget(categorys),
     );
 
-    final appbar = AppBar(
-      elevation: 0,
-      title: Text(
-        'Unit Converter',
-        style: TextStyle(color: Colors.black, fontSize: 30.0),
-      ),
-      centerTitle: true,
-      backgroundColor: _backgroundColor,
-    );
-
-    return Scaffold(
-      appBar: appbar,
-      body: Container(
-        color: _backgroundColor,
-        padding: EdgeInsets.symmetric(horizontal: 8.0),
-        child: listView,
-      ),
+    return Backdrop(
+      currentCategory:
+          _currentCategory != null ? _currentCategory : _defaultCategory,
+      frontPanel: _currentCategory == null
+          ? UnitConverter(
+              categoryWidget: _defaultCategory,
+            )
+          : UnitConverter(
+              categoryWidget: _currentCategory,
+            ),
+      backPanel: listView,
+      frontTitle: Text('Unit Converter'),
+      backTitle: Text('Select a Category'),
     );
   }
 }

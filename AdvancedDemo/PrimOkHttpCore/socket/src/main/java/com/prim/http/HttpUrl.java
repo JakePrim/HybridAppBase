@@ -7,7 +7,7 @@ import java.net.URL;
  * @author prim
  * @version 1.0.0
  * @desc
- * @time 2019-06-24 - 07:16
+ * @time 2019-06-24 - 07:16 这
  */
 public class HttpUrl {
     private String host;

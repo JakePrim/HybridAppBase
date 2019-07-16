@@ -1,33 +1,33 @@
 import 'package:flutter/widgets.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_action/widget/category.dart';
 import 'widget/unit.dart';
 import 'package:meta/meta.dart';
 
 final _padding = EdgeInsets.all(16.0);
 
-class ConverterRoute extends StatefulWidget {
-  ///Units for this [CategoryWidget]
-  final List<Unit> units;
+class UnitConverter extends StatefulWidget {
+  // ///Units for this [CategoryWidget]
+  // final List<Unit> units;
 
-  ///color for this [CategoryWidget]
-  final Color color;
+  // ///color for this [CategoryWidget]
+  // final Color color;
 
-  ///This [CategoryWidget]'s name
-  final String name;
+  // ///This [CategoryWidget]'s name
+  // final String name;
 
-  const ConverterRoute(
-      {@required this.units, @required this.color, @required this.name})
-      : assert(units != null),
-        assert(color != null),
-        assert(name != null);
+  final CategoryWidget categoryWidget;
+
+  const UnitConverter({@required this.categoryWidget})
+      : assert(categoryWidget != null);
 
   @override
   State<StatefulWidget> createState() {
-    return new ConverterPage();
+    return new _UnitConverterPage();
   }
 }
 
-class ConverterPage extends State<ConverterRoute> {
+class _UnitConverterPage extends State<UnitConverter> {
 //TODO Set some variables,such as for keeping track of the user's input
 //value and units
   Unit _fromValue;
@@ -46,9 +46,22 @@ class ConverterPage extends State<ConverterRoute> {
     _setDefaults();
   }
 
+  @override
+  void didUpdateWidget(UnitConverter oldWidget) {
+    super.didUpdateWidget(oldWidget);
+    if(oldWidget.categoryWidget != widget.categoryWidget){
+      _createDropdownMenuItems();
+      _setDefaults();
+    }
+  }
+
+
+  // TODO: _createDropdownMenuItems() and _setDefaults() should also be called
+  // each time the user switches [Categories].
+
   void _createDropdownMenuItems() {
     var newItems = <DropdownMenuItem>[];
-    for (var unit in widget.units) {
+    for (var unit in widget.categoryWidget.units) {
       newItems.add(DropdownMenuItem(
         child: Container(
           child: Text(
@@ -66,8 +79,8 @@ class ConverterPage extends State<ConverterRoute> {
 
   void _setDefaults() {
     setState(() {
-      _fromValue = widget.units[0];
-      _toValue = widget.units[1];
+      _fromValue = widget.categoryWidget.units[0];
+      _toValue = widget.categoryWidget.units[1];
     });
   }
 
@@ -117,7 +130,7 @@ class ConverterPage extends State<ConverterRoute> {
   }
 
   Unit _getUnit(String unitName) {
-    return widget.units.firstWhere(
+    return widget.categoryWidget.units.firstWhere(
       (Unit unit) {
         return unit.name == unitName;
       },
@@ -171,26 +184,6 @@ class ConverterPage extends State<ConverterRoute> {
     return outputNum;
   }
 
-  AppBar appBar(BuildContext context) {
-    return AppBar(
-      leading: Builder(builder: (BuildContext context) {
-        return IconButton(
-            icon: const Icon(Icons.close),
-            // ignore: unused_local_variable
-            onPressed: () {
-              Navigator.pop(context);
-            });
-      }),
-      title: Text(
-        widget.name,
-        style: Theme.of(context).textTheme.title,
-      ),
-      centerTitle: true,
-      backgroundColor: widget.color,
-      elevation: 1.0,
-    );
-  }
-
   @override
   Widget build(BuildContext context) {
     final input = Padding(
@@ -241,6 +234,7 @@ class ConverterPage extends State<ConverterRoute> {
       ),
     );
 
+    ///将图片进行旋转
     final arrows = RotatedBox(
       quarterTurns: 1, //旋转90度(1/4圈)
       child: Icon(
@@ -258,11 +252,9 @@ class ConverterPage extends State<ConverterRoute> {
       ],
     );
 
-    return Scaffold(
-        appBar: appBar(context),
-        body: Padding(
-          padding: _padding,
-          child: converter,
-        ));
+    return Padding(
+      padding: _padding,
+      child: converter,
+    );
   }
 }

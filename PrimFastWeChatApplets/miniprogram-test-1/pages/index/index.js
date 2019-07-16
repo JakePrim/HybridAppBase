@@ -31,24 +31,42 @@ const weatherColorMap = {
 //引入位置核心SDK
 const QQMapWx = require('../../libs/qqmap-wx-jssdk.js');
 Page({
+  //页面开始加载
   onLoad(){
     this.qqmapsdk = new QQMapWx({
       key:'SZGBZ-64HEI-RVTG7-5GPKJ-GGV46-LEBTG'
     });
-    //请求定位之后 在获取天气信息
-    this.toTabLocation();
+    // //请求定位之后 在获取天气信息
+    // this.toTabLocation();
+    this.getNowData();
   },
-  
+  //需要保存的数据
   data:{
     now_temp:"",
     now_weather:"",
     now_weather_bg:"",
     forecast:[],
     toDayTempDate:"",
-    city:"北京市",
+    city:"石家庄市",
     locationTipsText: UNPROMPTED_TIPS,
     locationAuthType: UNPROMPTED
   },
+  onShow(){
+    console.log("onShow");
+    wx.getSetting({
+      success:res=>{
+        console.log("success:" + res);
+      },
+      fail:res=>{
+        console.log("fail:"+res);
+      }
+    });
+  },
+  onReady(){
+
+  },
+   
+  //获取天气信息
   getNowData(callback) {
     wx.request({
       url: 'https://test-miniprogram.com/api/weather/now',
@@ -67,9 +85,11 @@ Page({
       }
     })
   },
+  //下拉刷新
   onPullDownRefresh(){
     this.getNowData(()=>{wx.stopPullDownRefresh()})
   },
+  //设置当前的天气信息
   setNow(result) {
     let temp = result.now.temp;
     let weather = result.now.weather;
@@ -85,6 +105,7 @@ Page({
       now_weather_bg: "/images/" + weather + '-bg.png'
     })
   },
+  //设置未来的天气信息
   setForecast(result){
     let r_forecast = [];
     let n_f = result.forecast;
@@ -102,51 +123,63 @@ Page({
       forecast: r_forecast
     })
   },
+  //设置当天的天气温度范围
   setToDayTemp(result){
      let date = new Date();
      this.setData({
        toDayTempDate: `${date.getFullYear()}-${date.getMonth() - 1}-${date.getDate()} 今天` + ` ${result.today.minTemp}°-${result.today.maxTemp}°`
      });
   },
+  //跳转到未来天气列表
   onTabDayWeather(){
     wx.navigateTo({
       url: '/pages/list/list?city='+this.data.city,
     })
   },
-  //获取当前的经纬度
+  //获取位置权限
   toTabLocation(){
-      wx.getLocation({
-        success: res => {
-          this.setData({
-            locationTipsText: AUTHORIZED_TIPS,
-            locationAuthType: AUTHORIZED
-          });
-          this.qqmapsdk.reverseGeocoder({
-              location:{
-                latitude:res.latitude,
-                longitude: res.longitude
-              },
-              success:res =>{
-                let r_city = res.result.address_component.city;
-                console.log("city:" + r_city);
-                this.setData({
-                  city: r_city
-                });
-                this.getNowData()
-              },
-              fail: function (error) {
-                console.error(error);
-                this.setData({
-                  city: r_city,
-                  locationTipsText: UNAUTHORIZED_TIPS,
-                  locationAuthType: UNAUTHORIZED
-                });
-              }
-          });
-        },
-      });
+    console.log("locationAuthType:" + this.data.locationAuthType);
+     //判断权限是否授权
+     if(this.data.locationAuthType === UNAUTHORIZED){
+       //进行授权
+       wx.openSetting();
+     }else{
+       this.getLocation();
+     }
+  },
+  ////获取当前位置的经纬度,得到当前的城市
+  getLocation(){
+    wx.getLocation({
+      success: res => {
+        this.setData({
+          locationTipsText: AUTHORIZED_TIPS,
+          locationAuthType: AUTHORIZED
+        });
+        this.qqmapsdk.reverseGeocoder({
+          location: {
+            latitude: res.latitude,
+            longitude: res.longitude
+          },
+          success: res => {
+            let r_city = res.result.address_component.city;
+            console.log("city:" + r_city);
+            this.setData({
+              city: r_city
+            });
+            this.getNowData()
+          },
+          fail: function (error) {
+            console.error(error);
+            this.setData({
+              city: r_city,
+              locationTipsText: UNAUTHORIZED_TIPS,
+              locationAuthType: UNAUTHORIZED
+            });
+          }
+        });
+      },
+    });
       //SZGBZ-64HEI-RVTG7-5GPKJ-GGV46-LEBTG
       //https://apis.map.qq.com
-
   }
 })

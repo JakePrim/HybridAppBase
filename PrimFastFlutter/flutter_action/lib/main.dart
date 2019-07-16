@@ -6,13 +6,6 @@ const _categoryName = 'Cake';
 const _categoryColor = Colors.green;
 const _categoryIcon = Icons.cake;
 
-class HelloRectangle extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Center(child: CategoryRoute());
-  }
-}
-
 AppBar getAppBar() {
   return AppBar(
     title: Text("Hello Rectangle"),
