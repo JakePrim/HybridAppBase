@@ -2,10 +2,6 @@ import 'package:flutter/material.dart';
 
 import 'category_route.dart';
 
-const _categoryName = 'Cake';
-const _categoryColor = Colors.green;
-const _categoryIcon = Icons.cake;
-
 AppBar getAppBar() {
   return AppBar(
     title: Text("Hello Rectangle"),
@@ -23,6 +19,7 @@ class UnitConverterApp extends StatelessWidget {
       debugShowCheckedModeBanner: false, //移除右上角debug角标标识
       title: 'Unit Converter',
       theme: ThemeData(
+        fontFamily: 'Raleway',
         textTheme: Theme.of(context).textTheme.apply(
               bodyColor: Colors.black,
               displayColor: Colors.grey[600],

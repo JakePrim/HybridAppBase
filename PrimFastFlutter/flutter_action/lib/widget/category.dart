@@ -10,17 +10,17 @@ final _rowHeight = 100.0;
 final _borderRadius = BorderRadius.circular(_rowHeight / 2);
 
 class CategoryWidget {
-  final IconData iconData;
+  final String iconLocation;
   final String text;
   final ColorSwatch color;
   final List<Unit> units;
 
   CategoryWidget(
-      {@required this.iconData,
+      {@required this.iconLocation,
       @required this.text,
       @required this.color,
       @required this.units})
-      : assert(iconData != null),
+      : assert(iconLocation != null),
         assert(text != null),
         assert(color != null),
         assert(units != null);

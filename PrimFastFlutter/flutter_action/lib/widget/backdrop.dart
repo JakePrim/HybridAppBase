@@ -32,8 +32,8 @@ class _BackdropPanel extends StatelessWidget {
     return Material(
       elevation: 2.0, //投影设置
       borderRadius: BorderRadius.only(
-        topLeft: Radius.circular(6.0),
-        topRight: Radius.circular(6.0),
+        topLeft: Radius.circular(8.0),
+        topRight: Radius.circular(8.0),
       ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch, //横轴设置
@@ -44,7 +44,7 @@ class _BackdropPanel extends StatelessWidget {
             onVerticalDragEnd: onVerticalDragEnd,
             onTap: onTap,
             child: Container(
-              height: 48.0,
+              height: 50.0,
               padding: EdgeInsetsDirectional.only(start: 16.0),
               alignment: AlignmentDirectional.centerStart,
               child: DefaultTextStyle(
@@ -175,6 +175,7 @@ class _BackdropState extends State<Backdrop> with SingleTickerProviderStateMixin
     return status == AnimationStatus.completed || status == AnimationStatus.forward;
   }
 
+  ///面板的显示和隐藏
   void _toggleBackdropPanelVisability(){
     //??? 面板显示后设置焦点
     FocusScope.of(context).requestFocus(FocusNode());
@@ -191,12 +192,14 @@ class _BackdropState extends State<Backdrop> with SingleTickerProviderStateMixin
   }
 
   void _handleDragUpdate(DragUpdateDetails details){
-    if(_controller.isAnimating || _controller.status == AnimationStatus.completed) return;
+    //|| _controller.status == AnimationStatus.completed 如果设置此条件返回的手势就没有了
+    if(_controller.isAnimating) return;
     _controller.value -= details.primaryDelta / _backdropHeight;
   }
 
   void _handleDragEnd(DragEndDetails details){
-    if(_controller.isAnimating || _controller.status == AnimationStatus.completed) return;
+    //|| _controller.status == AnimationStatus.completed
+    if(_controller.isAnimating ) return;
 
     final double flingVelocity = details.velocity.pixelsPerSecond.dy / _backdropHeight;
     if(flingVelocity < 0.0){

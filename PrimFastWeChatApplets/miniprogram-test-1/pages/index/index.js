@@ -37,8 +37,26 @@ Page({
       key:'SZGBZ-64HEI-RVTG7-5GPKJ-GGV46-LEBTG'
     });
     // //请求定位之后 在获取天气信息
-    // this.toTabLocation();
-    this.getNowData();
+    wx.getSetting({
+      success:res =>{
+        console.log("setting:"+res);
+        let auth = res.authSetting['scope.userLocation'];
+        let authType = auth ? AUTHORIZED : (auth === false)?UNAUTHORIZED:UNPROMPTED;
+        let authText = auth ? AUTHORIZED_TIPS:(auth === false)?UNPROMPTED_TIPS:UNPROMPTED_TIPS;
+        this.setData({
+          locationAuthType:authType,
+          locationTipsText:authText
+        });
+        if(auth){
+          this.getLocation();
+        }else{
+          this.getNowData();
+        }
+      },
+      fail:()=>{
+        this.getNowData();
+      }
+    });
   },
   //需要保存的数据
   data:{
@@ -53,19 +71,14 @@ Page({
   },
   onShow(){
     console.log("onShow");
-    wx.getSetting({
-      success:res=>{
-        console.log("success:" + res);
-      },
-      fail:res=>{
-        console.log("fail:"+res);
-      }
-    });
   },
   onReady(){
-
+    console.log("onReady");
   },
-   
+
+  onHide(){
+    console.log("onHide");
+  },
   //获取天气信息
   getNowData(callback) {
     wx.request({
@@ -142,7 +155,13 @@ Page({
      //判断权限是否授权
      if(this.data.locationAuthType === UNAUTHORIZED){
        //进行授权
-       wx.openSetting();
+       wx.openSetting({
+         success:res => {
+           console.log("success:"+res);
+         },fail:() =>{
+           console.log("fail:"+res);
+         }
+       });
      }else{
        this.getLocation();
      }

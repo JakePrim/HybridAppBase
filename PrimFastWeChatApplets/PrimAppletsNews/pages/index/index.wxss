@@ -1,0 +1,28 @@
+.swiper-tab{
+  width: 100%;
+  background: #3299dc;
+  border-bottom: 2rpx solid #ccc;
+  display: flex;/*设置为横向*/
+  text-align: center;
+  height: 88rpx;
+  line-height: 88rpx;
+  flex-flow: row;
+  justify-content: space-between;/*内容间隔平分*/
+}
+
+.swiper-tab-item{
+  font-size: 30rpx;
+  font-weight: bold;
+  width: 30%;
+  color: #eee;
+}
+
+.active{
+  color: #fff;
+  border-bottom: 2rpx solid #fff;
+  border-bottom-width: 10%;
+}
+
+swiper{
+  text-align: center;
+}

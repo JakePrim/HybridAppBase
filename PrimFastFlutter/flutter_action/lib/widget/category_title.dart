@@ -34,10 +34,7 @@ class CategoryTitle extends StatelessWidget {
               children: <Widget>[
                 Padding(
                   padding: EdgeInsets.all(16.0),
-                  child: Icon(
-                    categoryWidget.iconData,
-                    size: 60.0,
-                  ),
+                  child: Image.asset(categoryWidget.iconLocation),
                 ),
                 Center(
                   child: Text(

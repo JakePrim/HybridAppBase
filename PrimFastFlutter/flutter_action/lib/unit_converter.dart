@@ -28,7 +28,7 @@ class UnitConverter extends StatefulWidget {
 }
 
 class _UnitConverterPage extends State<UnitConverter> {
-//TODO Set some variables,such as for keeping track of the user's input
+//Set some variables,such as for keeping track of the user's input
 //value and units
   Unit _fromValue;
   Unit _toValue;
@@ -36,8 +36,9 @@ class _UnitConverterPage extends State<UnitConverter> {
   String _convertedValue = '';
   bool _showValidationError = false;
   List<DropdownMenuItem> _unitMenuItems;
+  final _inputKey = GlobalKey(debugLabel: 'inputText');
 
-//TODO :Determine whether you need to override anything,such as initState()
+//Determine whether you need to override anything,such as initState()
 
   @override
   void initState() {
@@ -56,7 +57,7 @@ class _UnitConverterPage extends State<UnitConverter> {
   }
 
 
-  // TODO: _createDropdownMenuItems() and _setDefaults() should also be called
+  // _createDropdownMenuItems() and _setDefaults() should also be called
   // each time the user switches [Categories].
 
   void _createDropdownMenuItems() {
@@ -166,7 +167,7 @@ class _UnitConverterPage extends State<UnitConverter> {
     );
   }
 
-  //TODO: Add other helper functions. We've given you one,_format()
+  // Add other helper functions. We've given you one,_format()
 
   ///Clean up conversion;trim trailing zeros, e.g. 5.500 -> 5.5 10.0 -> 10
   String _format(double conversion) {
@@ -178,7 +179,7 @@ class _UnitConverterPage extends State<UnitConverter> {
       }
       outputNum = outputNum.substring(0, outputNum.length - 1);
     }
-    if (outputNum.endsWith('.')) {
+    if (outputNum.endsWith('.'))  {
       return outputNum.substring(0, outputNum.length - 1);
     }
     return outputNum;
@@ -192,6 +193,7 @@ class _UnitConverterPage extends State<UnitConverter> {
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: <Widget>[
           TextField(
+            key: _inputKey,
             decoration: InputDecoration(
               //set input decoration
               labelText: 'Input', //set text hint
@@ -254,7 +256,20 @@ class _UnitConverterPage extends State<UnitConverter> {
 
     return Padding(
       padding: _padding,
-      child: converter,
+      child: OrientationBuilder(
+        builder: (BuildContext context,Orientation orientation){
+          if(orientation == Orientation.portrait){
+            return converter;
+          }else{
+            return Center(
+              child: Container(
+                width: 450.0,
+                child: converter,
+              ),
+            );
+          }
+        },
+      ),
     );
   }
 }

@@ -1,3 +1,5 @@
+import 'dart:convert';
+
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_action/widget/backdrop.dart';
@@ -8,9 +10,6 @@ import 'widget/unit.dart';
 
 ///a list of [Category]
 ///
-/// this of backgroundColor
-final _backgroundColor = Colors.green[100];
-
 class CategoryRoute extends StatefulWidget {
   @override
   State<StatefulWidget> createState() {
@@ -19,21 +18,19 @@ class CategoryRoute extends StatefulWidget {
 }
 
 class CategoryPage extends State<CategoryRoute> {
-  final categorys = <CategoryWidget>[];
-
   // Keep track of a default [Category], and the currently-selected
   CategoryWidget _currentCategory;
   CategoryWidget _defaultCategory;
-
-  static const _categoryNames = <String>[
-    'Length',
-    'Area',
-    'Volume',
-    'Mass',
-    'Time',
-    'Digital Storage',
-    'Energy',
-    'Currency'
+  final _categorys = <CategoryWidget>[];
+  static const _icons = <String>[
+    'assets/icons/length.png',
+    'assets/icons/area.png',
+    'assets/icons/volume.png',
+    'assets/icons/mass.png',
+    'assets/icons/time.png',
+    'assets/icons/digital_storage.png',
+    'assets/icons/power.png',
+    'assets/icons/currency.png'
   ];
 
   static const _baseColors = <ColorSwatch>[
@@ -72,39 +69,61 @@ class CategoryPage extends State<CategoryRoute> {
     }),
   ];
 
-  List<Unit> _retrieveUnitList(String categoryName) {
-    return List.generate(10, (int i) {
-      i += 1;
-      return Unit(name: '$categoryName Unit $i', conversion: i.toDouble());
-    });
-  }
-
-  Widget _buildCategoryWidget(List<CategoryWidget> categorys) {
-    return ListView.builder(
-      itemBuilder: (context, position) {
-        return CategoryTitle(
-          categoryWidget: categorys[position],
-          onTap: _onCategorytap,
-        );
-      },
-      itemCount: categorys.length,
-    );
-  }
-
-  @override
-  void initState() {
-    super.initState();
-    for (int i = 0; i < _categoryNames.length; i++) {
-      var category = CategoryWidget(
-          iconData: Icons.cake,
-          text: _categoryNames[i],
-          color: _baseColors[i],
-          units: _retrieveUnitList(_categoryNames[i]));
-      if (i == 0) {
-        _defaultCategory = category;
-      }
-      categorys.add(category);
+  /// 绘制列表 根据屏幕的方向改变widget
+  Widget _buildCategoryWidget(Orientation deviceOrientation) {
+    if (deviceOrientation == Orientation.portrait) {
+      return ListView.builder(
+        itemBuilder: (context, position) {
+          return CategoryTitle(
+            categoryWidget: _categorys[position],
+            onTap: _onCategorytap,
+          );
+        },
+        itemCount: _categorys.length,
+      );
+    } else {
+      return GridView.count(
+        crossAxisCount: 2,
+        childAspectRatio: 3.0,
+        children: _categorys.map((CategoryWidget c) {
+          return CategoryTitle(
+            categoryWidget: c,
+            onTap: _onCategorytap,
+          );
+        }).toList(),
+      );
     }
+  }
+
+  Future<void> _retrieveLocalCategories() async {
+    // Consider omitting the types for local variables. For more details on Effective
+    // Dart Usage, see https://www.dartlang.org/guides/language/effective-dart/usage
+    final json = DefaultAssetBundle.of(context)
+        .loadString('assets/data/regular_units.json');
+    final data = JsonDecoder().convert(await json);
+    if (data is! Map) {
+      throw ('Data retrieved from API is not a Map');
+    }
+    var categoryIndex = 0;
+    data.keys.forEach((key) {
+      final List<Unit> units =
+          data[key].map<Unit>((dynamic data) => Unit.fromJson(data)).toList();
+
+      var category = CategoryWidget(
+        text: key,
+        units: units,
+        color: _baseColors[categoryIndex],
+        iconLocation: _icons[categoryIndex],
+      );
+      print('_defaultCategory:$_defaultCategory categoryIndex:$categoryIndex');
+      setState(() {
+        if (categoryIndex == 0) {
+          _defaultCategory = category;
+        }
+        _categorys.add(category);
+      });
+      categoryIndex += 1;
+    });
   }
 
   //todo Fill out this function
@@ -115,20 +134,41 @@ class CategoryPage extends State<CategoryRoute> {
   }
 
   @override
+  Future<void> didChangeDependencies() async {
+    super.didChangeDependencies();
+    print('didChangeDependencies:$_categorys');
+    if (_categorys.isEmpty) {
+      await _retrieveLocalCategories();
+    }
+  }
+
+  @override
   Widget build(BuildContext context) {
+    assert(debugCheckHasMediaQuery(context));
     final listView = Container(
-      color: _backgroundColor,
+      // color: _backgroundColor,
       padding: EdgeInsets.only(
         left: 8.0,
         right: 8.0,
         bottom: 48.0,
       ),
-      child: _buildCategoryWidget(categorys),
+      child: _buildCategoryWidget(MediaQuery.of(context).orientation),
     );
-
+    print(
+        'currentCategory:$_currentCategory defaultCategory:$_defaultCategory');
+    if (_currentCategory == null && _defaultCategory == null) {
+      //显示加载中的提示
+      return Container(
+        color: Colors.grey[600],
+        child: Text(
+          '加载中...',
+          style: TextStyle(color: Colors.white),
+        ),
+      );
+    }
     return Backdrop(
       currentCategory:
-          _currentCategory != null ? _currentCategory : _defaultCategory,
+          _currentCategory == null ? _defaultCategory : _currentCategory,
       frontPanel: _currentCategory == null
           ? UnitConverter(
               categoryWidget: _defaultCategory,

@@ -1,0 +1,10 @@
+<view class='news'>
+  <view class='swiper-tab'>
+    <view class='swiper-tab-item' wx:for="{{tabs}}" bindtap='changTab'>{{item}}</view>
+  </view>
+  <swiper current="{{currentTab}}" duration = "300" bindchange='swiperTab'>
+    <swiper-item><view>全部</view></swiper-item>
+    <swiper-item><view>全部</view></swiper-item>
+    <swiper-item><view>全部</view></swiper-item>
+  </swiper>
+</view>
