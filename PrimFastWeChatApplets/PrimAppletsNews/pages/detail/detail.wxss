@@ -1,0 +1,36 @@
+/* pages/detail/detail.wxss */
+.detail{
+  background: #fff;
+  color: #000;
+}
+
+.detail-title{
+  color: #000;
+  padding: 20rpx;
+  font-size: 40rpx;
+  border-top: 1rpx solid #3299dc;
+}
+
+.detail-source{
+  display: flex;
+  color: #8f8f94;
+  margin: 0 20rpx;
+  font-size: 25rpx;
+}
+
+.detail-content{
+  margin: 20rpx 20rpx;
+  font-size: 30rpx;
+}
+
+.content-p{
+  margin-top: 20rpx; 
+}
+
+.content-img{
+  margin-top: 20rpx;
+}
+
+.detail-dec{
+  flex-grow: 1;
+}

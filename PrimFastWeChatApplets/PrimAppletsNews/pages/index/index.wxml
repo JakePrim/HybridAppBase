@@ -1,10 +1,24 @@
 <view class='news'>
-  <view class='swiper-tab'>
-    <view class='swiper-tab-item' wx:for="{{tabs}}" bindtap='changTab'>{{item}}</view>
+  <nav-bar navbar-data='{{navbarData}}'> </nav-bar>
+  <view class='tab' style='margin-top: {{height}}px'>
+    <view class='swiper-tab' wx:for="{{tabs}}">
+      <view class='swiper-tab-item {{currentTab==index ? "active":""}}' data-current='{{index}}' bindtap='changTab'>{{item}}</view>
+    </view>
   </view>
-  <swiper current="{{currentTab}}" duration = "300" bindchange='swiperTab'>
-    <swiper-item><view>全部</view></swiper-item>
-    <swiper-item><view>全部</view></swiper-item>
-    <swiper-item><view>全部</view></swiper-item>
+  <swiper current="{{currentTab}}" duration="300" bindchange='swiperTab'>
+    <block wx:for="{{tabs}}">
+      <swiper-item style="overflow:scroll">
+        <view class='item' wx:for="{{newsList}}" wx:key="newsList" bindtap='clickItem' data-bean='{{item}}'>
+          <image class='item-img' style='order:2;' src='{{item.firstImage}}' />
+          <view class='item-title'>
+           <view class='item-name'>{{item.title}}</view>
+           <view class='item-dec'>
+            <view>{{item.source}}</view>
+            <!-- <view>{{item.date}}</view> -->
+           </view>
+          </view>
+        </view>
+      </swiper-item>
+    </block>
   </swiper>
 </view>
