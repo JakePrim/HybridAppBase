@@ -1,5 +1,6 @@
 import 'package:flutter/widgets.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_action/io/api.dart';
 import 'package:flutter_action/widget/category.dart';
 import 'widget/unit.dart';
 import 'package:meta/meta.dart';
@@ -37,6 +38,7 @@ class _UnitConverterPage extends State<UnitConverter> {
   bool _showValidationError = false;
   List<DropdownMenuItem> _unitMenuItems;
   final _inputKey = GlobalKey(debugLabel: 'inputText');
+  bool _showErrorUI = false;
 
 //Determine whether you need to override anything,such as initState()
 
@@ -50,12 +52,11 @@ class _UnitConverterPage extends State<UnitConverter> {
   @override
   void didUpdateWidget(UnitConverter oldWidget) {
     super.didUpdateWidget(oldWidget);
-    if(oldWidget.categoryWidget != widget.categoryWidget){
+    if (oldWidget.categoryWidget != widget.categoryWidget) {
       _createDropdownMenuItems();
       _setDefaults();
     }
   }
-
 
   // _createDropdownMenuItems() and _setDefaults() should also be called
   // each time the user switches [Categories].
@@ -83,6 +84,9 @@ class _UnitConverterPage extends State<UnitConverter> {
       _fromValue = widget.categoryWidget.units[0];
       _toValue = widget.categoryWidget.units[1];
     });
+    if (_inputValue != null) {
+      _updateConversion();
+    }
   }
 
   /// 监听TextFiled 输入的text
@@ -123,11 +127,27 @@ class _UnitConverterPage extends State<UnitConverter> {
     }
   }
 
-  void _updateConversion() {
-    setState(() {
-      _convertedValue =
-          _format(_inputValue * (_toValue.conversion / _fromValue.conversion));
-    });
+  Future _updateConversion() async {
+    if (widget.categoryWidget.text == apiCategory['name']) {
+      final api = Api();
+      final conversion = await api.convert(apiCategory['route'],
+          _inputValue.toString(), _fromValue.name, _toValue.name);
+      if (conversion == null) {
+        setState(() {
+          _showErrorUI = true;
+        });
+      } else {
+        setState(() {
+          _showErrorUI = false;
+          _convertedValue = _format(conversion);
+        });
+      }
+    } else {
+      setState(() {
+        _convertedValue = _format(
+            _inputValue * (_toValue.conversion / _fromValue.conversion));
+      });
+    }
   }
 
   Unit _getUnit(String unitName) {
@@ -158,9 +178,9 @@ class _UnitConverterPage extends State<UnitConverter> {
               child: ButtonTheme(
             alignedDropdown: true,
             child: DropdownButton(
+              value: currentValue,
               items: _unitMenuItems,
               onChanged: onChanged,
-              value: currentValue,
               style: Theme.of(context).textTheme.title,
             ),
           ))),
@@ -179,7 +199,7 @@ class _UnitConverterPage extends State<UnitConverter> {
       }
       outputNum = outputNum.substring(0, outputNum.length - 1);
     }
-    if (outputNum.endsWith('.'))  {
+    if (outputNum.endsWith('.')) {
       return outputNum.substring(0, outputNum.length - 1);
     }
     return outputNum;
@@ -187,6 +207,38 @@ class _UnitConverterPage extends State<UnitConverter> {
 
   @override
   Widget build(BuildContext context) {
+    if (widget.categoryWidget.units == null ||
+        (widget.categoryWidget.text == apiCategory['name'] && _showErrorUI)) {
+      return SingleChildScrollView(
+        child: Container(
+          margin: _padding,
+          padding: _padding,
+          decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(16.0),
+              color: widget.categoryWidget.color),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: <Widget>[
+              Icon(
+                Icons.error_outline,
+                size: 180.0,
+                color: Colors.white,
+              ),
+              Text(
+                "Oh no!We can't connect right now!",
+                textAlign: TextAlign.center,
+                style: Theme.of(context)
+                    .textTheme
+                    .headline
+                    .copyWith(color: Colors.white),
+              ),
+            ],
+          ),
+        ),
+      );
+    }
+
     final input = Padding(
       padding: _padding,
       child: Column(
@@ -203,8 +255,10 @@ class _UnitConverterPage extends State<UnitConverter> {
                 borderRadius: BorderRadius.circular(0.0),
               ),
             ),
-            style: Theme.of(context).textTheme.display1, //set style
-            keyboardType: TextInputType.number, //set input type
+            style: Theme.of(context).textTheme.display1,
+            //set style
+            keyboardType: TextInputType.number,
+            //set input type
             onChanged: _updateInputValue,
           ),
           _createDropdown(_fromValue.name, _updateFromConversion),
@@ -257,10 +311,10 @@ class _UnitConverterPage extends State<UnitConverter> {
     return Padding(
       padding: _padding,
       child: OrientationBuilder(
-        builder: (BuildContext context,Orientation orientation){
-          if(orientation == Orientation.portrait){
+        builder: (BuildContext context, Orientation orientation) {
+          if (orientation == Orientation.portrait) {
             return converter;
-          }else{
+          } else {
             return Center(
               child: Container(
                 width: 450.0,

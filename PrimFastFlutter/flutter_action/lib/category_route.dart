@@ -1,4 +1,7 @@
+import 'dart:async';
 import 'dart:convert';
+import 'dart:core' as prefix0;
+import 'dart:core';
 
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
@@ -7,6 +10,8 @@ import 'package:flutter_action/widget/category_title.dart';
 import 'widget/category.dart';
 import 'unit_converter.dart';
 import 'widget/unit.dart';
+import 'io/api.dart';
+import 'dart:io';
 
 ///a list of [Category]
 ///
@@ -95,6 +100,34 @@ class CategoryPage extends State<CategoryRoute> {
     }
   }
 
+  Future<void> _retrieveApiCategories() async {
+    setState(() {
+      _categorys.add(CategoryWidget(
+        text: apiCategory['name'],
+        units: [],
+        color: _baseColors.last,
+        iconLocation: _icons.last
+      ));
+    });
+    final api = Api();
+      final jsonUnits = await api.getUnits(apiCategory['route']);
+      if(jsonUnits != null){
+        final units = <Unit>[];
+        for(var unit in jsonUnits){
+          units.add(Unit.fromJson(unit));
+        }
+        setState(() {
+          _categorys.removeLast();
+          _categorys.add(CategoryWidget(
+            text: apiCategory['name'],
+            units: units,
+            color: _baseColors.last,
+            iconLocation: _icons.last
+          ));
+        });
+      }
+  }
+
   Future<void> _retrieveLocalCategories() async {
     // Consider omitting the types for local variables. For more details on Effective
     // Dart Usage, see https://www.dartlang.org/guides/language/effective-dart/usage
@@ -139,6 +172,7 @@ class CategoryPage extends State<CategoryRoute> {
     print('didChangeDependencies:$_categorys');
     if (_categorys.isEmpty) {
       await _retrieveLocalCategories();
+      await _retrieveApiCategories();
     }
   }
 
@@ -162,7 +196,7 @@ class CategoryPage extends State<CategoryRoute> {
         color: Colors.grey[600],
         child: Text(
           '加载中...',
-          style: TextStyle(color: Colors.white),
+          style: TextStyle(color: Colors.black),
         ),
       );
     }
