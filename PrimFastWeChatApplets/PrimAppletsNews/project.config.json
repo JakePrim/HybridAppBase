@@ -13,7 +13,7 @@
 		"checkInvalidKey": true
 	},
 	"compileType": "miniprogram",
-	"libVersion": "2.7.2",
+	"libVersion": "2.7.4",
 	"appid": "wx96c890ef6bfe3cc2",
 	"projectname": "PrimNews",
 	"debugOptions": {

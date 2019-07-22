@@ -7,7 +7,7 @@
   </view>
   <swiper current="{{currentTab}}" duration="300" bindchange='swiperTab'>
     <block wx:for="{{tabs}}">
-      <swiper-item style="overflow:scroll">
+      <swiper-item>
         <view class='item' wx:for="{{newsList}}" wx:key="newsList" bindtap='clickItem' data-bean='{{item}}'>
           <image class='item-img' style='order:2;' src='{{item.firstImage}}' />
           <view class='item-title'>
