@@ -1,5 +1,5 @@
 # PrimFastApp
-PrimFastApp 完整的项目开发框架,框架内设计的技术面很广,同时还是一套Android进阶和大前端的技术学习库,第三方框架原理和设计思想.
+PrimFastApp 完整的项目开发框架,框架内设计的技术面很广,同时还是一套Android进阶和大前端的技术学习库,还有第三方框架原理和设计思想.
 
 1. 包括Android进阶知识:APP快速开发框架搭建、组件化技术实现、插件化技术实现、Okhttp原理、Glide原理、RxJava原理、EventBus原理、音视频、NDK开发、进程通信、IOC、移动架构等.
 
@@ -10,6 +10,8 @@ PrimFastApp 完整的项目开发框架,框架内设计的技术面很广,同时
 4. Kotlin 开发技术,使用kotlin开发Android.
 
 5. JavaScript 技术详解, 大前端时代必备的知识
+
+6. 数据结构与算法
 
    专注于移动技术的最前线 https://jakeprim.cn/
 
@@ -30,6 +32,8 @@ PrimFastApp 完整的项目开发框架,框架内设计的技术面很广,同时
 > PrimJs  是专门给Android开发者,Js入门到进阶的知识
 
 > PrimFastWeb 是学习移动Web开发的一个完整项目(项目准备采用Vue来实现)
+>
+> [PrimAlgorithm](https://github.com/JakePrim/PrimFastApp/tree/master/PrimAlgorithm) 是数据结构和算法,Java的实现
 
 > AdvancedDemo 是Android进阶的知识点的Demo练习
 
@@ -55,6 +59,8 @@ PrimFastRn [项目地址](https://github.com/JakePrim/PrimFastApp/tree/master/Pr
 PrimJs [项目地址](https://github.com/JakePrim/PrimFastApp/tree/master/PrimJs)
 
 AdvancedDemo [项目地址](https://github.com/JakePrim/PrimFastApp/tree/master/AdvancedDemo)
+
+[PrimAlgorithm](https://github.com/JakePrim/PrimFastApp/tree/master/PrimAlgorithm) 
 
 ### Android 高级进阶知识部分
 
@@ -148,18 +154,25 @@ AdvancedDemo [项目地址](https://github.com/JakePrim/PrimFastApp/tree/master/
 
 
 
-### 跨平台技术
+### 大前端技术
 
 ### Flutter 开发
 
 - [项目地址](https://github.com/JakePrim/PrimFastApp/tree/master/PrimFastFlutter)
-
 - [x] [Flutter 常用的布局与事件](https://jakeprim.cn/2019/03/26/flutter-1-1/)
 - [x] [Flutter 请求接口以及DAO层的实现](https://jakeprim.cn/2019/03/26/flutter-1-2/)
 - [x] [Flutter WebView使用详解](https://jakeprim.cn/2019/04/07/flutter-1-3/)
 - [x] [Flutter 中的组件通信与状态改变](https://jakeprim.cn/2019/03/15/flutter-event-bus/)
+- [x] [Dart 语言基础与核心特性](https://jakeprim.cn/2019/07/23/dart-2/)
+- [x] [Flutter与Native的生死相依](https://jakeprim.cn/2019/07/04/flutter-native-1/)
+
+### JavaScript 
+
+ [项目地址](https://github.com/JakePrim/PrimFastApp/tree/master/PrimJs)
+
+- [x] [初遇JavaScript](https://jakeprim.cn/2019/07/07/javascript-1/)
 
 ### ReactNative 开发
 
-#### reactnative 环境搭建和基础学习
+#### 
 

@@ -38,6 +38,7 @@ class CategoryPage extends State<CategoryRoute> {
     'assets/icons/currency.png'
   ];
 
+
   static const _baseColors = <ColorSwatch>[
     ColorSwatch(0xFF6AB7A8, {
       'highLight': Color(0xFF6AB7A8),
