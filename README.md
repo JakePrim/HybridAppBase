@@ -1,19 +1,24 @@
-# PrimFastApp
-PrimFastApp 完整的项目开发框架,框架内设计的技术面很广,同时还是一套Android进阶和大前端的技术学习库,还有第三方框架原理和设计思想.
+# PrimFast
+ PrimFast 是全栈技术学习的开源项目,也是我自己的未来发展方向
+ 项目内设计的技术面很广,有Android进阶技术和大前端的技术、后台技术、还有当前火热的python技术学习库,以及第三方框架原理和设计思想.
 
 1. 包括Android进阶知识:APP快速开发框架搭建、组件化技术实现、插件化技术实现、Okhttp原理、Glide原理、RxJava原理、EventBus原理、音视频、NDK开发、进程通信、IOC、移动架构等.
 
-2. Flutter跨平台技术.
+2. Flutter跨平台技术与实战.
 
 3. RN跨平台技术以及移动Web应用和小程序的实战.
 
-4. Kotlin 开发技术,使用kotlin开发Android.
+4. Kotlin 开发技术学习与使用kotlin开发Android实战.
 
-5. JavaScript 技术详解, 大前端时代必备的知识
+5. JavaScript/TypeScript 技术详解, 大前端时代必备的知识
 
 6. 数据结构与算法
 
-   专注于移动技术的最前线 https://jakeprim.cn/
+7. 后台开发:Node.js Java
+
+8. 数据分析与人工智能:python
+
+   专注于技术的最前线,欢迎关注我的个人网站:https://jakeprim.cn/
 
 [TOC]
 
@@ -31,11 +36,17 @@ PrimFastApp 完整的项目开发框架,框架内设计的技术面很广,同时
 
 > PrimJs  是专门给Android开发者,Js入门到进阶的知识
 
-> PrimFastWeb 是学习移动Web开发的一个完整项目(项目准备采用Vue来实现)
->
+> PrimFastWeb 是学习移动Web开发的一个完整项目(项目准备采用Vue/React来实现)
+
 > [PrimAlgorithm](https://github.com/JakePrim/PrimFastApp/tree/master/PrimAlgorithm) 是数据结构和算法,Java的实现
 
 > AdvancedDemo 是Android进阶的知识点的Demo练习
+
+> PrimFastJava Java后台开发学习项目
+
+> PrimFastNode Node开发学习项目
+
+> PrimFastPython Python 开发学习项目
 
 ## 进度
 
@@ -93,6 +104,7 @@ AdvancedDemo [项目地址](https://github.com/JakePrim/PrimFastApp/tree/master/
 
 #### OkHttp 实现原理及详细分析
 - [x] [OkHttp 源码解析及OkHttp的设计思想](https://www.jianshu.com/p/cb444f49a777)
+- [ ] 手写OkHttp核心代码
 - [ ] OkHttp 各个责任链详细分析
 - [ ] 理解Http与Tcp的相关知识(图解Http)
 
@@ -141,7 +153,7 @@ AdvancedDemo [项目地址](https://github.com/JakePrim/PrimFastApp/tree/master/
 
 ### 编程内功修炼部分
 
-#### 数据结构与算法
+#### 数据结构
 - [x] [数据结构之表的总结](https://www.jianshu.com/p/88a0e9c77fb1)
 - [x] [链表问题补充](https://www.jianshu.com/p/87d8e0320bb5)
 - [x] [数据结构之Java中哈希表的经典实现HashMap分析](https://www.jianshu.com/p/e15277533dcf)
@@ -150,13 +162,33 @@ AdvancedDemo [项目地址](https://github.com/JakePrim/PrimFastApp/tree/master/
 - [ ] 红黑树
 - [ ] 图论
 
+#### 算法
+...
+
 ### Kotlin 开发
-
-
+- [ ] Kotlin 基础语法与核心特性
+- [ ] Kotlin 开发github客户端实战
 
 ### 大前端技术
 
-### Flutter 开发
+#### JavaScript
+
+ [项目地址](https://github.com/JakePrim/PrimFastApp/tree/master/PrimJs)
+
+- [x] [初遇JavaScript](https://jakeprim.cn/2019/07/07/javascript-1/)
+
+#### ES6
+...
+
+#### TypeScript
+
+#### Vue.js
+
+#### React.js
+
+#### Node.js
+
+#### Flutter 开发
 
 - [项目地址](https://github.com/JakePrim/PrimFastApp/tree/master/PrimFastFlutter)
 - [x] [Flutter 常用的布局与事件](https://jakeprim.cn/2019/03/26/flutter-1-1/)
@@ -166,13 +198,13 @@ AdvancedDemo [项目地址](https://github.com/JakePrim/PrimFastApp/tree/master/
 - [x] [Dart 语言基础与核心特性](https://jakeprim.cn/2019/07/23/dart-2/)
 - [x] [Flutter与Native的生死相依](https://jakeprim.cn/2019/07/04/flutter-native-1/)
 
-### JavaScript 
+#### ReactNative 开发
+...
 
- [项目地址](https://github.com/JakePrim/PrimFastApp/tree/master/PrimJs)
+### 后端技术
 
-- [x] [初遇JavaScript](https://jakeprim.cn/2019/07/07/javascript-1/)
+#### Java后台
+...
 
-### ReactNative 开发
-
-#### 
-
+### Python 技术
+...

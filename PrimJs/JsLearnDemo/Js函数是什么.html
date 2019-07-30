@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript 的函数是什么鬼?</title>
+</head>
+
+<body>
+    <script>
+        console.log(add(1, 2));
+        /**
+        * 函数可以复用代码
+        */
+        function add(num1, num2) {
+            return num1 + num2;
+        }
+        add(2, 2);
+        //页面加载完毕后的处理
+        window.onload = function () {
+
+        }
+        //函数的本质
+        //JavaScript 中函数就是对象
+        new Function('num1', 'num2');
+        //给函数添加属性和方法
+        add.sex = '男';
+        add.setSex = function (sex) {
+            this.sex = sex;
+        }
+        console.log(add.sex);
+        console.log(add.setSex('女'));
+        console.log(add.sex);
+        console.log(add(1, 2));
+        //函数可以作为数据值来使用
+        var text = function () {
+            return "atex";
+        }
+        text();
+        console.log(text());
+        console.log(text);
+        //数组中可以 对象、函数
+        [{}, function () { }, { family: {}, setName: function (name) { } }]
+        //函数可以作为参数使用
+        //函数名加()表示函数被执行,不加参数表示将函数的本体传入
+
+        //函数作为返回值
+        function fn() {
+            return function () {
+                console.log(1);
+            }
+        }
+        var newFn = fn();
+        //调用函数返回值的函数
+        newFn();
+        fn()();
+
+        //注意Js中没有块级作用域
+        //在预解析的时候就已经对声明函数加载了 并不能达到if/else按需 定义函数的作用
+        if (true) {
+            function add() {
+
+            }
+        } else {
+            function sub() {
+
+            }
+        }
+
+        //可以使用下面的方式,使if/else起到作用,因为 add sub 是变量,在预解析时就变为了undefined,但是并不推荐使用这种方式
+        if (true) {
+            var add = function () {
+
+            }
+        } else {
+            var sub = function () {
+
+            }
+        }
+
+        //对象中定义函数
+        var person = {
+            name: 'xm',
+            setSex: function (sex) {
+                this.sex = sex;
+            }
+        };
+        //也可以在对象外定义函数
+        person.setName = function (name) {
+            this.name = name;
+        }
+        //需要通过对象名来找到对象中的函数
+        person.setSex('女');
+
+        //函数的调用
+
+        //普通函数的调用
+        //命名函数
+        function add() {
+
+        }
+
+        add();
+        //匿名函数的调用
+        var fn = function () {
+
+        }
+        fn();
+
+        //匿名函数头部需要存在合法的值 才可以自执行
+        //匿名函数定义直接执行
+        var s = function () {
+            console.log('');
+        }();
+
+        //匿名函数的自执行 
+        (function () {
+
+        })();
+        (function () {
+
+        }());
+        //匿名函数也可以这样用
+        !+function () {
+            console.log('1');
+        }();
+        //也可以这样用
+        console.log(function () {
+            return 1;
+        }());
+
+        //递归调用
+        //计算阶乘
+        function fn1(num) {
+            if (num <= 1) return 1;
+            return num * fn1(num - 1);
+        }
+
+        console.log(fn1(5));
+
+        //方法的调用
+        var option = {
+            add: function (num1, num2) {
+                return num1 + num2;
+            },
+            sub: function (num1, num2) {
+                return num1 - num2;
+            }
+        }
+        option.add(1, 2);
+        option['add'](1, 2);
+        var key = 'add';
+        option[key](2, 2);
+
+        //链式调用
+        var option = {
+            add: function (num1, num2) {
+                console.log(num1 + num2);
+                return this;
+            },
+            sub: function (num1, num2) {
+                return this;
+            }
+        }
+        option.add(1, 2).sub(3, 2);
+
+
+        // document.onclick = function(){
+        //     console.log('你点击了文档');
+        // }
+        // document.onclick();
+
+        // var close = document.getElementById('');
+
+        // document.getElementById('').onclick = function () {
+
+        // }
+
+        ///注意onclick 给他一个函数但是不要加上()否则函数会自动执行
+        // document.getElementById('close').onclick = closeBox;
+
+        // document.getElementById('btn').onclick = closeBox;
+
+        //动态设置属性
+        var person = {
+            setPerson: function (property, value) {
+                person[property] = value
+            }
+        };
+
+        person.setPerson('name', 'xm');
+        person.setPerson('age', 18);
+        person.setPerson('sex', 'male');
+
+        //构造函数的调用
+
+        function Person(){
+
+        }
+        //是不是通过new 来调用构造函数
+        var obj = new Person();
+
+        //间接调用
+        // function add(){
+
+        // }
+        // //每个函数下都有两个方法
+        // add.call
+        // add.apply
+
+        var name = 'xm';
+        var person = {};
+        person.name = 'xh';
+
+        person.getName = function(){
+            return this.name;
+        }
+
+        console.log(person.getName());//xh 
+        console.log(person.getName.call(window));//xh call 改变this的指向 this不指向了person 而是指向window
+
+
+        function adds(num1,num2){
+            return num1 + num2;
+        }
+        var data = [1,2];
+        console.log(adds(1,2));
+        console.log(adds.call(window,1,2));//add 中并没有用到this window 只是改变this的值
+        console.log(adds.apply(window,data));//apply 和call的区别 就是传递参数是个数组
+    </script>
+</body>
+
+</html>

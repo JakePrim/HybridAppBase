@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>函数的参数</title>
+</head>
+
+<body>
+        <p id="test" style="background-color: red; color: blue;">我是一个段落！</p>
+    <script>
+        //函数参数的本质: 形参 = 实参
+        //参数个数
+        // function add(num1, num2) {
+        //     return num1 + num2;
+        // }
+        // add(1, 2);
+        // add(1);//num1 = 1 ; num2 = undefined
+        //可选参数
+        // function pow(base, pow) {
+        //     pow = pow || 2;
+        //     return Math.pow(base, pow);
+        // }
+        // console.log(3);
+        // console.log(3,2);
+
+        // function add(){
+        //     if(arguments.length === 0) return;
+        //     var nums = 0;
+        //     for (let index = 0; index < arguments.length; index++) {
+        //         const element = arguments[index];
+        //         nums += element;
+        //     }
+        //     return nums;
+        // }
+        // console.log(add(1,2,3,4,5));
+
+        //arguments 类似数组的对象
+        //类似如下
+        // var arguments =  {
+        //     '0':1,
+        //     '1':2,
+        //     'length':2
+        // }
+
+        // function fn(name){
+        //     console.log(arguments.callee);
+        //     arguments[0] = '';
+        //     console.log(name);//'' name值也发生变化了
+        //     function fn2(){//每个函数都有一个独特的arguments
+        //         console.log(arguments);
+        //     }
+        // }
+        // fn('xh');
+        //arguments.callee 函数的本体 可以用到在递归调用中
+        //场景如下:
+        //如果函数jiecheng 内部过于复杂,用到了递归,某天改掉了函数名,还要将每个递归调用的函数名都要改掉
+        //用arguments.callee 就是当前函数的本体,这样就不用在手动去改掉函数名了.
+        // "use strict"//严格模式下 不允许使用arguments.callee 如何修改呢?
+        // function jiecheng(num){
+        //     if(num <= 1) return 1;
+        //     return num * arguments.callee(num - 1);
+        // }
+
+        // console.log(jiecheng(5));
+
+        //严格模式下 可以这样使用
+    //    var jiecheng =  function fn(num){
+    //         if(num <= 1) return 1;
+    //         return num * fn(num - 1);
+    //     }
+    //     console.log(jiecheng(5));
+
+    //如何判断传递参数的个数
+    // function add(num1,num2){
+    //     if(arguments.length !== add.length){
+    //         throw new Error('请传入'+add.length+"个参数");
+    //     }
+    //     return num1 + num2;
+    // }
+
+//     function css(){
+//         if(arguments.length === 2){
+//             return arguments[0].style(arguments[1]);
+//         }else if(arguments.length === 3){
+//             var elem = arguments[0];
+//             var value = arguments[1];
+//             var result = arguments[2];
+//             console.log(elem,value,result);
+//             elem.style[value] = result;
+//         }else{
+//             return '传递参数不正确';
+//         }
+//     }
+    
+//    var p = document.getElementById('test');
+   
+//   css(p,'background-color','orange');
+
+//传递集合
+$.each([1,2,3,4],function(index,value){
+
+});
+
+    </script>
+</body>
+
+</html>

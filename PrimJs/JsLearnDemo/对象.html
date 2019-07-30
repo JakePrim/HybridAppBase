@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>JavaScript 对象</title>
+</head>
+
+<body>
+    <script>
+        //定义一个猫的对象
+        var cat = {
+            'name': 'Tom',
+            'age': 12,
+            'family': ['father', 'mom'],
+            'speak': function () {
+                console.log('喵喵');
+            },
+            'friend': {
+                'name': 'Jake',
+                'age': 11,
+            }
+        };
+        //另一种创建对象的方式
+        // var cat = new Object();
+        // 第三种方式
+        // Object.create();
+
+        //如何访问对象的属性
+        cat.name = 'Prim';
+        //另外一种赋值方式
+        cat['name'] = 'Prim';
+
+        //创建一个属性
+        cat.type = '加菲猫';
+
+        //获取一个属性
+        console.log(cat.name);
+        console.log(cat['name']);
+        console.log(cat.type);
+
+        //删除某个属性
+        delete cat.type;
+        console.log(cat.type);
+
+        //是否存在某个属性
+        console.log('name' in cat);
+
+        //遍历对象的各个属性
+        for (const key in cat) {
+            if (cat.hasOwnProperty(key)) {
+                const element = cat[key];
+                console.log(key + " : "+element);
+            }
+        }
+    </script>
+</body>
+
+</html>

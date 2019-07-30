@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+
+<head></head>
+
+<body>
+    <script>
+        /**
+         * 闭包不止可以取到外层函数中的局部变量，还可以将值保存在内存中。 本题分析可参考如下：
+1、var func=test()执行之后func指向subTest方法，func()第一次调用，弹出n的值是11，因为++在后，的确是先参与运算，在进行自加，可在这里没有表达式，也没有运算，自接就是进行了n++；下面alert就是下一步操作了，肯定是需要上部操作执行完的，所以是自加之后的值所以是1。
+2、接下来就是闭包的作用了，
+闭包有2个作用：一个是可以读取函数内部的变量，另一个就是让这些变量的值始终保持在内存中。
+所以第一次调用之后，n的值变为11，在第二次调用的时候，访问到的n是11，++之后，就是12了。
+         */
+        //字面式声明对象
+
+        //构造式声明对象
+        // function person(name, sex, age) {
+        //     //this 代表的当前对像
+        //     this.name = name;
+        //     this.sex = sex;
+        //     this.age = age;
+        //     this.show = function () {
+        //         alert(this.name, this.sex, this.age);
+        //     }
+        // }
+        // var obj = new person('张三', '男', 18);
+        // obj.show();
+
+        //工厂模式 声明对象 在方法内部创建对象,给对象添加属性和方法,并返回对象
+        //属性和方法都是赋给object的
+        function createObject(name, age) {
+            var obj = new Object();
+            obj.na = name;
+            obj.age = age;
+            obj.run = function () {
+                return this.na + "------" + this.age + "---run";
+            }
+            obj.say = function () {
+                return '今天天气不错';
+            }
+            return obj;
+        }
+        var box1 = createObject('张三', 18);
+        alert(box1.run());
+        var box2 = createObject('李四', 20);
+
+        //原型模式 声明对象
+        function test() { }
+
+        test.prototype;//自带该对象
+        alert(test.prototype instanceof Object);
+        //prototype 就是一个对象Object
+        test.prototype.color = 'red';
+        test.prototype.height = 1.1;
+        test.prototype.width = 1.2;
+        test.prototype.info = function () {
+            alert(this.color + "--" + this.height + "--" + this.width);
+        }
+
+        var car = new test();
+        car.info();
+        //还可以这样写 以json数据的方式写出
+        test.prototype = {
+            color: 'red',
+            height: 1.1,
+            width: 1.2,
+            info: function () {
+                alert(this.color + "--" + this.height + "--" + this.width);
+            }
+        }
+        //混合模式= 构造 + 原型 的模式
+
+    </script>
+</body>
+
+</html>
