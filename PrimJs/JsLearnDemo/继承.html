@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <script>
+        //原型与原型链
+        //原型:prototype 添加属性和方法
+        var person = function () {//父类
+            person.prototype.say = function () {
+                alert('天气挺好');
+            }
+        }
+        person.prototype.gongzi = 500;
+        var progremmer = function () {
+            
+        }
+        progremmer.prototype.text = 1;
+        progremmer.prototype = new person();//原型继承 必须进行实例化
+        progremmer.prototype.wcd = function () {
+            alert('明天天气也不错');
+        }
+        progremmer.prototype.gongzi = 1000;
+
+        var p = new progremmer();
+        p.say();
+        p.wcd();
+        console.log(p.gongzi);
+        //分析:var p = new progremmer(); p.__proto__ = progremmer.prototype = new person()
+        //new person() 拆分
+        //var p1 = new person()  progremmer.prototype = p1
+
+        //调用流程:p.say() --> progremmer.prototype --> p1.__proto__ --> person.prototype.say()
+
+        //p.__proto__ = person.prototype --> 有say方法
+    </script>
+</body>
+
+</html>

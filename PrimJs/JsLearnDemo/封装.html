@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>封装</title>
+</head>
+
+<body>
+    <script>
+        //封装
+        //可以使用闭包
+        // function demo(param) {
+        //     var n = 1;
+        //     function test() {
+        //         n++;
+        //     }
+        //     text();
+        //     return n;
+        // }
+        // function demo(){
+        //     var n = 1;//局部变量
+        //     function test(){
+        //         ++n;
+        //         return n;
+        //     }
+        //     return test;
+        // }
+        // var c = demo();
+        // console.log(c());//2
+
+        function A() {
+            function _xx() {
+                alert("_xx")
+            }
+            this.xx = function () {//如果逻辑很复杂会占用很大的内存
+                return _xx;
+            }
+        }
+
+        A.prototype.action = function () {
+            alert('普通方法');
+        }
+
+        var a = new A();//实例化A
+        var b = a.xx();
+        console.log(b);
+        b();
+        //缺点:1.占内存 2.不利于继承
+
+
+
+    </script>
+</body>
+
+</html>
