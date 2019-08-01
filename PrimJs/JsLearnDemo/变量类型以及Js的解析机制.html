@@ -41,7 +41,7 @@
 
         // }
         // console.log(preson);
-        // delete preson.sex;//删除属性
+        // delete preson.sex;//只是删除属性 注意:不可以删除方法 删除不了变量 同时也不能删除原型链中的属性
         // console.log(preson);
         // //函数是引用类型 可以为其添加属性和方法 
         // function fn(){
@@ -60,7 +60,7 @@
         //     name:'小明',
         //     sex:'女'
         // }
-        //不相等 引用类型 只有指向同一个引用才相等 xm xh 开辟了两个不同的空间 
+        // //不相等 引用类型 只有指向同一个引用才相等 xm xh 开辟了两个不同的空间 
         // console.log(xm === xh);
 
         // function equleObj(a,b){
@@ -85,6 +85,12 @@
 所以b不会受到影响 为[4] . 后面又把a=b指向了同一个地址 ,此时为b添加元素 , 
 因为a、b的地址都没有改变 ,a也会随之改变 ,所以a为[4,44] . 
          */
+        // a = {
+        //     name:'xm'
+        // };
+        // b = a;
+        // b.name = 'xh';
+        // console.log('b:'+b.name+' a:'+a.name);
 
         //js 的解析机制
         //  var name = 'xm';
@@ -95,8 +101,8 @@
         //      var age = 20;
         //  }
         //  fn();
-        //js的解析过程
-        //预解析
+        // js的解析过程
+        // 预解析
         //  window 
         //    name = undefined
         //    age = undefined
@@ -129,7 +135,7 @@
         // }
 
         //再看如下的解析
-        // document.write(fn2);
+        // document.write(fn2);//undefined
         // //注意这是变量赋值不是函数声明 预解析后的fn2 = undefined
         // var fn2 = function(){};
 
@@ -142,20 +148,20 @@
         // a = 1;//没有var 就不能正常的预解析
 
         //2.
-        console.log(a);//function a(){console.log(4);}
-        var a = 1;
-        console.log(a);//1
-        function a() {
-            console.log(2);
-        }
-        console.log(a);//1
-        var a = 3;
-        console.log(a);//3
-        function a() {
-            console.log(4);
-        }
-        console.log(a);//3
-        a();//报错
+        // console.log(a);//function a(){console.log(4);}
+        // var a = 1;
+        // console.log(a);//1
+        // function a() {
+        //     console.log(2);
+        // }
+        // console.log(a);//1
+        // var a = 3;
+        // console.log(a);//3
+        // function a() {
+        //     console.log(4);
+        // }
+        // console.log(a);//3
+        // a();//报错
                     /**
          * 执行过程,Js在预解析时 提前进行了函数的声明,对于同名的函数
          * 最后一个会覆盖前一个

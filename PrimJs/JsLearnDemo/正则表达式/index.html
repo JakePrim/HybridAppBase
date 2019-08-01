@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+   <title>创建正则表达式</title>
+<body>
+    <script>
+        //字面量 直接量
+        // /js/
+        // []
+        // {}
+
+        //构造函数
+        // regular experssion
+        // new RegExp();
+
+        // /js5_正则,‘!;@ / .存在特殊含义
+        // var s = 'I love js';
+        // var patter = /js/;
+        // //test exec
+        // console.log(patter.test(s));//匹配s中相应的字符 返回true
+        // console.log(patter.exec(s));//返回匹配的字符
+
+        // 模式修饰符 i ignoreCase 忽略大小写; g global 全局修饰; m multiline 多行修饰
+        /**
+         * 不区分大小写，修饰符i。
+
+           行首行尾，修饰符m，m修饰符的作用是修改^和$在正则表达式中的作用，让它们分别表示行首和行尾。
+
+           全局匹配，修饰符g，匹配所有元素，如有多个匹配时，返回数组。
+         */
+        // var s = 'I love Js';
+        // var patter = /js/i;//i 忽略大小写 在//后面添加,/js/ig /js/ig /js/igm... 
+        // //test exec
+        // console.log(patter.test(s));//匹配s中相应的字符 返回true
+        // console.log(patter.exec(s));//返回匹配的字符
+
+        // 通过构造函数实现正则
+        var s = 'I love Js';
+        // var patter = new RegExp('js','i');//匹配的字符,模式修饰符
+        // console.log(patter.test(s));
+        // console.log(patter.exec(s));
+
+        //构造函数与字面量的区别
+        var input = "input";//使用动态的查找关键字
+        // var patter = "/" + input +"/i";//这个时候patter 就不是正则了而是字符串
+        //这个时候就可以通过构造函数的方式来判断了
+        var patter = new RegExp(input,"i");//
+        console.log(patter.test(s));
+        input = "love";
+        patter = new RegExp(input,'i');
+        console.log(patter.exec(s)); 
+
+        //
+      
+    </script>
+</body>
+
+</html>

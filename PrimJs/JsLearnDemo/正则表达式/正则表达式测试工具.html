@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        #regexp {
+            width: 650px;
+            margin: 100px auto;
+            font-size: 14px;
+        }
+
+        #regexp .title {
+            color: #777;
+            font-size: 24px;
+            text-align: center;
+        }
+
+        #regexp .textbox {
+            width: 638px;
+            height: 150px;
+            font-size: 24px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 5px;
+            resize: none;
+        }
+
+        #regexp .textfiled {
+            width: 215px;
+            padding: 5px;
+            border: 1px solid #ccc;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="regexp">
+        <h1 class="title">正则表达式测试工具</h1>
+        <textarea id="userTags" class="textbox" placeholder="在此输入带匹配的文本"></textarea>
+        <p>
+            正则表达式:<input type="text" id="useRegExp" class="textfiled" placeholder="在此输入正则表达式" />
+            <input type="checkbox" name="userModifier" value="i" /> 忽略大小写
+            <input type="checkbox" name="userModifier" value="m" /> 多行匹配
+            <input type="checkbox" name="userModifier" value="g" /> 全局匹配
+            <input type="button" value="测试匹配" id="matchingBtn" class="matchbtn" />
+        </p>
+        <h3>匹配结果:</h3>
+        <textarea id="matchingResult" class="textbox" placeholder="" disabled="disabled"></textarea>
+    </div>
+
+    <script>
+        var userTags = document.getElementById('userTags');
+        var useRegExp = document.getElementById('useRegExp');
+        //数组
+        var userModifiers = document.getElementsByName('userModifier');
+        var matchingBtn = document.getElementById('matchingBtn');
+        var matchingResult = document.getElementById('matchingResult');
+        var pattern;
+        var modifier = '';
+
+        for (var i = 0; i < userModifiers.length; i++) {
+            userModifiers[i].onclick = function () {
+                //每次点击清空
+                modifier = '';
+                //每一次点击都要循环匹配
+                for (var j = 0; j < userModifiers.length; j++) {
+                    if(userModifiers[j].checked){
+                        modifier += userModifiers[j].value;
+                    }
+                }
+            }
+        }
+
+        matchingBtn.onclick = function () {
+            if(!userTags.value){
+                alert('请输入待匹配待文本');
+                userTags.focus();
+                return;
+            }
+            if(!useRegExp.value){
+                alert('请输入正则');
+                useRegExp.focus();
+                return;
+            }
+            pattern = new RegExp(useRegExp.value, modifier);
+            matchingResult.value = pattern.exec(userTags.value) || '(没有匹配结果)';
+        }
+
+    </script>
+</body>
+
+</html>

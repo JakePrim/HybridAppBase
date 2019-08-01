@@ -3,28 +3,28 @@
 
 <body>
     <script>
-        //原型与原型链
+        //原型与原型链 原型继承
         //原型:prototype 添加属性和方法
-        var person = function () {//父类
-            person.prototype.say = function () {
-                alert('天气挺好');
-            }
-        }
-        person.prototype.gongzi = 500;
-        var progremmer = function () {
-            
-        }
-        progremmer.prototype.text = 1;
-        progremmer.prototype = new person();//原型继承 必须进行实例化
-        progremmer.prototype.wcd = function () {
-            alert('明天天气也不错');
-        }
-        progremmer.prototype.gongzi = 1000;
+        // var person = function () {//父类
+        //     person.prototype.say = function () {
+        //         alert('天气挺好');
+        //     }
+        // }
+        // person.prototype.gongzi = 500;
+        // var progremmer = function () {
 
-        var p = new progremmer();
-        p.say();
-        p.wcd();
-        console.log(p.gongzi);
+        // }
+        // progremmer.prototype.text = 1;
+        // progremmer.prototype = new person();//原型继承 必须进行实例化
+        // progremmer.prototype.wcd = function () {
+        //     alert('明天天气也不错');
+        // }
+        // progremmer.prototype.gongzi = 1000;
+
+        // var p = new progremmer();
+        // p.say();
+        // p.wcd();
+        // console.log(p.gongzi);
         //分析:var p = new progremmer(); p.__proto__ = progremmer.prototype = new person()
         //new person() 拆分
         //var p1 = new person()  progremmer.prototype = p1
@@ -32,6 +32,112 @@
         //调用流程:p.say() --> progremmer.prototype --> p1.__proto__ --> person.prototype.say()
 
         //p.__proto__ = person.prototype --> 有say方法
+        //父元素的所有方法都继承给子元素
+        // function pTest() {
+        //     this.say = function () {
+        //         alert('say');
+        //     }
+        // }
+        // pTest.prototype.name = 'pTest';
+        // function sTest() {
+        //     this.eat = function () {
+        //         alert('eat');
+        //     }
+        // }
+        // sTest.prototype.name = 'sTest';
+        // sTest.prototype = new pTest();//prototype 的指向内存地址改变,同时继承了pTest的所有方法和属性
+        // var test = new sTest();
+        // console.log(test.name);
+        // test.say();
+        // test.eat();
+
+        //构造函数继承
+        // function persons(name) {
+        //     this.name = name;
+        //     this.say = function () {
+        //         alert('父亲的名字是:' + this.name);
+        //     }
+        // }
+
+        // function child(name, age) {
+        //     this.age = age;
+        //     this.cSay = function () {
+        //         //注意这里的this.name = persions.name ?? why
+        //         alert('孩子的名字:' + this.name + this.obj.name + " 年龄:" + this.age);
+        //     }
+        //     //可以这样设置
+        //     //this.obj = persons(name);
+        //     this.obj = persons;//继承了persons 用父对象创建了子对象 所有的属性和方法都将传递到子对象中
+        //     //还可以这样设置
+        //     this.obj(name);//子对像的name 传递到父对象中
+        // }
+
+        //对象冒充 传递特权属性和特权方法给子类
+        function person(name,age){
+            //特权属性和特权方法
+            this.name = name;
+            this.age = age;
+            this.say = function(){
+                console.log('====================================');
+                console.log('say hi');
+                console.log('====================================');
+            }
+        }
+        person.prototype.walk = function () {
+            console.log('walk....');
+        }
+
+        function student(name,age,grade){
+            this.newMethod = person;//冒充person 对象,传递特权属性和特权方法给子类
+            this.newMethod(name,age);
+            this.grade = grade;
+        }
+
+        var stu = new student('xm',13,2);
+        stu.say();
+        //注意 stu 继承了特权属性和方法,没有继承共有的属性和方法
+        // stu.walk();//会报错
+
+
+
+        // var p = new persons('张三');
+        // p.say();
+        // var c = new child('李四', 18);
+        // c.cSay();
+        // c.say();
+
+        // 程序 自下而上运行 
+        //李四 -> this.obj --> persons(name) --> this.name = 李四
+        //this.cSay --> this.name --> persons --> this.name = 李四
+
+        //call apply 继承
+        //obj.call(方法,参数,参数,...)
+        //obj.apply(方法,[....])
+        // function person(name, age, len) {
+        //     this.name = name;
+        //     this.age = age;
+        //     this.len = len;
+        //     this.say = function(){
+        //         alert(this.name+this.age+this.len);
+        //     }
+        // }
+
+        
+        // function student(name,age) {
+        //     // this -> student,调用call方法,那么person中的this -> student
+        //     //call继承
+        //     // person.call(this,name,age);
+        //     //apply继承 
+        //     person.apply(this,[name,age]);//
+        // }
+
+        // var p = new person('xm',12,180);
+        // p.say();
+
+        // var s = new student('xh',18);
+        // s.say();
+
+
     </script>
 </body>
 
