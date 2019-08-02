@@ -17,7 +17,7 @@
         // }
         // add(1, 2);
         // add(1);//num1 = 1 ; num2 = undefined
-        //可选参数
+        // 可选参数
         // function pow(base, pow) {
         //     pow = pow || 2;
         //     return Math.pow(base, pow);
@@ -44,28 +44,28 @@
         //     'length':2
         // }
 
-        // function fn(name){
-        //     console.log(arguments.callee);
-        //     arguments[0] = '';
-        //     console.log(name);//'' name值也发生变化了
-        //     function fn2(){//每个函数都有一个独特的arguments
-        //         console.log(arguments);
-        //     }
-        // }
+        function fn(name){
+            console.log(arguments.callee);
+            arguments[0] = '';
+            console.log(name);//'' name值也发生变化了
+            function fn2(){//每个函数都有一个独特的arguments
+                console.log(arguments);
+            }
+        }
         // fn('xh');
         //arguments.callee 函数的本体 可以用到在递归调用中
         //场景如下:
         //如果函数jiecheng 内部过于复杂,用到了递归,某天改掉了函数名,还要将每个递归调用的函数名都要改掉
         //用arguments.callee 就是当前函数的本体,这样就不用在手动去改掉函数名了.
         // "use strict"//严格模式下 不允许使用arguments.callee 如何修改呢?
-        // function jiecheng(num){
-        //     if(num <= 1) return 1;
-        //     return num * arguments.callee(num - 1);
-        // }
+    //     function jiecheng(num){
+    //         if(num <= 1) return 1;
+    //         return num * arguments.callee(num - 1);
+    //     }
 
-        // console.log(jiecheng(5));
+    //     console.log(jiecheng(5));
 
-        //严格模式下 可以这样使用
+    //     严格模式下 可以这样使用
     //    var jiecheng =  function fn(num){
     //         if(num <= 1) return 1;
     //         return num * fn(num - 1);

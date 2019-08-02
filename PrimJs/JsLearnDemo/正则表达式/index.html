@@ -2,6 +2,11 @@
 <html>
    <title>创建正则表达式</title>
 <body>
+
+  <p class="odd1 odd odd2">1</p>
+  <p class="even">2</p>
+  <p class="odd">3</p>
+  <p class="even">4</p>
     <script>
         //字面量 直接量
         // /js/
@@ -50,6 +55,85 @@
         console.log(patter.exec(s)); 
 
         //
+        //中文的表示是\u4e00-\u9fa5，
+        //\w表示[A-Za-z0-9_]，
+        //\s表示空格和其他空白字符，
+        //\d表示[0-9]
+        
+        //\加上大写字母表示\加上其对应小写字母的相反含义，比如:/S /W 都是取相反的含义
+        //所以包含空格、中文、字母、数字以及下划线的正则表达式应该是/[\u4e00-\u9fa5\s\w]/
+
+        //\d{1,}  匹配至少一次以上
+        //\d+ 匹配至少一次以上
+        //\d* 匹配至少0次以sdsds上
+        //\d{0,1} 0次或者1次 也可以 \d?
+        //\d+? //匹配1个 非贪婪匹配
+        //<strong>.*?<\/strong>
+        // | 表示或者 0 | - 
+        //(ab) 分组 (?:ab) 非捕获性的分组 abcd /(ab)(c)/ = [abc ,ab, c] /(a(b(c)))/ = [abc abc bc c]
+        //引用的方式 /([Jj])ava([Ss])cript\sis\s(\1\2)/
+
+        // var str = 'html js';
+        // var pattern = /^js/;// 字符首匹配 字符串开头必须是j
+        // console.log(pattern.exec(str));//null 
+        // // /[^0-9]/ //取反 除了0-9以外的所有字符
+
+        // var pattern = /js$/;// 字符尾匹配 str = html js css 匹配失败
+        // console.log(pattern.exec(str));
+
+        // var str = '110119120';
+
+        // //验证输入的都是数字
+        // var pattern =/^\d+$/;//开头和结尾之间都是数字 /\D/ 不全是数字 匹配不是数字的字符串
+        // console.log(pattern.exec(str));
+        // if(patter.test(str)){
+        //   console.log('全是数字');
+        // }else{
+        //   console.log('不全是数字');
+        // }
+
+        // var str = '@@@@js@@@@ html';
+        // var pattern = /\bjs\b/;//匹配单词的边界
+        // console.log(pattern.exec(str));
+
+        // var oddP = getByClassName('odd');
+        // var evenP = getByClassName('even');
+
+        // for(var i=0;i<oddP.length;i++){
+        //   oddP[i].style.backgroundColor = 'red';
+        // }
+
+        // for(var i=0;i<evenP.length;i++){
+        //   evenP[i].style.backgroundColor = 'yellow';
+        // }
+
+
+        // //实例应用 兼容:getElementsByClassName
+        // function getByClassName(className,parentNode) {
+        //   if(document.getElementsByClassName){
+        //     //支持
+        //     return document.getElementsByClassName(className);
+        //   }else{
+        //     //不支持
+        //     parentNode = parentNode || document;
+        //     var nodeList = [];//
+        //     var allNodes = parentNode.getElementsByTagName('*');
+        //     // var pattern = new RegExp('(^|\\s+)'+className+'($|\\s+)');
+        //     var pattern = new RegExp('\\b'+className+'\\b');
+
+        //     for(var i = 0;i<allNodes.length;i++){
+        //       if(pattern.test(allNodes[i])){
+        //         nodeList.push(allNodes[i]);
+        //       }
+        //     }
+        //     return nodeList;
+        //   }
+        // }
+
+        // /java(?=script)/  匹配java 但是java后面必须跟 script 才能匹配成功 ,/java(?!script)/ java 后面不是script才匹配java
+
+
+        //了解 RegExp 对象
       
     </script>
 </body>
