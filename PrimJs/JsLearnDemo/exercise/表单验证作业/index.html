@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>慕课高铁客服服务中心</title>
+    <link rel="stylesheet" href="css/index.css">
+</head>
+
+<body>
+    <div class='moocHeader clear'>
+        <div class="header-left">
+            <img src="img/logo.png" alt="慕课高铁客服服务中心logo" class="logo" />
+            <h3>慕课高铁客服服务中心 | </h3>
+            <span class="server"> 客户服务</span>
+        </div>
+
+        <div class="header-right">
+            <span class="feed">意见反馈</span>
+            <a href="#" class="email" style="text-decoration : none">imooc@com</a>
+            <p>您好,请</p>
+            <a href="#" class="login" style="text-decoration : none">登录</a>
+            <span class="rigister">| 注册</span>
+            <div class="dropdown">
+                <span class="imooc">我的IMOOC</span>
+                <div class="dropdown-content">
+                    <a href="#">未完成订单</a>
+                    <a href="#">已完成订单(改/退)</a>
+                    <a href="#">我的保险</a>
+                    <a href="#">查看个人信息</a>
+                    <a href="#">账号安全</a>
+                    <a href="#">常用联系人</a>
+                    <a href="#">重点旅客预约</a>
+                    <a href="#">遗失物品查找</a>
+                    <a href="#">服务查询</a>
+                    <a href="#">投诉</a>
+                    <a href="#">建议</a>
+                </div>
+            </div>
+            <img class="img-phone" src="img/phone.png" alt="手机版">
+            <span>手机版</span>
+        </div>
+    </div>
+    <div class="moocContent">
+        <p class="mooc-loaction">您现在的位置: 客运首页>注册</p>
+        <div class="register-info">
+            <p class="userinfo">
+                <span class="userinfo_"> 账户信息</span>
+            </p>
+            <div class="edit-info">
+                <div class="item">
+                    <span class="important">*</span>
+                    <label for="userAccount">用 户 名&nbsp;:</label>
+                    <input type="text" id="userAccount" placeholder=" 用户设置成功后不可修改">
+                    <span class="item_" title='6-30位字母、数字或"_",字母开头'>6-30位字母、数字或"_",字母开头</span>
+                </div>
+                <br>
+                <div class="item">
+                    <span class="important">*</span>
+                    <label for="userPass">登录密码:</label>
+                    <input type="password" id="userPass" placeholder=" 6-20位字母、数字或符号">
+                    <span class="mediums" id="medium1"></span><span class="mediums" id="medium2"></span><span class="mediums" id="medium3"></span>
+                </div>
+                <p class="item_" title="请输入6-20位字母、数字或符号"></p>
+                <br>
+                <div class="item">
+                    <span class="important">*</span>
+                    <label for="userPass_">确认密码:</label>
+                    <input type="password" id="userPass_" placeholder=" 再次输入您的登录密码">
+                    <span class="item_" title="两次密码输入不一致"></span>
+                </div>
+
+                <br>
+                <div class="item">
+                    <span class="important">*</span>
+                    <label for="userName">姓&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;名:</label>
+                    <input type="text" id="userName" placeholder=" 请输入姓名">
+                    <div style="display: inline-block" id="rule-link-wrap">
+                        <a href="#rule-popup-box-01" style="color: rgb(251, 116, 3);">姓名填写规则</a>
+                        <div class="rule-popup-box" id="rule-popup-box-01">
+                            <div class="tit">
+                                <h3>规则说明</h3>
+                            </div>
+                            <div class="con">
+                                <ul>
+                                    <li>1.确认姓名中生僻字无法输入时，可用生僻字拼音或同音字替代。</li>
+                                    <li>2.输入姓名保存后，遇有系统无法正确显示的汉字，可用该汉子的拼音或同音字重新修改后保存。</li>
+                                    <li>3.姓名中有繁体字无法输入时，可用简体替代。</li>
+                                    <li>4.姓名较长，汉字与英文字符合计超过30个（1个汉子算2个字符）的，需按姓名中第一个汉字或英文字符开始按顺序连续输入30个字符（空格字符不输入），其中英文字符输入时不去别大小写
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <span class="item_" title="姓名只能包含中文或者英文且字符在3-30个之间"></s>
+                </div>
+                <br>
+                <div class="item">
+                    <span class="important">*</span>
+                    <label for="selectInformation">证件类型:</label>
+                    <select id="selectInformation">
+                        <option>二代身份证</option>
+                        <option>港澳通行证</option>
+                        <option>台湾通行证</option>
+                        <option>护照</option>
+                    </select>
+                </div>
+
+                <br>
+                <div class="item">
+                    <span class="important">*</span>
+                    <label for="userInformation">证件号码:</label>
+                    <input type="text" id="userInformation" placeholder=" 请输入您的证件号码">
+                    <span class="item_" title="请输入18位身份证号码"></span>
+                </div>
+
+                <br>
+                <div class="item">
+                    <span class="important">&nbsp;&nbsp;</span>
+                    <label for="userEmail">邮&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;箱:</label>
+                    <input type="text" id="userEmail" placeholder=" 请正确填写邮箱地址">
+                    <span class="item_" title="请输入正确的邮箱"></span>
+                </div>
+
+                <br>
+                <div class="item">
+                    <span class="important">*</span>
+                    <label for="userPhone">手机号码:</label>
+                    <input type="text" id="userPhone" placeholder=" 请输入您的手机号码">
+                    <span class="item_" title="您输入的手机号码不是有效的格式！">请正确填写手机号码,稍后将向该手机号码发送短信验证码</span>
+                </div>
+
+                <br>
+                <div class="item">
+                    <span class="important">*</span>
+                    <label for="userType">旅客类型:</label>
+                    <select id="userType">
+                        <option>成人</option>
+                        <option>儿童</option>
+                        <option>学生</option>
+                        <option>残疾军人</option>
+                        <option>伤残人民警察</option>
+                    </select>
+                </div>
+                <br>
+            </div>
+            <div class="end">
+                <input type="checkbox" id="choose" />
+                <label for="choose">我已同意并遵守</label>
+                <a href="#" style="text-decoration : none">《中国铁路客服中心网站服务条款》</a>
+            </div>
+            <div class="end"><button id="submit">下一步</button></div>
+
+        </div>
+
+    </div>
+</body>
+<script type="text/javascript" src="js/index.js"></script>
+
+</html>

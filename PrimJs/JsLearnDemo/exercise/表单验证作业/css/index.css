@@ -1,0 +1,296 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.clear {
+    clear: both;
+}
+
+body {
+    font-family: 'Microsoft YaHei'
+}
+
+/* 头部整体样式 */
+
+.moocHeader {
+    /*头部内容水平排布且垂直居中*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: -webkit-flex;
+    /* Safari */
+    padding: 5px 0px;
+    height: 100px;
+    background-color: #eee;
+}
+
+.moocHeader .header-left {
+    display: flex;
+    display: -webkit-flex;
+    /* Safari */
+    justify-content: center;
+    align-items: center;
+}
+
+.moocHeader .header-left .logo {
+    cursor: pointer;
+}
+
+.moocHeader .header-left .server {
+    margin-left: 5px;
+    cursor: pointer;
+}
+
+.moocHeader .header-right {
+    margin-left: 50px;
+    display: -webkit-flex;
+    /* Safari */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.moocHeader .header-right .email {
+    color: rgb(251, 116, 3);
+    font-size: 16px;
+    margin: 0px 5px;
+}
+
+.moocHeader .header-right .login {
+    color: rgb(251, 116, 3);
+    font-size: 16px;
+    margin-right: 5px;
+}
+
+.moocHeader .header-right .imooc {
+    margin: 0px 15px;
+}
+
+.moocHeader .header-right .img-phone {
+    width: 13px;
+    height: 20px;
+}
+
+.moocHeader .header-right .feed, .moocHeader .header-right .email, .moocHeader .header-right .rigister, .moocHeader .header-right .imooc, .moocHeader .header-right .img-phone {
+    cursor: pointer;
+}
+
+.moocHeader .header-right .feed:hover {
+    color: rgb(251, 116, 3);
+}
+
+.moocHeader .header-right .email:hover {
+    color: rgb(36, 135, 201);
+}
+
+.moocHeader .header-right .rigister:hover {
+    color: rgb(251, 116, 3);
+}
+
+.moocHeader .header-right .imooc:hover {
+    color: rgb(251, 116, 3);
+}
+
+.moocHeader .header-right .login:hover {
+    color: rgb(36, 135, 201);
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    min-width: 170px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    border: 1px solid rgb(251, 116, 3);
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.mediums {
+    display: inline-block;
+    width: 50px;
+    height: 10px;
+    line-height: 10px;
+    background: #ddd;
+    text-align: center;
+    margin: 0px 2px;
+}
+
+.default {
+    background: #eeeeee;
+}
+
+.weak {
+    background: #FF0000;
+}
+
+.medium {
+    background: #FF9900;
+}
+
+.strong {
+    background: #33CC00;
+}
+
+/*内容整体样式*/
+
+.moocContent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #fff;
+    border-block-start: 2px solid rgb(36, 135, 201);
+}
+
+.moocContent .mooc-loaction {
+    width: 1000px;
+    margin: 10px 0px;
+}
+
+.moocContent .register-info {
+    width: 1000px;
+    height: 600px;
+    border: 1px solid rgb(251, 116, 3);
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+
+.moocContent .register-info .userinfo {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    height: 35px;
+    color: white;
+    background-color: rgb(251, 116, 3);
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+
+.moocContent .register-info .edit-info {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: left;
+    margin-left: 250px;
+    flex-direction: column;
+}
+
+.edit-info .item input, select {
+    width: 200px;
+    height: 25px;
+    top: 50%;
+    left: 15%;
+    margin-top: -20px;
+    font-size: 15px;
+    outline: none;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 2px;
+    transition: box-shadow .5s;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    -ms-border-radius: 2px;
+    -o-border-radius: 2px;
+}
+
+.edit-info .item input:focus {
+    box-shadow: 1px 1px 10px #6385d1, 1px 1px 10px #6385d1;
+}
+
+.item .important {
+    color: rgb(251, 116, 3);
+}
+
+.item_ {
+    color: rgb(251, 116, 3);
+}
+
+.userinfo_ {
+    margin-left: 10px;
+}
+
+.end {
+    text-align: center;
+    margin: 0 auto;
+}
+
+#submit {
+    margin-top: 30px;
+    height: 30px;
+    width: 150px;
+    background-color: rgb(251, 116, 3);
+    border-radius: 5;
+    color: white;
+    cursor: pointer;
+    -webkit-border-radius: 5;
+    -moz-border-radius: 5;
+    -ms-border-radius: 5;
+    -o-border-radius: 5;
+}
+
+#submit:hover{
+    background-color: rgb(251, 116, 100);
+}
+
+.rule-popup-box {
+    display: none;
+    position: absolute;
+    top: 100;
+    right: 100;
+    z-index: 100;
+    width: 400px;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid rgb(36, 135, 201);
+}
+
+.rule-popup-box .tit {
+    border-bottom: 1px solid #dedede;
+}
+
+.rule-popup-box .tit h3 {
+    padding-bottom: 10px;
+    color: #333;
+    font-size: 16px;
+}
+
+.rule-popup-box .con {
+    padding: 10px 0 0 0;
+}
+
+.rule-popup-box .con ul {
+    padding-bottom: 5px;
+}
+
+.rule-popup-box .con ul li {
+    color: #333;
+    padding: 2px 0 2px 20px;
+    text-indent: -20px;
+    list-style: none;
+}
