@@ -1,7 +1,7 @@
 package tree;
 
 /**
- * 手写二叉树结构
+ * 手写二分搜索树结构
  */
 public class BST<T extends Comparable> {
 
