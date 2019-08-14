@@ -26,7 +26,7 @@ $(document).ready(function () {
         } else if (event.keyCode == 37) {
             indexs > 0 ? swiper(indexs - 1) : swiper($('a').length - 1);
         } else {
-            return false;
+            return true;
         }
     })
 
@@ -41,6 +41,15 @@ $(document).ready(function () {
         //查找某个img的位置 siblings 所有的兄弟元素
         $('img').eq($(this).index()).css({ "opacity": "1" }).siblings().css({ "opacity": "0" });
     });
+
+    /**
+     * 初始化 使图片默认显示第一个
+     */
+    var init = function(){
+        $('img').eq(0).css({ "opacity": "1" }).siblings().css({ "opacity": "0" });
+    }
+
+    init();
     //鼠标离开元素
     // $('a').mouseleave(function(){
 

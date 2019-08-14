@@ -1,4 +1,4 @@
-package com.prim.http;
+package com.prim.http.net;
 
 import java.net.MalformedURLException;
 import java.net.URL;
@@ -6,7 +6,7 @@ import java.net.URL;
 /**
  * @author prim
  * @version 1.0.0
- * @desc
+ * @desc 请求的URL的封装
  * @time 2019-06-24 - 07:16 这
  */
 public class HttpUrl {
@@ -15,16 +15,12 @@ public class HttpUrl {
     private String protocol;
     private int port;
 
-    public HttpUrl(String url) {
-        try {
-            URL urls = new URL(url);
-            host = urls.getHost();
-            file = urls.getFile();
-            protocol = urls.getProtocol();
-            port = urls.getPort();
-        } catch (MalformedURLException e) {
-            e.printStackTrace();
-        }
+    public HttpUrl(String url) throws MalformedURLException {
+        URL urls = new URL(url);
+        host = urls.getHost();//host
+        file = urls.getFile();// /query?.....
+        protocol = urls.getProtocol();//http/https
+        port = urls.getPort();//端口 如：80
     }
 
     public String getHost() {
