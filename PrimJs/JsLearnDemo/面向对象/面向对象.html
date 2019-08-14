@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        /**
+         * 理解对象,创建自定义对象的最简单方式就是创建一个object实例,然后添加属性和方法
+         */
+        // var person = new Object();
+        // person.name = 'Nicholas';
+        // person.age = 27;
+        // person.job = 'Software Engineer';
+
+        // person.sayName = function(){
+        //     alert(this.name);//person.name
+        // }
+
+        /**
+         * 对象字面量语法 
+         */
+        // var person = {
+        //     name:"Nicholas",
+        //     age:27,
+        //     job:"Software Enginner",
+        //     sayName:function(){
+        //         alert(this.name);
+        //     }
+        // };
+
+        /**
+         * 属性类型:数据属性和仿问器属性.
+         * 数据属性:[[Configurable]]->表示能否通过delete删除属性从而重新定义属性,能否修改属性的特性或者能否
+         * 把属性修改为仿问器属性.默认为true.
+         * [[Enumerable]]->表示能否通过for-in循环返回属性.默认为true
+         * [[Writable]]->表示能否修改属性的值.默认为true
+         * [[Value]]->包含这个属性的数据值,默认为undefined,读取这个属性值的时候,从这个位置读;写入属性值的时候
+         * 把新值保存在这个位置.
+         * 如下代码:
+         * 创建了一个属性名为name的属性,为它指定的值是'Nicholas'.也就是说[[Value]]特性将被设置为‘Nicholas’.
+         * 而对这个值的修改都将反映在这个位置
+         */
+        // var person = {
+        //     name:'Nicholas'
+        // }
+
+        /**
+         * 修改默认特性:使用Object.defineProperty().这个方法接受三个参数:属性所在的对象、属性的名字和一个描述符对象
+         */
+        // var person={};
+        // Object.defineProperty(person,'name',{
+        //     writable:false,
+        //     value:'Nicholas'
+        // });
+        // alert(person.name);
+        // person.name = 'Greg';
+        // alert(person.name);
+        /**
+         * 如上述代码,将name属性设置为只读属性,这个属性的值不可修改.在非严格模式下,赋值操作将被忽略;在严格模式下.赋值操作
+         * 将会导致抛出错误
+         */
+
+        /**
+         * 类似的规则也适用于不可配置的属性,把configurable设置为false,表示不能从对象中删除属性.
+         * 如果调用delete persion.name ,在非严格模式下什么也不会发生,在严格模式下会导致错误.
+         * 注意:一旦把属性定义为不可配置的就不能再把它变回可配置了.再调用Object.defineProperty()
+         * 方法修改除writable之外的特性,都会导致错误.
+         */
+        var person = {};
+        Object.defineProperty(person, 'name', {
+            configurable: false,
+            value: 'Nicholas'
+        });
+        //抛出错误
+        Object.defineProperty(person,'name',{
+            configurable:true,
+            value:'Nicholas'
+        })
+        alert(person.name);
+        delete person.name;
+        alert(person.name);
+    </script>
+</body>
+
+</html>

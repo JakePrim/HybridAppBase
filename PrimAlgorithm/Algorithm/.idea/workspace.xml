@@ -2,31 +2,49 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="82d7983b-0692-480e-ba37-a5faa0b9ac7f" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/datastructure/tree/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/datastructure/tree/BTS.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/datastructure/tree/BTS.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../JavaAlgorithm/.gradle/4.10.3/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaAlgorithm/.gradle/4.10.3/fileHashes/fileHashes.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../JavaAlgorithm/.gradle/4.10.3/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaAlgorithm/.gradle/4.10.3/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../JavaAlgorithm/.gradle/4.10.3/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaAlgorithm/.gradle/4.10.3/javaCompile/javaCompile.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../JavaAlgorithm/.gradle/4.10.3/taskHistory/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaAlgorithm/.gradle/4.10.3/taskHistory/taskHistory.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../JavaAlgorithm/.gradle/4.10.3/taskHistory/taskHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaAlgorithm/.gradle/4.10.3/taskHistory/taskHistory.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../JavaAlgorithm/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaAlgorithm/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../JavaAlgorithm/.idea/caches/gradle_models.ser" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../JavaAlgorithm/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaAlgorithm/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../JavaAlgorithm/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaAlgorithm/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../JavaAlgorithm/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaAlgorithm/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../JavaAlgorithm/build/classes/java/main/tree/BST$Node.class" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaAlgorithm/build/classes/java/main/tree/BST$Node.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../JavaAlgorithm/build/classes/java/main/tree/BST.class" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaAlgorithm/build/classes/java/main/tree/BST.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../JavaAlgorithm/src/main/java/datastructure/tree/BST.java" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaAlgorithm/src/main/java/datastructure/tree/BST.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../PrimJs/JsLearnDemo/DOM/dom.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../PrimJs/JsLearnDemo/DOM/dom.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../PrimJs/JsLearnDemo/Js函数是什么.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../PrimJs/JsLearnDemo/jquery/jqueryLearn.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../PrimJs/JsLearnDemo/jquery/jqueryLearn.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../PrimJs/JsLearnDemo/jquery/js/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../PrimJs/JsLearnDemo/jquery/js/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../PrimJs/JsLearnDemo/关键词.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../PrimJs/JsLearnDemo/内存问题.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../PrimJs/JsLearnDemo/函数的参数.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../PrimJs/JsLearnDemo/函数的返回值.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../PrimJs/JsLearnDemo/变量类型以及Js的解析机制.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../PrimJs/JsLearnDemo/对象.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../PrimJs/JsLearnDemo/闭包.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaAlgorithm/.gradle/4.10.3/fileChanges/last-build.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaAlgorithm/.gradle/4.10.3/fileContent/fileContent.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaAlgorithm/.gradle/4.10.3/fileHashes/fileHashes.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaAlgorithm/.gradle/4.10.3/fileHashes/fileHashes.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaAlgorithm/.gradle/4.10.3/gc.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaAlgorithm/.gradle/4.10.3/javaCompile/classAnalysis.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaAlgorithm/.gradle/4.10.3/javaCompile/javaCompile.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaAlgorithm/.gradle/4.10.3/javaCompile/taskHistory.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaAlgorithm/.gradle/4.10.3/taskHistory/taskHistory.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaAlgorithm/.gradle/4.10.3/taskHistory/taskHistory.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaAlgorithm/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaAlgorithm/.gradle/buildOutputCleanup/cache.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaAlgorithm/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaAlgorithm/.gradle/vcs-1/gc.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaAlgorithm/.idea/.name" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaAlgorithm/.idea/JavaAlgorithm.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaAlgorithm/.idea/caches/build_file_checksums.ser" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaAlgorithm/.idea/checkstyle-idea.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaAlgorithm/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaAlgorithm/.idea/gradle.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaAlgorithm/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaAlgorithm/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaAlgorithm/.idea/runConfigurations.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaAlgorithm/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaAlgorithm/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaAlgorithm/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaAlgorithm/build/classes/java/main/algorithm/array/ArrayIntersection.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaAlgorithm/build/classes/java/main/algorithm/array/ArrayTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaAlgorithm/build/classes/java/main/tree/BST$Node.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaAlgorithm/build/classes/java/main/tree/BST.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaAlgorithm/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaAlgorithm/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaAlgorithm/gradlew" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaAlgorithm/gradlew.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaAlgorithm/jakeprim.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaAlgorithm/local.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaAlgorithm/settings.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaAlgorithm/src/main/java/algorithm/array/ArrayIntersection.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaAlgorithm/src/main/java/algorithm/array/ArrayTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaAlgorithm/src/main/java/datastructure/tree/BST.java" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
@@ -52,12 +70,25 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/datastructure/tree/BTS.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
+            <state relative-caret-position="313">
+              <caret line="106" column="28" lean-forward="true" selection-start-line="106" selection-start-column="28" selection-end-line="106" selection-end-column="28" />
               <folding>
-                <element signature="e#508#509#0" expanded="true" />
-                <element signature="e#560#561#0" expanded="true" />
+                <element signature="e#502#503#0" expanded="true" />
+                <element signature="e#534#535#0" expanded="true" />
+                <element signature="e#559#560#0" expanded="true" />
+                <element signature="e#586#587#0" expanded="true" />
+                <element signature="e#1997#1998#0" expanded="true" />
+                <element signature="e#2450#2451#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/datastructure/tree/Main.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="68">
+              <caret line="4" selection-start-line="4" selection-end-line="4" />
             </state>
           </provider>
         </entry>
@@ -78,6 +109,7 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/src/main/java/datastructure/tree/BTS.java" />
+        <option value="$PROJECT_DIR$/src/main/java/datastructure/tree/Main.java" />
       </list>
     </option>
   </component>
@@ -88,15 +120,9 @@
       </MavenGeneralSettings>
     </option>
   </component>
-  <component name="ProjectConfigurationFiles">
-    <option name="files">
-      <list>
-        <option value="$PROJECT_DIR$/.idea/vcs.xml" />
-      </list>
-    </option>
-  </component>
-  <component name="ProjectFrameBounds" extendedState="1">
-    <option name="y" value="23" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="16" />
+    <option name="y" value="-1030" />
     <option name="width" value="1440" />
     <option name="height" value="814" />
   </component>
@@ -159,6 +185,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="android.sdk.path" value="$USER_HOME$/Library/Android/sdk" />
     <property name="aspect.path.notification.shown" value="true" />
@@ -192,15 +219,15 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1565667073681</updated>
-      <workItem from="1565667075451" duration="1112000" />
+      <workItem from="1565667075451" duration="6453000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1112000" />
+    <option name="totallyTimeSpent" value="6453000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1440" height="814" extended-state="1" />
+    <frame x="16" y="-1030" width="1440" height="814" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Designer" />
@@ -247,13 +274,24 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/main/java/datastructure/tree/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" selection-start-line="4" selection-end-line="4" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/datastructure/tree/BTS.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
+        <state relative-caret-position="313">
+          <caret line="106" column="28" lean-forward="true" selection-start-line="106" selection-start-column="28" selection-end-line="106" selection-end-column="28" />
           <folding>
-            <element signature="e#508#509#0" expanded="true" />
-            <element signature="e#560#561#0" expanded="true" />
+            <element signature="e#502#503#0" expanded="true" />
+            <element signature="e#534#535#0" expanded="true" />
+            <element signature="e#559#560#0" expanded="true" />
+            <element signature="e#586#587#0" expanded="true" />
+            <element signature="e#1997#1998#0" expanded="true" />
+            <element signature="e#2450#2451#0" expanded="true" />
           </folding>
         </state>
       </provider>
