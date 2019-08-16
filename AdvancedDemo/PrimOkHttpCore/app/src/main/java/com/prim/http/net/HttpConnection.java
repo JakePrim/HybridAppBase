@@ -19,6 +19,8 @@ import javax.net.ssl.SSLSocketFactory;
 public class HttpConnection {
     Socket socket;
     Request request;
+    private HttpClient client;
+
     /**
      * 当前链接的socket是否与对应的host port一致
      *
@@ -30,7 +32,7 @@ public class HttpConnection {
         if (null == socket) {
             return false;
         }
-        return TextUtils.equals(socket.getInetAddress().getHostAddress(), host) && (port == socket.getPort());
+        return TextUtils.equals(socket.getInetAddress().getHostName(), host) && (port == socket.getPort());
     }
 
     /**
@@ -78,7 +80,7 @@ public class HttpConnection {
             //如果是https
             if (httpUrl.getProtocol().equalsIgnoreCase("https")) {
                 //也可以用户自己设置
-                socket = SSLSocketFactory.getDefault().createSocket();
+                socket = client.getSocketFactory().createSocket();
             } else {
                 socket = new Socket();
             }
@@ -90,6 +92,10 @@ public class HttpConnection {
 
     public void setRequest(Request request) {
         this.request = request;
+    }
+
+    public void setClient(HttpClient client) {
+        this.client = client;
     }
 
     public void updateLastUserTime() {

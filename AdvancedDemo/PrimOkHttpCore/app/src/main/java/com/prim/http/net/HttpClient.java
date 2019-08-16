@@ -1,5 +1,10 @@
 package com.prim.http.net;
 
+import java.util.ArrayList;
+import java.util.List;
+
+import javax.net.SocketFactory;
+
 /**
  * @author prim
  * @version 1.0.0
@@ -14,10 +19,25 @@ public class HttpClient {
 
     private final ConnectionPool connectionPool;
 
+
+    private final List<Interceptor> interceptors;
+
+    private final SocketFactory socketFactory;
+
     public HttpClient(Builder builder) {
         this.dispatcher = builder.dispatcher;
         this.retrys = builder.retrys;
         this.connectionPool = builder.connectionPool;
+        this.interceptors = builder.interceptors;
+        this.socketFactory = builder.socketFactory;
+    }
+
+    public List<Interceptor> getInterceptors() {
+        return interceptors;
+    }
+
+    public SocketFactory getSocketFactory() {
+        return socketFactory;
     }
 
     public Dispatcher getDispatcher() {
@@ -41,6 +61,10 @@ public class HttpClient {
         int retrys;
         ConnectionPool connectionPool;
 
+        List<Interceptor> interceptors = new ArrayList<>();
+
+        SocketFactory socketFactory;
+
         /**
          * 用户自定义调度器
          *
@@ -52,8 +76,47 @@ public class HttpClient {
             return this;
         }
 
+        /**
+         * 自定义socketFactory 如果是https 需要使用socketFactory
+         *
+         * @param socketFactory
+         * @return
+         */
+        public Builder setSocketFactory(SocketFactory socketFactory) {
+            this.socketFactory = socketFactory;
+            return this;
+        }
+
+        /**
+         * 设置重试的次数
+         *
+         * @param retrys
+         * @return
+         */
         public Builder retrys(int retrys) {
             this.retrys = retrys;
+            return this;
+        }
+
+        /**
+         * 添加自定义拦截器
+         *
+         * @param interceptor
+         * @return
+         */
+        public Builder addInterceptor(Interceptor interceptor) {
+            interceptors.add(interceptor);
+            return this;
+        }
+
+        /**
+         * 添加自定义的连接池
+         *
+         * @param connectionPool
+         * @return
+         */
+        public Builder connectionPool(ConnectionPool connectionPool) {
+            this.connectionPool = connectionPool;
             return this;
         }
 
@@ -64,12 +127,11 @@ public class HttpClient {
             if (null == connectionPool) {
                 connectionPool = new ConnectionPool();
             }
+            if (null == socketFactory) {
+                socketFactory = SocketFactory.getDefault();
+            }
             return new HttpClient(this);
         }
 
-        public Builder connectionPool(ConnectionPool connectionPool) {
-            this.connectionPool = connectionPool;
-            return this;
-        }
     }
 }

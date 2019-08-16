@@ -1,5 +1,7 @@
 package com.prim.http.net;
 
+import android.text.TextUtils;
+
 import java.net.MalformedURLException;
 import java.net.URL;
 
@@ -19,8 +21,10 @@ public class HttpUrl {
         URL urls = new URL(url);
         host = urls.getHost();//host
         file = urls.getFile();// /query?.....
+        file = TextUtils.isEmpty(file) ? "/" : file;
         protocol = urls.getProtocol();//http/https
         port = urls.getPort();//端口 如：80
+        port = port == -1 ? urls.getDefaultPort() : port;
     }
 
     public String getHost() {

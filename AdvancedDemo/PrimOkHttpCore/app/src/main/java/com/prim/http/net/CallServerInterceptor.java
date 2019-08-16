@@ -24,7 +24,7 @@ public class CallServerInterceptor implements Interceptor {
 
     @Override
     public Response interceptor(InterceptorChain chain) throws IOException {
-        Log.e(TAG, "interceptor: 通信拦截器");
+        Log.e(TAG, "interceptor: CallServerInterceptor");
         HttpConnection connection = chain.httpConnection;
         //进行I/O操作
         HttpCodec httpCodec = new HttpCodec();
@@ -32,8 +32,12 @@ public class CallServerInterceptor implements Interceptor {
         //读取响应
         //读取响应行: HTTP/1.1 200 OK\r\n
         String statusLine = httpCodec.readLine(in);
+        Log.e(TAG, "CallServerInterceptor: 得到响应行：" + statusLine);
         //读取响应头
         Map<String, String> headers = httpCodec.readHeader(in);
+        for (Map.Entry<String, String> entry : headers.entrySet()) {
+            Log.e(TAG, "CallServerInterceptor: 得到响应头 key:" + entry.getKey() + " value:" + entry.getValue());
+        }
         //读取响应体
         //判断请求头是否有 content-length 如果有就直接读取这大的长度就可以
         int content_length = -1;
@@ -61,7 +65,6 @@ public class CallServerInterceptor implements Interceptor {
         }
         //更新一下这个连接的时间
         connection.updateLastUserTime();
-        Log.e(TAG, "响应体：" + body);
         //返回响应包装类
         return new Response(Integer.valueOf(status[1]), content_length, headers, body, isKeepAlive);
     }

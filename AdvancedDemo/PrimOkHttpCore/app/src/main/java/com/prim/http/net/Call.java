@@ -95,10 +95,12 @@ public class Call {
 
     private Response getResponse() throws Exception {
         ArrayList<Interceptor> interceptors = new ArrayList<>();
+        //自定义拦截器
+        interceptors.addAll(client.getInterceptors());
         //添加重试拦截器
         interceptors.add(new RetryInterceptor());
         //添加请求头拦截器
-        interceptors.add(new HeaderInterceptor());
+        interceptors.add(new BridgeInterceptor());
         //添加连接拦截器
         interceptors.add(new ConnectionInterceptor());
         //添加通信拦截器
