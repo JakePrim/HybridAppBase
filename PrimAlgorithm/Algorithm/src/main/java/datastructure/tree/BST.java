@@ -5,7 +5,7 @@ package datastructure.tree;
  *
  * @param <T>
  */
-public class BTS<T extends Comparable<T>> {
+public class BST<T extends Comparable<T>> {
     public static class Node<T> {
         public T value;
         public Node<T> left;
@@ -22,7 +22,7 @@ public class BTS<T extends Comparable<T>> {
 
     private int size;
 
-    public BTS() {
+    public BST() {
         root = null;
         size = 0;
     }
@@ -112,7 +112,58 @@ public class BTS<T extends Comparable<T>> {
         if (node == null)
             return;
         System.out.println("node = [" + node.value + "]");
-        preOrder(node.left);
-        preOrder(node.right);
+        preOrder(node.left);//遍历左子树
+        preOrder(node.right);//遍历右子树
+    }
+
+    //中序遍历 二分搜索树排序的结果 是顺序排列的
+    public void inOrder() {
+        inOrder(root);
+    }
+
+    private void inOrder(Node<T> node) {
+        if (node == null)
+            return;
+        inOrder(node.left);
+        System.out.println("node = [" + node.value + "]");
+        inOrder(node.right);
+    }
+
+    public void postOrder(){
+        postOrder(root);
+    }
+
+    private void postOrder(Node<T> node){
+        if (node == null)
+            return;
+        postOrder(node.left);
+        postOrder(node.right);
+        System.out.println("node = [" + node.value + "]");
+    }
+
+    @Override
+    public String toString() {
+        StringBuilder res = new StringBuilder();
+        generateBSTString(root, 0, res);
+        return res.toString();
+    }
+
+    //生成以root 为跟节点，深入为depth的描述二叉树的字符串
+    private void generateBSTString(Node<T> root, int depth, StringBuilder res) {
+        if (root == null) {
+            res.append(generateDepthString(depth) + "null\n");
+            return;
+        }
+        res.append(generateDepthString(depth) + root.value + "\n");
+        generateBSTString(root.left, depth + 1, res);
+        generateBSTString(root.right, depth + 1, res);
+    }
+
+    private String generateDepthString(int depth) {
+        StringBuilder res = new StringBuilder();
+        for (int i = 0; i < depth; i++) {
+            res.append("--");
+        }
+        return res.toString();
     }
 }

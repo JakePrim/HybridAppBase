@@ -8,13 +8,16 @@ package com.prim.http.net;
  */
 public class HttpClient {
 
-    Dispatcher dispatcher;
+    private final Dispatcher dispatcher;
 
-    int retrys;
+    private final int retrys;
+
+    private final ConnectionPool connectionPool;
 
     public HttpClient(Builder builder) {
         this.dispatcher = builder.dispatcher;
         this.retrys = builder.retrys;
+        this.connectionPool = builder.connectionPool;
     }
 
     public Dispatcher getDispatcher() {
@@ -25,6 +28,10 @@ public class HttpClient {
         return retrys;
     }
 
+    public ConnectionPool getConnectionPool() {
+        return connectionPool;
+    }
+
     public Call newCall(Request request) {
         return new Call(request, this);
     }
@@ -32,6 +39,7 @@ public class HttpClient {
     public static final class Builder {
         Dispatcher dispatcher;
         int retrys;
+        ConnectionPool connectionPool;
 
         /**
          * 用户自定义调度器
@@ -50,7 +58,18 @@ public class HttpClient {
         }
 
         public HttpClient build() {
+            if (null == dispatcher) {
+                dispatcher = new Dispatcher();
+            }
+            if (null == connectionPool) {
+                connectionPool = new ConnectionPool();
+            }
             return new HttpClient(this);
+        }
+
+        public Builder connectionPool(ConnectionPool connectionPool) {
+            this.connectionPool = connectionPool;
+            return this;
         }
     }
 }

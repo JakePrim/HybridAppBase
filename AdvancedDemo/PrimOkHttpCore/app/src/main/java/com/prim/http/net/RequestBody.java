@@ -13,7 +13,7 @@ import java.util.Map;
  */
 public class RequestBody {
     /**
-     * 表单提交 使用urlencoded编码
+     * 表单提交 使用urlencoded编码 只模拟表单提交
      */
     private final static String CONTENT_TYPE = "application/x-www-form-urlencoded";
 

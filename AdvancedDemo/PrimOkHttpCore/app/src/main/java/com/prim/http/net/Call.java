@@ -26,9 +26,9 @@ public class Call {
         this.client = client;
     }
 
-    public void enqueue(CallBack callBack){
-        synchronized (this){
-            if (executed){
+    public void enqueue(CallBack callBack) {
+        synchronized (this) {
+            if (executed) {
                 throw new IllegalStateException("已经执行过了");
             }
             //标记已经执行过了
@@ -42,14 +42,14 @@ public class Call {
     /**
      * 取消请求
      */
-    public void cancel(){
-         cancel = true;
+    public void cancel() {
+        cancel = true;
     }
 
     /**
      * 执行网络请求的线程
      */
-    class AsyncCall implements Runnable{
+    class AsyncCall implements Runnable {
 
         private CallBack callBack;
 
@@ -65,20 +65,20 @@ public class Call {
                 //真正的实现请求逻辑
                 Response response = getResponse();
                 //如果取消了请求，就回调一个onFailure
-                if (cancel){
+                if (cancel) {
                     //回调通知过了
                     singalledCallbacked = true;
-                    callBack.onFailure(Call.this,new IOException("Canceled"));
-                }else {
+                    callBack.onFailure(Call.this, new IOException("Canceled"));
+                } else {
                     singalledCallbacked = true;
                     //链接成功了
-                    callBack.onResponse(Call.this,response);
+                    callBack.onResponse(Call.this, response);
                 }
             } catch (Exception e) {
                 e.printStackTrace();
                 //如果信号没有通知过 则回调
-                if (!singalledCallbacked){
-                    callBack.onFailure(Call.this,e);
+                if (!singalledCallbacked) {
+                    callBack.onFailure(Call.this, e);
                 }
             } finally {
                 //将这个任务从调度器移除
@@ -86,7 +86,7 @@ public class Call {
             }
         }
 
-        public String host(){
+        public String host() {
             return request.getUrl().getHost();
         }
 
@@ -95,13 +95,25 @@ public class Call {
 
     private Response getResponse() throws Exception {
         ArrayList<Interceptor> interceptors = new ArrayList<>();
+        //添加重试拦截器
         interceptors.add(new RetryInterceptor());
-        InterceptorChain chain = new InterceptorChain(interceptors, 0, this);
+        //添加请求头拦截器
+        interceptors.add(new HeaderInterceptor());
+        //添加连接拦截器
+        interceptors.add(new ConnectionInterceptor());
+        //添加通信拦截器
+        interceptors.add(new CallServerInterceptor());
+
+        InterceptorChain chain = new InterceptorChain(interceptors, 0, this, null);
         return chain.process();
     }
 
     public HttpClient getClient() {
         return client;
+    }
+
+    public Request request() {
+        return request;
     }
 
     public boolean isCanceled() {

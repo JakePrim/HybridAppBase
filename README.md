@@ -14,7 +14,7 @@
 
 6. 数据结构与算法
 
-7. 后台开发:Node.js Java
+7. 后台开发:Node Java
 
 8. 数据分析与人工智能:python
 
@@ -54,11 +54,6 @@
 
 PrimFastCommon [项目地址](https://github.com/JakePrim/PrimFastApp/tree/master/PrimFastCommon)
 
-- 网络框架PrimHttp 完成度50%.
-  - 整体库配置搭建
-- 基础框架PrimBase 完成度10%.
-.......
-
 PrimFastFlutter [项目地址](https://github.com/JakePrim/PrimFastApp/tree/master/PrimFastFlutter)
 
 PrimFastKotlin [项目地址](https://github.com/JakePrim/PrimFastApp/tree/master/PrimFastKotlin)
@@ -71,7 +66,10 @@ PrimJs [项目地址](https://github.com/JakePrim/PrimFastApp/tree/master/PrimJs
 
 AdvancedDemo [项目地址](https://github.com/JakePrim/PrimFastApp/tree/master/AdvancedDemo)
 
-[PrimAlgorithm](https://github.com/JakePrim/PrimFastApp/tree/master/PrimAlgorithm) 
+PrimAlgorithm [项目地址](https://github.com/JakePrim/PrimFastApp/tree/master/PrimAlgorithm)
+
+---
+技术详解部分
 
 ### Android 高级进阶知识部分
 
@@ -102,11 +100,11 @@ AdvancedDemo [项目地址](https://github.com/JakePrim/PrimFastApp/tree/master/
 - [ ] 数据库框架设计 升级数据库
 - [ ] greenDao源码分析
 
-#### OkHttp 实现原理及详细分析
+#### OkHttp 实现原理及详细分析 [代码](https://github.com/JakePrim/PrimFast/tree/master/AdvancedDemo/PrimOkHttpCore)
 - [x] [OkHttp 源码解析及OkHttp的设计思想](https://www.jianshu.com/p/cb444f49a777)
-- [ ] 手写OkHttp核心代码
-- [ ] OkHttp 各个责任链详细分析
-- [ ] 理解Http与Tcp的相关知识(图解Http)
+- [ ] [手写OkHttp核心代码]()
+- [ ] [OkHttp 各个责任链详细分析]()
+- [ ] [理解Http与Tcp的相关知识]()
 
 #### Retrofit 实现原理
 - [x] [架构设计之美-揭秘Retrofit设计原理](https://jakeprim.cn/2019/05/21/retrofit-1/)
@@ -123,14 +121,14 @@ AdvancedDemo [项目地址](https://github.com/JakePrim/PrimFastApp/tree/master/
 
 #### 序列化与反序列化Json框架原理解析
 
-####  IOC 注入式框架分析
-
 #### EventBus原理分析与如何实现可跨进程的通信框架
 
 #### RxJava基础和RxJava实现原理
 
 - [x] [RxJava2.x 庖丁解牛 - 操作符使用详解与场景分析](https://jakeprim.cn/2019/05/09/rxjava-1/)
 - [ ] RxJava2.x 源码分析
+
+####  IOC 注入式框架分析
 
 ### Android View 部分
 
@@ -151,6 +149,10 @@ AdvancedDemo [项目地址](https://github.com/JakePrim/PrimFastApp/tree/master/
 - [x] [JNI 编程详解-基本数据类型](https://www.jianshu.com/p/d8061f0f2eac)
 - [x] [JNI编程-动态注册及native线程调用Java](https://www.jianshu.com/p/290fbbfac841)
 
+### Kotlin 开发
+- [ ] Kotlin 基础语法与核心特性
+- [ ] Kotlin 开发github客户端实战
+
 ### 编程内功修炼部分
 
 #### 数据结构
@@ -164,14 +166,18 @@ AdvancedDemo [项目地址](https://github.com/JakePrim/PrimFastApp/tree/master/
 
 #### 算法
 ...
-
-### Kotlin 开发
-- [ ] Kotlin 基础语法与核心特性
-- [ ] Kotlin 开发github客户端实战
+#### 浏览器的工作原理
+...
+#### 网络协议
+...
+#### 操作系统
+...
+#### 数据库
+...
 
 ### 大前端技术
 
-#### JavaScript
+#### Deep JavaScript
 
  [项目地址](https://github.com/JakePrim/PrimFastApp/tree/master/PrimJs)
 
@@ -183,16 +189,14 @@ AdvancedDemo [项目地址](https://github.com/JakePrim/PrimFastApp/tree/master/
 ...
 
 #### TypeScript
-
+...
 #### Vue.js
-
+...
 #### React.js
-
+...
 #### Node.js
-
-#### Flutter 开发
-
-- [项目地址](https://github.com/JakePrim/PrimFastApp/tree/master/PrimFastFlutter)
+...
+#### Flutter 开发 [项目地址](https://github.com/JakePrim/PrimFastApp/tree/master/PrimFastFlutter)
 - [x] [Flutter 常用的布局与事件](https://jakeprim.cn/2019/03/26/flutter-1-1/)
 - [x] [Flutter 请求接口以及DAO层的实现](https://jakeprim.cn/2019/03/26/flutter-1-2/)
 - [x] [Flutter WebView使用详解](https://jakeprim.cn/2019/04/07/flutter-1-3/)
@@ -208,5 +212,5 @@ AdvancedDemo [项目地址](https://github.com/JakePrim/PrimFastApp/tree/master/
 #### Java后台
 ...
 
-### Python 技术
+#### Python
 ...

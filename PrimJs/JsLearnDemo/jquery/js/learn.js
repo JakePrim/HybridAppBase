@@ -32,21 +32,29 @@ $(document).ready(function () {
 
     var swiper = function (index) {
         indexs = index;
-        $('img').eq(index).css({ "opacity": "1" }).siblings().css({ "opacity": "0" });
+        // $('img').eq(index).stop().animate({ "opacity": "1" },1000)
+        // .siblings().stop().animate({ "opacity": "0" },1000);
+
+        // $('img').eq(index).stop().show('slow')
+        // .siblings().stop().hide('slow');
+        //toggle();//交替执行show/hide
+
+        $('img').eq(index).stop().fadeIn('slow')
+        .siblings().stop().fadeOut('slow');
     }
 
     //mouseenter mouseleave 
     //鼠标进入元素
     $('a').mouseenter(function () {
         //查找某个img的位置 siblings 所有的兄弟元素
-        $('img').eq($(this).index()).css({ "opacity": "1" }).siblings().css({ "opacity": "0" });
+        swiper($(this).index());
     });
 
     /**
      * 初始化 使图片默认显示第一个
      */
     var init = function(){
-        $('img').eq(0).css({ "opacity": "1" }).siblings().css({ "opacity": "0" });
+        swiper(0);
     }
 
     init();

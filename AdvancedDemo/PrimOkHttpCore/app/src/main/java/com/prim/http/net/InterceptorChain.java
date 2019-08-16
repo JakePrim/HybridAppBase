@@ -15,10 +15,24 @@ public class InterceptorChain {
     int index;
     Call call;
 
-    public InterceptorChain(List<Interceptor> interceptors, int index, Call call) {
+    HttpConnection httpConnection;
+
+    public InterceptorChain(List<Interceptor> interceptors, int index, Call call, HttpConnection httpConnection) {
         this.interceptors = interceptors;
         this.index = index;
         this.call = call;
+        this.httpConnection = httpConnection;
+    }
+
+    /**
+     * 使下一个拦截器拿到HttpConnection
+     *
+     * @param connection
+     * @return
+     */
+    public Response process(HttpConnection connection) throws IOException {
+        this.httpConnection = connection;
+        return process();
     }
 
     /**
@@ -29,7 +43,7 @@ public class InterceptorChain {
         //获得拦截器 从第0个拦截器开始
         Interceptor interceptor = interceptors.get(index);
         //链条一条一条执行
-        InterceptorChain next = new InterceptorChain(interceptors, index + 1, call);
+        InterceptorChain next = new InterceptorChain(interceptors, index + 1, call, httpConnection);
         Response response = interceptor.interceptor(next);
         return response;
     }
