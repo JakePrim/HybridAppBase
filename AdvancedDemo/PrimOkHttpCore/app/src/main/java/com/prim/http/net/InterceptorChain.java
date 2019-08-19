@@ -17,6 +17,10 @@ public class InterceptorChain {
 
     HttpConnection httpConnection;
 
+    public InterceptorChain(List<Interceptor> interceptors, int index, Call call) {
+        this(interceptors, index, call, null);
+    }
+
     public InterceptorChain(List<Interceptor> interceptors, int index, Call call, HttpConnection httpConnection) {
         this.interceptors = interceptors;
         this.index = index;

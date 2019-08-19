@@ -16,9 +16,10 @@ public class Call {
     //HttpClient 中配置的参数
     HttpClient client;
 
-    //标示是否执行过
+    //标记是否执行过
     boolean executed = false;
 
+    //标记是否取消请求
     boolean cancel = false;
 
     public Call(Request request, HttpClient client) {
@@ -37,6 +38,23 @@ public class Call {
         }
         //把任务交给调度器调度
         client.getDispatcher().enqueue(new AsyncCall(callBack));
+    }
+
+    public Response execute() throws Exception {
+        synchronized (this) {
+            if (executed) throw new IllegalStateException("Already Executed");
+            executed = true;
+        }
+        try {
+            client.getDispatcher().execute(this);
+            Response response = getResponse();
+            if (response == null) throw new IOException("Canceled");
+            return response;
+        } catch (Exception e) {
+            throw e;
+        } finally {
+            client.getDispatcher().finished(this);
+        }
     }
 
     /**

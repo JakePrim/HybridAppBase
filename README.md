@@ -102,9 +102,9 @@ PrimAlgorithm [项目地址](https://github.com/JakePrim/PrimFastApp/tree/master
 
 #### OkHttp 实现原理及详细分析 [代码](https://github.com/JakePrim/PrimFast/tree/master/AdvancedDemo/PrimOkHttpCore)
 - [x] [OkHttp 源码解析及OkHttp的设计思想](https://www.jianshu.com/p/cb444f49a777)
-- [ ] [手写OkHttp核心代码]()
-- [ ] [OkHttp 各个责任链详细分析]()
-- [ ] [理解Http与Tcp的相关知识]()
+- [x] [手写OkHttp核心代码](https://jakeprim.cn/2019/08/19/okhttp-2/)
+- [ ] [OkHttp 缓存责任链详细分析]()
+- [ ] [Http与Tcp的相关知识]()
 
 #### Retrofit 实现原理
 - [x] [架构设计之美-揭秘Retrofit设计原理](https://jakeprim.cn/2019/05/21/retrofit-1/)

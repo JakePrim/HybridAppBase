@@ -25,11 +25,13 @@ public class RetryInterceptor implements Interceptor {
                 throw new IOException("Canceled");
             }
             try {
+                Log.e(TAG, "interceptor: 执行次数：" + (i + 1));
                 //执行链条中下一个拦截器 如果有返回response 则表示请求成功直接return结束for循环
                 Response response = chain.process();
                 return response;
             } catch (IOException e) {
                 exception = e;
+                Log.e(TAG, "interceptor: 执行出错");
             }
         }
         throw exception;

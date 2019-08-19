@@ -13,7 +13,7 @@ import javax.net.ssl.SSLSocketFactory;
 /**
  * @author prim
  * @version 1.0.0
- * @desc
+ * @desc 实现socket的网络请求
  * @time 2019-08-15 - 15:17
  */
 public class HttpConnection {
