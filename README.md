@@ -155,11 +155,11 @@ PrimAlgorithm [项目地址](https://github.com/JakePrim/PrimFastApp/tree/master
 
 #### NDK开发音视频播放器实战
 - [实战代码]()
-- [] ffmpeg播放器1-直播流信息获取
-- [] ffmpeg播放器2-视频解码与原生绘制
-- [] ffmpeg播放器3-音频解码与opensl es播放
-- [] ffmpeg播放器4-音视频同步
-- [] ffmpeg播放器5-停止与释放
+- [ ] ffmpeg播放器1-直播流信息获取
+- [ ] ffmpeg播放器2-视频解码与原生绘制
+- [ ] ffmpeg播放器3-音频解码与opensl es播放
+- [ ] ffmpeg播放器4-音视频同步
+- [ ] ffmpeg播放器5-停止与释放
 
 #### RTMP直播
 ...
