@@ -5,10 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="jquery-3.4.1.js"></script>
     <title>ajax</title>
 </head>
 
 <body>
+    <div class="banner" id="banner"></div>
     <script>
         /**
          * 封装XmlHttpRequest,兼容各个版本
@@ -44,30 +47,67 @@
             data;
         console.log(xhr);
         /**
-         * XMLHttpRequest 监听服务器响应
+         * 监听服务器响应
          */
         xhr.onreadystatechange = function () {
-            //表示异步调用成功
+            //readyState == 4表示异步调用成功
             if (xhr.readyState === 4) {
                 if ((xhr.status >= 200 && xhr.status < 300) || xhr.status === 304) {
-                    //获得服务器返回的数据
-                    data = xhr.responseText;
+                    //xhr.responseText 返回的是json字符串,我们需要转换为object对象
+                    //1 可以使用eval来转换为对象,但是eval存在这一些问题 他可以执行不符合json格式的代码
+                    // data = eval("("+xhr.responseText+")");
+                    //2 推荐使用JSON来转换
+                    data = JSON.parse(xhr.responseText);
+                    //将对象转换为json字符串
+                    // JSON.stringify(data);
                     console.log(data);
-                }else{
+                    renderDataToDom();
+
+                } else {
                     console.log('unsuccess');
                 }
             }
         };
         /**
          * 创建http请求
-         * true 表示异步调用; false 表示为同步调用
+         * @param get/post
+         * @param 请求地址
+         * @param true异步调用 默认为true;false 同步调用
          */
-        xhr.open('get','./server/slider.json',true);
-        
+        xhr.open('get', './server/slider.json', true);
+
         /**
-         * 
+         * 发送请求
+         * 如果是post请求send({'param1':value,'param2':value,})
+         * 如果是get请求不传或者传null
          */
-        
+        xhr.send();
+
+        /**
+         * 渲染数据
+         */
+        function renderDataToDom() {
+            var banner = document.getElementById('banner');
+            var img = data.slider;
+            var len = img.length, str = "";
+            for (var i = 0; i < len; i++) {
+                str += '<a href="' + img[i].linkUrl + '"><img src="' + img[i].picUrl + '"/></a>';
+            }
+            console.log(str);
+            banner.innerHTML = str;
+        }
+        $.ajax({
+            url: '',
+            type: 'post',
+            async: true,
+            dataType: 'json',//服务端返回的数据格式
+            success: function (data) {
+                console.log(data);
+            }
+        });
+        // $.get();
+        // $.post();
+        // $.getJSON();
 
     </script>
 </body>

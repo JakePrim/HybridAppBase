@@ -1,0 +1,29 @@
+{
+  "code": 0,
+  "slider": [
+    {
+      "linkUrl": "https://m.imooc.com/act/share",
+      "picUrl": "img/fm1.jpg"
+    },
+    {
+      "linkUrl": "https://m.imooc.com/act/share",
+      "picUrl": "img/fm2.jpg"
+    },
+    {
+      "linkUrl": "https://m.imooc.com/act/share",
+      "picUrl": "img/fm3.jpg"
+    },
+    {
+      "linkUrl": "https://m.imooc.com/act/share",
+      "picUrl": "img/fm4.jpg"
+    },
+    {
+      "linkUrl": "https://m.imooc.com/act/share",
+      "picUrl": "img/fm5.jpg"
+    },
+    {
+      "linkUrl": "https://m.imooc.com/act/share",
+      "picUrl": "img/fm6.jpg"
+    }
+  ]
+}

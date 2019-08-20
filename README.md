@@ -4,9 +4,9 @@
 
 1. 包括Android进阶知识:APP快速开发框架搭建、组件化技术实现、插件化技术实现、Okhttp原理、Glide原理、RxJava原理、EventBus原理、音视频、NDK开发、进程通信、IOC、移动架构等.
 
-2. Flutter跨平台技术与实战.
+2. Flutter跨平台技术与ReactNative跨平台技术实战.
 
-3. RN跨平台技术以及移动Web应用和小程序的实战.
+3. 移动Web应用(Vue、React、PWA)和微信小程序的实战.
 
 4. Kotlin 开发技术学习与使用kotlin开发Android实战.
 
@@ -71,6 +71,7 @@ PrimAlgorithm [项目地址](https://github.com/JakePrim/PrimFastApp/tree/master
 ---
 技术详解部分
 
+---
 ### Android 高级进阶知识部分
 
 #### Android 组件化原理及路由的实现
@@ -136,8 +137,11 @@ PrimAlgorithm [项目地址](https://github.com/JakePrim/PrimFastApp/tree/master
 
 #### ListView和RecyclerView实现原理解析
 
+### Android Jetpack
+
 ### Android性能优化部分
 
+---
 ### NDK开发部分
 
 #### NDK开发基础知识掌握
@@ -149,10 +153,28 @@ PrimAlgorithm [项目地址](https://github.com/JakePrim/PrimFastApp/tree/master
 - [x] [JNI 编程详解-基本数据类型](https://www.jianshu.com/p/d8061f0f2eac)
 - [x] [JNI编程-动态注册及native线程调用Java](https://www.jianshu.com/p/290fbbfac841)
 
+#### NDK开发音视频播放器实战
+- [实战代码]()
+- [] ffmpeg播放器1-直播流信息获取
+- [] ffmpeg播放器2-视频解码与原生绘制
+- [] ffmpeg播放器3-音频解码与opensl es播放
+- [] ffmpeg播放器4-音视频同步
+- [] ffmpeg播放器5-停止与释放
+
+#### RTMP直播
+...
+#### 热修复与增量更新
+...
+#### openCV与openGL
+...
+#### webRTC-音视频通话
+...
+
 ### Kotlin 开发
 - [ ] Kotlin 基础语法与核心特性
 - [ ] Kotlin 开发github客户端实战
 
+---
 ### 编程内功修炼部分
 
 #### 数据结构
@@ -175,6 +197,7 @@ PrimAlgorithm [项目地址](https://github.com/JakePrim/PrimFastApp/tree/master
 #### 数据库
 ...
 
+---
 ### 大前端技术
 
 #### Deep JavaScript
@@ -187,7 +210,6 @@ PrimAlgorithm [项目地址](https://github.com/JakePrim/PrimFastApp/tree/master
 
 #### ES6
 ...
-
 #### TypeScript
 ...
 #### Vue.js
