@@ -96,19 +96,63 @@
             console.log(str);
             banner.innerHTML = str;
         }
-        $.ajax({
-            url: '',
-            type: 'post',
-            async: true,
-            dataType: 'json',//服务端返回的数据格式
-            success: function (data) {
-                console.log(data);
-            }
-        });
+        // $.ajax({
+        //     url: '',
+        //     type: 'post',
+        //     async: true,
+        //     dataType: 'json',//服务端返回的数据格式
+        //     success: function (data) {
+        //         console.log(data);
+        //     }
+        // });
         // $.get();
         // $.post();
         // $.getJSON();
 
+        /**
+         * 跨域问题 jsonp 原理
+         * 利用了script的src可以跨域,动态创建了script标签
+         */
+        function getJSONP(url, callback) {
+            if (!url) {
+                return;
+            }
+            var a = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k'],
+                r1 = Math.floor(Math.random() * 10),
+                r2 = Math.floor(Math.random() * 10),
+                r3 = Math.floor(Math.random() * 10),
+                name = "getJSONP" + a[r1] + a[r2] + a[r3],
+                cbname = 'getJSONP.' + name;
+            console.log(cbname);
+            //判断url地址中是否有问号
+            if (url.indexOf('?') === -1) {
+                url += "?jsonp=" + cbname;
+            } else {
+                url += "&jsonp=" + cbname;
+            }
+            console.log(url);
+            //生成script标签
+            var script = document.createElement('script');
+            //定义被脚本执行的函数
+            getJSONP[name] = function (data) {
+                try {
+                    callback && callback(data);
+                } catch (e) {
+
+                } finally {
+                    //删除函数和移除script标签
+                    delete getJSONP[name];
+                    script.parentNode.removeChild(script);
+                }
+            }
+            script.src = url;
+            document.getElementsByTagName('head')[0].appendChild(script);
+
+        }
+
+        getJSONP('http://class.imooc.com/api/jsonp', function (data) {
+            console.log(data);
+        });
     </script>
 </body>
 

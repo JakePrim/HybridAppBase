@@ -1,0 +1,107 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background: #333;
+}
+
+.register{
+    width: 300px;
+    height: 270px;
+    margin: 80px auto;
+    padding: 15px 30px;
+    background: #eee;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+
+.title{
+    height: 35px;
+}
+
+.title span{
+    font-size: 16px;
+    font-weight: bold;
+    color: #666;
+    cursor: pointer;
+    margin-right: 30px;
+}
+
+.title span.current{
+    color: #f00;
+}
+
+.from div{
+    position: relative;
+    width: 290px;
+    height: 30px;
+    border-radius: 8px;
+    background: #fff;
+    margin-bottom: 25px;
+    padding: 8px 10px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+}
+
+.from div span{
+    display: inline-block;
+    padding-top: 5px;
+    color: #666;
+}
+
+.from div input{
+    border: none;
+    outline: none;
+    font-size: 16px;
+    color: #666;
+}
+
+.from div i{
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    right: 12px;
+    top: 17px;
+}
+
+.from div i.ok{
+    background: url(../img/icon.png) no-repeat 0 -67px;
+}
+
+.from div i.no{
+    background: url(../img/icon.png) no-repeat -17px -67px;
+}
+
+.from .info{
+    margin-top: 16px;
+    color: #f00;
+    padding-left: 2px;
+}
+
+.button{
+    padding-top: 7px;
+}
+
+.button a{
+    display: block;
+    width: 100%;
+    height: 45px;
+    line-height: 45px;
+    text-align: center;
+    text-decoration: none;
+    background: #f20d0d;
+    color: #fff;
+    border-radius: 30px;
+    font-size: 16px;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    -ms-border-radius: 30px;
+    -o-border-radius: 30px;
+}
