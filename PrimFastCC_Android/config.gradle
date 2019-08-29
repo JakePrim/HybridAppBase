@@ -1,0 +1,29 @@
+ext {
+    android = [
+            compileSdkVersion: 28,
+            minSdkVersion    : 19,
+            targetSdkVersion : 28,
+            versionCode      : 1,
+            versionName      : "1.0",
+            multiDexEnabled  : true,
+            applicationId    : 'com.prim.music_app'
+    ]
+
+    buildTypes = []
+
+//    API_HOST = "http"
+    pomVersion = "1.0.0"
+    pomDescription = "123"
+    VERSION_CODE = 1000
+    VERSION_NAME = "1.0.0.0"
+
+    //版本定义
+    depsVersion = [
+            appcompat: '28.0.0'
+    ]
+
+    //lib包
+    depsLibs = [
+            appcompat: "com.android.support:appcompat-v7:${depsVersion.appcompat}",
+    ]
+}

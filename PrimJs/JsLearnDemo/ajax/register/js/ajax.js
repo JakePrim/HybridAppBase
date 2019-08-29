@@ -1,5 +1,5 @@
 var $ = {
-    ajax : function (options) {
+    ajax: function (options) {
         var xhr = createAjax(),//创建XMLHttpRequest
             url = options.url,//请求的URL
             method = options.method || 'get',//请求类型
@@ -35,10 +35,16 @@ var $ = {
                     // data = eval("("+xhr.responseText+")");
                     //2 推荐使用JSON来转换
                     var data = JSON.parse(xhr.responseText);
+                    console.log('====================================');
+                    console.log('responseText:' + xhr.responseText);
+                    console.log('====================================');
                     //将对象转换为json字符串
                     // JSON.stringify(data);
                     callback && callback(data);
                 } else {
+                    console.log('====================================');
+                    console.log('error');
+                    console.log('====================================');
                     error && error();
                 }
             }
@@ -48,8 +54,40 @@ var $ = {
         xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
         xhr.send(sendParams);
     },
-    jsonp: function () {
+    jsonp: function (url, callback) {
+        if (!url) {
+            return;
+        }
+        var a = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k'],
+            r1 = Math.floor(Math.random() * 10),
+            r2 = Math.floor(Math.random() * 10),
+            r3 = Math.floor(Math.random() * 10),
+            name = "getJSONP" + a[r1] + a[r2] + a[r3],
+            cbname = 'getJSONP.' + name;
+        console.log(cbname);
+        //判断url地址中是否有问号
+        if (url.indexOf('?') === -1) {
+            url += "?jsonp=" + cbname;
+        } else {
+            url += "&jsonp=" + cbname;
+        }
+        console.log(url);
+        //生成script标签
+        var script = document.createElement('script');
+        //定义被脚本执行的函数
+        getJSONP[name] = function (data) {
+            try {
+                callback && callback(data);
+            } catch (e) {
 
+            } finally {
+                //删除函数和移除script标签
+                delete getJSONP[name];
+                script.parentNode.removeChild(script);
+            }
+        }
+        script.src = url;
+        document.getElementsByTagName('head')[0].appendChild(script);
     }
 }
 

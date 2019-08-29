@@ -1,0 +1,166 @@
+apply plugin: 'maven'
+apply from: rootProject.file('config.gradle')
+
+println 'compileSdkVersion:' + android.compileSdkVersion
+
+def pomName = project.getName()
+
+println 'custom:' + project.hasProperty('custom') +" pomVersion："+pomVersion +" pomDescription:"+pomDescription
+
+
+//所有的lib包继承此gradle
+android {
+    compileSdkVersion android.compileSdkVersion
+    defaultConfig {
+        minSdkVersion android.minSdkVersion
+        targetSdkVersion android.targetSdkVersion
+        //动态设置版本号
+        versionCode project.hasProperty('VERSION_CODE') ? VERSION_CODE : android.versionCode
+        versionName project.hasProperty('VERSION_NAME') ? VERSION_NAME : android.versionName
+
+        multiDexEnabled android.multiDexEnabled
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+        consumerProguardFiles 'consumer-rules.pro'
+
+        //ARouter配置
+        javaCompileOptions {
+            annotationProcessorOptions {
+                arguments = [AROUTER_MODULE_NAME: project.getName(), AROUTER_GENERATE_DOC: "enable"]
+            }
+        }
+
+    }
+
+    buildTypes {
+        //正式环境配置
+        release {
+            buildConfigField "boolean", "LOG_DEBUG", "false"    // 不显示Log
+//            buildConfigField "String", "API_HOST", "https://www.baidu.com"    //API Host
+//            signingConfig signingConfigs.release
+            minifyEnabled true                      //是否混淆
+            zipAlignEnabled true                    //是否设置zip对齐优化
+//            shrinkResources true                    // 移除无用的resource文件
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            //manifest常用配置
+            manifestPlaceholders = [
+                    "UMENG_APPKEY" : "",
+                    "UMENG_CHANNEL": "umeng",
+                    "SINA_APPKEY"  : "",
+                    "SINA_SECRET"  : "",
+                    "SINA_REDIRECT": "http://sns.whalecloud.com/sina2/callback",
+                    "WECHAT_APPKEY": "",
+                    "WECHAT_SECRET": ""
+            ]
+        }
+
+        //预发布环境配置
+        preRelease {
+            buildConfigField "boolean", "LOG_DEBUG", "true"    // 不显示Log
+//            buildConfigField "String", "API_HOST", "https://www.baidu.com"    //API Host
+//            signingConfig signingConfigs.release
+            minifyEnabled false
+            //manifest常用配置
+            manifestPlaceholders = [
+                    "UMENG_APPKEY" : "",
+                    "UMENG_CHANNEL": "umeng",
+                    "SINA_APPKEY"  : "",
+                    "SINA_SECRET"  : "",
+                    "SINA_REDIRECT": "http://sns.whalecloud.com/sina2/callback",
+                    "WECHAT_APPKEY": "",
+                    "WECHAT_SECRET": ""
+            ]
+        }
+
+        //本地开发环境配置
+        debug {
+            buildConfigField "boolean", "LOG_DEBUG", "true"    // 不显示Log
+//            buildConfigField "String", "API_HOST", "https://www.baidu.com"    //API Host
+//            signingConfig signingConfigs.release
+            minifyEnabled false
+            //manifest常用配置
+            manifestPlaceholders = [
+                    "UMENG_APPKEY" : "",
+                    "UMENG_CHANNEL": "umeng",
+                    "SINA_APPKEY"  : "",
+                    "SINA_SECRET"  : "",
+                    "SINA_REDIRECT": "http://sns.whalecloud.com/sina2/callback",
+                    "WECHAT_APPKEY": "",
+                    "WECHAT_SECRET": ""
+            ]
+        }
+
+        //测试环境配置
+        beta {
+            buildConfigField "boolean", "LOG_DEBUG", "true"    // 不显示Log
+//            buildConfigField "String", "API_HOST", "https://www.baidu.com"   //API Host
+//            signingConfig signingConfigs.release
+            minifyEnabled false
+            //manifest常用配置
+            manifestPlaceholders = [
+                    "UMENG_APPKEY" : "",
+                    "UMENG_CHANNEL": "umeng",
+                    "SINA_APPKEY"  : "",
+                    "SINA_SECRET"  : "",
+                    "SINA_REDIRECT": "http://sns.whalecloud.com/sina2/callback",
+                    "WECHAT_APPKEY": "",
+                    "WECHAT_SECRET": ""
+            ]
+        }
+    }
+
+    //配置keystore 可以根据不同的环境配置keystore
+    signingConfigs {
+        release {
+            storeFile file("peopleDaily")        //正式版本的keystore
+            storePassword "123456"
+            keyAlias "peopledaily"
+            keyPassword "123456"
+            v2SigningEnabled true
+        }
+        debug {
+            storeFile file("peopleDaily")
+            storePassword "123456"
+            keyAlias "peopledaily"
+            keyPassword "123456"
+            v2SigningEnabled true
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    lintOptions {
+        checkReleaseBuilds false
+        abortOnError false
+    }
+
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+}
+
+//uploadArchives {
+//    repositories {
+//        mavenDeployer {
+//            repository(url: NEXUS_REPOSITORY_URL) {
+//                authentication(userName: NEXUS_USERNAME, password: NEXUS_PASSWORD)
+//            }
+//            pom.project {
+//                name pomName
+//                version pomVersion
+//                description pomDescription
+//                artifactId pomVersion
+//                groupId POM_GROUPID
+//                packaging POM_PACKAGING
+//            }
+//        }
+//    }
+//}

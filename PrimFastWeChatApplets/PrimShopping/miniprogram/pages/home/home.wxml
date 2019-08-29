@@ -16,3 +16,8 @@
 <image class='hot-info' src='/images/discount.png'></image>
 <image class='hot-img' src='{{productList[0].image}}'></image>
 </navigator>
+<view class="list-title">
+<image class="list-title-line" src="/images/line-black.png"></image>
+<view class="list-title-text">Promotion</view>
+<image class="list-title-line" src="/images/line-black.png"></image>
+</view>

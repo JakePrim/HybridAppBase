@@ -1,7 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="82d7983b-0692-480e-ba37-a5faa0b9ac7f" name="Default Changelist" comment="" />
+    <list default="true" id="82d7983b-0692-480e-ba37-a5faa0b9ac7f" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.gradle/4.10.3/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.3/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.10.3/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.3/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../PrimFastCC_Android/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../../PrimFastCC_Android/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../PrimFastWeChatApplets/PrimShopping/miniprogram/pages/home/home.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/../../PrimFastWeChatApplets/PrimShopping/miniprogram/pages/home/home.wxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../PrimFastWeChatApplets/PrimShopping/miniprogram/pages/home/home.wxss" beforeDir="false" afterPath="$PROJECT_DIR$/../../PrimFastWeChatApplets/PrimShopping/miniprogram/pages/home/home.wxss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../PrimJs/JsLearnDemo/ajax/register/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/../../PrimJs/JsLearnDemo/ajax/register/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../PrimJs/JsLearnDemo/ajax/register/js/ajax.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../PrimJs/JsLearnDemo/ajax/register/js/ajax.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../PrimJs/JsLearnDemo/ajax/register/js/register.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../PrimJs/JsLearnDemo/ajax/register/js/register.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../PrimJs/JsLearnDemo/ajax/register/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../PrimJs/JsLearnDemo/ajax/register/register.html" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
     <ignored path="$PROJECT_DIR$/build/" />
@@ -40,15 +52,16 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/datastructure/tree/BST.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="135" column="41" lean-forward="true" selection-start-line="135" selection-start-column="41" selection-end-line="135" selection-end-column="41" />
+            <state relative-caret-position="2295">
+              <caret line="139" column="28" selection-start-line="139" selection-start-column="28" selection-end-line="139" selection-end-column="28" />
               <folding>
                 <element signature="e#1953#1954#0" expanded="true" />
                 <element signature="e#1997#1998#0" expanded="true" />
                 <element signature="e#2420#2421#0" expanded="true" />
                 <element signature="e#2450#2451#0" expanded="true" />
+                <element signature="e#2735#2736#0" expanded="true" />
                 <element signature="e#2764#2765#0" expanded="true" />
-                <element signature="e#3008#3009#0" expanded="true" />
+                <element signature="e#3004#3005#0" expanded="true" />
                 <element signature="e#3035#3036#0" expanded="true" />
               </folding>
             </state>
@@ -58,8 +71,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/datastructure/tree/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="253">
-              <caret line="15" column="10" lean-forward="true" selection-start-line="15" selection-start-column="10" selection-end-line="15" selection-end-column="10" />
+            <state relative-caret-position="255">
+              <caret line="15" column="10" selection-start-line="15" selection-start-column="10" selection-end-line="15" selection-end-column="10" />
             </state>
           </provider>
         </entry>
@@ -80,8 +93,8 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/src/main/java/datastructure/tree/BTS.java" />
-        <option value="$PROJECT_DIR$/src/main/java/datastructure/tree/BST.java" />
         <option value="$PROJECT_DIR$/src/main/java/datastructure/tree/Main.java" />
+        <option value="$PROJECT_DIR$/src/main/java/datastructure/tree/BST.java" />
       </list>
     </option>
   </component>
@@ -93,10 +106,10 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="26" />
-    <option name="y" value="-1028" />
-    <option name="width" value="1440" />
-    <option name="height" value="814" />
+    <option name="x" value="180" />
+    <option name="y" value="-847" />
+    <option name="width" value="1080" />
+    <option name="height" value="612" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -106,54 +119,9 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
+      <pane id="ProjectPane" />
       <pane id="PackagesPane" />
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="jakeprim" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Algorithm" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-            </path>
-            <path>
-              <item name="jakeprim" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Algorithm" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="jakeprim" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Algorithm" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-            </path>
-            <path>
-              <item name="jakeprim" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Algorithm" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="jakeprim" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Algorithm" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="datastructure" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="jakeprim" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Algorithm" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="datastructure" type="462c0819:PsiDirectoryNode" />
-              <item name="tree" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -219,17 +187,19 @@
       <updated>1565667073681</updated>
       <workItem from="1565667075451" duration="7109000" />
       <workItem from="1565838149339" duration="5526000" />
+      <workItem from="1566957709216" duration="1098000" />
+      <workItem from="1567001562632" duration="421000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="12635000" />
+    <option name="totallyTimeSpent" value="14154000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="26" y="-1028" width="1440" height="814" extended-state="0" />
+    <frame x="180" y="-847" width="1080" height="612" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25432277" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26459143" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -273,26 +243,27 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/datastructure/tree/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="253">
-          <caret line="15" column="10" lean-forward="true" selection-start-line="15" selection-start-column="10" selection-end-line="15" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/datastructure/tree/BST.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="135" column="41" lean-forward="true" selection-start-line="135" selection-start-column="41" selection-end-line="135" selection-end-column="41" />
+        <state relative-caret-position="2295">
+          <caret line="139" column="28" selection-start-line="139" selection-start-column="28" selection-end-line="139" selection-end-column="28" />
           <folding>
             <element signature="e#1953#1954#0" expanded="true" />
             <element signature="e#1997#1998#0" expanded="true" />
             <element signature="e#2420#2421#0" expanded="true" />
             <element signature="e#2450#2451#0" expanded="true" />
+            <element signature="e#2735#2736#0" expanded="true" />
             <element signature="e#2764#2765#0" expanded="true" />
-            <element signature="e#3008#3009#0" expanded="true" />
+            <element signature="e#3004#3005#0" expanded="true" />
             <element signature="e#3035#3036#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/datastructure/tree/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="10" selection-start-line="15" selection-start-column="10" selection-end-line="15" selection-end-column="10" />
         </state>
       </provider>
     </entry>

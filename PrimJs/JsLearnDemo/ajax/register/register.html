@@ -12,8 +12,8 @@
 <body>
     <div class="register">
         <p class="title">
-            <span>登录</span>
-            <span class="current">注册</span>
+            <span id="login">登录</span>
+            <span class="current" id="register">注册</span>
         </p>
         <div class="from">
             <div>
@@ -24,12 +24,13 @@
             </div>
             <div>
                 <input type="password" name="password" id="password" placeholder="请输入密码" />
-                <i></i>
-                <p class="info"></p>
+                <i id="passwordIcon"></i>
+                <p class="info" id="passwordInfo"></p>
             </div>
         </div>
         <p class="button">
-            <a href="javascript:void(0)" class="btn" id="sigup">注 册</a>
+            <a href="javascript:void(0)" class="btn show" id="sigup">注 册</a>
+            <a href="javascript:void(0)" id="login-btn" class="btn">登 录</a>
         </p>
     </div>
     <script src="js/ajax.js"></script>
