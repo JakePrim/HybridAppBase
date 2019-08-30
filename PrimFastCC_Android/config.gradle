@@ -19,11 +19,13 @@ ext {
 
     //版本定义
     depsVersion = [
-            appcompat: '28.0.0'
+            appcompat     : '28.0.0',
+            magicindicator: '1.5.0'
     ]
 
     //lib包
     depsLibs = [
-            appcompat: "com.android.support:appcompat-v7:${depsVersion.appcompat}",
+            appcompat     : "com.android.support:appcompat-v7:${depsVersion.appcompat}",
+            magicindicator: "com.github.hackware1993:MagicIndicator:${depsVersion.magicindicator}",
     ]
 }

@@ -4,6 +4,7 @@ android {
     compileSdkVersion this.rootProject.android.compileSdkVersion
     defaultConfig {
         applicationId this.rootProject.android.applicationId
+
         minSdkVersion this.rootProject.android.minSdkVersion
         targetSdkVersion this.rootProject.android.targetSdkVersion
         versionCode this.rootProject.android.versionCode
@@ -21,4 +22,5 @@ android {
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation this.rootProject.depsLibs.appcompat
+    implementation project(':lib_common_ui')
 }
