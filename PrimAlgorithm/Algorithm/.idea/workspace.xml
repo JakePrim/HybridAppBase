@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="82d7983b-0692-480e-ba37-a5faa0b9ac7f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../../PrimFastPython/learnPython/baseType.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../PrimFastPython/learnPython/test_if.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/datastructure/array/Array.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/datastructure/array/Student.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/datastructure/array/Text.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.10.3/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.3/fileHashes/fileHashes.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.10.3/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.3/fileHashes/fileHashes.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.10.3/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.3/javaCompile/classAnalysis.bin" afterDir="false" />
@@ -12,12 +13,7 @@
       <change beforePath="$PROJECT_DIR$/.gradle/4.10.3/taskHistory/taskHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.3/taskHistory/taskHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/datastructure/tree/BST$Node.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/datastructure/tree/BST$Node.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/datastructure/tree/BST.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/datastructure/tree/BST.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/datastructure/tree/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/datastructure/tree/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/datastructure/tree/BST.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/datastructure/tree/BST.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/datastructure/tree/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/datastructure/tree/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../PrimFastWeChatApplets/git-auto.sh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../PrimFastPython/learnPython/test_if.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../PrimFastPython/learnPython/test_if.py" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
@@ -54,11 +50,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/datastructure/tree/BST.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="179">
-              <caret line="311" column="32" lean-forward="true" selection-start-line="311" selection-start-column="32" selection-end-line="311" selection-end-column="32" />
+            <state relative-caret-position="897">
+              <caret line="311" column="32" selection-start-line="311" selection-start-column="32" selection-end-line="311" selection-end-column="32" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#6973#6974#0" expanded="true" />
@@ -69,22 +65,48 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/datastructure/tree/Main.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/datastructure/array/Text.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="453">
-              <caret line="29" column="24" selection-start-line="29" selection-start-column="24" selection-end-line="29" selection-end-column="24" />
+            <state relative-caret-position="364">
+              <caret line="24" column="27" lean-forward="true" selection-start-line="24" selection-start-column="27" selection-end-line="24" selection-end-column="27" />
               <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="e#135#144#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_144.jdk/Contents/Home/src.zip!/java/util/Random.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/datastructure/array/Student.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="76" column="6" selection-start-line="76" selection-start-column="6" selection-end-line="76" selection-end-column="6" />
+            <state relative-caret-position="374">
+              <caret line="22" column="56" selection-start-line="22" selection-start-column="56" selection-end-line="22" selection-end-column="56" />
+              <folding>
+                <element signature="e#255#256#0" expanded="true" />
+                <element signature="e#292#293#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/datastructure/array/Array.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="186">
+              <caret line="96" column="12" selection-start-line="96" selection-start-column="8" selection-end-line="96" selection-end-column="12" />
+              <folding>
+                <element signature="e#259#260#0" expanded="true" />
+                <element signature="e#314#315#0" expanded="true" />
+                <element signature="e#380#381#0" expanded="true" />
+                <element signature="e#444#445#0" expanded="true" />
+                <element signature="e#468#469#0" expanded="true" />
+                <element signature="e#494#495#0" expanded="true" />
+                <element signature="e#562#563#0" expanded="true" />
+                <element signature="e#1347#1348#0" expanded="true" />
+                <element signature="e#1415#1416#0" expanded="true" />
+                <element signature="e#1697#1698#0" expanded="true" />
+                <element signature="e#3129#3130#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -107,6 +129,9 @@
         <option value="$PROJECT_DIR$/src/main/java/datastructure/tree/BTS.java" />
         <option value="$PROJECT_DIR$/src/main/java/datastructure/tree/Main.java" />
         <option value="$PROJECT_DIR$/src/main/java/datastructure/tree/BST.java" />
+        <option value="$PROJECT_DIR$/src/main/java/datastructure/array/Student.java" />
+        <option value="$PROJECT_DIR$/src/main/java/datastructure/array/Text.java" />
+        <option value="$PROJECT_DIR$/src/main/java/datastructure/array/Array.java" />
       </list>
     </option>
   </component>
@@ -162,6 +187,15 @@
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="datastructure" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="jakeprim" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Algorithm" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="datastructure" type="462c0819:PsiDirectoryNode" />
+              <item name="array" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -186,7 +220,7 @@
     <property name="project.structure.last.edited" value="SDKs" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.0" />
-    <property name="settings.editor.selected.configurable" value="MavenSettings" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
     <property name="show.migrate.to.gradle.popup" value="false" />
   </component>
   <component name="RunDashboard">
@@ -201,7 +235,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.Text">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="datastructure.tree.Main" />
       <module name="jakeprim.main" />
@@ -215,8 +249,36 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Student" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="datastructure.array.Student" />
+      <module name="jakeprim.main" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="datastructure.array.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Text" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="datastructure.array.Text" />
+      <module name="jakeprim.main" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="datastructure.array.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Student" />
+        <item itemvalue="Application.Text" />
         <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
@@ -236,18 +298,35 @@
       <workItem from="1566957709216" duration="1098000" />
       <workItem from="1567001562632" duration="421000" />
       <workItem from="1567149236078" duration="2866000" />
-      <workItem from="1567178184937" duration="5916000" />
+      <workItem from="1567178184937" duration="11688000" />
     </task>
+    <task id="LOCAL-00001" summary="二分搜索树">
+      <created>1567264809637</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1567264809637</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="22936000" />
+    <option name="totallyTimeSpent" value="28708000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21037464" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.21037464" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -256,13 +335,13 @@
       <window_info id="UI Designer" order="6" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.3286445" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3286445" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32992327" />
       <window_info anchor="bottom" id="FindBugs-IDEA" order="7" />
-      <window_info anchor="bottom" id="Terminal" order="8" />
+      <window_info anchor="bottom" id="Terminal" order="8" weight="0.32992327" />
       <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="CheckStyle" order="10" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
@@ -289,6 +368,12 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
+    <option name="CHECK_NEW_TODO" value="false" />
+    <MESSAGE value="二分搜索树" />
+    <option name="LAST_COMMIT_MESSAGE" value="二分搜索树" />
   </component>
   <component name="editorHistoryManager">
     <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_144.jdk/Contents/Home/src.zip!/java/lang/Comparable.java">
@@ -317,12 +402,53 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/datastructure/tree/BST.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="179">
-          <caret line="311" column="32" lean-forward="true" selection-start-line="311" selection-start-column="32" selection-end-line="311" selection-end-column="32" />
+        <state relative-caret-position="897">
+          <caret line="311" column="32" selection-start-line="311" selection-start-column="32" selection-end-line="311" selection-end-column="32" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#6973#6974#0" expanded="true" />
             <element signature="e#6992#6993#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/datastructure/array/Student.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="22" column="56" selection-start-line="22" selection-start-column="56" selection-end-line="22" selection-end-column="56" />
+          <folding>
+            <element signature="e#255#256#0" expanded="true" />
+            <element signature="e#292#293#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/datastructure/array/Text.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="364">
+          <caret line="24" column="27" lean-forward="true" selection-start-line="24" selection-start-column="27" selection-end-line="24" selection-end-column="27" />
+          <folding>
+            <element signature="e#135#144#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/datastructure/array/Array.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="186">
+          <caret line="96" column="12" selection-start-line="96" selection-start-column="8" selection-end-line="96" selection-end-column="12" />
+          <folding>
+            <element signature="e#259#260#0" expanded="true" />
+            <element signature="e#314#315#0" expanded="true" />
+            <element signature="e#380#381#0" expanded="true" />
+            <element signature="e#444#445#0" expanded="true" />
+            <element signature="e#468#469#0" expanded="true" />
+            <element signature="e#494#495#0" expanded="true" />
+            <element signature="e#562#563#0" expanded="true" />
+            <element signature="e#1347#1348#0" expanded="true" />
+            <element signature="e#1415#1416#0" expanded="true" />
+            <element signature="e#1697#1698#0" expanded="true" />
+            <element signature="e#3129#3130#0" expanded="true" />
           </folding>
         </state>
       </provider>
