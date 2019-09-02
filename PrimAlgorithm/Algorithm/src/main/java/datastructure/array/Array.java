@@ -28,15 +28,17 @@ public class Array<T> {
         return size == 0;
     }
 
+    //O(1)
     public void addLast(T e) {
         add(size, e);
     }
 
+    //O(n)
     public void addFirst(T e) {
         add(0, e);
     }
 
-    //添加元素
+    //添加元素 O(n)
     public void add(int index, T e) {
         if (index < 0 || index > size) {
             throw new IllegalArgumentException("add error request index < 0 || index > capacity");
@@ -63,10 +65,12 @@ public class Array<T> {
         data = newData;
     }
 
+    //O(n)
     public T removeFirst() {
         return remove(0);
     }
 
+    //O(1)
     public T removeLast() {
         return remove(size - 1);
     }
@@ -81,12 +85,23 @@ public class Array<T> {
         return false;
     }
 
+    //删除所有重复的元素
     public boolean removeElementAll(T e) {
+        return removeAll(e);
+    }
+
+    private boolean removeAll(T e) {
+        int index = find(e);
+        if (index == -1) {
+            return true;
+        }
+        remove(index);
+        removeAll(e);
         return false;
     }
 
     //删除某个索引
-    public T remove(int index) {
+    public synchronized T remove(int index) {
         if (index < 0 || index >= size) {
             throw new IllegalArgumentException("add error request index < 0 || index > size");
         }
@@ -97,7 +112,9 @@ public class Array<T> {
         size--;
         data[size] = null;
         //如果当前的元素个数已经小到了一个程度 1/2 的程度则缩小容量
-        if (size == data.length / 2) {
+        //为了防止出现震荡的情况 如：位于扩容与缩容临界点 不断的添加或者删除 就会不断的扩容和缩容，时间复杂度都是O(n)
+        //所以将元素的个数达到总容量的1/4时才进行缩容 到总容量的一半 可以有效的防止上述的临界点的问题
+        if (size == data.length / 4 && data.length / 2 != 0) {
             resize(data.length / 2);
         }
         return e;
@@ -113,7 +130,7 @@ public class Array<T> {
     }
 
     //更新某个元素
-    public void update(int index, T e) {
+    public void set(int index, T e) {
         if (index < 0 || index >= size) {
             throw new IllegalArgumentException("add error request index < 0 || index > size");
         }
@@ -140,8 +157,20 @@ public class Array<T> {
         return -1;
     }
 
-    public int findAll(int e) {
-        return -1;
+    //找到所有重复的元素
+    public int[] findAll(T e) {
+        int[] indexs = new int[size];
+        int k = 0;
+        for (int i = 0; i < size; i++) {
+            if (data[i].equals(e)) {
+                indexs[k] = i;
+                k++;
+            } else {
+                indexs[k] = -1;
+                k++;
+            }
+        }
+        return indexs;
     }
 
     @Override

@@ -9,23 +9,29 @@ public class Text {
         System.out.println(array);
 
         array.add(1, 100);
+        array.add(2, 100);
+        array.add(4, 100);
+        System.out.println(array);
+        array.removeElementAll(100);
+        System.out.println(array);
+        System.out.println(array);
         System.out.println(array);
 
-        array.addFirst(-1);
-        System.out.println(array);
-//
+//        array.addFirst(-1);
+//        System.out.println(array);
+////
 //        array.remove(2);
 //        System.out.println(array);
 //        array.removeFirst();
 //        System.out.println(array);
 //
-        array.removeLast();
-        System.out.println(array);
-
-        array.removeLast();
-        System.out.println(array);
-
-        array.removeLast();
-        System.out.println(array);
+//        array.removeLast();
+//        System.out.println(array);
+//
+//        array.removeLast();
+//        System.out.println(array);
+//
+//        array.removeLast();
+//        System.out.println(array);
     }
 }

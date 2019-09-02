@@ -18,7 +18,7 @@ public class Main {
         //
         //
 //        bst.preOrder();//532468
-//        System.out.println("args = [" + args + "]");
+        System.out.println(bst);
 //        bst.preOrderNR();
 //        bst.lastOrder();//536248
 //        bst.inOrder();//234568
@@ -26,8 +26,8 @@ public class Main {
 //        System.out.println(bst.toString());
 //        System.out.println("args = [" + bst.minimum() + "]");
 //        System.out.println("args = [" + bst.maximum() + "]");
-        bst.remove(3);
-        bst.lastOrder();
+//        bst.remove(3);
+//        bst.lastOrder();
 
 //        testRemoveMin();
 //        testRemoveMax();

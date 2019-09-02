@@ -171,6 +171,18 @@ public class BST<T extends Comparable<T>> {
         inOrder(node.right);
     }
 
+    /**
+     * 3
+     * <p>
+     * <p>
+     * <p>
+     * <p>
+     * 5
+     */
+    public void inOrderNR() {
+
+    }
+
     //后序遍历
     public void postOrder() {
         postOrder(root);
@@ -253,7 +265,10 @@ public class BST<T extends Comparable<T>> {
         //如果递归的节点的左子树为null那么就查找到最小的节点
         if (node.left == null) {
             //保存右子树
-            return moveRight(node);
+            Node<T> rightNode = node.right;
+            node.right = null;
+            size--;
+            return rightNode;
         }
         //然后将最小的节点进行赋值
         node.left = removeMin(node.left);
@@ -269,7 +284,10 @@ public class BST<T extends Comparable<T>> {
 
     private Node<T> removeMax(Node<T> node) {
         if (node.right == null) {
-            return moveLeft(node);
+            Node<T> leftNode = node.left;
+            node.left = null;
+            size--;
+            return leftNode;
         }
         node.right = removeMax(node.right);
         return node;
