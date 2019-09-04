@@ -23,6 +23,9 @@ public class ArrayQueue<E> implements Queue<E> {
         array.addLast(e);
     }
 
+    /**
+     * 每次移除的是数组的第一个，会导致所有数据的移动 性能低效
+     */
     @Override
     public E dequeue() {
         if (isEmpty()) return null;
@@ -46,6 +49,29 @@ public class ArrayQueue<E> implements Queue<E> {
 
     @Override
     public String toString() {
-        return super.toString();
+        StringBuilder res = new StringBuilder();
+        res.append("Queue: \n");
+        res.append("top: ");
+        for (int i = 0; i < size(); i++) {
+            res.append(array.get(i));
+            if (i < size() - 1) {
+                res.append(", ");
+            }
+        }
+        return res.toString();
+    }
+
+    public static void main(String[] args) {
+        ArrayQueue<Integer> arrayQueue = new ArrayQueue<Integer>();
+        for (int i = 0; i < 6; i++) {
+            arrayQueue.enqueue(i);
+        }
+        System.out.println(arrayQueue);
+        arrayQueue.dequeue();
+        System.out.println(arrayQueue);
+        arrayQueue.enqueue(7);
+        System.out.println(arrayQueue);
+        arrayQueue.dequeue();
+        System.out.println(arrayQueue);
     }
 }
