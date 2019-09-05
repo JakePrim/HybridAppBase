@@ -5,7 +5,7 @@ package datastructure.stack;
  *
  * @param <E>
  */
-public class ArrayStack<E> extends Array<E> implements Stack<E> {
+public class ArrayStack<E> implements Stack<E> {
 
     private Array<E> array;
 
@@ -29,12 +29,20 @@ public class ArrayStack<E> extends Array<E> implements Stack<E> {
 
     @Override
     public E peek() {
+        if (array.isEmpty()) {
+            return null;
+        }
         return array.getLast();
     }
 
     @Override
     public int size() {
         return array.getSize();
+    }
+
+    @Override
+    public boolean isEmpty() {
+        return array.isEmpty();
     }
 
     public int getCapacity() {
