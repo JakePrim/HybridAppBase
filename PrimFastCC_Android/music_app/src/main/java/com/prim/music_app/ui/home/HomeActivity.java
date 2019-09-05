@@ -10,6 +10,7 @@ import android.view.View;
 import android.widget.ImageView;
 
 import com.prim.lib_common_ui.base.BaseActivity;
+import com.prim.lib_common_ui.pager_indicator.ScaleTransitionPagerTitleView;
 import com.prim.music_app.R;
 import com.prim.music_app.config.CHANNEL;
 import com.prim.music_app.ui.home.adapter.HomePageAdapter;
@@ -72,7 +73,7 @@ public class HomeActivity extends BaseActivity {
 
             @Override
             public IPagerTitleView getTitleView(Context context, final int index) {
-                SimplePagerTitleView titleView = new SimplePagerTitleView(context);
+                ScaleTransitionPagerTitleView titleView = new ScaleTransitionPagerTitleView(context);
                 titleView.setText(CHANNELS[index].getKey());
                 titleView.setTextSize(19);
                 titleView.setNormalColor(Color.parseColor("#999999"));

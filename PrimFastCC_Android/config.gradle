@@ -20,12 +20,18 @@ ext {
     //版本定义
     depsVersion = [
             appcompat     : '28.0.0',
-            magicindicator: '1.5.0'
+            magicindicator: '1.5.0',
+            immersionbar  : '3.0.0-beta07'
     ]
 
     //lib包
     depsLibs = [
-            appcompat     : "com.android.support:appcompat-v7:${depsVersion.appcompat}",
-            magicindicator: "com.github.hackware1993:MagicIndicator:${depsVersion.magicindicator}",
+            appcompat           : "com.android.support:appcompat-v7:${depsVersion.appcompat}",
+            //指示器
+            magicindicator      : "com.github.hackware1993:MagicIndicator:${depsVersion.magicindicator}",
+            //状态栏管理 基础依赖包，必须要依赖
+            immersionbar        : "com.gyf.immersionbar:immersionbar:${depsVersion.immersionbar}",
+            //状态栏管理 fragment快速实现（可选）
+            immersionbarfragment: "com.gyf.immersionbar:immersionbar-components:${depsVersion.immersionbar}"
     ]
 }

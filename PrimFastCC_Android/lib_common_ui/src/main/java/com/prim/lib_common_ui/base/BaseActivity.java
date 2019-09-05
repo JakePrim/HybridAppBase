@@ -4,6 +4,8 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.FragmentActivity;
 
+import com.gyf.immersionbar.ImmersionBar;
+import com.prim.lib_common_ui.R;
 import com.prim.lib_common_ui.utils.StatusBarUtil;
 
 /**
@@ -16,6 +18,11 @@ public abstract class BaseActivity extends FragmentActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        StatusBarUtil.statusBarLightMode(this);
+        ImmersionBar.with(this)
+                .statusBarColor(R.color.colorWhite)
+                .autoStatusBarDarkModeEnable(true)
+                .navigationBarColor(R.color.colorWhite)
+                .autoNavigationBarDarkModeEnable(true)
+                .init();
     }
 }

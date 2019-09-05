@@ -29,6 +29,8 @@ android {
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-    implementation rootProject.depsLibs.appcompat
+    compileOnly rootProject.depsLibs.appcompat
+    implementation rootProject.depsLibs.immersionbar
+
     api rootProject.depsLibs.magicindicator
 }

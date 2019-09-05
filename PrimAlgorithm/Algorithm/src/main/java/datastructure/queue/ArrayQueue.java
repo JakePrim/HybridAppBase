@@ -62,16 +62,17 @@ public class ArrayQueue<E> implements Queue<E> {
     }
 
     public static void main(String[] args) {
-        ArrayQueue<Integer> arrayQueue = new ArrayQueue<Integer>();
-        for (int i = 0; i < 6; i++) {
-            arrayQueue.enqueue(i);
-        }
-        System.out.println(arrayQueue);
-        arrayQueue.dequeue();
-        System.out.println(arrayQueue);
-        arrayQueue.enqueue(7);
-        System.out.println(arrayQueue);
-        arrayQueue.dequeue();
-        System.out.println(arrayQueue);
+//        ArrayQueue<Integer> arrayQueue = new ArrayQueue<Integer>();
+//        for (int i = 0; i < 6; i++) {
+//            arrayQueue.enqueue(i);
+//        }
+//        System.out.println(arrayQueue);
+//        arrayQueue.dequeue();
+//        System.out.println(arrayQueue);
+//        arrayQueue.enqueue(7);
+//        System.out.println(arrayQueue);
+//        arrayQueue.dequeue();
+//        System.out.println(arrayQueue);
+        System.out.println("求余："+1%2);
     }
 }

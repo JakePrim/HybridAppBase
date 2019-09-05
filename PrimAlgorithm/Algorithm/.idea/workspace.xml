@@ -2,10 +2,24 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="82d7983b-0692-480e-ba37-a5faa0b9ac7f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/datastructure/queue/ArrayQueue.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/datastructure/queue/Queue.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/datastructure/queue/LoopQueue.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/datastructure/queue/Test.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../PrimFastCC_Android/lib_common_ui/src/main/java/com/prim/lib_common_ui/pager_indicator/ScaleTransitionPagerTitleView.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../PrimFastCC_Android/lib_common_ui/src/main/res/values/colors.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.10.3/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.3/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.10.3/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.3/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.10.3/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.3/javaCompile/classAnalysis.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.10.3/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.3/javaCompile/javaCompile.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.10.3/taskHistory/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.3/taskHistory/taskHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.10.3/taskHistory/taskHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.3/taskHistory/taskHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../PrimFastCC_Android/lib_network/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../../PrimFastCC_Android/lib_network/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/datastructure/queue/ArrayQueue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/datastructure/queue/ArrayQueue.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../PrimFastCC_Android/config.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../../PrimFastCC_Android/config.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../PrimFastCC_Android/lib_common_ui/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../../PrimFastCC_Android/lib_common_ui/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../PrimFastCC_Android/lib_common_ui/src/main/java/com/prim/lib_common_ui/base/BaseActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../PrimFastCC_Android/lib_common_ui/src/main/java/com/prim/lib_common_ui/base/BaseActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../PrimFastCC_Android/music_app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../PrimFastCC_Android/music_app/src/main/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../PrimFastCC_Android/music_app/src/main/java/com/prim/music_app/ui/home/HomeActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../PrimFastCC_Android/music_app/src/main/java/com/prim/music_app/ui/home/HomeActivity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../PrimFastCC_Android/music_app/src/main/res/layout/activity_home_layout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../PrimFastCC_Android/music_app/src/main/res/layout/activity_home_layout.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../PrimFastCC_Android/music_app/src/main/res/values-v21/styles.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../PrimFastCC_Android/music_app/src/main/res/values-v21/styles.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../PrimFastCC_Android/music_app/src/main/res/values/styles.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../PrimFastCC_Android/music_app/src/main/res/values/styles.xml" afterDir="false" />
@@ -46,34 +60,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/datastructure/stack/Array.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1683">
-              <caret line="117" column="36" lean-forward="true" selection-start-line="117" selection-start-column="36" selection-end-line="117" selection-end-column="36" />
-              <folding>
-                <element signature="e#2897#2898#0" expanded="true" />
-                <element signature="e#2933#2934#0" expanded="true" />
-                <element signature="e#2960#2961#0" expanded="true" />
-                <element signature="e#2989#2990#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/datastructure/queue/Queue.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="11" column="20" selection-start-line="11" selection-start-column="20" selection-end-line="11" selection-end-column="20" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/datastructure/queue/ArrayQueue.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="5" column="9" selection-start-line="5" selection-start-column="9" selection-end-line="5" selection-end-column="9" />
+            <state relative-caret-position="68">
+              <caret line="64" selection-start-line="64" selection-end-line="74" selection-end-column="41" />
               <folding>
                 <element signature="e#205#206#0" expanded="true" />
                 <element signature="e#250#251#0" expanded="true" />
@@ -87,9 +77,36 @@
                 <element signature="e#658#659#0" expanded="true" />
                 <element signature="e#702#703#0" expanded="true" />
                 <element signature="e#737#738#0" expanded="true" />
-                <element signature="e#783#784#0" expanded="true" />
-                <element signature="e#822#823#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/datastructure/queue/LoopQueue.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-597">
+              <caret line="59" column="24" lean-forward="true" selection-start-line="59" selection-start-column="24" selection-end-line="59" selection-end-column="24" />
+              <folding>
+                <element signature="e#467#468#0" expanded="true" />
+                <element signature="e#538#539#0" expanded="true" />
+                <element signature="e#275#276#0" expanded="true" />
+                <element signature="e#303#304#0" expanded="true" />
+                <element signature="e#629#630#0" expanded="true" />
+                <element signature="e#664#665#0" expanded="true" />
+                <element signature="e#727#728#0" expanded="true" />
+                <element signature="e#758#759#0" expanded="true" />
+                <element signature="e#2408#2417#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/datastructure/queue/Test.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="425">
+              <caret line="25" column="55" selection-start-line="25" selection-start-column="45" selection-end-line="25" selection-end-column="55" />
             </state>
           </provider>
         </entry>
@@ -127,6 +144,8 @@
         <option value="$PROJECT_DIR$/src/main/java/datastructure/stack/MinStack.java" />
         <option value="$PROJECT_DIR$/src/main/java/datastructure/queue/Queue.java" />
         <option value="$PROJECT_DIR$/src/main/java/datastructure/queue/ArrayQueue.java" />
+        <option value="$PROJECT_DIR$/src/main/java/datastructure/queue/Test.java" />
+        <option value="$PROJECT_DIR$/src/main/java/datastructure/queue/LoopQueue.java" />
       </list>
     </option>
   </component>
@@ -189,15 +208,6 @@
               <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="datastructure" type="462c0819:PsiDirectoryNode" />
-              <item name="array" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="jakeprim" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Algorithm" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="datastructure" type="462c0819:PsiDirectoryNode" />
               <item name="queue" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
@@ -245,13 +255,26 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Test">
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="datastructure.tree.Main" />
+  <component name="RunManager" selected="Application.Test (1)">
+    <configuration name="ArrayQueue" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="datastructure.queue.ArrayQueue" />
       <module name="jakeprim.main" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="datastructure.tree.*" />
+          <option name="PATTERN" value="datastructure.queue.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="LoopQueue" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="datastructure.queue.LoopQueue" />
+      <module name="jakeprim.main" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="datastructure.queue.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -272,6 +295,19 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Test (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="datastructure.queue.Test" />
+      <module name="jakeprim.main" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="datastructure.queue.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="datastructure.stack.Test" />
       <module name="jakeprim.main" />
@@ -285,25 +321,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Text" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="datastructure.array.Text" />
-      <module name="jakeprim.main" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="datastructure.array.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Test (1)" />
+        <item itemvalue="Application.LoopQueue" />
+        <item itemvalue="Application.ArrayQueue" />
         <item itemvalue="Application.Test" />
         <item itemvalue="Application.Student" />
-        <item itemvalue="Application.Text" />
-        <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
   </component>
@@ -323,7 +347,7 @@
       <workItem from="1567001562632" duration="421000" />
       <workItem from="1567149236078" duration="2866000" />
       <workItem from="1567178184937" duration="31778000" />
-      <workItem from="1567520498740" duration="2568000" />
+      <workItem from="1567520498740" duration="9220000" />
     </task>
     <task id="LOCAL-00001" summary="二分搜索树">
       <created>1567264809637</created>
@@ -353,11 +377,25 @@
       <option name="project" value="LOCAL" />
       <updated>1567520714690</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="队列">
+      <created>1567585897644</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1567585897644</updated>
+    </task>
+    <task id="LOCAL-00006" summary="队列">
+      <created>1567586393289</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1567586393289</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="51366000" />
+    <option name="totallyTimeSpent" value="58018000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -369,10 +407,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1440" height="900" extended-state="0" />
+    <frame x="0" y="0" width="1440" height="900" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.23775215" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.23775215" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -381,7 +419,7 @@
       <window_info id="UI Designer" order="6" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.4028133" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.40153453" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39897698" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -422,7 +460,8 @@
     <MESSAGE value="数组结构" />
     <MESSAGE value="动态数组" />
     <MESSAGE value="最小栈的问题" />
-    <option name="LAST_COMMIT_MESSAGE" value="最小栈的问题" />
+    <MESSAGE value="队列" />
+    <option name="LAST_COMMIT_MESSAGE" value="队列" />
   </component>
   <component name="editorHistoryManager">
     <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_144.jdk/Contents/Home/src.zip!/java/lang/Comparable.java">
@@ -576,6 +615,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/datastructure/queue/Queue.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="20" selection-start-line="11" selection-start-column="20" selection-end-line="11" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/datastructure/stack/Array.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1683">
@@ -589,17 +635,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/datastructure/queue/Queue.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="20" selection-start-line="11" selection-start-column="20" selection-end-line="11" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/datastructure/queue/ArrayQueue.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="9" selection-start-line="5" selection-start-column="9" selection-end-line="5" selection-end-column="9" />
+        <state relative-caret-position="68">
+          <caret line="64" selection-start-line="64" selection-end-line="74" selection-end-column="41" />
           <folding>
             <element signature="e#205#206#0" expanded="true" />
             <element signature="e#250#251#0" expanded="true" />
@@ -613,8 +652,31 @@
             <element signature="e#658#659#0" expanded="true" />
             <element signature="e#702#703#0" expanded="true" />
             <element signature="e#737#738#0" expanded="true" />
-            <element signature="e#783#784#0" expanded="true" />
-            <element signature="e#822#823#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/datastructure/queue/Test.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="25" column="55" selection-start-line="25" selection-start-column="45" selection-end-line="25" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/datastructure/queue/LoopQueue.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-597">
+          <caret line="59" column="24" lean-forward="true" selection-start-line="59" selection-start-column="24" selection-end-line="59" selection-end-column="24" />
+          <folding>
+            <element signature="e#467#468#0" expanded="true" />
+            <element signature="e#538#539#0" expanded="true" />
+            <element signature="e#275#276#0" expanded="true" />
+            <element signature="e#303#304#0" expanded="true" />
+            <element signature="e#629#630#0" expanded="true" />
+            <element signature="e#664#665#0" expanded="true" />
+            <element signature="e#727#728#0" expanded="true" />
+            <element signature="e#758#759#0" expanded="true" />
+            <element signature="e#2408#2417#0" expanded="true" />
           </folding>
         </state>
       </provider>
