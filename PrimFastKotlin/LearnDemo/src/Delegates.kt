@@ -1,5 +1,8 @@
 import kotlin.reflect.KProperty
 
+/**
+ * 代理
+ */
 class Delegates {
     val hello by lazy {
         "HelloWorld"

@@ -2,8 +2,94 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="82d7983b-0692-480e-ba37-a5faa0b9ac7f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/datastructure/stack/BrowserStack.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/datastructure/stack/SampleBrowser.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/datastructure/linklist/LinkedList.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/datastructure/linklist/LinkedQueue.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/datastructure/linklist/LinkedStack.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/datastructure/linklist/Test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../AdvancedDemo/PrimImageLoader/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../AdvancedDemo/PrimImageLoader/.idea/caches/build_file_checksums.ser" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../AdvancedDemo/PrimImageLoader/.idea/codeStyles/Project.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../AdvancedDemo/PrimImageLoader/.idea/gradle.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../AdvancedDemo/PrimImageLoader/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../AdvancedDemo/PrimImageLoader/.idea/runConfigurations.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../AdvancedDemo/PrimImageLoader/app/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../AdvancedDemo/PrimImageLoader/app/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../AdvancedDemo/PrimImageLoader/app/proguard-rules.pro" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../AdvancedDemo/PrimImageLoader/app/src/androidTest/java/load/image/prim/com/primimageloader/ExampleInstrumentedTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../AdvancedDemo/PrimImageLoader/app/src/main/AndroidManifest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../AdvancedDemo/PrimImageLoader/app/src/main/java/load/image/prim/com/primimageloader/MainActivity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../AdvancedDemo/PrimImageLoader/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../AdvancedDemo/PrimImageLoader/app/src/main/res/drawable/ic_launcher_background.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../AdvancedDemo/PrimImageLoader/app/src/main/res/layout/activity_main.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../AdvancedDemo/PrimImageLoader/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../AdvancedDemo/PrimImageLoader/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../AdvancedDemo/PrimImageLoader/app/src/main/res/mipmap-hdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../AdvancedDemo/PrimImageLoader/app/src/main/res/mipmap-hdpi/ic_launcher_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../AdvancedDemo/PrimImageLoader/app/src/main/res/mipmap-mdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../AdvancedDemo/PrimImageLoader/app/src/main/res/mipmap-mdpi/ic_launcher_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../AdvancedDemo/PrimImageLoader/app/src/main/res/mipmap-xhdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../AdvancedDemo/PrimImageLoader/app/src/main/res/mipmap-xhdpi/ic_launcher_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../AdvancedDemo/PrimImageLoader/app/src/main/res/mipmap-xxhdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../AdvancedDemo/PrimImageLoader/app/src/main/res/mipmap-xxhdpi/ic_launcher_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../AdvancedDemo/PrimImageLoader/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../AdvancedDemo/PrimImageLoader/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../AdvancedDemo/PrimImageLoader/app/src/main/res/values/colors.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../AdvancedDemo/PrimImageLoader/app/src/main/res/values/strings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../AdvancedDemo/PrimImageLoader/app/src/main/res/values/styles.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../AdvancedDemo/PrimImageLoader/app/src/test/java/load/image/prim/com/primimageloader/ExampleUnitTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../AdvancedDemo/PrimImageLoader/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../AdvancedDemo/PrimImageLoader/gradle.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../AdvancedDemo/PrimImageLoader/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../AdvancedDemo/PrimImageLoader/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../AdvancedDemo/PrimImageLoader/gradlew" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../AdvancedDemo/PrimImageLoader/gradlew.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../AdvancedDemo/PrimImageLoader/prim-image-loader/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../AdvancedDemo/PrimImageLoader/prim-image-loader/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../AdvancedDemo/PrimImageLoader/prim-image-loader/proguard-rules.pro" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../AdvancedDemo/PrimImageLoader/prim-image-loader/src/androidTest/java/load/image/prim/com/prim_image_loader/ExampleInstrumentedTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../AdvancedDemo/PrimImageLoader/prim-image-loader/src/main/AndroidManifest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../AdvancedDemo/PrimImageLoader/prim-image-loader/src/main/java/load/image/prim/com/prim_image_loader/PrimM.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../AdvancedDemo/PrimImageLoader/prim-image-loader/src/main/java/load/image/prim/com/prim_image_loader/PrimMBuilder.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../AdvancedDemo/PrimImageLoader/prim-image-loader/src/main/java/load/image/prim/com/prim_image_loader/cache/ActivityCache.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../AdvancedDemo/PrimImageLoader/prim-image-loader/src/main/java/load/image/prim/com/prim_image_loader/cache/CacheTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../AdvancedDemo/PrimImageLoader/prim-image-loader/src/main/java/load/image/prim/com/prim_image_loader/cache/Key.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../AdvancedDemo/PrimImageLoader/prim-image-loader/src/main/java/load/image/prim/com/prim_image_loader/cache/LruMemoryCache.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../AdvancedDemo/PrimImageLoader/prim-image-loader/src/main/java/load/image/prim/com/prim_image_loader/cache/MemoryCache.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../AdvancedDemo/PrimImageLoader/prim-image-loader/src/main/java/load/image/prim/com/prim_image_loader/cache/disk/DiskLruCache.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../AdvancedDemo/PrimImageLoader/prim-image-loader/src/main/java/load/image/prim/com/prim_image_loader/cache/disk/DiskLruCacheWrapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../AdvancedDemo/PrimImageLoader/prim-image-loader/src/main/java/load/image/prim/com/prim_image_loader/cache/disk/IDiskCache.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../AdvancedDemo/PrimImageLoader/prim-image-loader/src/main/java/load/image/prim/com/prim_image_loader/cache/disk/StrictLineReader.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../AdvancedDemo/PrimImageLoader/prim-image-loader/src/main/java/load/image/prim/com/prim_image_loader/cache/disk/Util.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../AdvancedDemo/PrimImageLoader/prim-image-loader/src/main/java/load/image/prim/com/prim_image_loader/cache/recycle/BitmapPool.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../AdvancedDemo/PrimImageLoader/prim-image-loader/src/main/java/load/image/prim/com/prim_image_loader/cache/recycle/LruBitmapPool.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../AdvancedDemo/PrimImageLoader/prim-image-loader/src/main/java/load/image/prim/com/prim_image_loader/cache/recycle/Resource.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../AdvancedDemo/PrimImageLoader/prim-image-loader/src/main/java/load/image/prim/com/prim_image_loader/load/LoadText.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../AdvancedDemo/PrimImageLoader/prim-image-loader/src/main/java/load/image/prim/com/prim_image_loader/load/ModelLoaderRegistry.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../AdvancedDemo/PrimImageLoader/prim-image-loader/src/main/java/load/image/prim/com/prim_image_loader/load/ObjectKey.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../AdvancedDemo/PrimImageLoader/prim-image-loader/src/main/java/load/image/prim/com/prim_image_loader/load/fetcher/DataFetcher.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../AdvancedDemo/PrimImageLoader/prim-image-loader/src/main/java/load/image/prim/com/prim_image_loader/load/fetcher/FileFetcher.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../AdvancedDemo/PrimImageLoader/prim-image-loader/src/main/java/load/image/prim/com/prim_image_loader/load/fetcher/HttpUriFetcher.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../AdvancedDemo/PrimImageLoader/prim-image-loader/src/main/java/load/image/prim/com/prim_image_loader/load/loader/FileLoader.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../AdvancedDemo/PrimImageLoader/prim-image-loader/src/main/java/load/image/prim/com/prim_image_loader/load/loader/FileUriLoader.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../AdvancedDemo/PrimImageLoader/prim-image-loader/src/main/java/load/image/prim/com/prim_image_loader/load/loader/HttpUriLoader.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../AdvancedDemo/PrimImageLoader/prim-image-loader/src/main/java/load/image/prim/com/prim_image_loader/load/loader/ModelLoader.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../AdvancedDemo/PrimImageLoader/prim-image-loader/src/main/java/load/image/prim/com/prim_image_loader/load/loader/MultiModelLoader.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../AdvancedDemo/PrimImageLoader/prim-image-loader/src/main/java/load/image/prim/com/prim_image_loader/load/loader/StringModelLoader.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../AdvancedDemo/PrimImageLoader/prim-image-loader/src/main/java/load/image/prim/com/prim_image_loader/manager/ActivityFragmentLifecycle.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../AdvancedDemo/PrimImageLoader/prim-image-loader/src/main/java/load/image/prim/com/prim_image_loader/manager/ApplicationLifecycle.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../AdvancedDemo/PrimImageLoader/prim-image-loader/src/main/java/load/image/prim/com/prim_image_loader/manager/Lifecycle.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../AdvancedDemo/PrimImageLoader/prim-image-loader/src/main/java/load/image/prim/com/prim_image_loader/manager/LifecycleListener.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../AdvancedDemo/PrimImageLoader/prim-image-loader/src/main/java/load/image/prim/com/prim_image_loader/manager/RequestBuilder.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../AdvancedDemo/PrimImageLoader/prim-image-loader/src/main/java/load/image/prim/com/prim_image_loader/manager/RequestManager.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../AdvancedDemo/PrimImageLoader/prim-image-loader/src/main/java/load/image/prim/com/prim_image_loader/manager/RequestManagerFactory.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../AdvancedDemo/PrimImageLoader/prim-image-loader/src/main/java/load/image/prim/com/prim_image_loader/manager/SupportRequestManagerFragment.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../AdvancedDemo/PrimImageLoader/prim-image-loader/src/main/java/load/image/prim/com/prim_image_loader/manager/Traget.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../AdvancedDemo/PrimImageLoader/prim-image-loader/src/main/java/load/image/prim/com/prim_image_loader/request/Request.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../AdvancedDemo/PrimImageLoader/prim-image-loader/src/main/java/load/image/prim/com/prim_image_loader/request/RequestTrack.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../AdvancedDemo/PrimImageLoader/prim-image-loader/src/main/java/load/image/prim/com/prim_image_loader/util/Utils.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../AdvancedDemo/PrimImageLoader/prim-image-loader/src/main/res/values/strings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../AdvancedDemo/PrimImageLoader/prim-image-loader/src/test/java/load/image/prim/com/prim_image_loader/ExampleUnitTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../AdvancedDemo/PrimImageLoader/settings.gradle" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.10.3/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.3/fileHashes/fileHashes.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.10.3/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.3/fileHashes/fileHashes.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.10.3/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.3/javaCompile/classAnalysis.bin" afterDir="false" />
@@ -12,8 +98,21 @@
       <change beforePath="$PROJECT_DIR$/.gradle/4.10.3/taskHistory/taskHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.3/taskHistory/taskHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/datastructure/stack/ArrayStack.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/datastructure/stack/ArrayStack.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/datastructure/stack/ArrayStack.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/datastructure/stack/ArrayStack.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../PrimFastKotlin/LearnDemo/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../PrimFastKotlin/LearnDemo/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../PrimFastKotlin/LearnDemo/out/production/LearnDemo/ArrayKt.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../PrimFastKotlin/LearnDemo/out/production/LearnDemo/ArrayKt.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../PrimFastKotlin/LearnDemo/out/production/LearnDemo/CalcKt.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../PrimFastKotlin/LearnDemo/out/production/LearnDemo/CalcKt.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../PrimFastKotlin/LearnDemo/out/production/LearnDemo/Delegates$hello$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../PrimFastKotlin/LearnDemo/out/production/LearnDemo/Delegates$hello$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../PrimFastKotlin/LearnDemo/out/production/LearnDemo/Delegates.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../PrimFastKotlin/LearnDemo/out/production/LearnDemo/Delegates.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../PrimFastKotlin/LearnDemo/out/production/LearnDemo/DelegatesKt.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../PrimFastKotlin/LearnDemo/out/production/LearnDemo/DelegatesKt.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../PrimFastKotlin/LearnDemo/out/production/LearnDemo/META-INF/LearnDemo.kotlin_module" beforeDir="false" afterPath="$PROJECT_DIR$/../../PrimFastKotlin/LearnDemo/out/production/LearnDemo/META-INF/LearnDemo.kotlin_module" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../PrimFastKotlin/LearnDemo/out/production/LearnDemo/Operators.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../PrimFastKotlin/LearnDemo/out/production/LearnDemo/Operators.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../PrimFastKotlin/LearnDemo/out/production/LearnDemo/People.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../PrimFastKotlin/LearnDemo/out/production/LearnDemo/People.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../PrimFastKotlin/LearnDemo/out/production/LearnDemo/X.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../PrimFastKotlin/LearnDemo/out/production/LearnDemo/X.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../PrimFastKotlin/LearnDemo/out/production/LearnDemo/dataclass/ComponentX.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../PrimFastKotlin/LearnDemo/out/production/LearnDemo/dataclass/ComponentX.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../PrimFastKotlin/LearnDemo/out/production/LearnDemo/dataclass/Country.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../PrimFastKotlin/LearnDemo/out/production/LearnDemo/dataclass/Country.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../PrimFastKotlin/LearnDemo/out/production/LearnDemo/dataclass/CountryKt.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../PrimFastKotlin/LearnDemo/out/production/LearnDemo/dataclass/CountryKt.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../PrimFastKotlin/LearnDemo/out/production/LearnDemo/function/Childs.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../PrimFastKotlin/LearnDemo/out/production/LearnDemo/function/Childs.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../PrimFastKotlin/LearnDemo/src/Delegates.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../../PrimFastKotlin/LearnDemo/src/Delegates.kt" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
@@ -51,82 +150,70 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/datastructure/queue/ArrayQueue.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/datastructure/linklist/LinkedList.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="850">
-              <caret line="62" selection-end-line="78" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/datastructure/queue/LoopQueue.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="18" column="45" selection-end-line="127" />
+            <state relative-caret-position="401">
+              <caret line="28" column="5" lean-forward="true" selection-start-line="9" selection-start-column="3" selection-end-line="28" selection-end-column="5" />
               <folding>
-                <element signature="e#443#444#0" expanded="true" />
-                <element signature="e#467#468#0" expanded="true" />
-                <element signature="e#499#500#0" expanded="true" />
-                <element signature="e#538#539#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/datastructure/stack/ArrayStack.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="31" column="30" lean-forward="true" selection-start-line="31" selection-start-column="30" selection-end-line="31" selection-end-column="30" />
-              <folding>
-                <element signature="e#276#277#0" expanded="true" />
-                <element signature="e#318#319#0" expanded="true" />
-                <element signature="e#435#436#0" expanded="true" />
-                <element signature="e#482#483#0" expanded="true" />
-                <element signature="e#663#664#0" expanded="true" />
-                <element signature="e#691#692#0" expanded="true" />
-                <element signature="e#666#667#0" expanded="true" />
+                <element signature="e#614#615#0" expanded="true" />
+                <element signature="e#641#642#0" expanded="true" />
+                <element signature="e#676#677#0" expanded="true" />
                 <element signature="e#708#709#0" expanded="true" />
+                <element signature="e#1304#1305#0" expanded="true" />
+                <element signature="e#1332#1333#0" expanded="true" />
+                <element signature="e#1925#1926#0" expanded="true" />
+                <element signature="e#1987#1988#0" expanded="true" />
+                <element signature="e#3023#3024#0" expanded="true" />
+                <element signature="e#3091#3092#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/datastructure/stack/BrowserStack.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/datastructure/linklist/LinkedQueue.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="8" column="31" lean-forward="true" selection-start-line="8" selection-start-column="31" selection-end-line="8" selection-end-column="31" />
+            <state relative-caret-position="541">
+              <caret line="60" column="15" selection-start-line="60" selection-start-column="15" selection-end-line="60" selection-end-column="15" />
               <folding>
-                <element signature="e#1685#1686#0" expanded="true" />
+                <element signature="e#1294#1295#0" expanded="true" />
+                <element signature="e#1360#1361#0" expanded="true" />
+                <element signature="e#1431#1432#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/datastructure/stack/MinStack.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/datastructure/linklist/LinkedStack.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="425">
-              <caret line="25" column="10" lean-forward="true" selection-start-line="25" selection-start-column="10" selection-end-line="25" selection-end-column="10" />
+            <state relative-caret-position="884">
+              <caret line="52" column="40" selection-start-line="52" selection-start-column="40" selection-end-line="52" selection-end-column="40" />
+              <folding>
+                <element signature="e#183#184#0" expanded="true" />
+                <element signature="e#229#230#0" expanded="true" />
+                <element signature="e#273#274#0" expanded="true" />
+                <element signature="e#298#299#0" expanded="true" />
+                <element signature="e#209#210#0" expanded="true" />
+                <element signature="e#236#237#0" expanded="true" />
+                <element signature="e#273#274#0" expanded="true" />
+                <element signature="e#300#301#0" expanded="true" />
+                <element signature="e#339#340#0" expanded="true" />
+                <element signature="e#363#364#0" expanded="true" />
+                <element signature="e#409#410#0" expanded="true" />
+                <element signature="e#437#438#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/datastructure/linklist/Test.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="491">
+              <caret line="31" lean-forward="true" selection-start-line="31" selection-end-line="31" />
               <folding>
                 <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/datastructure/stack/Array.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="125" column="33" selection-start-line="125" selection-start-column="33" selection-end-line="125" selection-end-column="33" />
-              <folding>
-                <element signature="e#2897#2898#0" expanded="true" />
-                <element signature="e#2933#2934#0" expanded="true" />
-                <element signature="e#2960#2961#0" expanded="true" />
-                <element signature="e#2989#2990#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -169,6 +256,10 @@
         <option value="$PROJECT_DIR$/src/main/java/datastructure/stack/ArrayStack.java" />
         <option value="$PROJECT_DIR$/src/main/java/datastructure/stack/SampleBrowser.java" />
         <option value="$PROJECT_DIR$/src/main/java/datastructure/stack/BrowserStack.java" />
+        <option value="$PROJECT_DIR$/src/main/java/datastructure/linklist/LinkedStack.java" />
+        <option value="$PROJECT_DIR$/src/main/java/datastructure/linklist/Test.java" />
+        <option value="$PROJECT_DIR$/src/main/java/datastructure/linklist/LinkedList.java" />
+        <option value="$PROJECT_DIR$/src/main/java/datastructure/linklist/LinkedQueue.java" />
       </list>
     </option>
   </component>
@@ -179,7 +270,7 @@
       </MavenGeneralSettings>
     </option>
   </component>
-  <component name="ProjectFrameBounds" fullScreen="true">
+  <component name="ProjectFrameBounds" extendedState="6" fullScreen="true">
     <option name="width" value="1440" />
     <option name="height" value="900" />
   </component>
@@ -191,49 +282,49 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
               <item name="jakeprim" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Algorithm" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="Algorithm" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="jakeprim" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Algorithm" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="Algorithm" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="jakeprim" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Algorithm" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-            </path>
-            <path>
-              <item name="jakeprim" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Algorithm" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="Algorithm" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="jakeprim" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Algorithm" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="Algorithm" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="datastructure" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="jakeprim" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Algorithm" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="Algorithm" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="datastructure" type="462c0819:PsiDirectoryNode" />
-              <item name="stack" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="jakeprim" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Algorithm" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="datastructure" type="462c0819:PsiDirectoryNode" />
+              <item name="linklist" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -258,7 +349,7 @@
     <property name="project.structure.last.edited" value="SDKs" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.0" />
-    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="settings.editor.selected.configurable" value="preferences.customizations" />
     <property name="show.migrate.to.gradle.popup" value="false" />
   </component>
   <component name="RecentsManager">
@@ -278,20 +369,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.BrowserStack">
-    <configuration name="ArrayQueue" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="datastructure.queue.ArrayQueue" />
-      <module name="jakeprim.main" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="datastructure.queue.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="Application.Test">
     <configuration name="BrowserStack" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="datastructure.stack.BrowserStack" />
       <module name="jakeprim.main" />
@@ -305,12 +383,25 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="LoopQueue" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="datastructure.queue.LoopQueue" />
+    <configuration name="LinkedList" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="datastructure.linklist.LinkedList" />
       <module name="jakeprim.main" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="datastructure.queue.*" />
+          <option name="PATTERN" value="datastructure.linklist.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="LinkedStack" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="datastructure.linklist.LinkedStack" />
+      <module name="jakeprim.main" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="datastructure.linklist.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -331,12 +422,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Test (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="datastructure.queue.Test" />
+    <configuration name="Test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="datastructure.linklist.Test" />
       <module name="jakeprim.main" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="datastructure.queue.*" />
+          <option name="PATTERN" value="datastructure.linklist.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -346,11 +437,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Test" />
+        <item itemvalue="Application.LinkedStack" />
+        <item itemvalue="Application.LinkedList" />
         <item itemvalue="Application.SampleBrowser" />
         <item itemvalue="Application.BrowserStack" />
-        <item itemvalue="Application.Test (1)" />
-        <item itemvalue="Application.LoopQueue" />
-        <item itemvalue="Application.ArrayQueue" />
       </list>
     </recent_temporary>
   </component>
@@ -371,7 +462,11 @@
       <workItem from="1567149236078" duration="2866000" />
       <workItem from="1567178184937" duration="31778000" />
       <workItem from="1567520498740" duration="10563000" />
-      <workItem from="1567666050837" duration="2995000" />
+      <workItem from="1567666050837" duration="3031000" />
+      <workItem from="1567693043227" duration="2957000" />
+      <workItem from="1567995542236" duration="538000" />
+      <workItem from="1568020244138" duration="436000" />
+      <workItem from="1568037580182" duration="4484000" />
     </task>
     <task id="LOCAL-00001" summary="二分搜索树">
       <created>1567264809637</created>
@@ -415,11 +510,18 @@
       <option name="project" value="LOCAL" />
       <updated>1567586393289</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="队列">
+      <created>1567670342351</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1567670342352</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="62356000" />
+    <option name="totallyTimeSpent" value="70807000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -434,7 +536,7 @@
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24207492" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.259366" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -458,6 +560,7 @@
       <window_info anchor="bottom" id="Version Control" order="14" />
       <window_info anchor="bottom" id="Flutter Performance" order="15" side_tool="true" />
       <window_info anchor="bottom" id="MyBatis Log" order="16" />
+      <window_info anchor="right" id="Coverage" side_tool="true" weight="0.3299712" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -486,6 +589,11 @@
     <MESSAGE value="最小栈的问题" />
     <MESSAGE value="队列" />
     <option name="LAST_COMMIT_MESSAGE" value="队列" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/jakeprim$LinkedList.ic" NAME="LinkedList Coverage Results" MODIFIED="1568040637316" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>datastructure.linklist.*</FILTER>
+    </SUITE>
   </component>
   <component name="editorHistoryManager">
     <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_144.jdk/Contents/Home/src.zip!/java/lang/Comparable.java">
@@ -618,77 +726,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/datastructure/queue/ArrayQueue.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="850">
-          <caret line="62" selection-end-line="78" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/datastructure/stack/Solution.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
           <caret line="2" selection-start-line="2" selection-end-line="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/datastructure/queue/Test.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/datastructure/stack/Array.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="125" column="33" selection-start-line="125" selection-start-column="33" selection-end-line="125" selection-end-column="33" />
-          <folding>
-            <element signature="e#2897#2898#0" expanded="true" />
-            <element signature="e#2933#2934#0" expanded="true" />
-            <element signature="e#2960#2961#0" expanded="true" />
-            <element signature="e#2989#2990#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/datastructure/queue/LoopQueue.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="18" column="45" selection-end-line="127" />
-          <folding>
-            <element signature="e#443#444#0" expanded="true" />
-            <element signature="e#467#468#0" expanded="true" />
-            <element signature="e#499#500#0" expanded="true" />
-            <element signature="e#538#539#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/datastructure/stack/ArrayStack.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="31" column="30" lean-forward="true" selection-start-line="31" selection-start-column="30" selection-end-line="31" selection-end-column="30" />
-          <folding>
-            <element signature="e#276#277#0" expanded="true" />
-            <element signature="e#318#319#0" expanded="true" />
-            <element signature="e#435#436#0" expanded="true" />
-            <element signature="e#482#483#0" expanded="true" />
-            <element signature="e#663#664#0" expanded="true" />
-            <element signature="e#691#692#0" expanded="true" />
-            <element signature="e#666#667#0" expanded="true" />
-            <element signature="e#708#709#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/datastructure/stack/MinStack.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="25" column="10" lean-forward="true" selection-start-line="25" selection-start-column="10" selection-end-line="25" selection-end-column="10" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -721,12 +762,136 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/datastructure/stack/MinStack.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="25" column="10" selection-start-line="25" selection-start-column="10" selection-end-line="25" selection-end-column="10" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/datastructure/stack/Array.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1819">
+          <caret line="125" column="33" selection-start-line="125" selection-start-column="33" selection-end-line="125" selection-end-column="33" />
+          <folding>
+            <element signature="e#2897#2898#0" expanded="true" />
+            <element signature="e#2933#2934#0" expanded="true" />
+            <element signature="e#2960#2961#0" expanded="true" />
+            <element signature="e#2989#2990#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/datastructure/stack/BrowserStack.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="31" lean-forward="true" selection-start-line="8" selection-start-column="31" selection-end-line="8" selection-end-column="31" />
+        <state relative-caret-position="153">
+          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
           <folding>
+            <element signature="e#1616#1617#0" expanded="true" />
             <element signature="e#1685#1686#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/datastructure/stack/ArrayStack.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="31" column="30" selection-start-line="31" selection-start-column="30" selection-end-line="31" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/datastructure/queue/LoopQueue.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="21" column="17" lean-forward="true" selection-start-line="21" selection-start-column="17" selection-end-line="21" selection-end-column="17" />
+          <folding>
+            <element signature="e#443#444#0" expanded="true" />
+            <element signature="e#467#468#0" expanded="true" />
+            <element signature="e#499#500#0" expanded="true" />
+            <element signature="e#538#539#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/datastructure/queue/ArrayQueue.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="16" column="23" lean-forward="true" selection-start-line="16" selection-start-column="23" selection-end-line="16" selection-end-column="23" />
+          <folding>
+            <element signature="e#286#287#0" expanded="true" />
+            <element signature="e#310#311#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/datastructure/queue/Test.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" selection-start-line="3" selection-end-line="33" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/datastructure/linklist/Test.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="491">
+          <caret line="31" lean-forward="true" selection-start-line="31" selection-end-line="31" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/datastructure/linklist/LinkedStack.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="884">
+          <caret line="52" column="40" selection-start-line="52" selection-start-column="40" selection-end-line="52" selection-end-column="40" />
+          <folding>
+            <element signature="e#183#184#0" expanded="true" />
+            <element signature="e#229#230#0" expanded="true" />
+            <element signature="e#273#274#0" expanded="true" />
+            <element signature="e#298#299#0" expanded="true" />
+            <element signature="e#209#210#0" expanded="true" />
+            <element signature="e#236#237#0" expanded="true" />
+            <element signature="e#273#274#0" expanded="true" />
+            <element signature="e#300#301#0" expanded="true" />
+            <element signature="e#339#340#0" expanded="true" />
+            <element signature="e#363#364#0" expanded="true" />
+            <element signature="e#409#410#0" expanded="true" />
+            <element signature="e#437#438#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/datastructure/linklist/LinkedList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="401">
+          <caret line="28" column="5" lean-forward="true" selection-start-line="9" selection-start-column="3" selection-end-line="28" selection-end-column="5" />
+          <folding>
+            <element signature="e#614#615#0" expanded="true" />
+            <element signature="e#641#642#0" expanded="true" />
+            <element signature="e#676#677#0" expanded="true" />
+            <element signature="e#708#709#0" expanded="true" />
+            <element signature="e#1304#1305#0" expanded="true" />
+            <element signature="e#1332#1333#0" expanded="true" />
+            <element signature="e#1925#1926#0" expanded="true" />
+            <element signature="e#1987#1988#0" expanded="true" />
+            <element signature="e#3023#3024#0" expanded="true" />
+            <element signature="e#3091#3092#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/datastructure/linklist/LinkedQueue.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="541">
+          <caret line="60" column="15" selection-start-line="60" selection-start-column="15" selection-end-line="60" selection-end-column="15" />
+          <folding>
+            <element signature="e#1294#1295#0" expanded="true" />
+            <element signature="e#1360#1361#0" expanded="true" />
+            <element signature="e#1431#1432#0" expanded="true" />
           </folding>
         </state>
       </provider>
