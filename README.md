@@ -219,13 +219,18 @@ PrimAlgorithm [项目地址](https://github.com/JakePrim/PrimFastApp/tree/master
 ## 编程基础
 
 ### 数据结构
-- [x] [数据结构之表的总结](https://www.jianshu.com/p/88a0e9c77fb1)
-- [x] [链表问题补充](https://www.jianshu.com/p/87d8e0320bb5)
-- [x] [数据结构之Java中哈希表的经典实现HashMap分析](https://www.jianshu.com/p/e15277533dcf)
-- [x] [队列：彻底理解队列](https://www.jianshu.com/p/1b8270f3c881)
-- [ ] 二叉树
-- [ ] 红黑树
-- [ ] 图论
+[代码](https://github.com/JakePrim/PrimFast/tree/master/PrimAlgorithm/Algorithm)
+
+| 文章标题 | 状态 | 原创/转载 |
+| --- | --- | --- |
+| [算法基础: 数组结构](https://jakeprim.cn/2019/09/04/shuzu/) | [x] | 原创 |
+| [数据结构之表的总结](https://www.jianshu.com/p/88a0e9c77fb1) | [x] | 原创 |
+| [链表问题补充](https://www.jianshu.com/p/87d8e0320bb5) | [x] | 原创 |
+| [数据结构之Java中哈希表的经典实现HashMap分析](https://www.jianshu.com/p/e15277533dcf) | [x] | 原创 |
+| [队列：彻底理解队列](https://www.jianshu.com/p/1b8270f3c881) | [x] | 原创 |
+| [算法基础:栈和队列结构](https://jakeprim.cn/2019/09/05/stackandqueue/) | [x] | 原创 |
+| [算法基础:二分搜索树](https://jakeprim.cn/2019/09/02/bst1/) | [x] | 原创 |
+| [算法基础:链表结构]() | [x] | 原创 |
 
 ### 算法
 ...
