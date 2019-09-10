@@ -2,117 +2,111 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="82d7983b-0692-480e-ba37-a5faa0b9ac7f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/datastructure/linklist/LinkedList.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/datastructure/linklist/LinkedQueue.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/datastructure/linklist/LinkedStack.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/datastructure/linklist/Test.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../AdvancedDemo/PrimImageLoader/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../AdvancedDemo/PrimImageLoader/.idea/caches/build_file_checksums.ser" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../AdvancedDemo/PrimImageLoader/.idea/codeStyles/Project.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../AdvancedDemo/PrimImageLoader/.idea/gradle.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../AdvancedDemo/PrimImageLoader/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../AdvancedDemo/PrimImageLoader/.idea/runConfigurations.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../AdvancedDemo/PrimImageLoader/app/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../AdvancedDemo/PrimImageLoader/app/build.gradle" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../AdvancedDemo/PrimImageLoader/app/proguard-rules.pro" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../AdvancedDemo/PrimImageLoader/app/src/androidTest/java/load/image/prim/com/primimageloader/ExampleInstrumentedTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../AdvancedDemo/PrimImageLoader/app/src/main/AndroidManifest.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../AdvancedDemo/PrimImageLoader/app/src/main/java/load/image/prim/com/primimageloader/MainActivity.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../AdvancedDemo/PrimImageLoader/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../AdvancedDemo/PrimImageLoader/app/src/main/res/drawable/ic_launcher_background.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../AdvancedDemo/PrimImageLoader/app/src/main/res/layout/activity_main.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../AdvancedDemo/PrimImageLoader/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../AdvancedDemo/PrimImageLoader/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../AdvancedDemo/PrimImageLoader/app/src/main/res/mipmap-hdpi/ic_launcher.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../AdvancedDemo/PrimImageLoader/app/src/main/res/mipmap-hdpi/ic_launcher_round.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../AdvancedDemo/PrimImageLoader/app/src/main/res/mipmap-mdpi/ic_launcher.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../AdvancedDemo/PrimImageLoader/app/src/main/res/mipmap-mdpi/ic_launcher_round.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../AdvancedDemo/PrimImageLoader/app/src/main/res/mipmap-xhdpi/ic_launcher.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../AdvancedDemo/PrimImageLoader/app/src/main/res/mipmap-xhdpi/ic_launcher_round.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../AdvancedDemo/PrimImageLoader/app/src/main/res/mipmap-xxhdpi/ic_launcher.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../AdvancedDemo/PrimImageLoader/app/src/main/res/mipmap-xxhdpi/ic_launcher_round.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../AdvancedDemo/PrimImageLoader/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../AdvancedDemo/PrimImageLoader/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../AdvancedDemo/PrimImageLoader/app/src/main/res/values/colors.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../AdvancedDemo/PrimImageLoader/app/src/main/res/values/strings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../AdvancedDemo/PrimImageLoader/app/src/main/res/values/styles.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../AdvancedDemo/PrimImageLoader/app/src/test/java/load/image/prim/com/primimageloader/ExampleUnitTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../AdvancedDemo/PrimImageLoader/build.gradle" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../AdvancedDemo/PrimImageLoader/gradle.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../AdvancedDemo/PrimImageLoader/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../AdvancedDemo/PrimImageLoader/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../AdvancedDemo/PrimImageLoader/gradlew" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../AdvancedDemo/PrimImageLoader/gradlew.bat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../AdvancedDemo/PrimImageLoader/prim-image-loader/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../AdvancedDemo/PrimImageLoader/prim-image-loader/build.gradle" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../AdvancedDemo/PrimImageLoader/prim-image-loader/proguard-rules.pro" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../AdvancedDemo/PrimImageLoader/prim-image-loader/src/androidTest/java/load/image/prim/com/prim_image_loader/ExampleInstrumentedTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../AdvancedDemo/PrimImageLoader/prim-image-loader/src/main/AndroidManifest.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../AdvancedDemo/PrimImageLoader/prim-image-loader/src/main/java/load/image/prim/com/prim_image_loader/PrimM.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../AdvancedDemo/PrimImageLoader/prim-image-loader/src/main/java/load/image/prim/com/prim_image_loader/PrimMBuilder.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../AdvancedDemo/PrimImageLoader/prim-image-loader/src/main/java/load/image/prim/com/prim_image_loader/cache/ActivityCache.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../AdvancedDemo/PrimImageLoader/prim-image-loader/src/main/java/load/image/prim/com/prim_image_loader/cache/CacheTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../AdvancedDemo/PrimImageLoader/prim-image-loader/src/main/java/load/image/prim/com/prim_image_loader/cache/Key.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../AdvancedDemo/PrimImageLoader/prim-image-loader/src/main/java/load/image/prim/com/prim_image_loader/cache/LruMemoryCache.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../AdvancedDemo/PrimImageLoader/prim-image-loader/src/main/java/load/image/prim/com/prim_image_loader/cache/MemoryCache.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../AdvancedDemo/PrimImageLoader/prim-image-loader/src/main/java/load/image/prim/com/prim_image_loader/cache/disk/DiskLruCache.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../AdvancedDemo/PrimImageLoader/prim-image-loader/src/main/java/load/image/prim/com/prim_image_loader/cache/disk/DiskLruCacheWrapper.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../AdvancedDemo/PrimImageLoader/prim-image-loader/src/main/java/load/image/prim/com/prim_image_loader/cache/disk/IDiskCache.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../AdvancedDemo/PrimImageLoader/prim-image-loader/src/main/java/load/image/prim/com/prim_image_loader/cache/disk/StrictLineReader.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../AdvancedDemo/PrimImageLoader/prim-image-loader/src/main/java/load/image/prim/com/prim_image_loader/cache/disk/Util.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../AdvancedDemo/PrimImageLoader/prim-image-loader/src/main/java/load/image/prim/com/prim_image_loader/cache/recycle/BitmapPool.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../AdvancedDemo/PrimImageLoader/prim-image-loader/src/main/java/load/image/prim/com/prim_image_loader/cache/recycle/LruBitmapPool.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../AdvancedDemo/PrimImageLoader/prim-image-loader/src/main/java/load/image/prim/com/prim_image_loader/cache/recycle/Resource.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../AdvancedDemo/PrimImageLoader/prim-image-loader/src/main/java/load/image/prim/com/prim_image_loader/load/LoadText.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../AdvancedDemo/PrimImageLoader/prim-image-loader/src/main/java/load/image/prim/com/prim_image_loader/load/ModelLoaderRegistry.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../AdvancedDemo/PrimImageLoader/prim-image-loader/src/main/java/load/image/prim/com/prim_image_loader/load/ObjectKey.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../AdvancedDemo/PrimImageLoader/prim-image-loader/src/main/java/load/image/prim/com/prim_image_loader/load/fetcher/DataFetcher.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../AdvancedDemo/PrimImageLoader/prim-image-loader/src/main/java/load/image/prim/com/prim_image_loader/load/fetcher/FileFetcher.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../AdvancedDemo/PrimImageLoader/prim-image-loader/src/main/java/load/image/prim/com/prim_image_loader/load/fetcher/HttpUriFetcher.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../AdvancedDemo/PrimImageLoader/prim-image-loader/src/main/java/load/image/prim/com/prim_image_loader/load/loader/FileLoader.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../AdvancedDemo/PrimImageLoader/prim-image-loader/src/main/java/load/image/prim/com/prim_image_loader/load/loader/FileUriLoader.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../AdvancedDemo/PrimImageLoader/prim-image-loader/src/main/java/load/image/prim/com/prim_image_loader/load/loader/HttpUriLoader.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../AdvancedDemo/PrimImageLoader/prim-image-loader/src/main/java/load/image/prim/com/prim_image_loader/load/loader/ModelLoader.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../AdvancedDemo/PrimImageLoader/prim-image-loader/src/main/java/load/image/prim/com/prim_image_loader/load/loader/MultiModelLoader.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../AdvancedDemo/PrimImageLoader/prim-image-loader/src/main/java/load/image/prim/com/prim_image_loader/load/loader/StringModelLoader.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../AdvancedDemo/PrimImageLoader/prim-image-loader/src/main/java/load/image/prim/com/prim_image_loader/manager/ActivityFragmentLifecycle.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../AdvancedDemo/PrimImageLoader/prim-image-loader/src/main/java/load/image/prim/com/prim_image_loader/manager/ApplicationLifecycle.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../AdvancedDemo/PrimImageLoader/prim-image-loader/src/main/java/load/image/prim/com/prim_image_loader/manager/Lifecycle.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../AdvancedDemo/PrimImageLoader/prim-image-loader/src/main/java/load/image/prim/com/prim_image_loader/manager/LifecycleListener.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../AdvancedDemo/PrimImageLoader/prim-image-loader/src/main/java/load/image/prim/com/prim_image_loader/manager/RequestBuilder.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../AdvancedDemo/PrimImageLoader/prim-image-loader/src/main/java/load/image/prim/com/prim_image_loader/manager/RequestManager.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../AdvancedDemo/PrimImageLoader/prim-image-loader/src/main/java/load/image/prim/com/prim_image_loader/manager/RequestManagerFactory.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../AdvancedDemo/PrimImageLoader/prim-image-loader/src/main/java/load/image/prim/com/prim_image_loader/manager/SupportRequestManagerFragment.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../AdvancedDemo/PrimImageLoader/prim-image-loader/src/main/java/load/image/prim/com/prim_image_loader/manager/Traget.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../AdvancedDemo/PrimImageLoader/prim-image-loader/src/main/java/load/image/prim/com/prim_image_loader/request/Request.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../AdvancedDemo/PrimImageLoader/prim-image-loader/src/main/java/load/image/prim/com/prim_image_loader/request/RequestTrack.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../AdvancedDemo/PrimImageLoader/prim-image-loader/src/main/java/load/image/prim/com/prim_image_loader/util/Utils.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../AdvancedDemo/PrimImageLoader/prim-image-loader/src/main/res/values/strings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../AdvancedDemo/PrimImageLoader/prim-image-loader/src/test/java/load/image/prim/com/prim_image_loader/ExampleUnitTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../AdvancedDemo/PrimImageLoader/settings.gradle" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.10.3/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.3/fileHashes/fileHashes.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.10.3/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.3/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.10.3/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.3/javaCompile/classAnalysis.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.10.3/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.3/javaCompile/javaCompile.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.10.3/taskHistory/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.3/taskHistory/taskHistory.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.10.3/taskHistory/taskHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.3/taskHistory/taskHistory.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/datastructure/linklist/LinkedList$Node.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/datastructure/linklist/LinkedList.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/datastructure/linklist/LinkedStack.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/datastructure/linklist/Test.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../AdvancedDemo/PrimSkin/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../AdvancedDemo/PrimSkin/.idea/codeStyles/Project.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../AdvancedDemo/PrimSkin/.idea/gradle.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../AdvancedDemo/PrimSkin/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../AdvancedDemo/PrimSkin/.idea/runConfigurations.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../AdvancedDemo/PrimSkin/app/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../AdvancedDemo/PrimSkin/app/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../AdvancedDemo/PrimSkin/app/proguard-rules.pro" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../AdvancedDemo/PrimSkin/app/src/androidTest/java/com/prim/skin/ExampleInstrumentedTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../AdvancedDemo/PrimSkin/app/src/main/AndroidManifest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../AdvancedDemo/PrimSkin/app/src/main/assets/test.skin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../AdvancedDemo/PrimSkin/app/src/main/java/com/prim/skin/App.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../AdvancedDemo/PrimSkin/app/src/main/java/com/prim/skin/MainActivity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../AdvancedDemo/PrimSkin/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../AdvancedDemo/PrimSkin/app/src/main/res/drawable/ic_launcher_background.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../AdvancedDemo/PrimSkin/app/src/main/res/layout/activity_main.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../AdvancedDemo/PrimSkin/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../AdvancedDemo/PrimSkin/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../AdvancedDemo/PrimSkin/app/src/main/res/mipmap-hdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../AdvancedDemo/PrimSkin/app/src/main/res/mipmap-hdpi/ic_launcher_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../AdvancedDemo/PrimSkin/app/src/main/res/mipmap-mdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../AdvancedDemo/PrimSkin/app/src/main/res/mipmap-mdpi/ic_launcher_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../AdvancedDemo/PrimSkin/app/src/main/res/mipmap-xhdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../AdvancedDemo/PrimSkin/app/src/main/res/mipmap-xhdpi/ic_launcher_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../AdvancedDemo/PrimSkin/app/src/main/res/mipmap-xhdpi/t_window_bg.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../AdvancedDemo/PrimSkin/app/src/main/res/mipmap-xhdpi/text_drawable_left.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../AdvancedDemo/PrimSkin/app/src/main/res/mipmap-xhdpi/toolbar.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../AdvancedDemo/PrimSkin/app/src/main/res/mipmap-xxhdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../AdvancedDemo/PrimSkin/app/src/main/res/mipmap-xxhdpi/ic_launcher_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../AdvancedDemo/PrimSkin/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../AdvancedDemo/PrimSkin/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../AdvancedDemo/PrimSkin/app/src/main/res/values/colors.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../AdvancedDemo/PrimSkin/app/src/main/res/values/strings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../AdvancedDemo/PrimSkin/app/src/main/res/values/styles.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../AdvancedDemo/PrimSkin/app/src/test/java/com/prim/skin/ExampleUnitTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../AdvancedDemo/PrimSkin/app_skin/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../AdvancedDemo/PrimSkin/app_skin/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../AdvancedDemo/PrimSkin/app_skin/proguard-rules.pro" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../AdvancedDemo/PrimSkin/app_skin/src/main/AndroidManifest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../AdvancedDemo/PrimSkin/app_skin/src/main/res/drawable-v24/ic_launcher_foreground.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../AdvancedDemo/PrimSkin/app_skin/src/main/res/drawable/ic_launcher_background.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../AdvancedDemo/PrimSkin/app_skin/src/main/res/mipmap-xhdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../AdvancedDemo/PrimSkin/app_skin/src/main/res/mipmap-xhdpi/ic_launcher_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../AdvancedDemo/PrimSkin/app_skin/src/main/res/mipmap-xhdpi/t_window_bg.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../AdvancedDemo/PrimSkin/app_skin/src/main/res/mipmap-xhdpi/text_drawable_left.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../AdvancedDemo/PrimSkin/app_skin/src/main/res/mipmap-xhdpi/toolbar.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../AdvancedDemo/PrimSkin/app_skin/src/main/res/values/colors.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../AdvancedDemo/PrimSkin/app_skin/src/main/res/values/strings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../AdvancedDemo/PrimSkin/app_skin/src/test/java/com/app_skin/ExampleUnitTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../AdvancedDemo/PrimSkin/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../AdvancedDemo/PrimSkin/gradle.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../AdvancedDemo/PrimSkin/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../AdvancedDemo/PrimSkin/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../AdvancedDemo/PrimSkin/gradlew" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../AdvancedDemo/PrimSkin/gradlew.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../AdvancedDemo/PrimSkin/prim_skin/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../AdvancedDemo/PrimSkin/prim_skin/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../AdvancedDemo/PrimSkin/prim_skin/proguard-rules.pro" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../AdvancedDemo/PrimSkin/prim_skin/src/androidTest/java/com/prim_skin/ExampleInstrumentedTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../AdvancedDemo/PrimSkin/prim_skin/src/main/AndroidManifest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../AdvancedDemo/PrimSkin/prim_skin/src/main/java/com/prim_skin/PrimSkin.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../AdvancedDemo/PrimSkin/prim_skin/src/main/java/com/prim_skin/bean/SkinBean.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../AdvancedDemo/PrimSkin/prim_skin/src/main/java/com/prim_skin/bean/SkinView.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../AdvancedDemo/PrimSkin/prim_skin/src/main/java/com/prim_skin/skin/SkinActivityLifecycle.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../AdvancedDemo/PrimSkin/prim_skin/src/main/java/com/prim_skin/skin/SkinAttribute.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../AdvancedDemo/PrimSkin/prim_skin/src/main/java/com/prim_skin/skin/SkinLayoutFactory.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../AdvancedDemo/PrimSkin/prim_skin/src/main/java/com/prim_skin/utils/SkinPreferenceTools.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../AdvancedDemo/PrimSkin/prim_skin/src/main/java/com/prim_skin/utils/SkinResourceTools.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../AdvancedDemo/PrimSkin/prim_skin/src/main/java/com/prim_skin/utils/SkinTools.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../AdvancedDemo/PrimSkin/prim_skin/src/main/res/values/strings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../AdvancedDemo/PrimSkin/prim_skin/src/test/java/com/prim_skin/ExampleUnitTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../AdvancedDemo/PrimSkin/settings.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../AdvancedDemo/PrimSkin/test_skin/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../AdvancedDemo/PrimSkin/test_skin/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../AdvancedDemo/PrimSkin/test_skin/proguard-rules.pro" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../AdvancedDemo/PrimSkin/test_skin/src/androidTest/java/skin/prim/com/test_skin/ExampleInstrumentedTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../AdvancedDemo/PrimSkin/test_skin/src/main/AndroidManifest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../AdvancedDemo/PrimSkin/test_skin/src/main/java/skin/prim/com/test_skin/MainActivity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../AdvancedDemo/PrimSkin/test_skin/src/main/res/drawable-v24/ic_launcher_foreground.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../AdvancedDemo/PrimSkin/test_skin/src/main/res/drawable/ic_launcher_background.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../AdvancedDemo/PrimSkin/test_skin/src/main/res/layout/activity_main.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../AdvancedDemo/PrimSkin/test_skin/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../AdvancedDemo/PrimSkin/test_skin/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../AdvancedDemo/PrimSkin/test_skin/src/main/res/mipmap-hdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../AdvancedDemo/PrimSkin/test_skin/src/main/res/mipmap-hdpi/ic_launcher_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../AdvancedDemo/PrimSkin/test_skin/src/main/res/mipmap-mdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../AdvancedDemo/PrimSkin/test_skin/src/main/res/mipmap-mdpi/ic_launcher_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../AdvancedDemo/PrimSkin/test_skin/src/main/res/mipmap-xhdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../AdvancedDemo/PrimSkin/test_skin/src/main/res/mipmap-xhdpi/ic_launcher_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../AdvancedDemo/PrimSkin/test_skin/src/main/res/mipmap-xhdpi/t_window_bg.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../AdvancedDemo/PrimSkin/test_skin/src/main/res/mipmap-xhdpi/text_drawable_left.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../AdvancedDemo/PrimSkin/test_skin/src/main/res/mipmap-xhdpi/toolbar.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../AdvancedDemo/PrimSkin/test_skin/src/main/res/mipmap-xxhdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../AdvancedDemo/PrimSkin/test_skin/src/main/res/mipmap-xxhdpi/ic_launcher_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../AdvancedDemo/PrimSkin/test_skin/src/main/res/mipmap-xxxhdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../AdvancedDemo/PrimSkin/test_skin/src/main/res/mipmap-xxxhdpi/ic_launcher_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../AdvancedDemo/PrimSkin/test_skin/src/main/res/values/colors.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../AdvancedDemo/PrimSkin/test_skin/src/main/res/values/strings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../AdvancedDemo/PrimSkin/test_skin/src/main/res/values/styles.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../AdvancedDemo/PrimSkin/test_skin/src/test/java/skin/prim/com/test_skin/ExampleUnitTest.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../PrimFastKotlin/LearnDemo/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../PrimFastKotlin/LearnDemo/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../PrimFastKotlin/LearnDemo/out/production/LearnDemo/ArrayKt.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../PrimFastKotlin/LearnDemo/out/production/LearnDemo/ArrayKt.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../PrimFastKotlin/LearnDemo/out/production/LearnDemo/CalcKt.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../PrimFastKotlin/LearnDemo/out/production/LearnDemo/CalcKt.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../PrimFastKotlin/LearnDemo/out/production/LearnDemo/Delegates$hello$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../PrimFastKotlin/LearnDemo/out/production/LearnDemo/Delegates$hello$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../PrimFastKotlin/LearnDemo/out/production/LearnDemo/Delegates.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../PrimFastKotlin/LearnDemo/out/production/LearnDemo/Delegates.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../PrimFastKotlin/LearnDemo/out/production/LearnDemo/DelegatesKt.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../PrimFastKotlin/LearnDemo/out/production/LearnDemo/DelegatesKt.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../PrimFastKotlin/LearnDemo/out/production/LearnDemo/META-INF/LearnDemo.kotlin_module" beforeDir="false" afterPath="$PROJECT_DIR$/../../PrimFastKotlin/LearnDemo/out/production/LearnDemo/META-INF/LearnDemo.kotlin_module" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../PrimFastKotlin/LearnDemo/out/production/LearnDemo/Operators.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../PrimFastKotlin/LearnDemo/out/production/LearnDemo/Operators.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../PrimFastKotlin/LearnDemo/out/production/LearnDemo/People.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../PrimFastKotlin/LearnDemo/out/production/LearnDemo/People.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../PrimFastKotlin/LearnDemo/out/production/LearnDemo/X.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../PrimFastKotlin/LearnDemo/out/production/LearnDemo/X.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../PrimFastKotlin/LearnDemo/out/production/LearnDemo/dataclass/ComponentX.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../PrimFastKotlin/LearnDemo/out/production/LearnDemo/dataclass/ComponentX.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../PrimFastKotlin/LearnDemo/out/production/LearnDemo/dataclass/Country.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../PrimFastKotlin/LearnDemo/out/production/LearnDemo/dataclass/Country.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../PrimFastKotlin/LearnDemo/out/production/LearnDemo/dataclass/CountryKt.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../PrimFastKotlin/LearnDemo/out/production/LearnDemo/dataclass/CountryKt.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../PrimFastKotlin/LearnDemo/out/production/LearnDemo/function/Childs.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../PrimFastKotlin/LearnDemo/out/production/LearnDemo/function/Childs.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../PrimFastKotlin/LearnDemo/src/Delegates.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../../PrimFastKotlin/LearnDemo/src/Delegates.kt" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
@@ -153,7 +147,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/datastructure/linklist/LinkedList.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="401">
-              <caret line="28" column="5" lean-forward="true" selection-start-line="9" selection-start-column="3" selection-end-line="28" selection-end-column="5" />
+              <caret line="28" column="5" selection-start-line="9" selection-start-column="3" selection-end-line="28" selection-end-column="5" />
               <folding>
                 <element signature="e#614#615#0" expanded="true" />
                 <element signature="e#641#642#0" expanded="true" />
@@ -173,8 +167,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/datastructure/linklist/LinkedQueue.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="541">
-              <caret line="60" column="15" selection-start-line="60" selection-start-column="15" selection-end-line="60" selection-end-column="15" />
+            <state relative-caret-position="1037">
+              <caret line="65" column="30" selection-start-line="65" selection-start-column="30" selection-end-line="65" selection-end-column="30" />
               <folding>
                 <element signature="e#1294#1295#0" expanded="true" />
                 <element signature="e#1360#1361#0" expanded="true" />
@@ -211,7 +205,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/datastructure/linklist/Test.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="491">
-              <caret line="31" lean-forward="true" selection-start-line="31" selection-end-line="31" />
+              <caret line="31" selection-start-line="31" selection-end-line="31" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -466,7 +460,7 @@
       <workItem from="1567693043227" duration="2957000" />
       <workItem from="1567995542236" duration="538000" />
       <workItem from="1568020244138" duration="436000" />
-      <workItem from="1568037580182" duration="4484000" />
+      <workItem from="1568037580182" duration="5269000" />
     </task>
     <task id="LOCAL-00001" summary="二分搜索树">
       <created>1567264809637</created>
@@ -517,11 +511,18 @@
       <option name="project" value="LOCAL" />
       <updated>1567670342352</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="链表">
+      <created>1568042693460</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1568042693460</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="70807000" />
+    <option name="totallyTimeSpent" value="71592000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -533,7 +534,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1440" height="900" extended-state="0" />
+    <frame x="0" y="0" width="1440" height="900" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.259366" />
@@ -551,7 +552,7 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32992327" />
       <window_info anchor="bottom" id="FindBugs-IDEA" order="7" />
-      <window_info anchor="bottom" id="Terminal" order="8" weight="0.32992327" />
+      <window_info anchor="bottom" id="Terminal" order="8" visible="true" weight="0.32992327" />
       <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="CheckStyle" order="10" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
@@ -588,7 +589,8 @@
     <MESSAGE value="动态数组" />
     <MESSAGE value="最小栈的问题" />
     <MESSAGE value="队列" />
-    <option name="LAST_COMMIT_MESSAGE" value="队列" />
+    <MESSAGE value="链表" />
+    <option name="LAST_COMMIT_MESSAGE" value="链表" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/jakeprim$LinkedList.ic" NAME="LinkedList Coverage Results" MODIFIED="1568040637316" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
@@ -837,7 +839,7 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/datastructure/linklist/Test.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="491">
-          <caret line="31" lean-forward="true" selection-start-line="31" selection-end-line="31" />
+          <caret line="31" selection-start-line="31" selection-end-line="31" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -868,7 +870,7 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/datastructure/linklist/LinkedList.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="401">
-          <caret line="28" column="5" lean-forward="true" selection-start-line="9" selection-start-column="3" selection-end-line="28" selection-end-column="5" />
+          <caret line="28" column="5" selection-start-line="9" selection-start-column="3" selection-end-line="28" selection-end-column="5" />
           <folding>
             <element signature="e#614#615#0" expanded="true" />
             <element signature="e#641#642#0" expanded="true" />
@@ -886,8 +888,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/datastructure/linklist/LinkedQueue.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="541">
-          <caret line="60" column="15" selection-start-line="60" selection-start-column="15" selection-end-line="60" selection-end-column="15" />
+        <state relative-caret-position="1037">
+          <caret line="65" column="30" selection-start-line="65" selection-start-column="30" selection-end-line="65" selection-end-column="30" />
           <folding>
             <element signature="e#1294#1295#0" expanded="true" />
             <element signature="e#1360#1361#0" expanded="true" />
