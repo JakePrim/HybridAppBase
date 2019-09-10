@@ -84,16 +84,18 @@ PrimAlgorithm [项目地址](https://github.com/JakePrim/PrimFastApp/tree/master
 
 #### 图片框架实现原理及详细分析
 实现demo地址:
-- [ ] Glide 的图片缓存实现原理；
-- [ ] Glide 图片加载器；
-- [ ] Glide 加载图片的流程；
-- [ ] Glide 的生命周期管理；
-- [ ] Glide 框架整体结构；
-- [ ] Glide 的核心 API 的设计思路；
-- [ ] 总结 Glide 的架构。
+
+| 文章标题 | 状态 | 原创/转载 |
+| --- | --- | --- |
+| Glide 的图片缓存实现原理 | [ ] | 原创 |
+| Glide 图片加载器 | [ ] | 原创 |
+| Glide 加载图片的流程 | [ ] | 原创 |
+| Glide 的生命周期管理 | [ ] | 原创 |
+| Glide 框架整体结构 | [ ] | 原创 |
 
 #### Android 组件化原理及路由的实现
 实现demo地址:https://github.com/JakePrim/PrimRoute
+
 | 文章标题 | 状态 | 原创/转载 |
 | --- | --- | --- |
 | [Android组件化专题 - 组件化配置](https://www.jianshu.com/p/dd323c987c94) | [x] | 原创 |
@@ -105,6 +107,7 @@ PrimAlgorithm [项目地址](https://github.com/JakePrim/PrimFastApp/tree/master
 
 #### Android 插件化实现方案
 实现demo地址:https://github.com/JakePrim/PrimPlug
+
 | 文章标题 | 状态 | 原创/转载 |
 | --- | --- | --- |
 | [Android插件化技术之旅 1 开篇 - 实现启动插件与调用插件中的Activity和Service](https://www.jianshu.com/p/ef3f8c5c3810) | [x] | 原创 |
@@ -113,6 +116,7 @@ PrimAlgorithm [项目地址](https://github.com/JakePrim/PrimFastApp/tree/master
 
 #### 数据库框架设计实现自己的数据库框架与greenDao源码分析
 实现demo地址:https://github.com/JakePrim/PrimDao
+
 | 文章标题 | 状态 | 原创/转载 |
 | --- | --- | --- |
 | [数据库框架设计 自动建表](https://www.jianshu.com/p/4adc3b6213b0) | [x] | 原创 |
