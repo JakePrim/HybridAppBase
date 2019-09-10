@@ -48,27 +48,6 @@
 
 > PrimFastPython Python 开发学习项目
 
-### PrimFast 进度
-
-PrimFastCommon [项目地址](https://github.com/JakePrim/PrimFastApp/tree/master/PrimFastCommon)
-
-PrimFastFlutter [项目地址](https://github.com/JakePrim/PrimFastApp/tree/master/PrimFastFlutter)
-
-PrimFastKotlin [项目地址](https://github.com/JakePrim/PrimFastApp/tree/master/PrimFastKotlin)
-
-PrimFastApplets [项目地址](https://github.com/JakePrim/PrimFastApp/tree/master/PrimFastWeChatApplets)
-
-PrimFastRn [项目地址](https://github.com/JakePrim/PrimFastApp/tree/master/PrimFastRn)
-
-PrimJs [项目地址](https://github.com/JakePrim/PrimFastApp/tree/master/PrimJs)
-
-AdvancedDemo [项目地址](https://github.com/JakePrim/PrimFastApp/tree/master/AdvancedDemo)
-
-PrimAlgorithm [项目地址](https://github.com/JakePrim/PrimFastApp/tree/master/PrimAlgorithm)
-
----
-技术详解部分
-
 ---
 ## Android 高级进阶知识部分
 
@@ -79,39 +58,39 @@ PrimAlgorithm [项目地址](https://github.com/JakePrim/PrimFastApp/tree/master
 
 | 文章标题 | 状态 | 原创/转载 |
 | --- | --- | --- |
-| 换肤原理与基础换肤 | [ ] | 原创 |
-| 动态换肤扩展:支持自定义view | [ ] | 原创 |
+| 换肤原理与基础换肤 | [敬请期待] | 原创 |
+| 动态换肤扩展:支持自定义view | [敬请期待] | 原创 |
 
 #### 图片框架实现原理及详细分析
 实现demo地址:
 
 | 文章标题 | 状态 | 原创/转载 |
 | --- | --- | --- |
-| Glide 的图片缓存实现原理 | [ ] | 原创 |
-| Glide 图片加载器 | [ ] | 原创 |
-| Glide 加载图片的流程 | [ ] | 原创 |
-| Glide 的生命周期管理 | [ ] | 原创 |
-| Glide 框架整体结构 | [ ] | 原创 |
+| Glide 的图片缓存实现原理 | [敬请期待] | 原创 |
+| Glide 图片加载器 | [敬请期待] | 原创 |
+| Glide 加载图片的流程 | [敬请期待] | 原创 |
+| Glide 的生命周期管理 | [敬请期待] | 原创 |
+| Glide 框架整体结构 | [敬请期待] | 原创 |
 
 #### Android 组件化原理及路由的实现
 实现demo地址:https://github.com/JakePrim/PrimRoute
 
 | 文章标题 | 状态 | 原创/转载 |
 | --- | --- | --- |
-| [Android组件化专题 - 组件化配置](https://www.jianshu.com/p/dd323c987c94) | [x] | 原创 |
-| [Android APT(Annotation Processing Tool) 实践](https://www.jianshu.com/p/160a832ce135) | [x] | 原创 |
-| [Android组件化专题 - 路由框架原理](https://www.jianshu.com/p/e2d93259dc34) | [x] | 原创 |
-| [Android组件化专题 - 路由框架进阶模块间的业务通信](https://www.jianshu.com/p/f215eaf2f687) | [x] | 原创 |
-| [Android组件化专题-路由动态注入跳转参数以及获取其他模块的fragment](https://www.jianshu.com/p/3dcbde5acc3b) | [x] | 原创 |
-| 组件化总结与用组件化如何开发一个完整的项目 | [ ] | |
+| [Android组件化专题 - 组件化配置](https://www.jianshu.com/p/dd323c987c94) | [已完成] | 原创 |
+| [Android APT(Annotation Processing Tool) 实践](https://www.jianshu.com/p/160a832ce135) | [已完成] | 原创 |
+| [Android组件化专题 - 路由框架原理](https://www.jianshu.com/p/e2d93259dc34) | [已完成] | 原创 |
+| [Android组件化专题 - 路由框架进阶模块间的业务通信](https://www.jianshu.com/p/f215eaf2f687) | [已完成] | 原创 |
+| [Android组件化专题-路由动态注入跳转参数以及获取其他模块的fragment](https://www.jianshu.com/p/3dcbde5acc3b) | [已完成] | 原创 |
+| 组件化总结与用组件化如何开发一个完整的项目 | [敬请期待] | |
 
 #### Android 插件化实现方案
 实现demo地址:https://github.com/JakePrim/PrimPlug
 
 | 文章标题 | 状态 | 原创/转载 |
 | --- | --- | --- |
-| [Android插件化技术之旅 1 开篇 - 实现启动插件与调用插件中的Activity和Service](https://www.jianshu.com/p/ef3f8c5c3810) | [x] | 原创 |
-| [Android插件化技术之旅 2-广播插件的实现与安装apk原理](https://www.jianshu.com/p/64bbbb3bc38a) | [x] | 原创 |
+| [Android插件化技术之旅 1 开篇 - 实现启动插件与调用插件中的Activity和Service](https://www.jianshu.com/p/ef3f8c5c3810) | [已完成] | 原创 |
+| [Android插件化技术之旅 2-广播插件的实现与安装apk原理](https://www.jianshu.com/p/64bbbb3bc38a) | [已完成] | 原创 |
 
 
 #### 数据库框架设计实现自己的数据库框架与greenDao源码分析
@@ -119,11 +98,11 @@ PrimAlgorithm [项目地址](https://github.com/JakePrim/PrimFastApp/tree/master
 
 | 文章标题 | 状态 | 原创/转载 |
 | --- | --- | --- |
-| [数据库框架设计 自动建表](https://www.jianshu.com/p/4adc3b6213b0) | [x] | 原创 |
-| [数据库框架设计 增删改查](https://note.youdao.com/) | [x] | 原创 |
-| [数据库框架设计 多用户分库实现](https://www.jianshu.com/p/ced35d1fba5e) | [x] | 原创 |
-| 数据库框架设计 升级数据库 | [ ] | 原创 |
-| greenDao源码分析 | [ ] | 原创 |
+| [数据库框架设计 自动建表](https://www.jianshu.com/p/4adc3b6213b0) | [已完成] | 原创 |
+| [数据库框架设计 增删改查](https://note.youdao.com/) | [已完成] | 原创 |
+| [数据库框架设计 多用户分库实现](https://www.jianshu.com/p/ced35d1fba5e) | [已完成] | 原创 |
+| 数据库框架设计 升级数据库 | [敬请期待] | 原创 |
+| greenDao源码分析 | [敬请期待] | 原创 |
 
 
 #### 网络框架实现原理及详细分析
@@ -131,11 +110,11 @@ PrimAlgorithm [项目地址](https://github.com/JakePrim/PrimFastApp/tree/master
 
 | 文章标题 | 状态 | 原创/转载 |
 | --- | --- | --- |
-| [Http与Tcp的相关知识]() | [ ] | 原创 |
-| [x] [OkHttp 源码解析及OkHttp的设计思想](https://www.jianshu.com/p/cb444f49a777) | [x] | 原创 |
-| [x] [手写OkHttp核心代码](https://jakeprim.cn/2019/08/19/okhttp-2/) | [x] | 原创 |
-| [OkHttp 缓存责任链详细分析]() | [ ] | 原创 |
-| [x] [架构设计之美-揭秘Retrofit设计原理](https://jakeprim.cn/2019/05/21/retrofit-1/) | [x] | 原创 |
+| [Http与Tcp的相关知识]() | [敬请期待] | 原创 |
+| [OkHttp 源码解析及OkHttp的设计思想](https://www.jianshu.com/p/cb444f49a777) | [已完成] | 原创 |
+| [手写OkHttp核心代码](https://jakeprim.cn/2019/08/19/okhttp-2/) | [已完成] | 原创 |
+| [OkHttp 缓存责任链详细分析]() | [敬请期待] | 原创 |
+| [架构设计之美-揭秘Retrofit设计原理](https://jakeprim.cn/2019/05/21/retrofit-1/) | [已完成] | 原创 |
 
 #### Json框架原理解析及实现
 
@@ -145,8 +124,8 @@ PrimAlgorithm [项目地址](https://github.com/JakePrim/PrimFastApp/tree/master
 
  文章标题 | 状态 | 原创/转载 |
 | --- | --- | --- |
-| [x] [RxJava2.x 庖丁解牛 - 操作符使用详解与场景分析](https://jakeprim.cn/2019/05/09/rxjava-1/) | [x] | 原创 |
-| RxJava2.x 源码分析 | [ ] | 原创 |
+| [RxJava2.x 庖丁解牛 - 操作符使用详解与场景分析](https://jakeprim.cn/2019/05/09/rxjava-1/) | [已完成] | 原创 |
+| RxJava2.x 源码分析 | [敬请期待] | 原创 |
 
 ####  IOC 注入式框架原理及实现
 
@@ -227,14 +206,14 @@ PrimAlgorithm [项目地址](https://github.com/JakePrim/PrimFastApp/tree/master
 
 | 文章标题 | 状态 | 原创/转载 |
 | --- | --- | --- |
-| [算法基础: 数组结构](https://jakeprim.cn/2019/09/04/shuzu/) | [x] | 原创 |
-| [数据结构之表的总结](https://www.jianshu.com/p/88a0e9c77fb1) | [x] | 原创 |
-| [链表问题补充](https://www.jianshu.com/p/87d8e0320bb5) | [x] | 原创 |
-| [数据结构之Java中哈希表的经典实现HashMap分析](https://www.jianshu.com/p/e15277533dcf) | [x] | 原创 |
-| [队列：彻底理解队列](https://www.jianshu.com/p/1b8270f3c881) | [x] | 原创 |
-| [算法基础:栈和队列结构](https://jakeprim.cn/2019/09/05/stackandqueue/) | [x] | 原创 |
-| [算法基础:二分搜索树](https://jakeprim.cn/2019/09/02/bst1/) | [x] | 原创 |
-| [算法基础:链表结构]() | [x] | 原创 |
+| [算法基础: 数组结构](https://jakeprim.cn/2019/09/04/shuzu/) | [已完成] | 原创 |
+| [数据结构之表的总结](https://www.jianshu.com/p/88a0e9c77fb1) | [已完成] | 原创 |
+| [链表问题补充](https://www.jianshu.com/p/87d8e0320bb5) | [已完成] | 原创 |
+| [数据结构之Java中哈希表的经典实现HashMap分析](https://www.jianshu.com/p/e15277533dcf) | [已完成] | 原创 |
+| [队列：彻底理解队列](https://www.jianshu.com/p/1b8270f3c881) | [已完成] | 原创 |
+| [算法基础:栈和队列结构](https://jakeprim.cn/2019/09/05/stackandqueue/) | [已完成] | 原创 |
+| [算法基础:二分搜索树](https://jakeprim.cn/2019/09/02/bst1/) | [已完成] | 原创 |
+| [算法基础:链表结构]() | [已完成] | 原创 |
 
 ### 算法
 ...
