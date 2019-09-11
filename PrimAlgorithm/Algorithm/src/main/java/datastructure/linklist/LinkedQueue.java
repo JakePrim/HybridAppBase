@@ -74,6 +74,36 @@ public class LinkedQueue<E> implements Queue<E> {
 
     @Override
     public E getTopQueue() {
+        if (tail != null) {
+            return tail.e;
+        }
         return null;
+    }
+
+    @Override
+    public String toString() {
+        StringBuilder res = new StringBuilder();
+        res.append("Queue: \n");
+        Node<E> node = this.head;
+        while (node != null) {
+            res.append(node.e+" -> ");
+            node = node.next;
+        }
+        res.append("top");
+        return res.toString();
+    }
+
+    public static void main(String[] args) {
+        LinkedQueue<Integer> arrayQueue = new LinkedQueue<Integer>();
+        for (int i = 0; i < 6; i++) {
+            arrayQueue.enqueue(i);
+        }
+        System.out.println(arrayQueue);
+        arrayQueue.dequeue();
+        System.out.println(arrayQueue);
+        arrayQueue.enqueue(7);
+        System.out.println(arrayQueue);
+        arrayQueue.dequeue();
+        System.out.println(arrayQueue);
     }
 }

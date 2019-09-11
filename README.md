@@ -1,26 +1,8 @@
 # PrimFast
  PrimFast 是自己系统性学习技术记录的开源项目,也是我自己的未来发展方向
- 项目内设计的技术面很广,有移动开发技术:Android进阶技术以及了解基本的IOS开发和大前端的技术(主要是跨平台方向)、后台技术(Java Node)、还有当前火热的python人工智能技术学习,以及第三方框架原理和设计思想.努力做一名技术人
+ 项目内设计的技术面很广,有移动开发技术:Android进阶技术以及了解基本的IOS开发和大前端的技术(主要是跨平台方向)、后台技术(Java Node)、还有当前火热的python人工智能技术学习,以及第三方框架原理和设计思想.努力做一名技术人.
 
-1. 包括Android进阶知识:APP快速开发框架搭建、组件化技术实现、插件化技术实现、Okhttp原理、Glide原理、RxJava原理、EventBus原理、音视频、NDK开发、进程通信、IOC、移动架构等.
-
-2. Flutter跨平台技术与ReactNative跨平台技术实战.
-
-3. 移动Web应用(Vue、React、PWA)和微信小程序的实战.
-
-4. Kotlin 开发技术学习与使用kotlin开发Android实战.
-
-5. JavaScript/TypeScript 技术详解, 大前端时代必备的知识
-
-6. 数据结构与算法训练
-
-7. 后台开发:Node Java
-
-8. 数据分析与人工智能:python
-
-   专注于技术的最前线,欢迎关注我的个人网站:https://jakeprim.cn/
-
-[TOC]
+专注于技术的最前线,欢迎关注我的个人网站:https://jakeprim.cn/   语雀:https://www.yuque.com/jakeprim
 
 ## PrimFast 介绍
 
@@ -71,6 +53,12 @@
 | Glide 加载图片的流程 | [敬请期待] | 原创 |
 | Glide 的生命周期管理 | [敬请期待] | 原创 |
 | Glide 框架整体结构 | [敬请期待] | 原创 |
+
+####  IOC 注入式框架原理及实现
+
+#### ButterKnife原理及实现
+
+#### 动态权限申请框架设计
 
 #### Android 组件化原理及路由的实现
 实现demo地址:https://github.com/JakePrim/PrimRoute
@@ -126,12 +114,6 @@
 | --- | --- | --- |
 | [RxJava2.x 庖丁解牛 - 操作符使用详解与场景分析](https://jakeprim.cn/2019/05/09/rxjava-1/) | [已完成] | 原创 |
 | RxJava2.x 源码分析 | [敬请期待] | 原创 |
-
-####  IOC 注入式框架原理及实现
-
-#### ButterKnife原理及实现
-
-#### 动态权限申请框架设计
 
 #### MVP与MVVM
 
@@ -213,7 +195,7 @@
 | [队列：彻底理解队列](https://www.jianshu.com/p/1b8270f3c881) | [已完成] | 原创 |
 | [算法基础:栈和队列结构](https://jakeprim.cn/2019/09/05/stackandqueue/) | [已完成] | 原创 |
 | [算法基础:二分搜索树](https://jakeprim.cn/2019/09/02/bst1/) | [已完成] | 原创 |
-| [算法基础:链表结构]() | [已完成] | 原创 |
+| [算法基础:链表结构](https://jakeprim.cn/2019/09/11/linkedlist1/) | [已完成] | 原创 |
 
 ### 算法
 ...

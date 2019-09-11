@@ -55,23 +55,17 @@ public class LinkedList<E> {
      * @param e
      */
     public void addFirst(E e) {
-//        Node<E> node = new Node<>(e);
-//        node.next = head;
-//        head = node;
         add(e, 0);
     }
 
     public void add(E e, int index) {
         if (index < 0 || index > size)
             throw new IllegalArgumentException("index > 0 && index < size");
-        Node perv = head;
+        Node<E> perv = head;
         for (int i = 0; i < index; i++) {
             perv = perv.next;
         }
-//            Node<E> node = new Node<>(e);
-//            node.next = perv.next;
-//            perv.next = node;
-        perv.next = new Node(e, perv.next);
+        perv.next = new Node<E>(e, perv.next);
         size++;
     }
 

@@ -1,5 +1,7 @@
 package datastructure.queue;
 
+import datastructure.linklist.LinkedQueue;
+
 import java.util.Random;
 
 public class Test {
@@ -30,5 +32,9 @@ public class Test {
         LoopQueue<Integer> loopQueue = new LoopQueue<>();
         double time2 = testQueue(loopQueue, opCount);
         System.out.println("LoopQueue, time: " + time2 + " s");
+
+        LinkedQueue<Integer> linkedQueue = new LinkedQueue<>();
+        double time3 = testQueue(linkedQueue, opCount);
+        System.out.println("linkedQueue, time: " + time3 + " s");
     }
 }

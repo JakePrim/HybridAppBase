@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="82d7983b-0692-480e-ba37-a5faa0b9ac7f" name="Default Changelist" comment="" />
+    <list default="true" id="82d7983b-0692-480e-ba37-a5faa0b9ac7f" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/datastructure/linklist/LinkedList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/datastructure/linklist/LinkedList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/datastructure/linklist/LinkedQueue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/datastructure/linklist/LinkedQueue.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/datastructure/linklist/Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/datastructure/linklist/Test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/datastructure/queue/Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/datastructure/queue/Test.java" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
     <ignored path="$PROJECT_DIR$/build/" />
@@ -40,9 +46,11 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/datastructure/linklist/LinkedList.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="401">
-              <caret line="28" column="5" selection-start-line="9" selection-start-column="3" selection-end-line="28" selection-end-column="5" />
+            <state relative-caret-position="-287">
+              <caret line="63" column="28" lean-forward="true" selection-start-line="63" selection-start-column="28" selection-end-line="63" selection-end-column="28" />
               <folding>
+                <element signature="e#853#854#0" expanded="true" />
+                <element signature="e#878#879#0" expanded="true" />
                 <element signature="e#1896#1897#0" expanded="true" />
                 <element signature="e#1925#1926#0" expanded="true" />
                 <element signature="e#1951#1952#0" expanded="true" />
@@ -59,15 +67,39 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/datastructure/linklist/LinkedQueue.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="52" column="23" selection-start-line="52" selection-start-column="23" selection-end-line="52" selection-end-column="23" />
+            <state relative-caret-position="125">
+              <caret line="95" column="2" selection-start-line="95" selection-start-column="2" selection-end-line="107" selection-end-column="5" />
               <folding>
                 <element signature="e#1262#1263#0" expanded="true" />
                 <element signature="e#1294#1295#0" expanded="true" />
                 <element signature="e#1333#1334#0" expanded="true" />
                 <element signature="e#1360#1361#0" expanded="true" />
-                <element signature="e#1404#1405#0" expanded="true" />
-                <element signature="e#1431#1432#0" expanded="true" />
+                <element signature="e#1607#1616#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/datastructure/queue/Test.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="119">
+              <caret line="7" column="4" selection-start-line="7" selection-start-column="4" selection-end-line="38" selection-end-column="5" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/datastructure/queue/ArrayQueue.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="48">
+              <caret line="49" column="3" lean-forward="true" selection-start-line="49" selection-start-column="3" selection-end-line="61" selection-end-column="5" />
+              <folding>
+                <element signature="e#286#287#0" expanded="true" />
+                <element signature="e#310#311#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -76,8 +108,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/datastructure/linklist/LinkedStack.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="431">
-              <caret line="52" column="40" selection-start-line="52" selection-start-column="40" selection-end-line="52" selection-end-column="40" />
+            <state relative-caret-position="-197">
+              <caret line="14" column="24" lean-forward="true" selection-start-line="14" selection-start-column="24" selection-end-line="14" selection-end-column="24" />
               <folding>
                 <element signature="e#183#184#0" expanded="true" />
                 <element signature="e#230#231#0" expanded="true" />
@@ -88,14 +120,23 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/datastructure/linklist/Test.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="176">
-              <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
+            <state relative-caret-position="247">
+              <caret line="30" column="28" selection-start-line="30" selection-start-column="28" selection-end-line="30" selection-end-column="28" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/datastructure/stack/ArrayStack.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-232">
+              <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -131,16 +172,16 @@
         <option value="$PROJECT_DIR$/src/main/java/datastructure/stack/MinStack.java" />
         <option value="$PROJECT_DIR$/src/main/java/datastructure/queue/Queue.java" />
         <option value="$PROJECT_DIR$/src/main/java/datastructure/queue/ArrayQueue.java" />
-        <option value="$PROJECT_DIR$/src/main/java/datastructure/queue/Test.java" />
         <option value="$PROJECT_DIR$/src/main/java/datastructure/queue/LoopQueue.java" />
         <option value="$PROJECT_DIR$/src/main/java/datastructure/stack/Array.java" />
         <option value="$PROJECT_DIR$/src/main/java/datastructure/stack/ArrayStack.java" />
         <option value="$PROJECT_DIR$/src/main/java/datastructure/stack/SampleBrowser.java" />
         <option value="$PROJECT_DIR$/src/main/java/datastructure/stack/BrowserStack.java" />
         <option value="$PROJECT_DIR$/src/main/java/datastructure/linklist/LinkedStack.java" />
-        <option value="$PROJECT_DIR$/src/main/java/datastructure/linklist/Test.java" />
         <option value="$PROJECT_DIR$/src/main/java/datastructure/linklist/LinkedList.java" />
+        <option value="$PROJECT_DIR$/src/main/java/datastructure/linklist/Test.java" />
         <option value="$PROJECT_DIR$/src/main/java/datastructure/linklist/LinkedQueue.java" />
+        <option value="$PROJECT_DIR$/src/main/java/datastructure/queue/Test.java" />
       </list>
     </option>
   </component>
@@ -163,54 +204,54 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
               <item name="jakeprim" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Algorithm" type="462c0819:PsiDirectoryNode" />
+              <item name="Algorithm" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
             </path>
             <path>
               <item name="jakeprim" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Algorithm" type="462c0819:PsiDirectoryNode" />
+              <item name="Algorithm" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="jakeprim" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Algorithm" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-            </path>
-            <path>
-              <item name="jakeprim" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Algorithm" type="462c0819:PsiDirectoryNode" />
+              <item name="Algorithm" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="jakeprim" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Algorithm" type="462c0819:PsiDirectoryNode" />
+              <item name="Algorithm" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="datastructure" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="jakeprim" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Algorithm" type="462c0819:PsiDirectoryNode" />
+              <item name="Algorithm" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="datastructure" type="462c0819:PsiDirectoryNode" />
-              <item name="linklist" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="jakeprim" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Algorithm" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="datastructure" type="462c0819:PsiDirectoryNode" />
+              <item name="queue" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
       <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -250,13 +291,13 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Test">
-    <configuration name="BrowserStack" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="datastructure.stack.BrowserStack" />
+  <component name="RunManager" selected="Application.Test (1)">
+    <configuration name="LinkedList" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="datastructure.linklist.LinkedList" />
       <module name="jakeprim.main" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="datastructure.stack.*" />
+          <option name="PATTERN" value="datastructure.linklist.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -264,8 +305,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="LinkedList" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="datastructure.linklist.LinkedList" />
+    <configuration name="LinkedQueue" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="datastructure.linklist.LinkedQueue" />
       <module name="jakeprim.main" />
       <extension name="coverage">
         <pattern>
@@ -290,12 +331,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SampleBrowser" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="datastructure.stack.SampleBrowser" />
+    <configuration name="Test (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="datastructure.queue.Test" />
       <module name="jakeprim.main" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="datastructure.stack.*" />
+          <option name="PATTERN" value="datastructure.queue.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -318,11 +359,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Test (1)" />
+        <item itemvalue="Application.LinkedQueue" />
         <item itemvalue="Application.Test" />
         <item itemvalue="Application.LinkedStack" />
         <item itemvalue="Application.LinkedList" />
-        <item itemvalue="Application.SampleBrowser" />
-        <item itemvalue="Application.BrowserStack" />
       </list>
     </recent_temporary>
   </component>
@@ -348,7 +389,8 @@
       <workItem from="1567995542236" duration="538000" />
       <workItem from="1568020244138" duration="436000" />
       <workItem from="1568037580182" duration="5542000" />
-      <workItem from="1568082942636" duration="683000" />
+      <workItem from="1568082942636" duration="1331000" />
+      <workItem from="1568179560935" duration="2773000" />
     </task>
     <task id="LOCAL-00001" summary="二分搜索树">
       <created>1567264809637</created>
@@ -410,7 +452,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="72548000" />
+    <option name="totallyTimeSpent" value="75969000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -425,7 +467,7 @@
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.26368877" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.26801154" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -434,13 +476,13 @@
       <window_info id="UI Designer" order="6" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.40153453" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.40153453" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39897698" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32992327" />
       <window_info anchor="bottom" id="FindBugs-IDEA" order="7" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="8" visible="true" weight="0.32992327" />
+      <window_info anchor="bottom" id="Terminal" order="8" weight="0.32992327" />
       <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="CheckStyle" order="10" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
@@ -686,13 +728,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/datastructure/stack/ArrayStack.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="31" column="30" selection-start-line="31" selection-start-column="30" selection-end-line="31" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/datastructure/queue/LoopQueue.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="357">
@@ -706,29 +741,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/datastructure/queue/ArrayQueue.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/datastructure/stack/ArrayStack.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="16" column="23" lean-forward="true" selection-start-line="16" selection-start-column="23" selection-end-line="16" selection-end-column="23" />
-          <folding>
-            <element signature="e#286#287#0" expanded="true" />
-            <element signature="e#310#311#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/datastructure/queue/Test.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" selection-start-line="3" selection-end-line="33" selection-end-column="1" />
+        <state relative-caret-position="-232">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/datastructure/linklist/LinkedList.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="401">
-          <caret line="28" column="5" selection-start-line="9" selection-start-column="3" selection-end-line="28" selection-end-column="5" />
+        <state relative-caret-position="-287">
+          <caret line="63" column="28" lean-forward="true" selection-start-line="63" selection-start-column="28" selection-end-line="63" selection-end-column="28" />
           <folding>
+            <element signature="e#853#854#0" expanded="true" />
+            <element signature="e#878#879#0" expanded="true" />
             <element signature="e#1896#1897#0" expanded="true" />
             <element signature="e#1925#1926#0" expanded="true" />
             <element signature="e#1951#1952#0" expanded="true" />
@@ -741,25 +767,31 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/datastructure/linklist/LinkedQueue.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/datastructure/linklist/Test.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="52" column="23" selection-start-line="52" selection-start-column="23" selection-end-line="52" selection-end-column="23" />
+        <state relative-caret-position="247">
+          <caret line="30" column="28" selection-start-line="30" selection-start-column="28" selection-end-line="30" selection-end-column="28" />
           <folding>
-            <element signature="e#1262#1263#0" expanded="true" />
-            <element signature="e#1294#1295#0" expanded="true" />
-            <element signature="e#1333#1334#0" expanded="true" />
-            <element signature="e#1360#1361#0" expanded="true" />
-            <element signature="e#1404#1405#0" expanded="true" />
-            <element signature="e#1431#1432#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/datastructure/queue/ArrayQueue.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="48">
+          <caret line="49" column="3" lean-forward="true" selection-start-line="49" selection-start-column="3" selection-end-line="61" selection-end-column="5" />
+          <folding>
+            <element signature="e#286#287#0" expanded="true" />
+            <element signature="e#310#311#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/datastructure/linklist/LinkedStack.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="431">
-          <caret line="52" column="40" selection-start-line="52" selection-start-column="40" selection-end-line="52" selection-end-column="40" />
+        <state relative-caret-position="-197">
+          <caret line="14" column="24" lean-forward="true" selection-start-line="14" selection-start-column="24" selection-end-line="14" selection-end-column="24" />
           <folding>
             <element signature="e#183#184#0" expanded="true" />
             <element signature="e#230#231#0" expanded="true" />
@@ -769,10 +801,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/datastructure/linklist/Test.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/datastructure/linklist/LinkedQueue.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
+        <state relative-caret-position="125">
+          <caret line="95" column="2" selection-start-line="95" selection-start-column="2" selection-end-line="107" selection-end-column="5" />
+          <folding>
+            <element signature="e#1262#1263#0" expanded="true" />
+            <element signature="e#1294#1295#0" expanded="true" />
+            <element signature="e#1333#1334#0" expanded="true" />
+            <element signature="e#1360#1361#0" expanded="true" />
+            <element signature="e#1607#1616#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/datastructure/queue/Test.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="4" selection-start-line="7" selection-start-column="4" selection-end-line="38" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
