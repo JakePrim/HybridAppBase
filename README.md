@@ -31,6 +31,42 @@
 > PrimFastPython Python 开发学习项目
 
 ---
+
+作为一名职业的程序员我们需要重复的练习基本功,就像职业的运动员一样不断的训练基础动作,刻意练习自己觉得难的地方,不断的重复练习,掌握好基础功才能走的更远.
+
+## 编程基础功
+
+### 数据结构
+[代码](https://github.com/JakePrim/PrimFast/tree/master/PrimAlgorithm/Algorithm)
+
+| 文章标题 | 状态 | 原创/转载 |
+| --- | --- | --- |
+| [算法基础: 数组结构](https://jakeprim.cn/2019/09/04/shuzu/) | [已完成] | 原创 |
+| [数据结构之表的总结](https://www.jianshu.com/p/88a0e9c77fb1) | [已完成] | 原创 |
+| [链表问题补充](https://www.jianshu.com/p/87d8e0320bb5) | [已完成] | 原创 |
+| [数据结构之Java中哈希表的经典实现HashMap分析](https://www.jianshu.com/p/e15277533dcf) | [已完成] | 原创 |
+| [队列：彻底理解队列](https://www.jianshu.com/p/1b8270f3c881) | [已完成] | 原创 |
+| [算法基础:栈和队列结构](https://jakeprim.cn/2019/09/05/stackandqueue/) | [已完成] | 原创 |
+| [算法基础:二分搜索树](https://jakeprim.cn/2019/09/02/bst1/) | [已完成] | 原创 |
+| [算法基础:链表结构](https://jakeprim.cn/2019/09/11/linkedlist1/) | [已完成] | 原创 |
+
+### 算法
+...
+### 浏览器的工作原理
+...
+### 网络协议
+...
+### Linux操作系统
+...
+### 数据库
+...
+### 软件工程
+...
+
+---
+
+掌握Android的各个知识点
+
 ## Android 高级进阶知识部分
 
 ### Android 架构
@@ -161,6 +197,7 @@
 ...
 
 ---
+
 ### Kotlin 开发
 - [ ] Kotlin 基础语法与核心特性
 - [ ] Kotlin 开发github客户端实战
@@ -178,34 +215,6 @@
 - [x] [Flutter与Native的生死相依](https://jakeprim.cn/2019/07/04/flutter-native-1/)
 
 ### ReactNative 开发
-...
-
----
-## 编程基础
-
-### 数据结构
-[代码](https://github.com/JakePrim/PrimFast/tree/master/PrimAlgorithm/Algorithm)
-
-| 文章标题 | 状态 | 原创/转载 |
-| --- | --- | --- |
-| [算法基础: 数组结构](https://jakeprim.cn/2019/09/04/shuzu/) | [已完成] | 原创 |
-| [数据结构之表的总结](https://www.jianshu.com/p/88a0e9c77fb1) | [已完成] | 原创 |
-| [链表问题补充](https://www.jianshu.com/p/87d8e0320bb5) | [已完成] | 原创 |
-| [数据结构之Java中哈希表的经典实现HashMap分析](https://www.jianshu.com/p/e15277533dcf) | [已完成] | 原创 |
-| [队列：彻底理解队列](https://www.jianshu.com/p/1b8270f3c881) | [已完成] | 原创 |
-| [算法基础:栈和队列结构](https://jakeprim.cn/2019/09/05/stackandqueue/) | [已完成] | 原创 |
-| [算法基础:二分搜索树](https://jakeprim.cn/2019/09/02/bst1/) | [已完成] | 原创 |
-| [算法基础:链表结构](https://jakeprim.cn/2019/09/11/linkedlist1/) | [已完成] | 原创 |
-
-### 算法
-...
-### 浏览器的工作原理
-...
-### 网络协议
-...
-### 操作系统
-...
-### 数据库
 ...
 
 ---
@@ -228,14 +237,16 @@
 #### React.js
 ...
 
+---
 ## 后端开发
 
-#### Java后台
+### Java后台
 ...
 
-#### Node.js
+### Node.js
 ...
 
+---
 ## 人工智能
 
 #### Python
