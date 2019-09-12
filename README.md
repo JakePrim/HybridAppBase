@@ -2,7 +2,7 @@
  PrimFast 是自己系统性学习技术记录的开源项目,也是我自己的未来发展方向
  项目内设计的技术面很广,有移动开发技术:Android进阶技术以及了解基本的IOS开发和大前端的技术(主要是跨平台方向)、后台技术(Java Node)、还有当前火热的python人工智能技术学习,以及第三方框架原理和设计思想.努力做一名技术人.
 
-专注于技术的最前线,欢迎关注我的个人网站:https://jakeprim.cn/   语雀:https://www.yuque.com/jakeprim
+专注于技术的最前线,欢迎关注我的个人网站:https://jakeprim.cn/   备用网站:语雀:https://www.yuque.com/jakeprim
 
 ## PrimFast 介绍
 
@@ -20,7 +20,7 @@
 
 > PrimFastWeb 是学习移动Web开发的一个完整项目(项目准备采用Vue/React来实现)
 
-> [PrimAlgorithm](https://github.com/JakePrim/PrimFastApp/tree/master/PrimAlgorithm) 是数据结构和算法,Java的实现
+> PrimAlgorithm 是数据结构和算法训练
 
 > AdvancedDemo 是Android进阶的知识点的Demo练习
 
@@ -98,13 +98,14 @@
 
 ---
 
-掌握Android的各个知识点
+掌握Android的各个知识点,作为Android开发者我们必须精通一个方向才能更好的横向发展.
 
 ## Android 高级进阶知识部分
 
 ### Android 架构
 
 #### Android 动态换肤原理及实现
+
 实现demo地址:
 
 | 文章标题 | 状态 | 原创/转载 |
@@ -113,6 +114,7 @@
 | 动态换肤扩展:支持自定义view | [敬请期待] | 原创 |
 
 #### 图片框架实现原理及详细分析
+
 实现demo地址:
 
 | 文章标题 | 状态 | 原创/转载 |
@@ -129,12 +131,12 @@
 
 #### 动态权限申请框架设计
 
-
 #### Json框架原理解析及实现
 
 #### EventBus原理分析及实现可跨进程的通信框架
 
 #### Android 组件化原理及路由的实现
+
 实现demo地址:https://github.com/JakePrim/PrimRoute
 
 | 文章标题 | 状态 | 原创/转载 |
@@ -147,6 +149,7 @@
 | 组件化总结与用组件化如何开发一个完整的项目 | [敬请期待] | |
 
 #### Android 插件化实现方案
+
 实现demo地址:https://github.com/JakePrim/PrimPlug
 
 | 文章标题 | 状态 | 原创/转载 |
@@ -156,6 +159,7 @@
 
 
 #### 数据库框架设计实现自己的数据库框架与greenDao源码分析
+
 实现demo地址:https://github.com/JakePrim/PrimDao
 
 | 文章标题 | 状态 | 原创/转载 |
@@ -168,6 +172,7 @@
 
 
 #### 网络框架实现原理及详细分析
+
 [代码](https://github.com/JakePrim/PrimFast/tree/master/AdvancedDemo/PrimOkHttpCore)
 
 | 文章标题 | 状态 | 原创/转载 |
@@ -188,6 +193,8 @@
 
 #### MVP与MVVM
 
+#### Android Jetpack
+
 ---
 
 ### Android 高级UI部分
@@ -196,23 +203,27 @@
 
 #### ListView和RecyclerView实现原理解析
 
-#### Android Jetpack
-
 ---
 
 ### Android 性能优化部分
 
+
+
 ---
+
 ### Android NDK开发部分
 
 #### NDK开发基础知识掌握
 - C基础学习
 - C++基础学习
-- [x] [NDK 开发必知必会1⃣️CC++编译器配置](https://www.jianshu.com/p/00e999e72f66)
-- [x] [NDK 开发必知必会2⃣️NDK开发环境配置与MakeFile](https://www.jianshu.com/p/d4f02c41859e)
-- [x] [NDK开发必知必会3⃣️MakeFile详解](https://www.jianshu.com/p/b77367d0654e)
-- [x] [JNI 编程详解-基本数据类型](https://www.jianshu.com/p/d8061f0f2eac)
-- [x] [JNI编程-动态注册及native线程调用Java](https://www.jianshu.com/p/290fbbfac841)
+
+| 文章标题 | 状态 | 原创/转载 |
+| --- | --- | --- |
+| [NDK 开发必知必会1⃣️CC++编译器配置](https://www.jianshu.com/p/00e999e72f66) | [已完成] | 原创 |
+| [NDK 开发必知必会2⃣️NDK开发环境配置与MakeFile](https://www.jianshu.com/p/d4f02c41859e) | [已完成] | 原创 |
+| [NDK开发必知必会3⃣️MakeFile详解](https://www.jianshu.com/p/b77367d0654e) | [已完成] | 原创 |
+| [JNI 编程详解-基本数据类型](https://www.jianshu.com/p/d8061f0f2eac) | [已完成] | 原创 |
+| [JNI编程-动态注册及native线程调用Java](https://www.jianshu.com/p/290fbbfac841) | [已完成] | 原创 |
 
 #### NDK开发音视频播放器实战
 - [实战代码]()
@@ -253,13 +264,11 @@
 ...
 
 ---
+
 ## 后端开发
 
 ### Java后台
-...
 
-### Node.js
-...
 
 ---
 ## 大前端技术
@@ -281,8 +290,28 @@
 #### React.js
 ...
 
+#### Node.js
+...
+
 ---
+
 ## 人工智能
 
-#### Python
+### Python
 ...
+
+
+姓名：苏福鹿
+年龄：27
+电话：17600108056
+QQ号：1760473022
+QQ昵称：JakePrim
+最高学历：大专
+所在地区：北京
+目前工作：Android开发
+目前薪资：17K
+工作年限：4年
+支付平台（腾讯课堂/淘宝/支付宝转账）: 腾讯课堂
+是否动脑VIP学员所推荐或者是动脑VIP（Y/N）：Y
+从哪里了解到我们的课程的（公众号/官网/腾讯课堂/今日头条/QQ群/爱奇艺、 土豆、优酷...其他）：腾讯课堂
+听哪个老师的课程来报名vip的（Tony Mike Allen  Nick Tank   peak  hash  kody）可多选:ony Mike Allen 

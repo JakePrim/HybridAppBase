@@ -29,7 +29,7 @@ public class LinkedList<E> {
     }
 
     //标记链表的头部
-    private Node<E> head;
+    private Node<E> dymmnHead;
 
     //标记链表的尾部 可以降低尾部的时间复杂度
 
@@ -37,7 +37,7 @@ public class LinkedList<E> {
     private int size;
 
     public LinkedList() {
-        this.head = new Node<>(null, null);
+        this.dymmnHead = new Node<>(null, null);
         size = 0;
     }
 
@@ -61,7 +61,7 @@ public class LinkedList<E> {
     public void add(E e, int index) {
         if (index < 0 || index > size)
             throw new IllegalArgumentException("index > 0 && index < size");
-        Node<E> perv = head;
+        Node<E> perv = dymmnHead;
         for (int i = 0; i < index; i++) {
             perv = perv.next;
         }
@@ -83,7 +83,7 @@ public class LinkedList<E> {
         if (index < 0 && index >= size) {
             throw new IllegalArgumentException("Get Error,Illegal index");
         }
-        Node<E> node = head.next;//由于head是虚拟节点 获取下一个节点为头节点
+        Node<E> node = dymmnHead.next;//由于head是虚拟节点 获取下一个节点为头节点
         for (int i = 0; i < index; i++) {
             node = node.next;
         }
@@ -102,7 +102,7 @@ public class LinkedList<E> {
         if (index < 0 && index >= size) {
             throw new IllegalArgumentException("Set Error,Illegal index");
         }
-        Node<E> node = head.next;//由于head是虚拟节点 获取下一个节点为头节点
+        Node<E> node = dymmnHead.next;//由于head是虚拟节点 获取下一个节点为头节点
         for (int i = 0; i < index; i++) {
             node = node.next;
         }
@@ -110,7 +110,7 @@ public class LinkedList<E> {
     }
 
     public boolean contains(E e) {
-        Node<E> node = head.next;
+        Node<E> node = dymmnHead.next;
         while (node != null) {
             if (node.e.equals(e)) {
                 return true;
@@ -123,7 +123,7 @@ public class LinkedList<E> {
         if (index < 0 && index >= size) {
             throw new IllegalArgumentException("Remove Error,Illegal index");
         }
-        Node<E> prev = head;//从0开始查找
+        Node<E> prev = dymmnHead;//从0开始查找
         for (int i = 0; i < index; i++) {
             prev = prev.next;
         }
@@ -145,14 +145,14 @@ public class LinkedList<E> {
     @Override
     public String toString() {
         StringBuilder res = new StringBuilder();
-        Node<E> node = head.next;
+        Node<E> node = dymmnHead.next;
         while (node != null) {
             res.append(node.e + " -> ");
             node = node.next;
         }
 
         //等价循环
-//        for (Node<E> cur = head.next;cur != null;cur = cur.next){
+//        for (Node<E> cur = dymmnHead.next;cur != null;cur = cur.next){
 //            res.append(cur+" -> ");
 //        }
 
