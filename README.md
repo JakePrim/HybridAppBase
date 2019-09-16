@@ -1,6 +1,6 @@
 # PrimFast
  PrimFast 是自己系统性学习技术记录的开源项目,也是我自己的未来发展方向
- 项目内设计的技术面很广,有移动开发技术:Android进阶技术以及了解基本的IOS开发和大前端的技术(主要是跨平台方向)、后台技术(Java Node)、还有当前火热的python人工智能技术学习,以及第三方框架原理和设计思想.努力做一名技术人.
+ 项目内设计的技术面很广,有移动开发技术:Android进阶技术以及了解基本的IOS开发和大前端的技术(主要是跨平台方向)、后台技术(Java Go)、还有当前火热的python人工智能技术学习,以及第三方框架原理和设计思想.努力做一名技术人.
 
 专注于技术的最前线,欢迎关注我的个人网站:https://jakeprim.cn/   备用网站:语雀:https://www.yuque.com/jakeprim
 
@@ -54,6 +54,8 @@
 
 ### 算法
 [代码](https://github.com/JakePrim/PrimFast/tree/master/PrimAlgorithm/Algorithm)
+| 文章标题 | 状态 | 原创/转载 |
+| --- | --- | --- |
 
 ### 网络协议
 
@@ -106,12 +108,12 @@
 
 #### Android 动态换肤原理及实现
 
-实现demo地址:
+实现demo地址:https://github.com/JakePrim/PrimSkinCore
 
 | 文章标题 | 状态 | 原创/转载 |
 | --- | --- | --- |
-| 换肤原理与基础换肤 | [敬请期待] | 原创 |
-| 动态换肤扩展:支持自定义view | [敬请期待] | 原创 |
+| 动态换肤原理与基础换肤实现 | [敬请期待] | 原创 |
+| 动态换肤扩展-支持自定义view | [敬请期待] | 原创 |
 
 #### 图片框架实现原理及详细分析
 
@@ -193,11 +195,17 @@
 
 #### MVP与MVVM
 
+| 文章标题 | 状态 | 原创/转载 |
+| --- | --- | --- |
+
 #### Android Jetpack
 
 ---
 
 ### Android 高级UI部分
+
+| 文章标题 | 状态 | 原创/转载 |
+| --- | --- | --- |
 
 #### View绘制的原理
 
@@ -207,7 +215,8 @@
 
 ### Android 性能优化部分
 
-
+| 文章标题 | 状态 | 原创/转载 |
+| --- | --- | --- |
 
 ---
 
@@ -252,7 +261,13 @@
 
 ## 跨平台开发部分
 
-### Flutter 开发 [项目地址](https://github.com/JakePrim/PrimFastApp/tree/master/PrimFastFlutter)
+### Flutter 开发
+
+[项目地址](https://github.com/JakePrim/PrimFastApp/tree/master/PrimFastFlutter)
+
+| 文章标题 | 状态 | 原创/转载 |
+| --- | --- | --- |
+
 - [x] [Flutter 常用的布局与事件](https://jakeprim.cn/2019/03/26/flutter-1-1/)
 - [x] [Flutter 请求接口以及DAO层的实现](https://jakeprim.cn/2019/03/26/flutter-1-2/)
 - [x] [Flutter WebView使用详解](https://jakeprim.cn/2019/04/07/flutter-1-3/)
@@ -261,14 +276,30 @@
 - [x] [Flutter与Native的生死相依](https://jakeprim.cn/2019/07/04/flutter-native-1/)
 
 ### ReactNative 开发
-...
+
+| 文章标题 | 状态 | 原创/转载 |
+| --- | --- | --- |
 
 ---
 
 ## 后端开发
 
-### Java后台
+### Java高级开发
 
+#### JavaWeb基础
+
+| 文章标题 | 状态 | 原创/转载 |
+| --- | --- | --- |
+
+#### JavaWeb电商项目
+
+| 文章标题 | 状态 | 原创/转载 |
+| --- | --- | --- |
+
+#### Java高并发
+
+| 文章标题 | 状态 | 原创/转载 |
+| --- | --- | --- |
 
 ---
 ## 大前端技术
@@ -299,19 +330,3 @@
 
 ### Python
 ...
-
-
-姓名：苏福鹿
-年龄：27
-电话：17600108056
-QQ号：1760473022
-QQ昵称：JakePrim
-最高学历：大专
-所在地区：北京
-目前工作：Android开发
-目前薪资：17K
-工作年限：4年
-支付平台（腾讯课堂/淘宝/支付宝转账）: 腾讯课堂
-是否动脑VIP学员所推荐或者是动脑VIP（Y/N）：Y
-从哪里了解到我们的课程的（公众号/官网/腾讯课堂/今日头条/QQ群/爱奇艺、 土豆、优酷...其他）：腾讯课堂
-听哪个老师的课程来报名vip的（Tony Mike Allen  Nick Tank   peak  hash  kody）可多选:ony Mike Allen 
