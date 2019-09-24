@@ -2,7 +2,8 @@
  PrimFast 是自己系统性学习技术记录的开源项目,也是我自己的未来发展方向
  项目内设计的技术面很广,有移动开发技术:Android进阶技术以及了解基本的IOS开发和大前端的技术(主要是跨平台方向)、后台技术(Java Go)、还有当前火热的python人工智能技术学习,以及第三方框架原理和设计思想.努力做一名技术人.
 
-专注于技术的最前线,欢迎关注我的个人网站:https://jakeprim.cn/   备用网站:语雀:https://www.yuque.com/jakeprim
+专注于技术的最前线,欢迎关注我的个人网站:https://jakeprim.cn/
+备用网站:语雀:https://www.yuque.com/jakeprim
 
 ## PrimFast 介绍
 
@@ -121,6 +122,14 @@
 | 文章标题 | 状态 | 原创/转载 |
 | --- | --- | --- |
 
+#### ButterKnife原理及实现
+
+#### 动态权限申请框架设计
+
+#### Json框架原理解析及实现
+
+#### EventBus原理分析及实现可跨进程的通信框架
+
 #### 图片框架实现原理及详细分析
 
 实现demo地址:
@@ -132,14 +141,6 @@
 | Glide 加载图片的流程 | [敬请期待] | 原创 |
 | Glide 的生命周期管理 | [敬请期待] | 原创 |
 | Glide 框架整体结构 | [敬请期待] | 原创 |
-
-#### ButterKnife原理及实现
-
-#### 动态权限申请框架设计
-
-#### Json框架原理解析及实现
-
-#### EventBus原理分析及实现可跨进程的通信框架
 
 #### Android 组件化原理及路由的实现
 
@@ -224,7 +225,32 @@
 
 ---
 
-### Android NDK开发部分
+### 跨平台开发部分
+
+#### Flutter 开发
+
+[项目地址](https://github.com/JakePrim/PrimFastApp/tree/master/PrimFastFlutter)
+
+| 文章标题 | 状态 | 原创/转载 |
+| --- | --- | --- |
+| [Dart 语言基础与核心特性](https://jakeprim.cn/2019/07/23/dart-2/) | [已完成] | 原创 |
+| [Flutter 常用的布局与事件](https://jakeprim.cn/2019/03/26/flutter-1-1/) | [已完成] | 原创 |
+| [Flutter WebView使用详解](https://jakeprim.cn/2019/04/07/flutter-1-3/) | [已完成] | 原创 |
+| [Flutter 中的组件通信与状态改变](https://jakeprim.cn/2019/03/15/flutter-event-bus/) | [已完成] | 原创 |
+| [Flutter与Native的生死相依](https://jakeprim.cn/2019/07/04/flutter-native-1/) | [已完成] | 原创 |
+
+---
+
+### Kotlin 开发
+
+| 文章标题 | 状态 | 原创/转载 |
+| --- | --- | --- |
+- [ ] Kotlin 基础语法与核心特性
+- [ ] Kotlin 开发github客户端实战
+
+---
+
+### Android 音视频开发部分
 
 #### NDK开发基础知识掌握
 - C基础学习
@@ -257,80 +283,84 @@
 
 ---
 
-### Kotlin 开发
-- [ ] Kotlin 基础语法与核心特性
-- [ ] Kotlin 开发github客户端实战
-
----
-
-## 跨平台开发部分
-
-### Flutter 开发
-
-[项目地址](https://github.com/JakePrim/PrimFastApp/tree/master/PrimFastFlutter)
-
-| 文章标题 | 状态 | 原创/转载 |
-| --- | --- | --- |
-
-- [x] [Flutter 常用的布局与事件](https://jakeprim.cn/2019/03/26/flutter-1-1/)
-- [x] [Flutter 请求接口以及DAO层的实现](https://jakeprim.cn/2019/03/26/flutter-1-2/)
-- [x] [Flutter WebView使用详解](https://jakeprim.cn/2019/04/07/flutter-1-3/)
-- [x] [Flutter 中的组件通信与状态改变](https://jakeprim.cn/2019/03/15/flutter-event-bus/)
-- [x] [Dart 语言基础与核心特性](https://jakeprim.cn/2019/07/23/dart-2/)
-- [x] [Flutter与Native的生死相依](https://jakeprim.cn/2019/07/04/flutter-native-1/)
-
-### ReactNative 开发
-
-| 文章标题 | 状态 | 原创/转载 |
-| --- | --- | --- |
-
----
-
 ## 后端开发
 
 ### Java高级开发
 
-#### JavaWeb基础
+#### Java语言进阶
 
 | 文章标题 | 状态 | 原创/转载 |
 | --- | --- | --- |
 
-#### JavaWeb电商项目
+#### JavaWeb基础实战
 
+| 文章标题 | 状态 | 原创/转载 |
+| --- | --- | --- |
+| [mybatis配置]() | [敬请期待] | 原创 |
+| [spring配置]() | [敬请期待] | 原创 |
+
+#### Spring全家桶
 | 文章标题 | 状态 | 原创/转载 |
 | --- | --- | --- |
 
 #### Java高并发
 
+Java高并发-多线程原理
+
 | 文章标题 | 状态 | 原创/转载 |
 | --- | --- | --- |
 
+#### JavaWeb电商项目实战
+
+| 文章标题 | 状态 | 原创/转载 |
+| --- | --- | --- |
+| [Java项目初始化搭建-idea]() | [敬请期待] | 原创 |
+
 ---
+
 ## 大前端技术
 
-#### Deep JavaScript
+### Deep JavaScript
 
- [项目地址](https://github.com/JakePrim/PrimFastApp/tree/master/PrimJs)
+[项目地址](https://github.com/JakePrim/PrimFastApp/tree/master/PrimJs)
+
+| 文章标题 | 状态 | 原创/转载 |
+| --- | --- | --- |
 
 - [x] [初遇JavaScript](https://jakeprim.cn/2019/07/07/javascript-1/)
 - [x] [JavaScript 变量和作用域](https://jakeprim.cn/2019/08/01/javascript-2/)
 - [x] [JavaScript 函数](https://jakeprim.cn/2019/08/02/javascript-%E5%87%BD%E6%95%B0/)
 
-#### ES6
-...
-#### TypeScript
-...
-#### Vue.js
-...
-#### React.js
-...
+### ES6
 
-#### Node.js
-...
+| 文章标题 | 状态 | 原创/转载 |
+| --- | --- | --- |
+
+### TypeScript
+
+| 文章标题 | 状态 | 原创/转载 |
+| --- | --- | --- |
+
+### Vue.js
+
+| 文章标题 | 状态 | 原创/转载 |
+| --- | --- | --- |
+
+### React.js
+
+| 文章标题 | 状态 | 原创/转载 |
+| --- | --- | --- |
+
+### Node.js
+
+| 文章标题 | 状态 | 原创/转载 |
+| --- | --- | --- |
 
 ---
 
 ## 人工智能
 
-### Python
-...
+### Python 入门和进阶
+
+| 文章标题 | 状态 | 原创/转载 |
+| --- | --- | --- |
