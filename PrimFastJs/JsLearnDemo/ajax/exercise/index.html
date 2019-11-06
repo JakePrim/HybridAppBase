@@ -7,33 +7,95 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>预约挂号平台</title>
     <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/base.css">
 </head>
 
 <body>
     <div class="top" id="top">
         <div class="warp">
-            <span>
-                010-144/16114电话预约
-            </span>
+            <p class="call">010-144/16114电话预约</p>
+            <p class="welcome">欢迎来到城市预约挂号统一平台&nbsp;请&nbsp;&nbsp;
+                <a href="#">登录</a> &nbsp;&nbsp;
+                <a href="#">注册</a> &nbsp;&nbsp;&nbsp;&nbsp;
+                <a href="#">帮助中心</a>
+            </p>
         </div>
     </div>
     <div class="header" id="header">
-        <div class="header-logo"></div>
-        <div class="header-search"></div>
+        <div class="warp clearfix">
+            <a href="#" class="logo"><img src="img/logo.png"></a>
+            <div class="search"></div>
+        </div>
     </div>
     <div class="nav" id="nav">
-
+        <div class="warp">
+            <div class="link menu">全部科室
+                <div class="menu-list"></div>
+            </div>
+            <a href="#" class="link">按医院挂号</a>
+            <a href="#" class="link">按科室挂号</a>
+            <a href="#" class="link">按疾病挂号</a>
+            <a href="#" class="link">最新公告</a>
+            <a href="#" class="link right">社会知名医院</a>
+        </div>
     </div>
     <div class="banner" id="banner">
         <div class="banner-slider"></div>
-        <div class="banner-search"></div>
-        <div class="banner-helper"></div>
+        <div class="banner-search">
+            <div class="caption"><span class="text">快速预约</span></div>
+            <div class="form">
+                <div class="line"><select name="area">
+                        <option>医院地区</option>
+                    </select></div>
+                <div class="line"><select name="level">
+                        <option>医院等级</option>
+                    </select></div>
+                <div class="line"><select name="name">
+                        <option>医院名称</option>
+                    </select></div>
+                <div class="line"><select name="department">
+                        <option>医院科室</option>
+                    </select></div>
+            </div>
+            <div class="submit">
+                <input type="button" class="button" value="快速查询">
+            </div>
+        </div>
+        <div class="banner-helper">
+            <div class="caption"><span class="text">帮助指南</span></div>
+            <div class="list">
+                <a href="#" class="link">账号指南</a>
+                <a href="#" class="link">预约指南</a>
+                <a href="#" class="link">账号找回</a>
+                <a href="#" class="link">常见问题</a>
+            </div>
+        </div>
     </div>
     <div class="content" id="content">
         <div class="warp clearfix">
             <div class="tab"></div>
-            <div class="news"></div>
-            <div class="close"></div>
+            <div class="news">
+                <div class="caption">最新公告 <a href="#" class="more">| 更多</a></div>
+                <div class="list">
+                    <a href="#" class="link">啥快乐哈看了回放啥看法和</a>
+                    <a href="#" class="link">啥快乐哈看了回放啥看法和</a>
+                    <a href="#" class="link">啥快乐哈看了回放啥看法和</a>
+                    <a href="#" class="link">啥快乐哈看了回放啥看法和</a>
+                    <a href="#" class="link">啥快乐哈看了回放啥看法和</a>
+                    <a href="#" class="link">啥快乐哈看了回放啥看法和</a>
+                </div>
+            </div>
+            <div class="close">
+                <div class="caption">停诊公告 <a href="#" class="more">| 更多</a></div>
+                <div class="list">
+                    <a href="#" class="link">啥快乐哈看了回放啥看法和</a>
+                    <a href="#" class="link">啥快乐哈看了回放啥看法和</a>
+                    <a href="#" class="link">啥快乐哈看了回放啥看法和</a>
+                    <a href="#" class="link">啥快乐哈看了回放啥看法和</a>
+                    <a href="#" class="link">啥快乐哈看了回放啥看法和</a>
+                    <a href="#" class="link">啥快乐哈看了回放啥看法和</a>
+                </div>
+            </div>
         </div>
     </div>
     <div class="footer" id="footer"></div>

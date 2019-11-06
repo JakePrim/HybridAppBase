@@ -51,14 +51,14 @@
 .banner .banner-search {
     width: 250px;
     height: 255px;
-    background-color: #eee;
+    background-color: #fafafa;
     float: right;
 }
 
 .banner .banner-helper {
     width: 250px;
     height: 146px;
-    background-color: #ccc;
+    background-color: #fafafa;
     margin-top: 12px;
     float: right;
 }

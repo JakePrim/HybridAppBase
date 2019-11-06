@@ -10,6 +10,7 @@
 <body>
         <p id="test" style="background-color: red; color: blue;">我是一个段落！</p>
     <script>
+        //ECMAScript中的所有参数传递的都是值,不可能通过应用传递参数
         //函数参数的本质: 形参 = 实参
         //参数个数
         // function add(num1, num2) {
@@ -97,6 +98,17 @@
 //    var p = document.getElementById('test');
    
 //   css(p,'background-color','orange');
+
+//ECMAScript 函数没有重载 如果定义两个名字相同的函数,后定义的函数会覆盖先定义的函数
+function someAdd(num){
+    return num + 100;
+}
+
+function someAdd(num){
+    return num + 200;
+}
+
+console.log("someAdd:"+someAdd(100));//300
 
 //传递集合
 $.each([1,2,3,4],function(index,value){
