@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>组件化实战</title>
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/index.css">
+</head>
+
+<body>
+    <div class="nav-site">
+        <!--水平居中的容器-->
+        <div class="container">
+            <!--左侧 水平排布列表-->
+            <ul class="fl">
+                <li class="fl">
+                    <a href="javascript:;" class="nav-site-login">亲,请登录</a>
+                </li>
+                <li class="fl">
+                    <a href="javascript:;" class="nav-site-signup link">免费注册</a>
+                </li>
+                <li class="fl">
+                    <a href="###" target="_block" class="nav-site-mobile link">手机逛幕淘</a>
+                </li>
+            </ul>
+            <!--右侧 水平排布列表-->
+            <ul class="fr">
+                <li class="menu dropdown fl"  data-active="menu">
+                    <a href="###" target="_blank" class="dropdown-toggle link">我的幕淘
+                        <i class="dropdown-arrow icon transition">&#xe609;</i>
+                    </a>
+                    <!--垂直的列表 下拉菜单的一个层-->
+                    <ul class="dropdown-layer dropdown-left">
+                        <li>
+                            <a href="###" target="_blank" class="menu-item">已买到的宝贝</a>
+                        </li>
+                        <li>
+                            <a href="###" target="_blank" class="menu-item">我的足迹</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="menu dropdown fl" data-active="menu">
+                    <a href="###" target="_blank" class="dropdown-toggle link">收藏夹
+                        <i class="dropdown-arrow icon transition">&#xe609;</i>
+                    </a>
+                    <!--垂直的列表 下拉菜单的一个层-->
+                    <ul class="dropdown-layer dropdown-left">
+                        <li>
+                            <a href="###" target="_blank" class="menu-item">收藏的宝贝</a>
+                        </li>
+                        <li>
+                            <a href="###" target="_blank" class="menu-item">收藏的店铺</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="fl">
+                    <a href="###" class="nav-site-category link">商品分类</a>
+                </li>
+                <li class="menu dropdown fl" data-active="menu">
+                    <a href="###" target="_blank" class="dropdown-toggle link">卖家中心<i class="dropdown-arrow icon transition">&#xe609;</i>
+                    </a>
+                    <!--垂直的列表 下拉菜单的一个层-->
+                    <ul class="dropdown-layer dropdown-left">
+                        <li><a href="###" target="_blank" class="menu-item">免费开店</a>
+                        </li>
+                        <li>
+                            <a href="###" target="_blank" class="menu-item">已卖出的宝贝</a>
+                        </li>
+                        <li>
+                            <a href="###" target="_blank" class="menu-item">出售中的宝贝</a>
+                        </li>
+                        <li>
+                            <a href="###" target="_blank" class="menu-item">卖家服务市场</a>
+                        </li>
+                        <li>
+                            <a href="###" target="_blank" class="menu-item">卖家培训中心</a>
+                        </li>
+                        <li>
+                            <a href="###" target="_blank" class="menu-item">体验中心</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-site-service menu dropdown fl" data-active="menu">
+                    <a href="###" target="_blank" class="dropdown-toggle link">联系客服
+                        <i class="dropdown-arrow icon transition">&#xe609;</i>
+                    </a>
+                    <!--垂直的列表 下拉菜单的一个层-->
+                    <ul class="dropdown-layer dropdown-right">
+                        <li>
+                            <a href="###" target="_blank" class="menu-item">消费者客服</a>
+                        </li>
+                        <li>
+                            <a href="###" target="_blank" class="menu-item">卖家客服</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!--判断jquery是否引入 如果在线的没有引入则引入本地的js文件-->
+    <script>
+        window.jQuery || document.write('<script src="js/jquery-3.4.1.js"><\/script>');
+    </script>
+    <script src="js/dropdown.js"></script>
+    <script src="js/index.js"></script>
+</body>
+
+</html>

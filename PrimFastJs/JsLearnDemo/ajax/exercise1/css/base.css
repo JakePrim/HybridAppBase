@@ -15,7 +15,7 @@ select,input{
 .top{
     line-height: 30px;
     font-size: 13px;
-    color: #868686;
+    color: #ffffff;
 }
 /*top模块下call类选择器的样式*/
 .top .call{
@@ -64,7 +64,8 @@ a{
 .nav .link{
     display: inline-block;
     float: left;
-    padding-left: 30px;
+    padding-left: 15px;
+    padding-right: 15px;
     line-height: 36px;
     text-align: center;
     min-width: 80px;
@@ -72,9 +73,14 @@ a{
     color: #fff;
 }
 
+.nav .right{
+    float: right;
+}
+
 /*定义a标签 鼠标移动上去的效果*/
 .nav a:hover{
-    color: #d7f3ff;
+    background: #87CEEB;
+    cursor: pointer;
 }
 
 .nav .menu{
@@ -227,9 +233,10 @@ a{
 }
 
 .content .tab .caption{
-    background: #f4f6fa;
+    background: #ffffff;
     height: 34px;
     line-height: 34px;
+    border-bottom:2px solid #60bff2;
 }
 
 .content .tab .caption .item{
@@ -249,7 +256,6 @@ a{
 
 .tab .block{
     height: 452px;
-    border: 1px solid #f4f6fa;
 }
 
 .tab .block .block-caption{
@@ -347,4 +353,97 @@ a{
     font-size: 12px;
     text-align: center;
     color: #666;
+}
+
+.tab .block .title{
+    background: #F7F7F7;
+    width: 732px;
+    font-size: 14px;
+    margin-top: 20px;
+    padding: 10px 0 10px 20px;
+}
+
+/* left 样式 */
+.tab .block .left{
+    float: right;
+    position: absolute;
+    left: 762px;
+    top: 55px;
+    width: 240px;
+    height: 336px;
+    border: 1px solid #ccc;
+}
+
+.tab .block .left .left-title{
+    background: #F7F7F7;
+    width: 230px;
+    font-size: 14px;
+    padding: 10px 0 10px 10px;
+}
+
+.tab .block .left .update-time{
+    font-size: 12px;
+    color: blue;
+}
+
+.tab .block .left .content{
+    overflow-y: auto;/*超出固定高度显示滚动条*/
+    height: 250px;
+    font-size: 14px;
+}
+
+.tab .block .left .content .item{
+    padding: 5px 10px;
+    position: relative;
+}
+
+.tab .block .left .content .item .text{
+    position: absolute;
+    font-size: 12px;
+    color: #666666;
+    display: block;
+    left: 75px;
+    top:8px;
+}
+
+.tab .block .department-item{
+    position: relative;
+    height: 90px;
+    width: 750px;
+    border: 1px solid #eee;
+}
+
+.tab .block .department-item .name{
+    width: 140px;
+    line-height: 90px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    text-align: center;
+    background: #d7f3ff;
+}
+
+.tab .block .department-item .item-class{
+    height: 90px;
+    position: absolute;
+    left:140px;
+    top: 0px;
+    float: left;
+    margin-left: 20px;
+    line-height: 23px;
+}
+
+.tab .block .department-item .item-class span{
+    display: inline-block;
+    color: #868686;
+    margin-right: 50px;
+    font-size: 12px;
+    padding-bottom: 5px;
+}
+
+
+/*医院介绍*/
+.tab .block .item .introduction p{
+    text-indent: 50px;
+    line-height: 2em;
 }

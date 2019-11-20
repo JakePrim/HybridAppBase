@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>下拉菜单组件</title>
+    <link rel="stylesheet" href="../css/base.css">
+    <style>
+        /*设置最基本的样式*/
+        .dropdown {
+            position: relative;
+        }
+
+        .dropdown-toggle {
+            position: relative;
+            z-index: 2;
+        }
+
+        .dropdown-arrow {
+            display: inline-block;
+            vertical-align: middle;
+            background-repeat: no-repeat;
+        }
+
+        .dropdown-layer {
+            display: none;
+            position: absolute;
+            z-index: 1;
+        }
+
+        .dropdown-left {
+            left: 0;
+            right: auto;
+        }
+
+        .dropdown-right {
+            left: auto;
+            right: 0;
+        }
+
+        /*menu 菜单样式的下拉菜单*/
+        .menu .dropdown-toggle {
+            display: block;
+            height: 100%;
+            padding: 0 16px 0 12px;
+            border-left: 1px solid #f3f5f7;
+            border-right: 1px solid #f3f5f7;
+        }
+
+        .menu .dropdown-arrow {
+            width: 8px;
+            height: 6px;
+            background-image: url(../img/dropdown-arrow.png);
+            margin-left: 8px;
+        }
+
+        .menu .dropdown-layer {
+            top: 100%;
+            background-color: #fff;
+            border: 1px solid #cdd0d4;
+        }
+
+        .menu-item {
+            display: block;
+            height: 30px;
+            line-height: 30px;
+            color: #4d555d;
+            white-space: nowrap;
+            /*不换行*/
+            padding: 0 12px;
+        }
+
+        .menu-item:hover {
+            background: #f3f5f7;
+        }
+
+        .menu-active .dropdown-toggle {
+            background: #fff;
+            border-color: #cdd0d4;
+        }
+
+        .menu-active .dropdown-arrow {
+            background-image: url(../img/dropdown-arrow-active.png);
+        }
+
+        .menu-active .dropdown-layer {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 为了适配多数的下拉菜单 li在这里已经不能适用了 改成div -->
+    <!-- <div class="menu dropdown"> -->
+    <!-- 这里不一定是一个a标签 -->
+    <!-- <div class="dropdown-toggle">我的幕淘<i class="dropdown-arrow"></i></!-->
+    <!-- 通用的下拉菜单不一定是一个垂直的列表 下拉菜单的一个层,所以我们也要改成div-->
+    <!-- <div class="dropdown-layer dropdown-left"></div> -->
+    <!-- </div> -->
+
+    <div class="menu dropdown fl" data-active="menu">
+        <a href="###" target="_blank" class="dropdown-toggle link">我的幕淘
+            <i class="dropdown-arrow"></i>
+        </a>
+        <!--垂直的列表 下拉菜单的一个层-->
+        <ul class="dropdown-layer dropdown-left">
+            <li>
+                <a href="###" target="_blank" class="menu-item">已买到的宝贝</a>
+            </li>
+            <li>
+                <a href="###" target="_blank" class="menu-item">我的足迹</a>
+            </li>
+        </ul>
+    </div>
+
+    <div class="menu dropdown fl" data-active="menu">
+            <a href="###" target="_blank" class="dropdown-toggle link">我的幕淘
+                <i class="dropdown-arrow"></i>
+            </a>
+            <!--垂直的列表 下拉菜单的一个层-->
+            <ul class="dropdown-layer dropdown-left">
+                <li>
+                    <a href="###" target="_blank" class="menu-item">已买到的宝贝</a>
+                </li>
+                <li>
+                    <a href="###" target="_blank" class="menu-item">我的足迹</a>
+                </li>
+            </ul>
+        </div>
+    <script src="../js/jquery-3.4.1.js"></script>
+    <script src="../js/dropdown.js"></script>
+    <script>
+        //插件
+        $('.dropdown').dropdown();
+    </script>
+
+</body>
+
+</html>

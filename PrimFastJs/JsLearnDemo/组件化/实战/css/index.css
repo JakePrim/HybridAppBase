@@ -1,0 +1,27 @@
+.nav-site{
+    widows: 100%;
+    background-color: #f3f5f7;
+}
+.nav-site .container{
+    height: 44px;
+    line-height: 44px;
+    border-bottom:1px solid #cdd0d4;
+}
+.nav-site-login{
+    color: #f01414;
+    margin-left: 15px;
+}
+.nav-site-signup,
+.nav-site-mobile
+{
+    margin-left: 10px;
+}
+
+/*导航*/
+.nav-site-category{
+    margin: 0 10px;
+}
+
+.nav-site-service {
+    margin-right: 15px;
+}

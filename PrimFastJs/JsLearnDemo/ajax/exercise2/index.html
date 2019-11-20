@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="./jquery-3.4.1.js"></script>
+</head>
+<body>
+    <div class="one" style="width: 200px; height: 200px; background-color: red;">
+        <div class="two" style="width: 100px; height: 100px; background-color: blue;"></div>
+    </div>
+    <script>
+        $(function(){
+            $('.two').mouseover(function(){
+                console.log('two over');
+            });
+            $('.two').mouseout(function(){
+                console.log('two out');
+            });
+            $('.two').mouseenter(function(){
+                console.log('two enter');
+            });
+            $('.two').mouseleave(function(){
+                console.log('two leaver');
+            });
+            $('.one').mouseover(function(){
+                console.log('one over');
+                $(this).fadeIn();
+            });
+            $('.one').mouseout(function(){
+                console.log('one out');
+            });
+
+            $('.one').mouseenter(function(){
+                console.log('one enter');
+            });
+
+            $('.one').mouseleave(function(){
+                console.log('one leave');
+            });
+            $('.one').mousedown(function(){
+                console.log('one down');
+            });
+            $('.one').on('click',function(){
+                console.log('one click');
+            })
+
+            $('.one').on('doubleclick',function(){
+                console.log('one doubleclick');
+            })
+
+        })
+        $().ready(function(){
+            console.log('11111');
+        })
+    </script>
+</body>
+</html>

@@ -8,6 +8,8 @@
     <title>预约挂号平台</title>
     <link rel="stylesheet" href="css/layout.css">
     <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/ui.css">
+    <script type="text/javascript" src="js/jquery-3.4.1.js"></script>
 </head>
 
 <body>
@@ -24,13 +26,198 @@
     <div class="header" id="header">
         <div class="warp clearfix">
             <a href="#" class="logo"><img src="img/logo.png"></a>
-            <div class="search"></div>
+            <div class="search ui-search">
+                <div class="ui-search-select">医院</div>
+                <div class="ui-search-select-list">
+                    <a href="#" class="item">科室</a>
+                    <a href="#" class="item">疾病</a>
+                    <a href="#" class="item">医院</a>
+                </div>
+                <input type="text" class="ui-search-input" placeholder="请输入搜索内容">
+                <a href="#" class="ui-search-submit">&nbsp;</a>
+            </div>
         </div>
     </div>
     <div class="nav" id="nav">
         <div class="warp">
             <div class="link menu">全部科室
-                <div class="menu-list"></div>
+                <div class="menu-list ui-menu">
+                    <div class="ui-menu-item">
+                        <a href="#" class="ui-menu-item-department">内科</a>
+                        <a href="#" class="ui-menu-item-disease">高血压</a>
+                        <a href="#" class="ui-menu-item-disease">冠心病</a>
+                        <div class="ui-menu-item-detail">
+                            <div class="ui-menu-item-detail-group">
+                                <div class="ui-menu-item-detail-group-caption">
+                                    内科
+                                </div>
+                                <div class="ui-menu-item-detail-group-list">
+                                    <a href="#">心脑血管科</a>
+                                    <a href="#">心脑血管科</a>
+                                    <a href="#">心脑血管科</a>
+                                    <a href="#">心脑血管科</a>
+                                    <a href="#">心脑血管科</a>
+                                    <a href="#">心脑血管科</a>
+                                    <a href="#">心脑血管科</a>
+                                    <a href="#">心脑血管科</a>
+                                    <a href="#">心脑血管科</a>
+                                    <a href="#">心脑血管科</a>
+                                    <a href="#">心脑血管科</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ui-menu-item">
+                        <a href="#" class="ui-menu-item-department">外科</a>
+                        <a href="#" class="ui-menu-item-disease">高血压</a>
+                        <a href="#" class="ui-menu-item-disease">冠心病</a>
+                        <div class="ui-menu-item-detail">
+                            <div class="ui-menu-item-detail-group">
+                                <div class="ui-menu-item-detail-group-caption">
+                                    内科
+                                </div>
+                                <div class="ui-menu-item-detail-group-list">
+                                    <a href="#">心脑血管科</a>
+                                    <a href="#">心脑血管科</a>
+                                    <a href="#">心脑血管科</a>
+                                    <a href="#">心脑血管科</a>
+                                    <a href="#">心脑血管科</a>
+                                    <a href="#">心脑血管科</a>
+                                    <a href="#">心脑血管科</a>
+                                    <a href="#">心脑血管科</a>
+                                    <a href="#">心脑血管科</a>
+                                    <a href="#">心脑血管科</a>
+                                    <a href="#">心脑血管科</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ui-menu-item">
+                        <a href="#" class="ui-menu-item-department">儿科</a>
+                        <a href="#" class="ui-menu-item-disease">高血压</a>
+                        <a href="#" class="ui-menu-item-disease">冠心病</a>
+                        <div class="ui-menu-item-detail">
+                            <div class="ui-menu-item-detail-group">
+                                <div class="ui-menu-item-detail-group-caption">
+                                    内科
+                                </div>
+                                <div class="ui-menu-item-detail-group-list">
+                                    <a href="#">心脑血管科</a>
+                                    <a href="#">心脑血管科</a>
+                                    <a href="#">心脑血管科</a>
+                                    <a href="#">心脑血管科</a>
+                                    <a href="#">心脑血管科</a>
+                                    <a href="#">心脑血管科</a>
+                                    <a href="#">心脑血管科</a>
+                                    <a href="#">心脑血管科</a>
+                                    <a href="#">心脑血管科</a>
+                                    <a href="#">心脑血管科</a>
+                                    <a href="#">心脑血管科</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ui-menu-item">
+                        <a href="#" class="ui-menu-item-department">外科</a>
+                        <a href="#" class="ui-menu-item-disease">高血压</a>
+                        <a href="#" class="ui-menu-item-disease">冠心病</a>
+                        <div class="ui-menu-item-detail">
+                            <div class="ui-menu-item-detail-group">
+                                <div class="ui-menu-item-detail-group-caption">
+                                    A疾病
+                                </div>
+                                <div class="ui-menu-item-detail-group-list">
+                                    <a href="#">心脑血管科</a>
+                                    <a href="#">心脑血管科</a>
+                                    <a href="#">心脑血管科</a>
+                                    <a href="#">心脑血管科</a>
+                                    <a href="#">心脑血管科</a>
+                                    <a href="#">心脑血管科</a>
+                                    <a href="#">心脑血管科</a>
+                                    <a href="#">心脑血管科</a>
+                                    <a href="#">心脑血管科</a>
+                                    <a href="#">心脑血管科</a>
+                                    <a href="#">心脑血管科</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ui-menu-item">
+                        <a href="#" class="ui-menu-item-department">儿科</a>
+                        <a href="#" class="ui-menu-item-disease">高血压</a>
+                        <a href="#" class="ui-menu-item-disease">冠心病</a>
+                        <div class="ui-menu-item-detail">
+                            <div class="ui-menu-item-detail-group">
+                                <div class="ui-menu-item-detail-group-caption">
+                                    B疾病
+                                </div>
+                                <div class="ui-menu-item-detail-group-list">
+                                    <a href="#">心脑血管科</a>
+                                    <a href="#">心脑血管科</a>
+                                    <a href="#">心脑血管科</a>
+                                    <a href="#">心脑血管科</a>
+                                    <a href="#">心脑血管科</a>
+                                    <a href="#">心脑血管科</a>
+                                    <a href="#">心脑血管科</a>
+                                    <a href="#">心脑血管科</a>
+                                    <a href="#">心脑血管科</a>
+                                    <a href="#">心脑血管科</a>
+                                    <a href="#">心脑血管科</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ui-menu-item">
+                        <a href="#" class="ui-menu-item-department">内科</a>
+                        <a href="#" class="ui-menu-item-disease">高血压</a>
+                        <a href="#" class="ui-menu-item-disease">冠心病</a>
+                        <div class="ui-menu-item-detail">
+                            <div class="ui-menu-item-detail-group">
+                                <div class="ui-menu-item-detail-group-caption">
+                                    内科
+                                </div>
+                                <div class="ui-menu-item-detail-group-list">
+                                    <a href="#">心脑血管科</a>
+                                    <a href="#">心脑血管科</a>
+                                    <a href="#">心脑血管科</a>
+                                    <a href="#">心脑血管科</a>
+                                    <a href="#">心脑血管科</a>
+                                    <a href="#">心脑血管科</a>
+                                    <a href="#">心脑血管科</a>
+                                    <a href="#">心脑血管科</a>
+                                    <a href="#">心脑血管科</a>
+                                    <a href="#">心脑血管科</a>
+                                    <a href="#">心脑血管科</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ui-menu-item">
+                        <a href="#" class="ui-menu-item-department">内科</a>
+                        <a href="#" class="ui-menu-item-disease">高血压</a>
+                        <a href="#" class="ui-menu-item-disease">冠心病</a>
+                        <div class="ui-menu-item-detail">
+                            <div class="ui-menu-item-detail-group">
+                                <div class="ui-menu-item-detail-group-caption">
+                                    内科
+                                </div>
+                                <div class="ui-menu-item-detail-group-list">
+                                    <a href="#">心脑血管科</a>
+                                    <a href="#">心脑血管科</a>
+                                    <a href="#">心脑血管科</a>
+                                    <a href="#">心脑血管科</a>
+                                    <a href="#">心脑血管科</a>
+                                    <a href="#">心脑血管科</a>
+                                    <a href="#">心脑血管科</a>
+                                    <a href="#">心脑血管科</a>
+                                    <a href="#">心脑血管科</a>
+                                    <a href="#">心脑血管科</a>
+                                    <a href="#">心脑血管科</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
             <a href="#" class="link">按医院挂号</a>
             <a href="#" class="link">按科室挂号</a>
@@ -40,22 +227,56 @@
         </div>
     </div>
     <div class="banner" id="banner">
-        <div class="banner-slider"></div>
+        <div class="banner-slider ui-slider">
+            <!--包裹图片的主要容器-->
+            <div class="ui-slider-warp">
+                <a href="#0" class="item">
+                    <img src="img/banner_1.jpg" alt="banner-1">
+                </a>
+                <a href="#0" class="item">
+                    <img src="img/banner_2.jpg" alt="banner-2">
+                </a>
+                <a href="#0" class="item">
+                    <img src="img/banner_3.jpg" alt="banner-3">
+                </a>
+            </div>
+            <!-- 左右箭头 -->
+            <div class="ui-slider-arrow">
+                <a href="#l" class="item left">&nbsp;</a>
+                <a href="#l" class="item right">&nbsp;</a>
+            </div>
+            <!-- 底部导航 -->
+            <div class="ui-slider-process">
+                    <a href="#0" class="item item-focus">&nbsp;</a>
+                    <a href="#1" class="item">&nbsp;</a>
+                    <a href="#2" class="item">&nbsp;</a>
+            </div>
+
+        </div>
         <div class="banner-search">
             <div class="caption"><span class="text">快速预约</span></div>
-            <div class="form">
-                <div class="line"><select name="area">
+            <div class="form ui-cascading">
+                <div class="line">
+                    <select name="area" data-search="getDistinctArea" data-where="">
                         <option>医院地区</option>
-                    </select></div>
-                <div class="line"><select name="level">
+                    </select>
+                </div>
+                <div class="line">
+                    <select name="level" data-search="getLeveByArea" data-where="">
                         <option>医院等级</option>
-                    </select></div>
-                <div class="line"><select name="name">
+                        <option>医院等级2</option>
+                    </select>
+                </div>
+                <div class="line">
+                    <select name="name" data-search="getNameByAreaAndLevel" data-where="">
                         <option>医院名称</option>
-                    </select></div>
-                <div class="line"><select name="department">
+                    </select>
+                </div>
+                <div class="line">
+                    <select name="department" data-search="getDepartmentArrByHospitalName" data-where="">
                         <option>医院科室</option>
-                    </select></div>
+                    </select>
+                </div>
             </div>
             <div class="submit">
                 <input type="button" class="button" value="快速查询">
@@ -73,7 +294,86 @@
     </div>
     <div class="content" id="content">
         <div class="warp clearfix">
-            <div class="tab"></div>
+            <div class="tab">
+                <!-- tab切换区域 -->
+                <div class="caption">
+                    <a href="#8" class="item item-focus">医院</a>
+                    <a href="#8" class="item">科室</a>
+                </div>
+                <!-- tab item 医院内容区域 -->
+                <div class="block">
+                    <!--医院地区-->
+                    <div class="item">
+                        <div class="block-caption">
+                            <a href="#8" class="block-caption-item block-caption-item-focus">全部</a>
+                            <a href="#8" class="block-caption-item">东城区</a>
+                            <a href="#8" class="block-caption-item">西城区</a>
+                            <a href="#8" class="block-caption-item">朝阳区</a>
+                            <a href="#8" class="block-caption-item">丰台区</a>
+                            <a href="#8" class="block-caption-item">石景山区</a>
+                            <a href="#8" class="block-caption-item">海淀区</a>
+                            <a href="#8" class="block-caption-item">门头沟区</a>
+                            <a href="#8" class="block-caption-item">房山区</a>
+                            <a href="#8" class="block-caption-item">其他</a>
+                        </div>
+                        <!--医院推荐内容-->
+                        <div class="block-content">
+                            <div class="block-warp">
+                                <div class="block-list clearfix">
+                                    <div class="item">
+                                        <img src="img/hospital-1.jpg" alt="xx医院" class="item-img">
+                                        <div class="item-name">北京协和医院
+                                            <span class="item-level">[三级甲等]</span></div>
+                                        <div class="item-phone">电话:129238923893</div>
+                                        <div class="item-address">结束时间睡懒觉善良的事件发生逻辑搜ID飞机手机哦空间</div>
+                                    </div>
+                                    <div class="item">
+                                        <img src="img/hospital-1.jpg" alt="xx医院" class="item-img">
+                                        <div class="item-name">北京协和医院
+                                            <span class="item-level">[三级甲等]</span></div>
+                                        <div class="item-phone">电话:129238923893</div>
+                                        <div class="item-address">结束时间睡懒觉善良的空间</div>
+                                    </div>
+                                    <div class="item">
+                                        <img src="img/hospital-1.jpg" alt="xx医院" class="item-img">
+                                        <div class="item-name">北京协和医院
+                                            <span class="item-level">[三级甲等]</span></div>
+                                        <div class="item-phone">电话:129238923893</div>
+                                        <div class="item-address">结束时间睡懒觉善良的空间</div>
+                                    </div>
+                                    <div class="item">
+                                        <img src="img/hospital-1.jpg" alt="xx医院" class="item-img">
+                                        <div class="item-name">北京协和医院
+                                            <span class="item-level">[三级甲等]</span></div>
+                                        <div class="item-phone">电话:129238923893</div>
+                                        <div class="item-address">结束时间睡懒觉善良的空间</div>
+                                    </div>
+                                </div>
+                                <div class="block-text-list clearfix">
+                                    <a href="#8" class="item">北京首都儿童医院<span class="level">[三级甲等]</span></a>
+                                    <a href="#8" class="item">北京首都儿童医院<span class="level">[三级甲等]</span></a>
+                                    <a href="#8" class="item">北京首都儿童医院<span class="level">[三级甲等]</span></a>
+                                    <a href="#8" class="item">北京首都儿童医院<span class="level">[三级甲等]</span></a>
+                                    <a href="#8" class="item">北京首都儿童医院<span class="level">[三级甲等]</span></a>
+                                    <a href="#8" class="item">北京首都儿童医院<span class="level">[三级甲等]</span></a>
+                                </div>
+                                <a href="#8" class="block-more">更多</a>
+                            </div>
+
+                            <div class="block-warp" style="display: none">
+                                其他内容
+                            </div>
+                            
+                        </div>
+
+                    </div>
+                    <!-- tab item 科室内容区域 -->
+                    <div class="item" style="display: none">
+                        科室内容
+                    </div>
+                </div>
+
+            </div>
             <div class="news">
                 <div class="caption">最新公告 <a href="#" class="more">| 更多</a></div>
                 <div class="list">
@@ -98,7 +398,10 @@
             </div>
         </div>
     </div>
-    <div class="footer" id="footer"></div>
+    <div class="footer" id="footer">
+        Copyright @2019 Geeks JakePrim所有
+    </div>
+    <script type="text/javascript" src="js/ui.js"></script>
+    <script type="text/javascript" src="js/data.js"></script>
 </body>
-
 </html>
