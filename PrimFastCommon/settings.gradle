@@ -1,1 +1,0 @@
-include ':app', ':prim_http', ':prim_base', ':prim_res', ':prim_test', ':prim_img', ':prim_db'
