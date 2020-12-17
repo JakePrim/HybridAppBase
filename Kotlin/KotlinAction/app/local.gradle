@@ -1,8 +1,0 @@
-def localPropertiesFile=new File(rootDir,"debug.properties")
-def properties = new Properties()
-properties.load(new FileInputStream(localPropertiesFile))
-def propertiesNames = properties.propertyNames()
-while (propertiesNames.hasMoreElements()){
-    def name = propertiesNames.nextElement()
-    project.extensions.add(name,properties.getProperty(name))
-}
