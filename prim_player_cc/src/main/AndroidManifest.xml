@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.prim_player_cc">
+
+    <application>
+        <service
+            android:name=".service.DecoderService"
+            android:exported="false"
+            android:enabled="false"
+            android:label="DecoderService"/>
+    </application>
+
+</manifest>

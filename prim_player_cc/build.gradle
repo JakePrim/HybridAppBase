@@ -1,0 +1,26 @@
+apply plugin: 'com.android.library'
+
+def config = rootProject.ext.androidConfig
+android {
+    compileSdkVersion config.compileSdkVersion
+    buildToolsVersion config.buildToolsVersion
+    defaultConfig {
+        minSdkVersion config.minSdkVersion
+        targetSdkVersion config.targetSdkVersion
+    }
+
+
+    buildTypes {
+        debug {}
+        develop {}
+        beta {}
+        prerelease {}
+        release {}
+    }
+
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation rootProject.ext.dependencies["appcompat-v7"]
+}
