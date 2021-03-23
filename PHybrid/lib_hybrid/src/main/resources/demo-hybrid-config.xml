@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<configuration>
+    <!-- 环境配置，便于在开发环境下的测试 -->
+    <environments default="debug">
+        <!--develop  debug  prerelease release-->
+        <environment id="debug">
+            <!-- 添加初始化数据源配置 -->
+            <dataSource>
+                <!-- 默认模板配置 -->
+                <property name="template">
+                    <map>
+                        <!-- 文章详情页模板 -->
+                        <entry key="article" value="file:///assets/web/article/1.0/article.html"
+                            version="1.0" />
+                        <!-- item模板 -->
+                        <entry key="item" value="file:///assets/web/item/1.0/article.html"
+                            version="1.0" />
+                        <!-- web频道模板 -->
+                        <entry key="channel-web"
+                            value="file:///assets/web/channel-web/1.0/article.html" version="1.0" />
+                        <!-- 活动页面模板 -->
+                        <entry key="active" value="file:///assets/web/active/1.0/article.html"
+                            version="1.0" />
+                    </map>
+                </property>
+            </dataSource>
+        </environment>
+    </environments>
+
+    <!-- 插件相关的配置 -->
+    <settings>
+        <!-- 必须配置项 否则无法下载模板 下载模板的网络请求实现类 该类必须实现DownloadListener接口-->
+        <setting name="downloadTemplate" value="" />
+        <!-- 定义其他插件的实现 -->
+    </settings>
+
+    <!-- webview容器对应的配置映射文件信息，对应不同的功能有着不同的webview配置
+         如果不设置将使用该库的默认配置
+     -->
+    <webviews>
+<!--        默认配置 没有配置webview的以及从服务器下载一个新的类型 一个新的key 会加载默认的配置，-->
+        <webview id="default" value="demo-webview-config.xml" />
+        <webview value="demo-webview-config.xml" />
+        <webview value="demo-webview-config2.xml" />
+    </webviews>
+</configuration>

@@ -1,0 +1,4 @@
+include ':lib_hybrid'
+include ':primweb-core'
+include ':app'
+rootProject.name = "PHybrid"

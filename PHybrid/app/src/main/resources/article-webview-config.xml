@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<webview-mapper namespace="article">
+    <!-- webview的配置 -->
+    <webview>
+        <!-- webSetting 类 -->
+        <property name="webSetting" value="com.prim.phybrid.AndroidWebSettings" />
+        <!-- webChromeClient类 -->
+        <property name="webChromeClient" value="" />
+        <!-- WebViewClient类 -->
+        <property name="webViewClient" value="" />
+        <!-- 主要为primweb进行配置 -->
+        <property name="webViewType" value="Android" />
+        <!-- 监听js方法是否存在的全类名 -->
+        <property name="listenerCheckJsFunction" value="" />
+        <!-- UI配置- -->
+        <!-- 错误页面： value 是布局文件的名称：R.layout.error 直接填写error即可; clickId:错误页面点击某个view触发的点击事件，填写规则：R.id.text 直接写text即可 -->
+        <property name="errorLayout" value="" clickId="" />
+        <!-- 加载页面 -->
+        <property name="loadLayout" value="" />
+        <!-- 是否启用顶部指示器-->
+        <property name="enableTopIndicator" value="false" />
+        <!-- javaScript桥接类 -->
+        <property name="javaScriptBridge" value="" birdge="" />
+    </webview>
+
+    <!-- webview复用池的配置 -->
+    <webpool>
+        <!-- 配置是否开启复用池 -->
+        <property name="enable" value="true" />
+        <!-- webSetting的全类名 -->
+        <property name="webPoolSetting" value="com.prim.phybrid.AndroidWebSettings" />
+        <!-- 定义复用池的个数 -->
+        <property name="size" value="3" />
+        <!-- class：桥接类的全类名   bridge: 和js定义的桥接名称 -->
+        <property name="poolJavaScriptBridge" value="" birdge="" />
+        <!-- 复用池的webClient监听实现类 -->
+        <property name="webClientListener" value="" />
+    </webpool>
+</webview-mapper>

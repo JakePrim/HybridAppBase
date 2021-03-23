@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport"
+        content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>人民日报客户端</title>
+    <link rel="stylesheet" href="css/main.css" />
+    <script>
+        // console.oldLog = console.log;
+        // console.log = function(name,txt) {
+        //     var debCont = document.querySelector('.define-debugger-main');
+        //     var title=document.createElement('p');
+        //     var element=document.createElement('p');
+        //     element.innerText = txt || '暂无~~~~';
+        //     element.style.paddingBottom = '20px';
+        //     element.style.background = '#fff';
+        //     title.innerHTML = name+":"
+        //     title.style.background = '#eee';
+        //     console.oldLog(name,txt)
+        //     debCont.appendChild(title);
+        //     debCont.appendChild(element);
+        // }
+
+        var startTime = +new Date();
+        var rmrbAppArticleInfo = {
+            firstLoad: false,
+            appInfo: {},
+            dynamic: {},
+            articleInfo: {
+                contents: "",
+                gov: {}
+            }
+        };
+        // 获取文章信息
+        window.getArticleInfoCb = function (response,contents) {
+            if (typeof response == "string") {
+                response = JSON.parse(response);
+                response.frontend.contents = contents || '';
+            }
+            // if (
+            //     rmrbAppArticleInfo.firstLoad &&
+            //     response.frontend.contents ===
+            //     rmrbAppArticleInfo.articleInfo.contents
+            // ) {
+            //     return;
+            // }
+
+            rmrbAppArticleInfo.appInfo = response.appInfo;
+            rmrbAppArticleInfo.articleInfo = response.frontend;
+            if (window.rmrbApp) {
+                rmrbApp.resetFontBeilv(response.appInfo.screen.width)
+                rmrbApp.loadArticle = true;
+                rmrbApp.appInfo = response.appInfo;
+                rmrbApp.articleInfo = response.frontend;
+            }
+            rmrbAppArticleInfo.firstLoad = true;
+        };
+
+        // 动态信息
+        window.getDynamicInfoCb = function (response) {
+            if (typeof response == "string") {
+                response = JSON.parse(response);
+            }
+            rmrbAppArticleInfo.dynamic = response;
+            if (window.rmrbApp) {
+                rmrbApp.loadDynamic = true;
+                rmrbApp.dynamic = response;
+            }
+        };
+        try {
+            nativeBridge.ready(); // 告诉iOS完事了
+        } catch (error) {}
+
+        /**
+         *  设置默认图片
+         */
+        function defaultImg() {
+            var default_user = './images/user.png'
+            var img = event.srcElement;
+            img.src = default_user;
+            img.style.border = 'none';
+            img.onerror = null;
+        }
+
+        
+    </script>
+</head>
+
+<body style="background-color: blue;">
+    <div id="app-article" v-cloak>
+        <!-- 问政 -->
+        <template v-if="articleInfo.view_type == 'politics'">
+            <div class="politics-content">
+
+                <h1 class="politics-title" data-font-size="22">{{articleInfo.title}}</h1>
+                <!-- 问政相关信息 -->
+                <div class="politics-info">
+                    <div class="left">
+                        <span>{{articleInfo.domain}}·{{articleInfo.type}}</span>
+                        <span class="green" v-if="articleInfo.status=='办理中'">办理中</span>
+                        <span class="blue" v-if="articleInfo.status=='已回复'">已回复</span>
+                        <span class="red" v-if="articleInfo.status=='审核未通过'">审核未通过，仅自己可见</span>
+                        <span v-if="articleInfo.status=='待审核'">待审核，仅自己可见</span>
+                        <span class="yellow" v-if="articleInfo.status=='审核通过'">审核通过</span>
+                    </div>
+                    <div class="right">
+                        <section class="follow-button-b" :class="{followed: articleInfo.is_attention=='1'}"
+                            @click="politicsFollow">
+                            <template v-if="followLoading">
+                                <var class="spinner-loading-b"></var>
+                            </template>
+                            <template v-else>
+                                <!-- <i v-if="articleInfo.is_attention == '0'" class="follow-icon"></i> -->
+                                <span v-if="articleInfo.is_attention == '0'">关注问题</span>
+                                <span v-else>已关注</span>
+                            </template>
+                        </section>
+                    </div>
+                </div>
+
+
+                <!-- 提问者 -->
+                <div class="politics-questioner" data-font-size="14">
+                    <div style="padding-right:20px;">
+                        <span>网友问</span>
+                        <span>{{articleInfo.answer_user_name}}</span>
+                    </div>
+                    <span class="time">{{articleInfo.question.date_timestamp | dateFormat1}}</span>
+                </div>
+
+                <!-- 提问内容 -->
+                <div class="politics-problem" data-font-size="18">
+                    <p v-html="replaceFold(articleInfo.question.content)"></p>
+                    <!-- <img data-img-slide src="./images/default.png" data-echo="http://fpoimg.com/400x900" width="400" height="900"> -->
+                </div>
+
+                <div class="politics-answer" v-if="articleInfo.status == '已回复'">
+                    <span class="tip">官方回复</span>
+                    <p class="answer" data-font-size="14">{{articleInfo.answer.user_name}}</p>
+                    <p class="answer-text" data-font-size="18" v-html="replaceFold(articleInfo.answer.content)"></p>
+                </div>
+            </div>
+        </template>
+        <!-- 其他类型文章 -->
+        <template v-else>
+            <header class="atc-header">
+                <!-- 报纸、长文才显示标题部分 -->
+                <template
+                    v-if="articleInfo.view_type == 'paper' || articleInfo.view_type == 'normal' || articleInfo.view_type == 'gov_normal' || articleInfo.view_type == 'gov_with_video' || articleInfo.view_type == 'audio'">
+                    <div class="atc-header-title">
+                        <h2 class="act-toptitle" v-if="articleInfo.short_title" data-font-size="16">
+                            {{ removeHtml(articleInfo.short_title) }}
+                        </h2>
+                        <h1 class="atc-title" v-if="articleInfo.title_inner" data-font-size="22">
+                            {{ removeHtml(articleInfo.title_inner) }}
+                        </h1>
+                        <h2 class="atc-subtitle" v-if="articleInfo.title_down" data-font-size="16">
+                            {{ removeHtml(articleInfo.title_down) }}
+                        </h2>
+                    </div>
+                </template>
+                <!-- 人民号模块 -->
+                <template
+                    v-if="articleInfo.gov && articleInfo.gov.length && articleInfo.gov[0].id && articleInfo.gov[0].name && articleInfo.view_type">
+                    <template v-if="articleInfo.gov[0].source !=1 || articleInfo.view_type.indexOf('dynamic') > -1 || articleInfo.view_type == 'gov_small_video'">
+                        <div class="gov-info">
+                            <div class="avatar">
+                                <img :src="articleInfo.gov[0].logo" onerror="defaultImg()" @click="jumpToGov"/>
+                            </div>
+                            <div class="middle">
+                                <div class="rmh-name">{{ articleInfo.gov[0].name }}</div class="rmh-name">
+                                <!-- <p>
+                                    {{ articleInfo.gov[0].news_datetime }} ·
+                                    {{ articleInfo.gov[0].description }}
+                                </p> -->
+                                <p class="rmh-descriptions">
+                                    {{ articleInfo.news_datetime | dateFormat1 }}{{ articleInfo.gov[0].description && articleInfo.gov[0].source != 1 ? ' · '+articleInfo.gov[0].description : ''}}
+                                </p>
+                            </div>
+                            <template
+                                v-if="(dynamic.is_gov+'') != 'undefined' && appInfo.gov_id != articleInfo.gov[0].id && articleInfo.gov[0].source !=1">
+                                <section class="follow-button-b" :class="{followed: dynamic.is_gov == '0' ? false : true}"
+                                    @click="handleFollow" v-if="loadDynamic">
+                                    <template v-if="followLoading">
+                                        <var class="spinner-loading-b"></var>
+                                    </template>
+                                    <template v-else>
+                                        <i v-if="dynamic.is_gov == '0'" class="follow-icon-b"></i>
+                                        <span v-if="dynamic.is_gov == '0'">关注</span>
+                                        <span v-else>已关注</span>
+                                    </template>
+                                </section>
+                            </template>
+                        </div>
+                    </template>
+                    <template v-else>
+                        <div class="atc-top-info">
+                            <span v-if="articleInfo.gov[0].name" class="pr10">{{articleInfo.gov[0].name}}</span>
+                            <span v-if="articleInfo.news_datetime" class="pr10">{{ articleInfo.news_datetime | dateFormat2 }}</span>
+                            <span v-if="articleInfo.read_count && articleInfo.read_count != '0' && articleInfo.read_count_show == 1 && articleInfo.view_type != 'paper'">浏览量{{ articleInfo.read_count | numberFormat1 }}</span>
+                        </div>
+                    </template>
+                </template>
+                <template v-else>
+                    <div class="atc-top-info">
+                        <span v-if="articleInfo.copyfrom" class="pr10 atc-copyfrom">{{articleInfo.copyfrom}}</span>
+                        <span class="pr10" v-if="articleInfo.authors">{{articleInfo.authors}}</span>
+                        <span class="pr10" v-if="articleInfo.news_datetime">{{ articleInfo.news_datetime | dateFormat2 }}</span>
+                        <span v-if="articleInfo.read_count && articleInfo.read_count != '0' && articleInfo.read_count_show == 1 && articleInfo.view_type != 'paper'">浏览量{{ articleInfo.read_count | numberFormat1 }}</span>
+                    </div>
+                </template>
+            </header>
+
+            <!-- 报纸、普通长文、人民号长文、人民号带视频长文 -->
+            <div class="atc-container"
+                v-if="articleInfo.view_type == 'paper' || articleInfo.view_type == 'normal' || articleInfo.view_type == 'gov_normal' || articleInfo.view_type == 'gov_with_video' || articleInfo.view_type == 'audio' || articleInfo.view_type == 'gov_audio'">
+
+                <!-- 顶部超连 -->
+                <div v-if="articleInfo.head_linkdata && articleInfo.head_linkdata.length != 0" class="atc-alink" @click="openWbview(articleInfo.head_linkdata)">
+                    <span class="atc-alink-tip"></span>{{articleInfo.head_linkdata.link_title}}<span class="atc-alink-load"></span>
+                </div>
+
+                <!-- 导读 -->
+                <div class="atc-introduction" data-font-size="16" v-if="articleInfo.guidance">
+                    <p>{{ articleInfo.guidance }}</p>
+                </div>
+
+                <!-- 帮 -->
+                <div class="atc-help" v-if="articleInfo.show_help =='1'">
+                    <div class="top">
+                        <p class="already">
+                            <!-- 如果已集齐的数量大于目标数，则显示目标数 -->
+                            <span>已集齐</span><b>{{ articleInfo.love_num - articleInfo.aim_love_num >= 0 ?
+                                articleInfo.aim_love_num : articleInfo.love_num}}</b><span>份</span>
+                        </p>
+                        <p class="target">
+                            （目标{{ articleInfo.aim_love_num }}份）
+                        </p>
+                    </div>
+                    <div class="range-wrapper">
+                        <div class="range">
+                            <div class="range-progress" :style="'width:'+ (Number(help_percent||0)+1) +'%;'"></div>
+                            <div class="range-tip" :style="'left:'+ help_percent +'%;'">
+                                {{ help_percent }}%
+                            </div>
+                        </div>
+                    </div>
+                    <div class="result">{{ articleInfo.help_status }}</div>
+                </div>
+
+                <!-- 内容 -->
+                <div class="atc-html" data-font-size="18" v-html="contents"></div>
+
+                <!-- 投票 -->
+                <div v-if="articleInfo.vote_info && articleInfo.vote_info.questionChoices && articleInfo.vote_info.questionChoices.length>0" class="vote-container">
+                    <div class="vote-logo"><span class="vote-logo-icon"></span>投票</div>
+                    <div class="vote-title">{{articleInfo.vote_info.vote_name}}</div>
+                    <template v-for="(item,index) of articleInfo.vote_info.questionChoices">
+                        <div v-if="index<10" class="vote-item" :key="item.id">
+                            <span class="vote-item-txt">{{item.choose_name}}</span>
+                            <span v-if="articleInfo.vote_info.isCommit != 1" class="vote-line"></span>
+                            <span v-if="articleInfo.vote_info.isCommit != 1" class="vote-btn" @click="handleVote(item.id)">投票</span><span v-else class="vote-percent">{{item.percent}}</span>
+
+                            <p class="vote-progress" :style="{'width': articleInfo.vote_info.isCommit == 1 ? item.percent : 0,'background': voteBg[index]}"></p>
+                        </div>
+                    </template>
+                </div>
+
+                <!-- 底部 -->
+                <div class="atc-bottom">
+                    <template v-if="articleInfo.gov && articleInfo.gov.length && articleInfo.gov[0].name">
+                        <!-- <p class="read-count" v-if="articleInfo.read_count >= 0">
+                            浏览量{{ articleInfo.read_count | numberFormat1 }}
+                        </p> -->
+                        <p v-if="
+                            articleInfo.gov[0].name != '人民日报' && 
+                            articleInfo.gov[0].name != '人民日报客户端' &&
+                            articleInfo.gov[0].name != '人民号小助手' &&
+                            articleInfo.copyfrom != '人民日报' && 
+                            articleInfo.copyfrom != '人民日报客户端' &&
+                            articleInfo.copyfrom != '人民号小助手' &&
+                            articleInfo.gov[0].source !=1
+                            " class="special-statement">
+                            <!-- 特别声明：本内容为人民日报新媒体平台“人民号”作者上传并发布，仅代表作者观点。人民日报仅提供信息发布平台。 -->
+                            {{articleInfo.important_clause || importantClause}}
+                        </p>
+                    </template>
+                    <template v-else>
+                        <p class="editor" v-if="articleInfo.admin_name">
+                            责任编辑：{{ articleInfo.admin_name }}
+                        </p>
+                    </template>
+                </div>
+
+                <div class="body-bottom"></div>
+            </div>
+            <!-- 人民号图文、人民号短视频、人民号小视频 -->
+            <div class="dynamic-contnainer"
+                v-if="articleInfo.view_type == 'gov_dynamic' || articleInfo.view_type == 'gov_dynamic_video' || articleInfo.view_type == 'gov_small_video' ">
+                <div class="dynamic-text" data-font-size="16" v-html="articleInfo.title_inner">
+                    <!-- {{articleInfo.title_inner}} -->
+                </div>
+                <!-- 图片部分 -->
+                <template v-if="articleInfo.image && articleInfo.image.length">
+                    <div class="dynamic-images-box1" v-if="articleInfo.image.length == 1">
+                        <!-- 横图 -->
+                        <!-- <div class="dynamic-one-image heng" v-if="articleInfo.image[0].is_long_image == '1'">
+                            <img data-img-slide src="./images/default.png" :data-echo="articleInfo.image[0].url"
+                                :width="articleInfo.image[0].image_wide" :height="articleInfo.image[0].image_height" @load="resetDomHeight" onerror="this.src='./images/default.png'">
+                            <span class="image-type-icon"
+                                v-if="articleInfo.image[0].one_image_show_type == '1'"><var>横图</var></span>
+                        </div> -->
+                        <!-- 竖 -->
+                        <!-- <div class="dynamic-one-image shu" v-else-if="articleInfo.image[0].is_long_image == '2'">
+                            <img data-img-slide src="./images/default.png" :data-echo="articleInfo.image[0].url"
+                                :width="articleInfo.image[0].image_wide" :height="articleInfo.image[0].image_height" @load="resetDomHeight" onerror="this.src='./images/default.png'">
+                            <span class="image-type-icon"
+                                v-if="articleInfo.image[0].one_image_show_type == '2'"><var>竖图</var></span>
+                        </div> -->
+                        <!-- maxwidth: 100%; minwidth: 100%; -->
+                        <div class="dynamic-one-image">
+                            <img v-if="articleInfo.image[0].url" data-img-slide src="./images/default.png" :data-echo="articleInfo.image[0].url"
+                                :width="articleInfo.image[0].image_wide" :height="articleInfo.image[0].image_height" @load="resetDomHeight"  onerror="this.src='./images/default.png'">
+                        </div>
+                    </div>
+                    <div v-else class="dynamic-images-box" :class="'size-'+articleInfo.image.length">
+                        <figure class="dynamic-img-figure" v-for="(item, index) in articleInfo.image">
+                            <div class="dynamic-img-item">
+                                <span class="dynamic-img-inner">
+                                    <img data-img-slide src="./images/default.png" :data-echo="item.url"
+                                        :width="item.image_wide" :height="item.image_wide" @load="resetDomHeight" onerror="this.src='./images/default.png'">
+                                    <span class="image-type-icon"
+                                        v-if="item.one_image_show_type == '1'"><var>横图</var></span>
+                                    <span class="image-type-icon"
+                                        v-if="item.one_image_show_type == '2'"><var>竖图</var></span>
+                                </span>
+                            </div>
+                        </figure>
+                    </div>
+                    <!-- <div class="dynamic-images-box1" v-if="articleInfo.images.length == 1">
+                        <img data-img-slide src="./images/default.png" :data-echo="articleInfo.images[0].url" :width="articleInfo.images[0].width"
+                            :height="articleInfo.images[0].height">
+                    </div>
+                    <div v-else class="dynamic-images-box" :class="`size-${articleInfo.images.length}`">
+                        <figure class="dynamic-img-figure" v-for="(item, index) in articleInfo.images">
+                            <div class="dynamic-img-item">
+                                <span class="dynamic-img-inner">
+                                    <img data-img-slide src="./images/default.png" :data-echo="item.url" :width="item.width"
+                                        :height="item.height">
+                                </span>
+                            </div>
+                        </figure>
+                    </div> -->
+                </template>
+
+                <!-- 短视频 -->
+                <div class="play-box video j-video-container" v-if="articleInfo.view_type == 'gov_dynamic_video'">
+                    <img :src="articleInfo.video.video_default_image" onerror="this.src='./images/default.png'"
+                        :data-video="articleInfo.video.video_url">
+                    <i class="play-icon"></i>
+                    <span class="time-tip"
+                        v-if="articleInfo.video && articleInfo.video.video_play_time">{{articleInfo.video.video_play_time}}</span>
+                </div>
+
+                <!-- 小视频 -->
+                <div class="small-video-box j-video-container" v-if="articleInfo.view_type == 'gov_small_video'">
+                    <img :src="articleInfo.video.video_default_image" onerror="this.src='./images/default.png'"
+                        :data-video="articleInfo.video.video_url">
+                    <i class="play-icon"></i>
+                    <span class="time-tip"
+                        v-if="articleInfo.video && articleInfo.video.video_play_time">{{articleInfo.video.video_play_time}}</span>
+                </div>
+
+                <div class="atc-bottom">
+                    <template v-if="articleInfo.gov && articleInfo.gov.length && articleInfo.gov[0].name">
+                        <p v-if="
+                            articleInfo.gov[0].name != '人民日报' && 
+                            articleInfo.gov[0].name != '人民日报客户端' &&
+                            articleInfo.gov[0].name != '人民号小助手' &&
+                            articleInfo.copyfrom != '人民日报' && 
+                            articleInfo.copyfrom != '人民日报客户端' &&
+                            articleInfo.copyfrom != '人民号小助手' &&
+                            articleInfo.gov[0].source !=1 
+                            " class="special-statement">
+                            {{articleInfo.important_clause || importantClause}}
+                            <!-- 特别声明：本内容为人民日报新媒体平台“人民号”作者上传并发布，仅代表作者观点。人民日报仅提供信息发布平台。 -->
+                        </p>
+                    </template>
+                </div>
+                <div class="body-bottom"></div>
+            </div>
+        </template>
+    </div>
+    <div class="image-width"></div>
+    
+    <!-- <script src="https://cdn.bootcss.com/vConsole/3.2.0/vconsole.min.js"></script>
+    <script>
+        var vConsole = new VConsole();
+    </script> -->
+    <script src="./js/libs/jquery-1.12.4.min.js"></script>
+    <script src="./js/require.js" defer="defer" data-main="./js/article.js"></script>
+    <script>
+        // 模拟被客户端调用
+            getArticleInfoCb({
+                // app 状态
+                appInfo: {
+                    screen: {
+                        // 屏幕的分辨率
+                        width: 414,
+                        height: 636
+                    },
+                    isWifi: true,
+                    loadImg: true,
+                    fontScale: 1,
+                    gov_id: 12, //人民号本人看到自己的文章时不显示关注按钮
+                },
+                // 文章内容
+                /**
+                 * 文章类型
+                 * gov_ 开头的会有人民号主模块（通过frontend.gov.length判断）
+                 * 1. normal                            普通图文
+                 * 2. gov_normal || gov_with_video      人民号图文 同上
+                 * 3. gov_dynamic                       图文、图集；上文字，下图片
+                 * 4. gov_dynamic_video                 短视频； 上文字，下视频(16:9)
+                 * 5. gov_small_video                   小视频；上文字。下视频（固定比例）
+                 *
+                 */
+                // ------------------------------------------------------------------------
+                // frontend: {
+                //     view_type: 'politics',
+                //     "status": "已回复", //状态 已回复 审核未通过 办理中 待审核
+                //     "title": "给省长的一封信。", //标题
+                //     "type": "投诉", //标题下方显示的东西 后显示
+                //     "domain": "城建", //标题下方显示的东西 先显示
+                //     "answer_user_name": "河南省省长谢伏瞻河南省省长谢伏瞻河南省省长谢伏瞻河南省省长谢伏瞻河南省省长谢伏瞻", //提问领导
+                //     "question": {
+                //         "avatar": "", //用户头像
+                //         "user_name": "匿名用户", //用户名
+                //         "date": "2016-04-12 08:59:00", //提问时间
+                //         "content": "尊敬的领导，您好我是一个在外打工者我是一个在外打工者我是一个在外打工者我是一个在外打工者我是一个在外打工者", //提问内容
+                //         "date_timestamp": "1550645100" //提问时间戳
+                //     },
+                //     "answer": {
+                //         "avatar": "", //回答人头像
+                //         "user_name": "回答人姓名", //回答人姓名
+                //         "date": "2016-04-12 08:59:00", //回答人时间
+                //         "content": "你好，\n回答人内容回答人内容回答人\r\n内容回答人内容回答人内容", //回答人内容
+                //         "date_timestamp": "1460422740" //回答人时间戳
+                //     },
+                //     is_attention: '0'
+                // },
+                // ------------------------------------------------------------------------
+                // 人民号动态假数据
+                // frontend: {
+                //     view_type: "gov_dynamic",
+                //     // title_inner: "11月15日，英国伦敦，英国首相特蕾莎·梅离开首相府，<br>前往下议院就英国脱欧协议草案发表声明。",
+                //     title_inner: "酷酷酷酷酷酷酷酷酷\n电视里看到看见及时的解决\ndddddddddddddddd\n看ii视里看到看见及时的解视里看到看见及时的解视里看到看见及时的解",
+                //     "news_datetime": "1554974566",
+                //     gov: [{
+                //         id: "4697",
+                //         name: "时间财经",
+                //         description: "北京时间旗下财经新闻官方账号",
+                //         logo: "https://rmrbcmsonline.peopleapp.com/upload/zw/bjh_image/1533541692_a37dda759e546f6c14c1acf91beda393.jpeg?x-oss-process=style/w180gl",
+                //         subscribe_num: "4838",
+                //         news_datetime: "1536825561",
+                //         source: 0
+                //     }],
+                //     video: {
+                //         video_url: 'https://rmrbcmsonline.peopleapp.com/upload/zw/movie_video/15501099012b03f43c68906f1edf8da35d7deb6237.mp4',
+                //         video_default_image: 'https://rmrbcmsonline.peopleapp.com/upload/zw/movie_image/1550109901_20190214091954701800.jpg?x-oss-process=style/w10',
+                //     },
+                //     // $content_img[$key]['is_long_image'] = '0';//0  不显示 1 横图w>2h 2 竖图: h>2w
+                //     // $content_img[$key]['one_image_show_type'] = '0';//1.横图 w>h 2.竖图  0.75 <= w/h<= 1 3.竖图:w/h <0.75
+                //     "image" : [
+                //         {
+                //             "thumbnail" : "https://rmrbtest-image.peopleapp.com/rb_recsys/img/2019/0627/20a13fc5a6a6ae6fa609c0b4a80f8fa3_328774160308236288.jpeg",
+                //             "image_wide" : "300",
+                //             "sort" : "",
+                //             "image_height" : "",
+                //             "is_thumb" : "",
+                //             "desc" : "",
+                //             "url" : "https://rmrbtest-image.peopleapp.com/rb_recsys/img/2019/0627/20a13fc5a6a6ae6fa609c0b4a80f8fa3_328774160308236288.jpeg"
+                //         },
+                //         // {
+                //         //     "thumbnail" : "https://rmrbtest-image.peopleapp.com/rb_recsys/img/2019/0627/20a13fc5a6a6ae6fa609c0b4a80f8fa3_328774160308236288.jpeg",
+                //         //     "image_wide" : "",
+                //         //     "sort" : "",
+                //         //     "image_height" : "",
+                //         //     "is_thumb" : "",
+                //         //     "desc" : "",
+                //         //     "url" : "https://rmrbtest-image.peopleapp.com/rb_recsys/img/2019/0627/20a13fc5a6a6ae6fa609c0b4a80f8fa3_328774160308236288.jpeg"
+                //         // },
+                        
+                //     ]
+                // },
+                // ------------------------------------------------------------------------
+                // 长文、人民号长文假数据
+                frontend: {
+                    view_type: 'normal',
+                    short_title: '前往下议院就英国脱欧协议草案发表声明',
+                    title_inner: '篇头跳转文章名称超长篇头跳转文章名称超长篇头跳转文章名称超长篇头跳转文章名称超长篇头跳转文章名称超长555555555555555555555555555555555555555555555',
+                    title_down: '—— 前往下议院就英国脱欧协议草案发表声明',
+                    show_help: 0,
+                    copyfrom: "11月15日，英国伦敦，英国首相特蕾莎·梅离开首相府，前往下议院就英国脱欧协议草案发表声明",
+                    authors: "王亮",
+                    admin_name: "王亮",
+                    read_count: '19499',
+                    read_count_show: 1,
+                    news_datetime: '1563183403',
+                    guidance: "11月15日，英国伦敦，英国首相特蕾莎·梅离开首相府，前往下议院就英国脱欧协议草案发表声明。",
+                    head_linkdata: {
+                        id: "12397895",
+                        title: "大中小学如何开展劳动教育？教育部12问答详解",
+                        link_title: "大中小学如何开展劳动教育？教育部12问答详解",
+                        view_type: "gov_normal",
+                    },
+                    // important_clause: "特别声明：本内容为人民日报新媒体平台“人民号”作者上传并发布，仅代表作者观点。人民日报仅提供信息发布平台。",
+                    content_imgs: [
+                        {"pic":"https://rmrbcmsonline.peopleapp.com/rb_recsys/img/2019/0812/3515655412427320001_345214439957458944.jpeg","width":"270","height":"480"},
+                        {"pic":"https://rmrbcmsonline.peopleapp.com/upload/zw/bjh_image/1536758616_76e575db33c2f1b10a4493a13a374a2d.jpeg","width":"345","height":"423"},
+                        {"pic":"https://rmrbcmsonline.peopleapp.com/upload/zw/bjh_image/1536758616_ca2842b275ae4c2c011664887e037ed3.jpeg","width":"345","height":"253"},
+                        {"pic":"https://rmrbcmsonline.peopleapp.com/upload/zw/bjh_image/1536758616_e95bd3f21f015961e44ef5b1532695d3.jpeg","width":"345","height":"108"},
+                    ],
+
+                    "vote_info": {
+                        "isCommit": 0,	//是否投票 0否 1是
+                        "vote_name": "阿里巴巴将奖励1万元", //投票话题
+                        "questionChoices": [	//投票选项
+                            {
+                                "id": "7064",
+                                "articleid": "3917219",
+                                "vote_name": "投票话题",
+                                "choose_name": "选项名",
+                                "choose_sort": "选项排序",
+                                "choose_value": "选项票数",
+                                "is_del": "1",
+                                "createtime": "1564124498",
+                                "updatetime": "0",
+                                "percent": "10%"
+                            },
+                            {
+                                "id": "7068",
+                                "articleid": "3917219",
+                                "vote_name": "投票话题",
+                                "choose_name": "选项名",
+                                "choose_sort": "选项排序",
+                                "choose_value": "选项票数",
+                                "is_del": "1",
+                                "createtime": "1564124498",
+                                "updatetime": "0",
+                                "percent": "5%"
+                            }
+                        ]
+                    },
+                    contents: '<h2 class="" placeholder="请输入标题"><section class="" donone="shifuMouseDownCard(shifu_c_034)" label="Copyright Reserved by PLAYHUDONG."><strong><span>香港警司协会主席：</span><span>汽油弹袭警是恐怖主义行为，可判严重监禁！</span></strong></section></h2><p><span>香港特别行政区政府11日发布声明证实，一位香港警察当日在尖沙咀被暴徒投掷汽油弹烧伤双脚。</span><span>香港警务处处长卢伟聪对此表示强烈谴责，并表示警队必全力追究</span></p><section donone="shifuMouseDownCard(shifu_c_021)" label="Copyright © 2014 playhudong All Rights Reserved."><p><img src="https://rmrbcmsonline.peopleapp.com/rb_recsys/img/2019/0812/3515655412427320001_345214439957458944.jpeg?x-oss-process=style/w10"></p></section><p><strong><span>香港政府公布的消息称，11日，有一名香港警察在尖沙咀警署内执勤时，被暴徒投掷汽油弹引致双脚烧伤，目前正在玛嘉烈医院治疗。</span></strong><span><span>另据@人民日报&nbsp;最新消息，</span><span>11日18时左右，一名警署内的警员被示威者从外投掷的汽油弹击中，下肢烧伤。</span><span>初步诊断警员的左腿10%二级烧伤，右腿3%一级烧伤。</span></span></p><p><span></span></p><p><span>警务处处长卢伟聪当晚看望了这位受伤的警察，并予以最强烈谴责。</span><strong><span>“针对任何引致他人身体严重受伤、甚至威胁生命安全的暴力行为，警队必定全力追究。</span><span>”</span></strong></p><p><span></span></p><p><span>香港警司协会主席陈民德总警司11日对环球时报-环球网记者表示， 使用汽油弹袭击警察是极端暴力行为，是绝对不能接受的严重违法罪行。不论其诉求是什么，都没有任何理由合理化这种恶行，</span><strong><span>“事实上，这已经是恐怖主义行为”。</span></strong><span>陈民德表示，根据香港法例第212章侵害人身罪条例，严重伤人罪是可被判终身监禁的。</span></p><p><span></span></p><p><span>同日晚间，</span><strong><span>非法示威者在尖沙咀警署外集结数小时，有网友爆料称有人使用改装后的仿真枪械向警署内发射催泪弹。</span></strong><span>在反对派的社交媒体群组中，有人称上述枪械是改造后具有更大威力的武器。</span></p><p><img src="https://rmrbcmsonline.peopleapp.com/rb_recsys/img/2019/0812/3515655412427320001_345214441039589376.jpeg?x-oss-process=style/w10"></p><p><span>媒体拍摄到的持有仿真枪械的暴力分子</span></p><p><span></span></p><p><span><strong>视频在这里</strong></span></p><section class="play-box"><img src="https://rmrbcmsonline.peopleapp.com/rb_recsys/video/2019/0812/3515655412427320001_345214433804414976.mp4?x-oss-process=video/snapshot,t_100,f_jpg,w_0,h_0,m_fast" class="article-video-poster" data-video-url="https://rmrbcmsonline.peopleapp.com/rb_recsys/video/2019/0812/3515655412427320001_345214433804414976.mp4"><i class="play-icon"><i class="icon iconfont icon-bofang"></i></i></section><p><span>视频来源：</span><span>环视频&nbsp;制作：</span><span>乔炳新</span></p><p><span>此外，有香港警界人士向环球时报-环球网记者记者透露，</span><strong><span>除用汽油弹与改装枪械袭击警方外，还有暴徒藏有军用折叠短匕首，在街上拉起鱼丝陷阱试图跘倒警察。</span></strong><span>“可看见他们正一步一步提升他们的武力，使用更阴险毒辣的招数，更有组织地分工流窜进行攻击。”上述警界人士表示。</span></p><p><span></span></p><p><img src="https://rmrbcmsonline.peopleapp.com/rb_recsys/img/2019/0812/3515655412427320001_345214441920393216.jpeg?x-oss-process=style/w10"></p><p><span>1</span><span>1日晚的湾仔，有示威者破坏了人行道，试图用砖头袭击警察。<span>赵觉珵/摄</span></span></p><p><span></span></p><p><span>陈民德对环球时报-环球网记者强调，目前最重要的是止暴治乱，不要再轻信那些似是而非的歪理，将市民特别是年轻人推向罪恶的深渊。</span></p><p><strong><span>来源：</span></strong><strong><span>环球时报-环球网赴香港特派记者 陈青青 赵觉珵 杨升</span></strong></p><section donone="shifuMouseDownCard(shifu_c_040)" label="Copyright © 2015 playhudong All Rights Reserved."><section donone="shifuMouseDownCard(shifu_c_025)" label="Copyright © 2014 playhudong All Rights Reserved."><section><p class=""><span><strong>往期回顾</strong></span></p></section><section><p><span class="js_jump_icon h5_image_link" data-positionback="static"></span></p><p><img src="https://rmrbcmsonline.peopleapp.com/rb_recsys/img/2019/0812/3515655412427320001_345214442998329344.jpeg?x-oss-process=style/w10"></p><p><span class="js_jump_icon h5_image_link" data-positionback="static"></span></p><p><img src="https://rmrbcmsonline.peopleapp.com/rb_recsys/img/2019/0812/3515655412427320001_345214443837190144.jpeg?x-oss-process=style/w10"></p><p><span class="js_jump_icon h5_image_link" data-positionback="static"></span></p><p><img src="https://rmrbcmsonline.peopleapp.com/rb_recsys/img/2019/0812/3515655412427320001_345214444717993984.jpeg?x-oss-process=style/w10"></p><p><span class="js_jump_icon h5_image_link" data-positionback="static"></span></p><p><img src="https://rmrbcmsonline.peopleapp.com/rb_recsys/img/2019/0812/3515655412427320001_345214445628157952.jpeg?x-oss-process=style/w10"></p><p></p><p></p><p><strong>长按关注，</strong></p><p><span><strong>您就是环环的衣食父母</strong></span></p><p></p></section></section></section><p></p><p></p><p><span>觉得不错，就点在看哦～! &nbsp;&nbsp;&nbsp;</span><strong><strong><strong></strong></strong></strong></p><audio src="12"></audio><p><img src="https://rmrbcmsonline.peopleapp.com/rb_recsys/img/2019/0725/3515640593299710005_338999530957565952.gif"></p> ',
+                    
+                    contents: '\
+                    1、<a class="rmrb-act-link" href="https://rmrbtestwap.peopleapp.com/article/5380897/5292407" data-rmrbnative=\'{"jumpType":"internal","view_type":"normal","title":"2021年度国考今起报名，计划招录2.57万人","support":6230,"id":5380897}\'>2021年度国考今起报名，计划招录2.57万人</a><p></p>\
+                    2、<a class="rmrb-act-link" href="https://rmrbtestwap.peopleapp.com/video/5376558/5287855" data-rmrbnative=\'{"jumpType":"internal","view_type":"video","title":"新建视频8.17","support":6230,"id":5376558,"video_url":"https://rmrbtest-image.peopleapp.com/upload/video/mp4/202009/1601309291b5bcda0d9af8e2b9.mp4"}\'>新建视频</a><p></p>\
+                    3、<a class="rmrb-act-link" href="https://rmrbtestwap.peopleapp.com/article/5381194/5292687" data-rmrbnative=\'{"jumpType":"internal","view_type":"paper","title":"在新时代继承和弘扬伟大抗美援朝精神为实现中华民族伟大复兴而奋斗","support":6230,"id":5381194}\'>在新时代继承和弘扬伟大抗美援朝精神<br>为实现中华民族伟大复兴而奋斗</a><p></p>\
+                    4、<a class="rmrb-act-link" href="https://rmrbtestwap.peopleapp.com/living/5380801" data-rmrbnative=\'{"jumpType":"internal","id":"5380801","live_image":"https://rmrbtest-image.peopleapp.com/upload/image/202010/rmrb_41491602663619.png?x-oss-process=style/w10","news_link":"http://alcdn.hls.xiaoka.tv/2017827/40f/5f4/IbPHuE2tlTjoV0x7/index.m3u8","is_video":"1","title":"竖屏竖流直播看发言字数限制--1014","rongyun_id":"5292322","is_new":"1","view_type":"live_ing","support":"6230"}\'>竖屏竖流直播看发言字数限制--1014</a><p></p>\
+                    5、<a class="rmrb-act-link" href="https://rmrbtestwap.peopleapp.com/living/5369233" data-rmrbnative=\'{"jumpType":"internal","id":"5369233","live_image":"https://rmrbtest-image.peopleapp.com/upload/image/202006/goods_202006051741394912.jpg?x-oss-process=style/w10","news_link":"https://peoplelive-pull-gray.jdcloud-elive.com/296923/50b87ed9888933982b16f3cfe28ff58c.m3u8","is_video":"1","title":"赵丽改首播","rongyun_id":"5281256","is_new":"1","view_type":"live_future"}\'>赵丽改首播-直播预告</a><p></p>\
+                    6、<a class="rmrb-act-link" href="https://rmrbtestwap.peopleapp.com/audioDetails/5376706/5287950" data-rmrbnative=\'{"jumpType":"internal","view_type":"audio","title":"818音频","support":6230,"news_type":"cms","id":5376706,"audio_url":"https://rmrbtest-image.peopleapp.com/upload/voice/202008/50a922f02f33ef8479ded5003954da8e.mp3","audio_play_time":"06:36","image":[{"url":"https://rmrbtest-image.peopleapp.com/upload/image/202008/rmrb_96061597719615.png?x-oss-process=style/w10"}]}\'>818音频</a><p></p>\
+                    7、<a class="rmrb-act-link" href="https://rmrbtestwap.peopleapp.com/atlas/5374469" data-rmrbnative=\'{"jumpType":"internal","view_type":"img","title":"测试图集广告需求","support":6230,"id":5374469}\'>测试图集广告需求</a><p></p>\
+                    8、<a class="rmrb-act-link" href="https://rmrbtestwap.peopleapp.com/atlas/5374469" data-rmrbnative=\'{"view_type":"img","title":"测试图集广告需求","support":6230,"id":5374469}\'>测试图集广告需求(向外跳转)</a><p></p>\
+                    9、<a class="rmrb-act-link" href="https://rmrbtestwap.peopleapp.com/atlas/5374469" data-rmrbnative=\'{"jumpType":"internal","view_type":"img","title":"测试图集广告需求","support":8230,"id":5374469}\'>测试图集广告需求(版本限制support8230)</a><p></p>\
+                    ',
+                    // "contents" : "&lt;section class=&quot;play-box&quot;&gt;&lt;section style=&quot;display:none;&quot;&gt; &lt;/section&gt;&lt;audio class=&quot;audio-js&quot; src=&quot;https://rmrbtest-image.peopleapp.com/upload/rmh/voice/202010/b30d3ad61459e56d29ec4c825bc9211f.mp3&quot; controls=&quot;&quot;&gt;&lt;/audio&gt;&lt;/section&gt;&lt;p&gt;时间总是在不断的流逝，虽然我们无法把握它，但是我们可以用它来做更多有意义的事情，从而丰富我们的每一天。下面就一起跟随五爷的镜头，一起来到三里屯街区看一看吧，希望这里美女们的穿搭能够给你带来新的体会。 (来自:皇城根五爷)&lt;/p&gt;&lt;p&gt;&lt;a href=&quot;https://view.inews.qq.com/a/90QI4TZPD00RH06Y000?jumpType=1&amp;tbkt=D&amp;uid=&quot;&gt;从《毓贞》到《牵挂》这几首歌其实是都可以说是一位少年到年青人的成长之路 年纪最小的是《蓝色天空》爱幻想 唱的是懵懵懂懂的爱情 然后是《趁着》该高考了 要把握现在好时光 之后是《毓贞》和《曾经》开始远离家乡 走上社会之路了 再下一个阶段是《干一杯》人生态度比之前豁达了 后面是《爱一个人》人成熟了 知道什么是感情了 最后是《牵挂》经历了一些感情挫折之后 最终成熟的一个年青人 可以说《牵挂》这张EP的心理成熟状态更符合现在的我 很多词儿都很像我 虽然这些和我亲身经历也没什么关系 但我非常喜欢 所以我想用我的方式唱给大家听给大家分享我喜欢的歌曲&lt;/a&gt;&lt;/p&gt;",
+                    "contents" : '&lt;p&gt;早晚报跳转&lt;a href=&quot;https://rmrbtestwap218.peopleapp.com/article/47587642/46444175&quot; target=&quot;_self&quot; title=&quot;时间轴跳转&quot; data-rmrbnative=&quot;eyJqdW1wVHlwZSI6ImludGVybmFsIiwidmlld190eXBlIjoiYXVkaW8iLCJ0aXRsZSI6IjgxOC4sLizvvIzjgILjgIHjgIHjgJHjgJBbXScv6Z+zPGJyPumikSIsInN1cHBvcnQiOjYyMzAsIm5ld3NfdHlwZSI6ImNtcyIsImlkIjo1Mzc2NzA2LCJhdWRpb191cmwiOiJodHRwczovL3JtcmJ0ZXN0LWltYWdlLnBlb3BsZWFwcC5jb20vdXBsb2FkL3ZvaWNlLzIwMjAwOC81MGE5MjJmMDJmMzNlZjg0NzlkZWQ1MDAzOTU0ZGE4ZS5tcDM/dXJsPWh0dHAlM2ElMmYlMmZ0b29sLmNoaW5hei5jb20lMmZ0b29scyUyZnVybGVuY29kZS5hc3B4IiwiYXVkaW9fcGxheV90aW1lIjoiMDY6MzYiLCJpbWFnZSI6W3sidXJsIjoiaHR0cHM6Ly9ybXJidGVzdC1pbWFnZS5wZW9wbGVhcHAuY29tL3VwbG9hZC9pbWFnZS8yMDIwMDgvcm1yYl85NjA2MTU5NzcxOTYxNS5wbmc/eC1vc3MtcHJvY2Vzcz1zdHlsZS93MTAifV19&quot;&gt;时间轴跳转&lt;/a&gt;&lt;/p&gt;<a href="https://rmrbtestwap.peopleapp.com/timeline/1" target="_self" title="2019两会时间轴" data-rmrbnative="eyJpZCI6IjEiLCJ0aXRsZSI6IjIwMTnkuKTkvJrml7bpl7TovbQiLCJqdW1wVHlwZSI6ImludGVybmFsIiwic2hhcmVfdXJsIjoiaHR0cHM6Ly9ybXJidGVzdHdhcC5wZW9wbGVhcHAuY29tL3RpbWVsaW5lLzEiLCJ2aWV3X3R5cGUiOiJ0aW1lcyJ9" style="font-family: 微软雅黑, &quot;Microsoft YaHei&quot;; text-decoration: underline;"><span style="font-family: 微软雅黑, &quot;Microsoft YaHei&quot;;">2019两会时间轴（无cat-id）</span></a><p><a href="https://rmrbtestwap.peopleapp.com/timeline/1" target="_self" title="2019两会时间轴" data-rmrbnative="eyJpZCI6IjEiLCJ0aXRsZSI6IjIwMTnkuKTkvJrml7bpl7TovbQiLCJqdW1wVHlwZSI6ImludGVybmFsIiwic2hhcmVfdXJsIjoiaHR0cHM6Ly9ybXJidGVzdHdhcC5wZW9wbGVhcHAuY29tL3RpbWVsaW5lLzEiLCJ2aWV3X3R5cGUiOiJ0aW1lcyJ9" style="font-family: 微软雅黑, &quot;Microsoft YaHei&quot;; text-decoration: underline;"><strong><span style="font-family: 微软雅黑, &quot;Microsoft YaHei&quot;;">2019两会时间轴（无cat-id）</span></strong></a></p><p><a href="https://rmrbtestwap.peopleapp.com/article/5365289/5277624" target="_self" title="锐评标签文章看看" data-rmrbnative="eyJpZCI6IjUzNjUyODkiLCJ0aXRsZSI6IumUkOivhOagh+etvuaWh+eroOeci+eciyIsImp1bXBUeXBlIjoiaW50ZXJuYWwiLCJzaGFyZV91cmwiOiJodHRwczovL3JtcmJ0ZXN0d2FwLnBlb3BsZWFwcC5jb20vYXJ0aWNsZS81MzY1Mjg5LzUyNzc2MjQiLCJ2aWV3X3R5cGUiOiJub3JtYWwifQ=="><img src="https://rmrbtest-image.peopleapp.com/upload/ueditor/image/20201026/1603682827231037.jpg" title="1603682827231037.jpg" alt="c87d4ee421524561a1bcd72791f6dc7d.jpg"/></a><strong style="font-family: 微软雅黑, &quot;Microsoft YaHei&quot;; text-decoration: underline;"></strong></p><p><a href="https://rmrbtestwap218.peopleapp.com/article/rmh12489795/rmh12489795" target="_self" title="正公示！湖北这份重要名单来了！" data-rmrbnative="eyJpZCI6InJtaDEyNDcxMjk3IixhcnRpY2xlaWQ6InJtaDEyNDcxMjk3IiwidGl0bGUiOiLjgJDmmKXml6XmjaLmlrDoo4XvvIHmtoLoo4XliY3jgIHoo4XkuK3lkozoo4XlkI7lr7nmr5TnhaciLCJqdW1wVHlwZSI6ImludGVybmFsIiwic2hhcmVfdXJsIjoiaHR0cHM6Ly9ybXJidGVzdHdhcDIxOC5wZW9wbGVhcHAuY29tL2R5bmFtaWMvcm1oMTI0NzEyOTciLCJ2aWV3X3R5cGUiOiJnb3ZfZHluYW1pYyJ9">引用</a><br></p>',
+                    aim_love_num: 5000,
+                    love_num: 999999,
+                    help_status: '截至1月29日，集齐1万份爱心，阿里巴巴将奖励1万元',
+                    "gov": [{
+                        "id": "12345", //机构id
+                        "name": "张绍忠时评集张绍忠时评集张绍忠时评集张绍忠时评集", //机构名称
+                        "source": 0,
+                        "logo": "https://rmrbtest-image.peopleapp.com/upload/rmh/image/201904/201904221355497116.jpg?x-oss-process=style/w10", //图片链接
+                        "subscribe_num": "26435262", //机构订阅数量
+                        "is_gov": "0", //1未关注 2 已关注 改成 0 1了
+                        "description": "简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介", //简介
+                        "news_datetime": "1分钟前" //格式化时间
+                    }]
+                    // gov: []
+                    // gov: {
+                    //     "id": "12345", //机构id
+                    //     "name": "张绍忠时评集", //机构名称
+                    //     "logo": "http://rmrbimg2.people.cn/data/advert/upload/Focus/201512161709323981.jpg", //图片链接
+                    //     "subscribe_num": "26435262", //机构订阅数量
+                    //     "is_gov": "1", //1未关注 2 已关注 改成 0 1了
+                    //     "description": "简介简介简介简介简介简介简介简介", //简介
+                    //     "news_datetime": "1分钟前" //格式化时间
+                    // }
+                }
+            });
+            window.onscroll = function () {
+                bindscroll();
+            };
+
+            function bindscroll() {
+                if (rmrbApp) {
+                    var _scrollTop =
+                        window.pageYOffset || document.body.scrollTop;
+                    // console.log(_scrollTop);
+                    rmrbApp.setScrollTop(_scrollTop);
+                }
+            }
+            getDynamicInfoCb({
+                is_gov: 0
+            });
+            
+    </script>
+</body>
+
+</html>

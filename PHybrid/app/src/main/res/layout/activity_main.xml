@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/article"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="onArticle"
+        android:text="加载详情页" />
+
+    <Button
+        android:id="@+id/article2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="onArticle2"
+        android:text="升级详情页版本:2.0" />
+
+    <Button
+        android:id="@+id/article3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="onArticle3"
+        android:text="切换详情页版本1.0" />
+
+    <Button
+        android:id="@+id/article4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="onArticle4"
+        android:text="切换详情页版本2.0" />
+
+    <Button
+        android:id="@+id/item"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="onItem"
+        android:text="加载列表嵌套web" />
+
+    <Button
+        android:id="@+id/channel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="onChannel"
+        android:text="加载频道嵌套web" />
+
+    <Button
+        android:id="@+id/channelV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="onChannelV"
+        android:text="升级频道Web模板" />
+
+    <Button
+        android:id="@+id/active"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="onActive"
+        android:text="下载活动的模板,本地不存在" />
+
+    <Button
+        android:id="@+id/toActive"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="onLoadActive"
+        android:text="加载活动的模板" />
+</LinearLayout>
